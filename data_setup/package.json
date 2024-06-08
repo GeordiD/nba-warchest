@@ -1,0 +1,15 @@
+{
+  "name": "data_setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "teams": "node ./update_teams.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pocketbase": "^0.21.3"
+  }
+}
