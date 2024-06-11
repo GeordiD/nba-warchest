@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+   <head>
+      
+    <!-- START email detection script -->
+
+       <script>
+
+       !function(){"use strict";var e=window.location.search.substring(1).split("&");const t=e=>e.replace(/\s/g,""),o=e=>new Promise((t=>{if(!("msCrypto"in window)&&"https:"===location.protocol&&"crypto"in window&&"TextEncoder"in window){const o=(new TextEncoder).encode(e);crypto.subtle.digest("SHA-256",o).then((e=>{const o=Array.from(new Uint8Array(e)).map((e=>("00"+e.toString(16)).slice(-2))).join("");t(o)}))}else t("")}));for(var n=0;n<e.length;n++){var r="adt_ei",i=decodeURIComponent(e[n]);if(0===i.indexOf(r)){var a=i.split(r+"=")[1];if((e=>{const t=e.match(/((?=([a-zA-Z0-9._!#$%+^&*()[\]<>-]+))\2@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi);return t?t[0]:""})(t(a.toLowerCase()))){o(a).then((t=>{t.length&&(localStorage.setItem(r,t),localStorage.setItem("adt_emsrc","url"),e.splice(n,1),history.replaceState(null,"","?"+e.join("&")))}));break}}}}();
+
+       </script>
+
+   <!-- END email detection script -->
+
+
+   <!-- AdThrive Head Tag Manual -->
+   <script data-no-optimize="1" data-cfasync="false">
+   (function(w, d) {
+      w.adthrive = w.adthrive || {};
+      w.adthrive.cmd = w.
+      adthrive.cmd || [];
+      w.adthrive.plugin = 'adthrive-ads-manual';
+      w.adthrive.host = 'ads.adthrive.com';var s = d.createElement('script');
+      s.async = true;
+      s.referrerpolicy='no-referrer-when-downgrade';
+      s.src = 'https://' + w.adthrive.host + '/sites/6644e66132a7901cb0ab5997/ads.min.js?referrer=' + w.encodeURIComponent(w.location.href) + '&cb=' + (Math.floor(Math.random() * 100) + 1);
+      var n = d.getElementsByTagName('script')[0];
+      n.parentNode.insertBefore(s, n);
+   })(window, document);
+   </script>
+   <!-- End of AdThrive Head Tag -->
+
+   <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-TNR4DGVD');</script>
+      <!-- End Google Tag Manager -->
+
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>NBA Future Drafts By Team - RealGM</title>
+
+<link rel="canonical" href="https://basketball.realgm.com/nba/draft/future_drafts/team" />
+<meta property="article:publisher" content="https://www.facebook.com/RealGM">
+<meta property="fb:app_id" content="305642309526726">
+<meta name="keywords" content="NBA Future Drafts By Team, RealGM">
+<meta name="description" content="NBA Future Drafts By Team - RealGM">
+<meta property="rgm:pageid" content="nba_draft_future_summary_by_team">
+<meta property="rgm:datetime" content="2024-06-08 18:02:00">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.25">
+<link rel="stylesheet" href="/css/normalize.min.css">
+<link rel="stylesheet" href="/css/main.v10.css">
+<script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script src="/js/vendor/jquery-1.11.0.min.js"></script>
+<link rel="stylesheet" href="/css/ui/jquery-ui.min.css">
+<script src="/js/vendor/jquery-ui.min.js"></script>
+<script src="//scripts.nsn-server.xyz/js/36f582567146c17f625560d5543b9dd4.js" async defer/></script>
+<!-- SendToNews -->
+<script>
+   window.addEventListener('message',function(event) { 
+      if(event.data.type !== 's2nEvent' || event.data.s2nEvent !== 'readyToPlay') {
+         return;
+      }
+      ga('send', {
+         hitType: 'event',
+         eventCategory: 'SendtoNews Player',
+         eventAction: 'readyToPlay',
+         eventLabel: event.data.playerKey,
+         nonInteraction: true
+      });
+   });
+</script>      
+   </head>
+   
+   <body class="raptive">
+   
+      <div id="site-takeover">
+      
+         <div id="header_wrap">
+         
+            <header class="wrapper clearfix">
+            
+               <div class="container">
+               
+                  <div class="tabs-container clearfix">
+                  
+                     <div class="logo-container clearfix">
+                        <a href="/"><img src="/images/basketball/5.0/template/realgm-basketball-logo-175-80.png" class="logo" /></a>
+                     </div>
+                     
+                     <div class="secondary-ad-container"></div>
+                     
+                     <div id="social-menu" class="topmenu">
+                        <ul>
+                           <li class="instagram"><a href="https://www.instagram.com/realgmnba" title="RealGM on Instagram"></a></li>
+                           <li class="facebook"><a href="https://www.facebook.com/RealGM" title="RealGM on Facebook"></a></li>
+                           <li class="twitter"><a href="https://twitter.com/RealGM" title="RealGM on Twitter"></a></li>
+                        </ul>
+                     </div>
+                     
+                     <div id="sports-menu" class="topmenu">
+                        <div id="sports-menu-container">
+                           <ul>
+                              <li class="top-icon navitem nbalink selected"><a href="/"><span></span><nav>Basketball</nav></a></li>
+                              <li class="top-icon navitem nfllink"><a href="https://football.realgm.com/"><span></span><nav>Football</nav></a></li>
+                              <li class="top-icon navitem mlblink"><a href="https://baseball.realgm.com/"><span></span><nav>Baseball</nav></a></li>
+                              <li class="top-icon navitem soccerlink"><a href="https://soccer.realgm.com/"><span></span><nav>Soccer</nav></a></li>
+                              <li class="top-icon navitem nhllink"><a href="https://hockey.realgm.com/"><span></span><nav>Hockey</nav></a></li>
+                              <li class="top-icon navitem forumlink"><a href="https://forums.realgm.com/boards/index.php"><span></span><nav>Forums</nav></a></li>
+                                                            <li class="top-icon navitem tixlink"><a href="https://www.vividseats.com/?wsUser=958" target="_blank"><span></span><nav>Tickets</nav></a></li>
+                              <li class="top-icon navitem instagram"><a href="https://www.instagram.com/realgmnba" title="RealGM on Instagram"><span></span></a></li>
+                              <li class="top-icon navitem facebook"><a href="https://www.facebook.com/RealGM" title="RealGM on Facebook"><span></span></a></li>
+                              <li class="top-icon navitem twitter"><a href="https://twitter.com/RealGM" title="RealGM on Twitter"><span></span></a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     
+                     <div class="searchbar">
+                        <form action="/search" method="get" class="searchbox" id="playersearch" autocomplete="off">
+                           <input type="text" class="searchbox-text" placeholder="Search..." name="q" id="searchfield" onkeyup="searchButtonUp();" required="required"><input type="submit" class="searchbox-submit" value="Go">
+                        </form>
+                     </div>
+                     
+                  </div>
+                  
+               </div>
+            </header>
+               
+            <div class="top-nav-container">
+<div class="wrapper clearfix">
+<div id="menu-button" class="clearfix">
+<a href="/" class="home_logo"><img src="/images/basketball/5.0/template/realgm-basketball-logo-130-60.png" style="height: 30px; width: 65px;"></a></a>
+<a href="javascript:void(0);" class="menu-link"><span></span><nav>NBA Draft Menu</nav></a>
+<a href="javascript:void(0);" onclick="showSportsNav()"><nav id="primary-sport-menu-icon"><u>NBA</u></nav></a>
+</div><nav id="top-level-nav" role="navigation" class="container has-subnav">
+<ul class="primary-nav">
+<li class="search-nav">
+<form action="/search" method="get" class="searchbox" autocomplete="off">
+<input type="text" class="searchbox-text ui-autocomplete-input" placeholder="Search..." name="q" required="required" autocomplete="off"><input type="submit" class="searchbox-submit" value="Go">
+</form>
+</li>
+<li class="mobile-menu"><a href="javascript: void(0);" onclick="showSecondaryNav();"><span>&laquo; Back</span></a></li><li class="has-subnav">
+<a href="/nba" id="change-sports-menu">NBA</a>
+<div class="primary-nav-ddl">
+<ul>
+<li><a href="/nba">NBA</a></li><li><a href="/ncaa">NCAA</a></li><li><a href="/gleague">G League</a></li><li><a href="/international">International</a></li><li><a href="/national">National</a></li><li><a href="/highschool">High School</a></li></ul>
+</div>
+</li><li class="has-subnav">
+<a href="https://forums.realgm.com/boards/viewforum.php?f=243">Forums</a>
+<div class="primary-nav-ddl">
+<ul class="primary-nav-col" style="width: 15em; float: left;">
+<li><a href="https://forums.realgm.com/boards/viewforum.php?f=243">Basketball Forums</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=6">The General Board</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=64">Player Comparisons</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=2">Trades & Transactions</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=344">Statistical Analysis</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=39">Fantasy Basketball</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=465">Gambling</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=3">NBA Draft</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=36">NCAA Basketball</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=350">G League</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=5">International Basketball</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=346">High School Basketball</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=69">Current Affairs</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=42">Off-Topic Board</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=4">CBA & Business</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=40">Feedback</a></li></ul>
+<div style="float: left; border-left: 1px solid black; padding-left: 1em;">
+<div style="float: left; width: 16em;">
+<p style="padding-left: 15px;">Atlantic Division</p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="https://forums.realgm.com/boards/viewforum.php?f=8">Boston Celtics</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=23">Brooklyn Nets</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=24">New York Knicks</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=26">Philadelphia Sixers</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=32">Toronto Raptors</a></li></ul>
+</div>
+<div style="float: left; width: 16em;">
+<p style="padding-left: 15px;">Central Division</p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="https://forums.realgm.com/boards/viewforum.php?f=10">Chicago Bulls</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=11">Cleveland Cavaliers</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=14">Detroit Pistons</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=17">Indiana Pacers</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=21">Milwaukee Bucks</a></li></ul>
+</div>
+<div style="float: left; width: 16em;">
+<p style="padding-left: 15px;">Southeast Division</p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="https://forums.realgm.com/boards/viewforum.php?f=7">Atlanta Hawks</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=53">Charlotte Hornets</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=20">Miami Heat</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=25">Orlando Magic</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=35">Washington Wizards</a></li></ul>
+</div>
+<div style="clear: both; height: 1em;" class="sep"></div>
+<div style="float: left; width: 16em;">
+<p style="padding-left: 15px;">Northwest Division</p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="https://forums.realgm.com/boards/viewforum.php?f=13">Denver Nuggets</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=22">Minnesota Timberwolves</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=334">Oklahoma City Thunder</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=28">Portland Trail Blazers</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=33">Utah Jazz</a></li></ul>
+</div>
+<div style="float: left; width: 16em;">
+<p style="padding-left: 15px;">Pacific Division</p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="https://forums.realgm.com/boards/viewforum.php?f=15">Golden State Warriors</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=18">Los Angeles Clippers</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=19">Los Angeles Lakers</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=27">Phoenix Suns</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=29">Sacramento Kings</a></li></ul>
+</div>
+<div style="float: left; width: 16em;">
+<p style="padding-left: 15px;">Southwest Division</p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="https://forums.realgm.com/boards/viewforum.php?f=12">Dallas Mavericks</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=16">Houston Rockets</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=34">Memphis Grizzlies</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=9">New Orleans Pelicans</a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=30">San Antonio Spurs</a></li></ul>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</li><li>
+<a href="/nba/news">News</a>
+<div class="primary-nav-ddl">
+<ul class="primary-nav-col" style="width: 15em; float: left;">
+<li><a href="/news/wiretap/tags/15/NBA">All Rumors</a></li><li><a href="/news/wiretap/tags/16/Signing-Rumor">Free Agent Rumors</a></li><li><a href="/news/wiretap/tags/18/Trade Rumor">Trade Rumors</a></li><li><a href="/news/wiretap/tags/53/Waiver">Waivers</a></li><li><a href="/news/wiretap/tags/25/NBA-Draft">NBA Draft</a></li><li><a href="/news/wiretap/tags/52/CBA">CBA</a></li><li><a href="/news/wiretap/tags/24/Injury">Injuries</a></li><li><a href="/news/wiretap/tags/55/Award">Awards</a></li><li><a href="/news/wiretap/tags/63/Fines">Fines</a></li><li><a href="/news/wiretap/tags/23/Suspension">Suspensions</a></li><li><a href="/news/wiretap/tags/69/B-Ball-IQ">B-Ball IQ</a></li><li><a href="/news/wiretap/tags/97/Preseason">Preseason</a></li><li><a href="/news/wiretap/tags/98/Playoffs">Playoffs</a></li><li><a href="/news/wiretap/tags/95/Summer-League">Summer League</a></li><li><a href="/news/wiretap/tags/54/All-Star">All-Star</a></li><li><a href="/news/wiretap/tags/22/NBA">Rankings</a></li></ul>
+<div class="portal" style="float: left; border-left: 1px solid black; padding-left: 1em; max-width: 50em;">
+<div class="secondary-story-container" style="border-top: 0;"><div class="secondary-story">
+<a class="article-image" href="/wiretap/276012/Dan-Hurley-To-Lakers-Not-A-Done-Deal-As-UConn-Could-Improve-Contract-Offer" style="background-image: url('https://basketball.realgm.com/images/nba/4.2/wiretap/photos/2006/Hurley_Dan_uconn_240401.jpg');"></a>
+<div class="article-title"><a style="padding-left: 0;" href="/wiretap/276012/Dan-Hurley-To-Lakers-Not-A-Done-Deal-As-UConn-Could-Improve-Contract-Offer">Dan Hurley To Lakers 'Not A Done Deal' As UConn Could Improve Contract Offer</a></div>
+<div class='article-content' style='font-weight: normal;'></div>
+</div>
+<div class="secondary-story">
+<a class="article-image" href="/wiretap/276016/Bulls-Grizzlies-Thunder-Jazz-Could-Trade-Up-To-Draft-Donovan-Clingan" style="background-image: url('https://basketball.realgm.com/images/nba/4.2/wiretap/photos/2006/Clingan_Donovan_uconn_240401.jpg');"></a>
+<div class="article-title"><a style="padding-left: 0;" href="/wiretap/276016/Bulls-Grizzlies-Thunder-Jazz-Could-Trade-Up-To-Draft-Donovan-Clingan">Bulls, Grizzlies, Thunder, Jazz Could Trade Up To Draft Donovan Clingan</a></div>
+<div class='article-content' style='font-weight: normal;'></div>
+</div>
+<div class="secondary-story">
+<a class="article-image" href="/wiretap/276017/Bulls-Interested-In-Trading-Up-To-Draft-Matas-Buzelis" style="background-image: url('https://basketball.realgm.com/images/nba/4.2/wiretap/photos/2006/Buzelis_Matas_hs_240109.jpg');"></a>
+<div class="article-title"><a style="padding-left: 0;" href="/wiretap/276017/Bulls-Interested-In-Trading-Up-To-Draft-Matas-Buzelis">Bulls Interested In Trading Up To Draft Matas Buzelis</a></div>
+<div class='article-content' style='font-weight: normal;'></div>
+</div>
+<div class="secondary-story">
+<a class="article-image" href="/wiretap/276019/Sasha-Vezenkov-Kings-Could-Part-Ways-This-Summer" style="background-image: url('https://basketball.realgm.com/images/nba/4.2/wiretap/photos/2006/nba_sacramentokings.jpg');"></a>
+<div class="article-title"><a style="padding-left: 0;" href="/wiretap/276019/Sasha-Vezenkov-Kings-Could-Part-Ways-This-Summer">Sasha Vezenkov, Kings Could Part Ways This Summer</a></div>
+<div class='article-content' style='font-weight: normal;'></div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</li><li>
+<a href="/nba/news/analysis">Analysis</a>
+<div class="primary-nav-ddl">
+<ul class="primary-nav-col" style="width: 15em; float: left; padding-top: 0.5em;">
+<li class="label"><u>Featured Writers</u></li><li><a href="/news/analysis/author/257/Wes-Goldberg">Wes Goldberg</a></li><li><a href="/news/analysis/author/217/Colin-McGowan">Colin McGowan</a></li><li><a href="/news/analysis/author/6/Christopher-Reina">Christopher Reina</a></li><li><a href="/news/analysis/author/226/John-Wilmes">John Wilmes</a></li><li class="label">&nbsp;</li><li class="label"><u>More Contributors</u></li><li><a href="/news/analysis/author/258/Zachary-Cohen">Zachary Cohen</a></li><li><a href="/news/analysis/author/260/Brendon-Kleen">Brendon Kleen</a></li><li><a href="/news/analysis/author/259/Jack-Ross">Jack Ross</a></li><li><a href="/news/analysis/author/145/RealGM-Staff-Report">RealGM Staff Report</a></li><li><a href="/news/analysis/author/248/Jack-Tien-Dana">Jack Tien-Dana</a></li><li><a href="/news/analysis/author/245/Micah-Wimmer">Micah Wimmer</a></li><li><a href="/news/analysis/author/247/Kevin-Yeung">Kevin Yeung</a></li></ul>
+<div class="portal" style="float: left; border-left: 1px solid black; padding-left: 1em; max-width: 50em;">
+<div class="secondary-story-container" style="border-top: 0;"><div class="secondary-story">
+<a class="article-image" href="/analysis/276009/2024-NBA-Finals-Game-1-Review-Howling-Mountainous-Waves-Upon-The-Parquet" style="background-image: url('https://basketball.realgm.com/images/nba/4.2/wiretap/photos/2006/Porzingis_Kristaps_bos_231106.jpg');"></a>
+<div class="article-title"><a style="padding-left: 0;" href="/analysis/276009/2024-NBA-Finals-Game-1-Review-Howling-Mountainous-Waves-Upon-The-Parquet">2024 NBA Finals, Game 1 Review: Howling Mountainous Waves Upon The Parquet</a></div>
+<p class="author-details" style="margin: 0 0 0.5em;">
+by <a href='/news/analysis/author/6/Christopher-Reina' style='text-decoration: none;'>Christopher Reina</a></p>
+<div class='article-content' style='font-weight: normal;'>The Celtics have had a frustratingly extended prologue, but they are three wins away from finally vanquishing it. Game 1 showed the greatness they're capable of achieving.</div>
+</div>
+<div class="secondary-story">
+<a class="article-image" href="/analysis/276014/Caitlin-Clark-Has-Become-Both-More-And-Less-Than-A-Basketball-Player" style="background-image: url('https://basketball.realgm.com/images/nba/4.2/wiretap/photos/2006/Clark_Caitlin_ind_240520.jpg');"></a>
+<div class="article-title"><a style="padding-left: 0;" href="/analysis/276014/Caitlin-Clark-Has-Become-Both-More-And-Less-Than-A-Basketball-Player">Caitlin Clark Has Become Both More And Less Than A Basketball Player</a></div>
+<p class="author-details" style="margin: 0 0 0.5em;">
+by <a href='/news/analysis/author/260/Brendon-Kleen' style='text-decoration: none;'>Brendon Kleen</a></p>
+<div class='article-content' style='font-weight: normal;'>Caitlin Clark is following the recognizable footsteps of many basketball stars before her: legendarily talented, poised enough to rise quickly, and turned against in an instant.</div>
+</div>
+<div class="secondary-story">
+<a class="article-image" href="/analysis/275921/Luka-Doncic-Is-The-NBAs-Truest-Gamer" style="background-image: url('https://basketball.realgm.com/images/nba/4.2/wiretap/photos/2006/Doncic_Luka_dal_231213.jpg');"></a>
+<div class="article-title"><a style="padding-left: 0;" href="/analysis/275921/Luka-Doncic-Is-The-NBAs-Truest-Gamer">Luka Doncic Is The NBA's Truest Gamer</a></div>
+<p class="author-details" style="margin: 0 0 0.5em;">
+by <a href='/news/analysis/author/226/John-Wilmes' style='text-decoration: none;'>John Wilmes</a></p>
+<div class='article-content' style='font-weight: normal;'>It's time for some Gamer Theory: Luka Doncic plays Overwatch, and is in the 99th percentile of performance. He's in the 100th percentile of NBA players, but it's important to understand he's also elite pretending to be a futuristic gladiator and talking trash to teenagers.</div>
+</div>
+<div class="secondary-story">
+<a class="article-image" href="/analysis/275916/2024-NBA-Finals-Preview-Heliocentrism-Vs-Strength-In-Numbers" style="background-image: url('https://basketball.realgm.com/images/nba/4.2/wiretap/photos/2006/Doncic_Luka_dal_240522.jpg');"></a>
+<div class="article-title"><a style="padding-left: 0;" href="/analysis/275916/2024-NBA-Finals-Preview-Heliocentrism-Vs-Strength-In-Numbers">2024 NBA Finals Preview: Heliocentrism Vs. Strength In Numbers</a></div>
+<p class="author-details" style="margin: 0 0 0.5em;">
+by <a href='/news/analysis/author/6/Christopher-Reina' style='text-decoration: none;'>Christopher Reina</a></p>
+<div class='article-content' style='font-weight: normal;'>The Mavericks and Celtics are a pair of throughly modern teams, but in distinctly contrasting ways, which should make for an entertaining series and also a referendum on two models of team construction.</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</li><li class="has-subnav">
+<a href="/nba/teams">Teams</a>
+<div class="primary-nav-ddl">
+<div style="float: left; width: 16em;">
+<p style="padding-left: 15px;">Atlantic Division</p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="/nba/teams/Boston-Celtics/2/Home">Boston Celtics</a></li><li><a href="/nba/teams/Brooklyn-Nets/38/Home">Brooklyn Nets</a></li><li><a href="/nba/teams/New-York-Knicks/20/Home">New York Knicks</a></li><li><a href="/nba/teams/Philadelphia-Sixers/22/Home">Philadelphia Sixers</a></li><li><a href="/nba/teams/Toronto-Raptors/28/Home">Toronto Raptors</a></li></ul>
+</div>
+<div style="float: left; width: 16em;">
+<p style="padding-left: 15px;">Central Division</p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="/nba/teams/Chicago-Bulls/4/Home">Chicago Bulls</a></li><li><a href="/nba/teams/Cleveland-Cavaliers/5/Home">Cleveland Cavaliers</a></li><li><a href="/nba/teams/Detroit-Pistons/8/Home">Detroit Pistons</a></li><li><a href="/nba/teams/Indiana-Pacers/11/Home">Indiana Pacers</a></li><li><a href="/nba/teams/Milwaukee-Bucks/16/Home">Milwaukee Bucks</a></li></ul>
+</div>
+<div style="float: left; width: 16em;">
+<p style="padding-left: 15px;">Southeast Division</p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="/nba/teams/Atlanta-Hawks/1/Home">Atlanta Hawks</a></li><li><a href="/nba/teams/Charlotte-Hornets/3/Home">Charlotte Hornets</a></li><li><a href="/nba/teams/Miami-Heat/15/Home">Miami Heat</a></li><li><a href="/nba/teams/Orlando-Magic/21/Home">Orlando Magic</a></li><li><a href="/nba/teams/Washington-Wizards/30/Home">Washington Wizards</a></li></ul>
+</div>
+<div style="clear: both; height: 1em;" class="sep"></div>
+<div style="float: left; width: 16em;">
+<p style="padding-left: 15px;">Northwest Division</p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="/nba/teams/Denver-Nuggets/7/Home">Denver Nuggets</a></li><li><a href="/nba/teams/Minnesota-Timberwolves/17/Home">Minnesota Timberwolves</a></li><li><a href="/nba/teams/Oklahoma-City-Thunder/33/Home">Oklahoma City Thunder</a></li><li><a href="/nba/teams/Portland-Trail-Blazers/24/Home">Portland Trail Blazers</a></li><li><a href="/nba/teams/Utah-Jazz/29/Home">Utah Jazz</a></li></ul>
+</div>
+<div style="float: left; width: 16em;">
+<p style="padding-left: 15px;">Pacific Division</p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="/nba/teams/Golden-State-Warriors/9/Home">Golden State Warriors</a></li><li><a href="/nba/teams/Los-Angeles-Clippers/12/Home">Los Angeles Clippers</a></li><li><a href="/nba/teams/Los-Angeles-Lakers/13/Home">Los Angeles Lakers</a></li><li><a href="/nba/teams/Phoenix-Suns/23/Home">Phoenix Suns</a></li><li><a href="/nba/teams/Sacramento-Kings/25/Home">Sacramento Kings</a></li></ul>
+</div>
+<div style="float: left; width: 16em;">
+<p style="padding-left: 15px;">Southwest Division</p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="/nba/teams/Dallas-Mavericks/6/Home">Dallas Mavericks</a></li><li><a href="/nba/teams/Houston-Rockets/10/Home">Houston Rockets</a></li><li><a href="/nba/teams/Memphis-Grizzlies/14/Home">Memphis Grizzlies</a></li><li><a href="/nba/teams/New-Orleans-Pelicans/19/Home">New Orleans Pelicans</a></li><li><a href="/nba/teams/San-Antonio-Spurs/26/Home">San Antonio Spurs</a></li></ul>
+</div>
+<div style="clear: both;"></div>
+</div>
+</li><li class="has-subnav">
+<a href="#" class='selected'>GM Lab</a>
+<div class="primary-nav-ddl">
+<p style="margin-bottom: 0; color: #F36E21; text-align: center; font-style: italic; font-size: 1.5em;">Tools and Resources Used by Real General Managers.</p>
+<div style="float: left; width: 15em;">
+<p style="text-decoration: underline; padding: 0.3em 0.8em; margin-bottom: 0;"><a href="/nba/players">Players</a></p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="/nba/players">Current Players</a></li><li><a href="/nba/depth-charts">Depth Charts</a></li><li><a href="/nba/birth-cities">Birth Cities</a></li><li><a href="/nba/birth-countries">Birth Countries</a></li><li><a href="/nba/birth-dates">Birth Dates</a></li><li><a href="/nba/players-abroad">NBA Players Abroad</a></li></ul>
+<p style="text-decoration: underline; padding: 0.3em 0.8em; margin-bottom: 0;"><a href="/nba/awards">Awards</a></p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="/nba/awards/by_season">By Season</a></li><li><a href="/nba/awards/by_type">By Type</a></li><li><a href="/nba/awards/by_player">By Player</a></li><li><a href="/nba/awards/top_75">NBA's Top 75</a></li><li><a href="/nba/hall-of-fame">Hall of Fame</a></li><li><a href="/nba/retired-numbers">Retired Jerseys</a></li></ul>
+<p style="text-decoration: underline; padding: 0.3em 0.8em; margin-bottom: 0;"><a href="/nba/staff-members">Staff Members</a></p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="/nba/staff-members/20/Head-Coach/Current">Head Coaches</a></li><li><a href="/nba/staff-members/16/General-Manager/Current">General Managers</a></li></ul>
+</div>
+<div style="float: left; width: 15em;">
+<p style="text-decoration: underline; padding: 0.3em 0.8em; margin-bottom: 0;"><a href="/nba/transactions">Transactions</a></p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="/nba/transactions/league">Transactions History</a></li><li><a href="/nba/transactions/composition">Roster Compositions</a></li><li><a href="/nba/transactions/composition_search">Compositions Search</a></li><li><a href="/nba/transactions/trade-deadline">Trade Deadline</a></li><li><a href="/nba/player_tracker/trade">Trade Tracker</a></li><li><a href="/nba/current_free_agents">Current Free Agents</a></li><li><a href="/nba/future_free_agents">Future Free Agents</a></li><li><a href="/nba/free_agent_options">Contract Options</a></li><li><a href="/nba/player_tracker/free_agent">Free Agent Tracker</a></li><li><a href="/nba/offseason">Offseason Recap</a></li><li><a href="/nba/roster-turnover">Roster Turnover</a></li></ul>
+<p style="text-decoration: underline; padding: 0.3em 0.8em; margin-bottom: 0;"><a href="/nba/agent-client-list">Agents</a></p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="/nba/agent-client-list">Agent Client Lists</a></li><li><a href="/nba/agent-relationships">Agent Relationships</a></li></ul>
+</div>
+<div style="float: left; width: 15em;">
+<p style="text-decoration: underline; padding: 0.3em 0.8em; margin-bottom: 0;"><a href="/nba/draft/future_drafts/team">Future Draft Picks</a></p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="/nba/draft/future_drafts/team">Team Summary</a></li><li><a href="/nba/draft/future_drafts/yearly">Yearly Summary</a></li><li><a href="/nba/draft/future_drafts/detailed">Pick Details</a></li></ul>
+<p style="text-decoration: underline; padding: 0.3em 0.8em; margin-bottom: 0;">NBA Draft Tools</p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="/nba/draft/draft_simulator">Mock Draft Simulator</a></li><li><a href="/nba/draft/lottery_simulator">Lottery Simulator</a></li><li><a href="/nba/draft/prospects/stats">Prospect Stats</a></li></ul>
+<p style="text-decoration: underline; padding: 0.3em 0.8em; margin-bottom: 0;"><a href="/nba/draft">NBA Draft History</a></p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="/nba/draft/past-drafts">Past Drafts</a></li><li><a href="/nba/teams/Atlanta-Hawks/1/Draft_History/Historical">Team Draft History</a></li><li><a href="/nba/draft/draft-rights">Draft Rights</a></li><li><a href="/nba/draft/lottery_winners">Lottery Winners</a></li><li><a href="/nba/draft/lottery_results">Lottery History</a></li><li><a href="/nba/draft/lottery_results/by_team">Team Lottery History</a></li><li><a href="/nba/draft/search">NBA Draft Search</a></li><li><a href="/nba/draft/early_entry/by_year">Early Entrants</a></li><li><a href="/nba/draft/special_events">Special Events</a></li></ul>
+</div>
+<div style="float: left; width: 15em;">
+<p style="text-decoration: underline; padding: 0.3em 0.8em; margin-bottom: 0;"><a href="/nba/scores">Games</a></p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="/nba/scores">Scores</a></li><li><a href="/nba/schedules">Schedules</a></li><li><a href="/nba/standings">Standings</a></li><li><a href="/nba/venues">Venues</a></li></ul>
+<p style="text-decoration: underline; padding: 0.3em 0.8em; margin-bottom: 0;">Events</p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="/nba/preseason">Preseason</a></li><li><a href="/nba/summer">Summer League</a></li><li><a href="/nba/regular_season/history">Regular Season</a></li><li><a href="/nba/nba-cup">NBA Cup</a></li><li><a href="/nba/allstar">All-Star Weekend</a></li><li><a href="/nba/playoffs">Playoffs</a></li><li><a href="/nba/draft">NBA Draft</a></li></ul>
+<p style="text-decoration: underline; padding: 0.3em 0.8em; margin-bottom: 0;"><a href="/nba/info/salary_cap">Salary Cap</a></p>
+<ul class="primary-nav-col" style="font-weight: normal;">
+<li><a href="/nba/info/salary_cap">Salary Cap History</a></li><li><a href="/nba/info/minimum_scale">Minimum Scale</a></li><li><a href="/nba/info/rookie_scale">Rookie Scale</a></li><li><a href="http://www.cbafaq.com/salarycap.htm" target="_blank">NBA Salary Cap FAQ</a></li></ul>
+</div>
+<div style="clear: both;"></div>
+</div>
+</li><li class="has-subnav">
+<a href="/nba/stats" >Stats</a>
+<div class="primary-nav-ddl">
+<ul class="primary-nav-col" style="width: 15em; float: left;">
+<li><a href="/nba/stats">Player Stats</a></li><li><a href="/nba/team-stats">Team Stats</a></li><li><a href="/nba/individual-games">Individual Games</a></li><li><a href="/nba/individual-seasons">Individual Seasons</a></li><li><a href="/nba/daily-leaders">Daily Leaders</a></li></ul>
+<ul class="primary-nav-col" style="width: 15em; float: left;">
+<li><a href="/nba/stats/2024/Averages/Qualified/points/All/desc/1/Playoffs">Playoff Stats</a></li><li><a href="/nba/stats/2024/Averages/Qualified/points/All/desc/1/Preseason">Preseason Stats</a></li><li><a href="/nba/stats/2024/Averages/Qualified/points/All/desc/1/Summer_League">Summer League Stats</a></li></ul>
+<ul class="primary-nav-col" style="width: 15em; float: left;">
+<li><a href="/nba/stats/2024/Advanced_Stats/Qualified/points/All/desc/1/Regular_Season">Advanced Stats</a></li><li><a href="/nba/stats/2024/Misc_Stats/Qualified/per/All/desc/1/Regular_Season">Misc. Stats</a></li></ul>
+<ul class="primary-nav-col" style="width: 15em; float: left;">
+<li><a href="/nba/team-stats/2024/Advanced_Stats/Team_Totals/Regular_Season/ediff/desc">Team Net Rating</a></li><li><a href="/nba/team-stats/2024/Advanced_Stats/Team_Totals/Regular_Season/ortg/desc">Offensive Efficiency</a></li><li><a href="/nba/team-stats/2024/Advanced_Stats/Team_Totals/Regular_Season/drtg/desc">Defensive Efficiency</a></li></ul>
+<div style="clear: both;"></div>
+</div>
+</li><li><a href="/nba/scores" >Scores</a></li><li>
+<a href="/tradechecker" >Trade Checker</a>
+<div class="primary-nav-ddl">
+<div id="tcwrapper">
+<h2 style="font-weight: bold;">RealGM Trade Checker&#8482;</h2>
+<ul id="checkerNav" class="threeStep" style="margin: 1em 0;">
+<li class="current"><em>Step 1: Select the Teams</em><span>Choose at least two teams from the menus below to start your trade.</span></li><li><em>Step 2: Choose the Players</em><span>Select the players you wish to trade from the rosters below.</span></li><li class="mainNavNoBg"><em>Step 3: Verify the Trade</em><span>Confirm that your trade proposal is valid according to the NBA collective bargaining agreement.</span></li></ul><form method="post" action="/tradechecker/select_player">
+<div class="selectwrap">
+<div class="bluehead" style="font-weight: bold;">Team One *</div>
+<div class="bluebody" style="font-weight: normal;">Select the first team from the drop down menu.<br><br>
+<select name="team1">
+<option></option>
+<option value="1" selected>Atlanta</option>
+<option value="2">Boston</option>
+<option value="38">Brooklyn</option>
+<option value="3">Charlotte</option>
+<option value="4">Chicago</option>
+<option value="5">Cleveland</option>
+<option value="6">Dallas</option>
+<option value="7">Denver</option>
+<option value="8">Detroit</option>
+<option value="9">Golden State</option>
+<option value="10">Houston</option>
+<option value="11">Indiana</option>
+<option value="12">L.A. Clippers</option>
+<option value="13">L.A. Lakers</option>
+<option value="14">Memphis</option>
+<option value="15">Miami</option>
+<option value="16">Milwaukee</option>
+<option value="17">Minnesota</option>
+<option value="19">New Orleans</option>
+<option value="20">New York</option>
+<option value="33">Oklahoma City</option>
+<option value="21">Orlando</option>
+<option value="22">Philadelphia</option>
+<option value="23">Phoenix</option>
+<option value="24">Portland</option>
+<option value="25">Sacramento</option>
+<option value="26">San Antonio</option>
+<option value="28">Toronto</option>
+<option value="29">Utah</option>
+<option value="30">Washington</option>
+</select>
+</div>
+</div>
+<div class="selectwrap">
+<div class="bluehead">Team Two *</div>
+<div class="bluebody">Select the second team from the drop down menu.<br><br>
+<select name="team2">
+<option></option>
+<option value="1">Atlanta</option>
+<option value="2" selected>Boston</option>
+<option value="38">Brooklyn</option>
+<option value="3">Charlotte</option>
+<option value="4">Chicago</option>
+<option value="5">Cleveland</option>
+<option value="6">Dallas</option>
+<option value="7">Denver</option>
+<option value="8">Detroit</option>
+<option value="9">Golden State</option>
+<option value="10">Houston</option>
+<option value="11">Indiana</option>
+<option value="12">L.A. Clippers</option>
+<option value="13">L.A. Lakers</option>
+<option value="14">Memphis</option>
+<option value="15">Miami</option>
+<option value="16">Milwaukee</option>
+<option value="17">Minnesota</option>
+<option value="19">New Orleans</option>
+<option value="20">New York</option>
+<option value="33">Oklahoma City</option>
+<option value="21">Orlando</option>
+<option value="22">Philadelphia</option>
+<option value="23">Phoenix</option>
+<option value="24">Portland</option>
+<option value="25">Sacramento</option>
+<option value="26">San Antonio</option>
+<option value="28">Toronto</option>
+<option value="29">Utah</option>
+<option value="30">Washington</option>
+</select>
+</div>
+</div>
+<div class="selectwrap">
+<div class="bluehead">Team Three</div>
+<div class="bluebody">Select the third team from the drop down menu.<br><br>
+<select name="team3">
+<option></option>
+<option value="1">Atlanta</option>
+<option value="2">Boston</option>
+<option value="38">Brooklyn</option>
+<option value="3">Charlotte</option>
+<option value="4">Chicago</option>
+<option value="5">Cleveland</option>
+<option value="6">Dallas</option>
+<option value="7">Denver</option>
+<option value="8">Detroit</option>
+<option value="9">Golden State</option>
+<option value="10">Houston</option>
+<option value="11">Indiana</option>
+<option value="12">L.A. Clippers</option>
+<option value="13">L.A. Lakers</option>
+<option value="14">Memphis</option>
+<option value="15">Miami</option>
+<option value="16">Milwaukee</option>
+<option value="17">Minnesota</option>
+<option value="19">New Orleans</option>
+<option value="20">New York</option>
+<option value="33">Oklahoma City</option>
+<option value="21">Orlando</option>
+<option value="22">Philadelphia</option>
+<option value="23">Phoenix</option>
+<option value="24">Portland</option>
+<option value="25">Sacramento</option>
+<option value="26">San Antonio</option>
+<option value="28">Toronto</option>
+<option value="29">Utah</option>
+<option value="30">Washington</option>
+</select>
+</div>
+</div>
+<div class="selectwrap">
+<div class="bluehead">Team Four</div>
+<div class="bluebody">Select the fourth team from the drop down menu.<br><br>
+<select name="team4">
+<option></option>
+<option value="1">Atlanta</option>
+<option value="2">Boston</option>
+<option value="38">Brooklyn</option>
+<option value="3">Charlotte</option>
+<option value="4">Chicago</option>
+<option value="5">Cleveland</option>
+<option value="6">Dallas</option>
+<option value="7">Denver</option>
+<option value="8">Detroit</option>
+<option value="9">Golden State</option>
+<option value="10">Houston</option>
+<option value="11">Indiana</option>
+<option value="12">L.A. Clippers</option>
+<option value="13">L.A. Lakers</option>
+<option value="14">Memphis</option>
+<option value="15">Miami</option>
+<option value="16">Milwaukee</option>
+<option value="17">Minnesota</option>
+<option value="19">New Orleans</option>
+<option value="20">New York</option>
+<option value="33">Oklahoma City</option>
+<option value="21">Orlando</option>
+<option value="22">Philadelphia</option>
+<option value="23">Phoenix</option>
+<option value="24">Portland</option>
+<option value="25">Sacramento</option>
+<option value="26">San Antonio</option>
+<option value="28">Toronto</option>
+<option value="29">Utah</option>
+<option value="30">Washington</option>
+</select>
+</div>
+</div>
+<div class="buttons"><input type="submit" value="Continue" class="pushbutton"></div>
+</form>
+<div class="clearfloat">&nbsp;</div>
+</div>
+</div>
+</li><li><a href="https://link.ag.fan/realgm" target="_blank">Get Rewards</a></li>
+<li><a href="https://www.vividseats.com/nba-basketball/?wsUser=958" target="_blank">Tickets</a></li>
+<li class="has-subnav">
+<a href="/nba/odds">Odds</a>
+<div class="primary-nav-ddl">
+<ul class="primary-nav-col" style="width: 15em; float: left;">
+<li><a href="/nba/odds">Betting Preview</a></li><li><a href="/nba/how-to-watch">How To Watch</a></li><li><a href="/nba/injuries">Injury Report</a></li><li><a href="/nba/stat-leaders">Stat Leaders</a></li><li><a href="/nba/day-preview-best-bets">Best Bets</a></li><li><a href="/nba/player-props">Player Props</a></li><li><a href="/nba/award-futures">Awards</a></li><li><a href="/nba/team-futures">Team Futures</a></li><li><a href="/nba/power-rankings">Power Rankings</a></li><li><a href="/nba/merch">Player Merch</a></li><li><a href="/nba/tickets">Tickets</a></li><li><a href="/wnba">WNBA</a></li></ul>
+<div class="portal" style="float: left; border-left: 1px solid black; padding-left: 1em; max-width: 50em;">
+<div class="secondary-story-container" style="border-top: 0;"><div class="secondary-story">
+<a class="article-image" href="https://basketball.realgm.com/nba/odds/41343/celtics-vs-mavericks-nba-finals-betting-trends-stats-6-9-2024" style="background-image: url('https://cdn.dataskrive.com/api/asset/wBOMg2B.jpg');"></a>
+<div class="article-title"><a style="padding-left: 0;" href="https://basketball.realgm.com/nba/odds/41343/celtics-vs-mavericks-nba-finals-betting-trends-stats-6-9-2024">Celtics vs. Mavericks: Betting Trends, Odds, Records Against the Spread, Home/Road Splits</a></div>
+<div class='article-content' style='font-weight: normal;'>Preview the Boston Celtics vs. Dallas Mavericks game with promo codes, odds, betting stats, trends, splits, against the spread records and more.</div>
+</div>
+<div class="secondary-story">
+<a class="article-image" href="https://basketball.realgm.com/nba/odds/41180/celtics-vs-mavericks-nba-match-player-stats-6-9-2024" style="background-image: url('https://cdn.dataskrive.com/api/asset/oOrhBFP.jpg');"></a>
+<div class="article-title"><a style="padding-left: 0;" href="https://basketball.realgm.com/nba/odds/41180/celtics-vs-mavericks-nba-match-player-stats-6-9-2024">Celtics vs. Mavericks NBA Finals | Game 2 Preview, Stats, How to Watch - Sunday, June 9</a></div>
+<div class='article-content' style='font-weight: normal;'>Everything you need to know about the Boston Celtics vs. Dallas Mavericks NBA Finals | Game 2 on June 9, including how to watch info, stats, and more.</div>
+</div>
+<div class="secondary-story">
+<a class="article-image" href="https://basketball.realgm.com/nba/odds/41179/boston-celtics-dallas-mavericks-nba-odds-spread-over-under--nba-finals-game-2" style="background-image: url('https://cdn.dataskrive.com/api/asset/XPslaEq.jpg');"></a>
+<div class="article-title"><a style="padding-left: 0;" href="https://basketball.realgm.com/nba/odds/41179/boston-celtics-dallas-mavericks-nba-odds-spread-over-under--nba-finals-game-2">Celtics vs. Mavericks: Odds, spread, over/under and other Vegas lines - NBA Finals Game 2</a></div>
+<div class='article-content' style='font-weight: normal;'>See the odds, spread, over/under and other Vegas lines for the Boston Celtics vs. Dallas Mavericks NBA Finals Game 2.</div>
+</div>
+<div class="secondary-story">
+<a class="article-image" href="https://basketball.realgm.com/nba/odds/41042/nba-games-tv-live-streaming-6-6-2024" style="background-image: url('https://cdn.dataskrive.com/api/asset/yLQBMqO.jpg');"></a>
+<div class="article-title"><a style="padding-left: 0;" href="https://basketball.realgm.com/nba/odds/41042/nba-games-tv-live-streaming-6-6-2024">How to Watch NBA Playoffs Today Live on TV and Streaming - Thursday, June 6</a></div>
+<div class='article-content' style='font-weight: normal;'>Find out how to watch the NBA Playoffs game live today, with TV channel information and live streaming links for Thursday, June 6.</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</li></ul>
+</nav>
+<div class="second-level-nav-container">
+<nav id="second-level-nav" role="navigation" class="container">
+<ul class="level-1">
+<li class="search-nav">
+<form action="/search" method="get" class="searchbox" autocomplete="off">
+<input type="text" class="searchbox-text ui-autocomplete-input" placeholder="Search..." name="q" required="required" autocomplete="off"><input type="submit" class="searchbox-submit" value="Go">
+</form>
+</li>
+<li class="mobile-menu"><a href="javascript: void(0);" onclick="showPrimaryNav();"><span>&laquo; NBA Menu</span></a></li><li><a href="/nba/draft" ><span>NBA Draft</span></a></li><li><a href="https://forums.realgm.com/boards/viewforum.php?f=3"><span>Forums</span></a></li><li><a href="/nba/draft/news" ><span>News</span></a></li><li><a href="/nba/draft/prospects/stats" ><span>Prospects</span></a></li><li class="has-subnav">
+<a href="/nba/draft/past-drafts" ><span class="down">Draft History</span></a>
+<ul class="level-2">
+<li><a href="/nba/draft/past-drafts">Past Drafts</a></li><li><a href="/nba/draft/draft-rights">Draft Rights</a></li><li><a href="/nba/draft/search">NBA Draft Search</a></li><li><a href="/nba/draft/aba-dispersal">ABA Dispersal</a></li><li><a href="/nba/draft/dispersal-draft">Dispersal Drafts</a></li><li><a href="/nba/draft/expansion-draft">Expansion Drafts</a></li><li><a href="/nba/draft/hardship-draft">Hardship Draft</a></li><li><a href="/nba/draft/supplemental-draft">Supplemental Draft</a></li></ul>
+</li><li class="has-subnav">
+<a href="/nba/draft/future_drafts/team" class="selected"><span class="down">Future Drafts</span></a>
+<ul class="level-2">
+<li><a href="/nba/draft/future_drafts/team">Team Summary</a></li><li><a href="/nba/draft/future_drafts/yearly">Yearly Summary</a></li><li><a href="/nba/draft/future_drafts/detailed">Pick Details</a></li></ul>
+</li><li class="has-subnav">
+<a href="/nba/draft/early_entry/by_year" ><span class="down">Early Entry</span></a>
+<ul class="level-2">
+<li><a href="/nba/draft/early_entry/by_year">By Year</a></li><li><a href="/nba/draft/early_entry/by_type">By Type</a></li></ul>
+</li><li class="has-subnav">
+<a href="/nba/draft/lottery_results" ><span class="down">Lottery</span></a>
+<ul class="level-2">
+<li><a href="/nba/draft/lottery_results">Yearly History</a></li><li><a href="/nba/draft/lottery_results/by_team">Team History</a></li><li><a href="/nba/draft/lottery_winners">Lottery Winners</a></li><li><a href="/nba/draft/lottery_simulator">Lotto Simulator</a></li></ul>
+</li><li><a href="/nba/draft/draft_simulator" ><span>Draft Simulator</span></a></li><li><a href="/nba/draft/special_events" ><span>Special Events</span></a></li></ul>
+</nav>
+</div>
+</div>
+</div>
+            
+         </div>
+         
+         <div id="header_helper" class="large_header_helper"></div>
+
+         <div class="main-container">
+            
+            <div class="main wrapper clearfix container" style="position: relative;">
+            
+               <h2 class="page_title">Future NBA Draft Picks By Team
+</h2>
+<table class="basketball zebra">
+<thead>
+<tr>
+<th class="nosort">Team</th>
+<th class="nosort">First Round</th>
+<th class="nosort">Second Round</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Atlanta Hawks"><p><a href="/nba/teams/Atlanta-Hawks/1/Home" style="text-decoration: none;">Atlanta Hawks</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Atlanta Hawks"><p><strong>2024</strong> - Own #1</p><p><strong>2025</strong> - To SAN; SAC 13-30</p><p><strong>2026</strong> - Own or SAN (via SAN swap for ATL); SAC 11-30 if not already settled</p><p><strong>2027</strong> - To SAN</p><p><strong>2028</strong> - Own</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Atlanta Hawks"><p><strong>2024</strong> - To POR</p><p><strong>2025</strong> - 31-40 to POR; 41-59 to OKC; MIN (via HOU)</p><p><strong>2026</strong> - To GOS; MEM 31-42 (via UTH); SAC if SAC has not conveyed 1st round pick to ATL by 2026</p><p><strong>2027</strong> - To MEM (via BOS); LAC; SAC if SAC has not conveyed 1st round pick to ATL by 2026</p><p><strong>2028</strong> - To GOS; HOU</p><p><strong>2029</strong> - To OKC</p><p><strong>2030</strong> - Own</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Boston Celtics"><p><a href="/nba/teams/Boston-Celtics/2/Home" style="text-decoration: none;">Boston Celtics</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Boston Celtics"><p><strong>2024</strong> - Own #30</p><p><strong>2025</strong> - Own</p><p><strong>2026</strong> - Own</p><p><strong>2027</strong> - Own</p><p><strong>2028</strong> - 1 Own; 2-30 Own or SAN (via SAN swap for BOS)</p><p><strong>2029</strong> - To POR</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Boston Celtics"><p><strong>2024</strong> - To DAL (via CHA); DAL #54 (via SAC)</p><p><strong>2025</strong> - More favorable of BOS and MEM to OKC then other to ORL (via MEM to BOS to ORL); GOS, WAS, DAL or DET protected (via DET to LAC to POR to DET; via DET swap of GOS for WAS (via BRK); via BOS swap of DET, GOS or WAS for DAL)</p><p><strong>2026</strong> - Less favorable of (i) BOS and (ii) more favorable of IND and MIA then other to MEM or to HOU [MEM can swap this pick for LAC; LAC then conveyed to HOU] (via MIA to IND; via MIL to MEM; via MEM swap of IND or MIA for BOS); Most favorable of MIN, NYK, NOP and POR (via MIN to NYK; via NOP to POR to NOP; via POR to DET; via DET to BOS)</p><p><strong>2027</strong> - To ORL; Less favorable of POR 56-60 and NOP 56-60 (via POR)</p><p><strong>2028</strong> - 31-45 to SAN if BOS 1 in 2028; 46-60 to PHX (via ORL)</p><p><strong>2029</strong> - To OKC</p><p><strong>2030</strong> - Own</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Brooklyn Nets"><p><a href="/nba/teams/Brooklyn-Nets/38/Home" style="text-decoration: none;">Brooklyn Nets</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Brooklyn Nets"><p><strong>2024</strong> - To HOU</p><p><strong>2025</strong> - Own or HOU (via HOU swap for BRK) if HOU 1-10 or if HOU 11-30 less favorable than LAC; or least favorable of BRK, HOU 11-30 and OKC; and more favorable of (i) BRK and (ii) less favorable of HOU 11-30 and OKC to HOU if HOU 11-30 more favorable than LAC (via OKC swap for HOU 11-30 or LAC; via HOU swap of HOU or OKC for BRK); PHX</p><p><strong>2026</strong> - To HOU</p><p><strong>2027</strong> - Own or HOU (via HOU swap for BRK); PHX; PHL 9-30 if PHL conveys 1st round pick to OKC in 2025</p><p><strong>2028</strong> - Two most / more favorable of BRK, PHL 9-30 if not already settled and if PHL has conveyed 1st round pick to OKC by 2026, and PHX; more favorable of (i) WAS and (ii) least / less favorable of BRK, PHL 9-30 if conveyed to BRK, and PHX to WAS then other to PHX (via BRK swap of BRK or PHL for PHX; via WAS swap for PHX, BRK or PHL)</p><p><strong>2029</strong> - Own; DAL; PHX</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Brooklyn Nets"><p><strong>2024</strong> - To MEM (via HOU)</p><p><strong>2025</strong> - To NYK (via ATL); MIA 38-59 (via IND)</p><p><strong>2026</strong> - Own; Least favorable of DET, MIL and ORL (via DET to LAC to ORL; via ORL to PHX to BRK)</p><p><strong>2027</strong> - More favorable of BRK and DAL to WAS then other to DET (via DAL to BRK to DET; via DET to WAS)</p><p><strong>2028</strong> - Own; MEM (via PHX); PHL if PHL has not conveyed 1st round pick to BRK by 2028</p><p><strong>2029</strong> - Own; DAL; MEM (via PHX)</p><p><strong>2030</strong> - Own</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Charlotte Hornets"><p><a href="/nba/teams/Charlotte-Hornets/3/Home" style="text-decoration: none;">Charlotte Hornets</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Charlotte Hornets"><p><strong>2024</strong> - Own #6</p><p><strong>2025</strong> - 1-14 Own; 15-30 to SAN (via NYK to ATL)</p><p><strong>2026</strong> - Own</p><p><strong>2027</strong> - Own; DAL 3-30; MIA 15-30 if MIA conveys 1st round pick to OKC in 2025</p><p><strong>2028</strong> - Own; MIA if not already settled</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Charlotte Hornets"><p><strong>2024</strong> - To POR (via NOP to OKC to DEN); HOU #42 (via OKC)</p><p><strong>2025</strong> - 31-55 Own; 56-59 to IND (via GOS); PHL (via OKC)</p><p><strong>2026</strong> - To SAN if CHA does not convey 1st round pick to SAN in 2025 (via NYK to ATL)</p><p><strong>2027</strong> - To SAN if CHA does not convey 1st round pick to SAN in 2025 (via NYK to ATL); More favorable of POR and NOP (via POR)</p><p><strong>2028</strong> - More favorable of CHA and LAC then other to DAL (via CHA); MIA if DAL does not convey 1st round pick to CHA in 2027</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Chicago Bulls"><p><a href="/nba/teams/Chicago-Bulls/4/Home" style="text-decoration: none;">Chicago Bulls</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Chicago Bulls"><p><strong>2024</strong> - Own #11</p><p><strong>2025</strong> - 1-10 Own; 11-30 to SAN; POR 15-30</p><p><strong>2026</strong> - 1-8 Own; 9-30 to SAN if not already settled; POR 15-30 if not already settled</p><p><strong>2027</strong> - 1-8 Own; 9-30 to SAN if not already settled; POR 15-30 if not already settled</p><p><strong>2028</strong> - Own; POR 15-30 if not already settled</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Chicago Bulls"><p><strong>2024</strong> - To PHL (via NOP to SAN to BOS)</p><p><strong>2025</strong> - To SAN</p><p><strong>2026</strong> - To WAS</p><p><strong>2027</strong> - To WAS</p><p><strong>2028</strong> - To SAN if CHI has not conveyed 1st round pick to SAN by 2027; POR if POR has not conveyed 1st round pick to CHI by 2028</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Cleveland Cavaliers"><p><a href="/nba/teams/Cleveland-Cavaliers/5/Home" style="text-decoration: none;">Cleveland Cavaliers</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Cleveland Cavaliers"><p><strong>2024</strong> - Own #20</p><p><strong>2025</strong> - To UTH</p><p><strong>2026</strong> - Less favorable of (i) CLE and (ii) more favorable of UTH 1-8 and MIN if UTH does not convey 1st round pick to OKC in 2025; or Less favorable of (i) CLE and (ii) more favorable of UTH and MIN if UTH conveys 1st round pick to OKC in 2025 (via UTH swap for MIN; via UTH swap of UTH or MIN for CLE)</p><p><strong>2027</strong> - To UTH</p><p><strong>2028</strong> - Own or UTH (via UTH swap for CLE)</p><p><strong>2029</strong> - To UTH</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Cleveland Cavaliers"><p><strong>2024</strong> - To IND (via IND to MIL to MEM to LAC)</p><p><strong>2025</strong> - Own; MIL</p><p><strong>2026</strong> - Own</p><p><strong>2027</strong> - Own; DEN</p><p><strong>2028</strong> - Own</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - To SAN</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Dallas Mavericks"><p><a href="/nba/teams/Dallas-Mavericks/6/Home" style="text-decoration: none;">Dallas Mavericks</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Dallas Mavericks"><p><strong>2024</strong> - To NYK</p><p><strong>2025</strong> - Own</p><p><strong>2026</strong> - Own</p><p><strong>2027</strong> - 1-2 Own; 3-30 to CHA</p><p><strong>2028</strong> - Own or OKC (via OKC swap for DAL)</p><p><strong>2029</strong> - To BRK</p><p><strong>2030</strong> - Own or SAN (via SAN swap for DAL)</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Dallas Mavericks"><p><strong>2024</strong> - To BOS (via SAC); BOS #58 (via CHA)</p><p><strong>2025</strong> - To BOS conditionally; and DET, GOS, WAS or none incoming if DAL has conveyed 1st round pick to NYK by 2025 (via DET to LAC to POR to DET; via DET swap of GOS for WAS (via BRK); via DET and DAL to BOS); or to NYK if DAL has not conveyed 1st round pick to NYK by 2025; TOR (via SAN)</p><p><strong>2026</strong> - Most favorable of DAL, OKC and PHL to OKC; second most favorable to HOU and least favorable to SAN (via OKC to HOU; via OKC to MIA)</p><p><strong>2027</strong> - More favorable of DAL and BRK to WAS then other to DET (via DET to WAS; via DAL to BRK to DET)</p><p><strong>2028</strong> - To IND if IND has conveyed second potential 1st round pick to TOR by 2027, or to TOR if IND has not conveyed second potential 1st round pick to TOR by 2027 (via SAC to IND); Less favorable of CHA and LAC (via CHA); MIA if DAL conveys 1st round pick to CHA in 2027 (via SAN)</p><p><strong>2029</strong> - To BRK</p><p><strong>2030</strong> - To MEM (via BOS)</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Denver Nuggets"><p><a href="/nba/teams/Denver-Nuggets/7/Home" style="text-decoration: none;">Denver Nuggets</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Denver Nuggets"><p><strong>2024</strong> - Own #28</p><p><strong>2025</strong> - 1-5 Own; 6-30 to ORL</p><p><strong>2026</strong> - 1-5 Own; 6-30 to ORL if not already settled</p><p><strong>2027</strong> - 1-5 Own; 6-30 to ORL if not already settled; or 1-5 Own; 6-30 to OKC or to LAC if DEN conveys 1st round pick to ORL in 2025 [OKC can swap OKC or DEN for LAC]</p><p><strong>2028</strong> - 1-5 Own; 6-30 to OKC if not already settled and if DEN has conveyed 1st round pick to ORL by 2026</p><p><strong>2029</strong> - 1-5 Own; 6-30 to OKC if not already settled; or 1-5 Own; 6-30 to OKC if DEN has conveyed first potential 1st round pick to OKC by 2027</p><p><strong>2030</strong> - 1-5 Own; 6-30 to OKC if DEN has conveyed first potential 1st round pick to OKC by 2028</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Denver Nuggets"><p><strong>2024</strong> - Forfeited by PHX: To PHX (via ORL); MIN #56 (via OKC)</p><p><strong>2025</strong> - Own</p><p><strong>2026</strong> - Own</p><p><strong>2027</strong> - To CLE</p><p><strong>2028</strong> - 31-33 Own; 34-60 to SAN</p><p><strong>2029</strong> - To OKC if DEN has not conveyed first potential 1st round pick to OKC by 2029</p><p><strong>2030</strong> - To OKC  if DEN has not conveyed second potential 1st round pick to OKC by 2030</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Detroit Pistons"><p><a href="/nba/teams/Detroit-Pistons/8/Home" style="text-decoration: none;">Detroit Pistons</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Detroit Pistons"><p><strong>2024</strong> - Own #5</p><p><strong>2025</strong> - 1-13 Own; 14-30 to NYK (via HOU to OKC)</p><p><strong>2026</strong> - 1-11 Own; 12-30 to NYK if not already settled (via HOU to OKC)</p><p><strong>2027</strong> - 1-9 Own; 10-30 to NYK if not already settled (via HOU to OKC)</p><p><strong>2028</strong> - Own</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Detroit Pistons"><p><strong>2024</strong> - To TOR (via LAC to NYK); NYK #53 (via CHA to PHL)</p><p><strong>2025</strong> - 31-55 to BOS, DAL or WAS; 56-59 to NYK (via DET to LAC to POR to DET; via DET swap of GOS for WAS (via BRK); via DET and DAL to BOS; via DET to WAS) (via DET to LAC to POR to DET; via DET swap of GOS for WAS (via BRK); via BOS swap of DET, GOS or WAS for DAL; via DET to WAS)</p><p><strong>2026</strong> - Two most favorable of DET, MIL and ORL to ORL then other to BRK (via DET to LAC to ORL; via ORL to PHX to BRK)</p><p><strong>2027</strong> - To NYK if DET has not conveyed 1st round pick to NYK by 2027 (via HOU to OKC); Less favorable of BRK and DAL (via DAL to BRK to DET)</p><p><strong>2028</strong> - 31-55 Own; 56-60 to PHL; NYK</p><p><strong>2029</strong> - Own; MIL (via BRK); NYK</p><p><strong>2030</strong> - Own; MIN</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Golden State Warriors"><p><a href="/nba/teams/Golden-State-Warriors/9/Home" style="text-decoration: none;">Golden State Warriors</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Golden State Warriors"><p><strong>2024</strong> - To POR (via MEM to BOS)</p><p><strong>2025</strong> - Own</p><p><strong>2026</strong> - Own</p><p><strong>2027</strong> - Own</p><p><strong>2028</strong> - Own</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - 1-20 Own; 21-30 to WAS</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Golden State Warriors"><p><strong>2024</strong> - To HOU (via ATL); MIL #52 (via IND)</p><p><strong>2025</strong> - To BOS, WAS or DAL conditionally (via DET to LAC to POR to DET; via DET swap of GOS for WAS (via BRK); via DET and DAL to BOS; via DET to WAS)</p><p><strong>2026</strong> - To OKC (via ATL); ATL</p><p><strong>2027</strong> - To WAS</p><p><strong>2028</strong> - To POR; ATL</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - To WAS if GOS does not convey 1st round pick to WAS in 2030</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Houston Rockets"><p><a href="/nba/teams/Houston-Rockets/10/Home" style="text-decoration: none;">Houston Rockets</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Houston Rockets"><p><strong>2024</strong> - To OKC; BRK #3</p><p><strong>2025</strong> - 1-10 Own or swap for BRK; 11-30 Own or swap for BRK if HOU 11-30 less favorable than LAC; or more favorable of (i) BRK and (ii) less favorable of HOU 11-30 and OKC then other to BRK; and more favorable of HOU 11-30 and OKC to OKC if HOU 11-30 more favorable than LAC (via OKC swap for HOU 11-30 or LAC; via HOU swap of HOU or OKC for BRK)</p><p><strong>2026</strong> - 1-4 Own; two most / more favorable of HOU 5-30, LAC and OKC to OKC then other to PHL (via OKC); BRK</p><p><strong>2027</strong> - Own or swap for BRK</p><p><strong>2028</strong> - Own</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Houston Rockets"><p><strong>2024</strong> - To CHA (via OKC); GOS #44 (via ATL)</p><p><strong>2025</strong> - Less favorable of HOU and OKC then other to MEM (via ATL to HOU)</p><p><strong>2026</strong> - To OKC if HOU 1-4 in 2026; Second most favorable of OKC, DAL and PHL (via OKC); Less favorable of (i) LAC and (ii) most favorable of BOS, IND and MIA (via MIA to IND; via MIL to MEM; via MEM swap of IND or MIA for BOS; via MEM swap of BOS, IND or MIA for LAC)</p><p><strong>2027</strong> - Three most favorable of HOU, OKC, IND and MIA to OKC; more favorable of (i) SAN and (ii) least favorable of HOU, OKC, IND and MIA to SAN then other to MIA (via HOU to DET to OKC; via MIA to OKC to UTH to SAN to MIA); MEM (via LAC)</p><p><strong>2028</strong> - To ATL</p><p><strong>2029</strong> - To OKC</p><p><strong>2030</strong> - To OKC</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Indiana Pacers"><p><a href="/nba/teams/Indiana-Pacers/11/Home" style="text-decoration: none;">Indiana Pacers</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Indiana Pacers"><p><strong>2024</strong> - To TOR</p><p><strong>2025</strong> - Own</p><p><strong>2026</strong> - 1-4 Own; 5-30 to TOR</p><p><strong>2027</strong> - 1-4 Own; 5-30 to TOR if not already settled</p><p><strong>2028</strong> - Own</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Indiana Pacers"><p><strong>2024</strong> - To LAC (via MIL to MEM); TOR #36 (via MEM to LAC to PHL); CLE #49 (via IND to MIL to MEM to LAC); NOP #50</p><p><strong>2025</strong> - Own; CHA 56-59 (via GOS); MIA 31-37</p><p><strong>2026</strong> - Least favorable of IND, MIA and SAN to MIN; more favorable of (i) SAN and (ii) less favorable of IND and MIA to SAN; less favorable of (i) BOS and (ii) more favorable of IND and MIA to BOS then other to MEM or to HOU [MEM can swap this pick for LAC; LAC then conveyed to HOU] (via MIA to IND; via SAN swap for IND or MIA; via MIL to MEM; via MEM swap of IND or MIA for BOS)</p><p><strong>2027</strong> - Three most favorable of IND, OKC, HOU and MIA to OKC; more favorable of (i) SAN and (ii) least favorable of IND, OKC, HOU and MIA to SAN then other to MIA (via HOU to DET to OKC; via MIA to OKC to UTH to SAN to MIA); UTH if IND has conveyed second potential 1st round pick to TOR by 2027 (via CLE)</p><p><strong>2028</strong> - More favorable of IND and PHX then other to NYK (via IND); DAL if IND has conveyed second potential 1st round pick to TOR by 2027 (via SAC)</p><p><strong>2029</strong> - More favorable of IND and WAS then other to NYK (via IND); POR (via PHL)</p><p><strong>2030</strong> - Own; SAC</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Los Angeles Clippers"><p><a href="/nba/teams/Los-Angeles-Clippers/12/Home" style="text-decoration: none;">Los Angeles Clippers</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Los Angeles Clippers"><p><strong>2024</strong> - To WAS (via OKC to DAL)</p><p><strong>2025</strong> - Own or OKC (via OKC swap for HOU 11-30 or LAC)</p><p><strong>2026</strong> - Two most / more favorable of LAC, HOU 5-30 and OKC to OKC then other to PHL (via OKC)</p><p><strong>2027</strong> - Least / less favorable of LAC, DEN 6-30 if DEN conveys 1st round pick to ORL in 2025, and OKC (via OKC swap of OKC or DEN for LAC)</p><p><strong>2028</strong> - To PHL</p><p><strong>2029</strong> - 1-3 Own; 4-30 Own or PHL (via PHL swap for LAC)</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Los Angeles Clippers"><p><strong>2024</strong> - To LAL; IND #46 (via MIL to MEM)</p><p><strong>2025</strong> - To LAL</p><p><strong>2026</strong> - Less favorable of (i) LAC and (ii) most favorable of BOS, IND and MIA to HOU then other to MEM (via MIA to IND; via MIL to MEM; via MEM swap of IND or MIA for BOS; via MEM swap of BOS, IND or MIA for LAC)</p><p><strong>2027</strong> - To ATL</p><p><strong>2028</strong> - More favorable of LAC and CHA to CHA then other to DAL (via CHA)</p><p><strong>2029</strong> - To SAN (via PHL)</p><p><strong>2030</strong> - Own</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Los Angeles Lakers"><p><a href="/nba/teams/Los-Angeles-Lakers/13/Home" style="text-decoration: none;">Los Angeles Lakers</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Los Angeles Lakers"><p><strong>2024</strong> - Own #17</p><p><strong>2025</strong> - To NOP</p><p><strong>2026</strong> - Own</p><p><strong>2027</strong> - 1-4 Own; 5-30 to UTH</p><p><strong>2028</strong> - Own</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Los Angeles Lakers"><p><strong>2024</strong> - To SAN (via MEM); LAC #55</p><p><strong>2025</strong> - Own; LAC</p><p><strong>2026</strong> - To MIA (via CLE)</p><p><strong>2027</strong> - To UTH if LAL does not convey 1st round pick to UTH in 2027</p><p><strong>2028</strong> - More favorable of LAL and WAS to ORL then other to WAS (via WAS to LAL to ORL; via LAL to WAS)</p><p><strong>2029</strong> - To WAS</p><p><strong>2030</strong> - Own</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Memphis Grizzlies"><p><a href="/nba/teams/Memphis-Grizzlies/14/Home" style="text-decoration: none;">Memphis Grizzlies</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Memphis Grizzlies"><p><strong>2024</strong> - Own #9</p><p><strong>2025</strong> - Own</p><p><strong>2026</strong> - More favorable of (i) MEM and (ii) least / less favorable of ORL, PHX and WAS 1-8; and least favorable of MEM, ORL, WAS 1-8 and PHX to PHX if WAS does not convey 1st round pick to NYK in 2025; or More favorable of (i) MEM and (ii) least favorable of ORL, PHX and WAS; and least favorable of MEM, ORL, WAS  and PHX to PHX if WAS conveys 1st round pick to NYK in 2025 (via WAS swap for PHX; via ORL swap for PHX or WAS; via MEM swap for PHX, WAS or ORL)</p><p><strong>2027</strong> - Own</p><p><strong>2028</strong> - Own</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - More favorable of (i) MEM and (ii) less favorable of PHX and WAS then other to PHX (via WAS swap for PHX; via MEM swap for PHX or WAS)</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Memphis Grizzlies"><p><strong>2024</strong> - To MIN (via LAL); BRK #39 (via HOU); OKC #57 (via ATL to HOU)</p><p><strong>2025</strong> - More favorable of MEM and BOS to OKC then other to ORL (via MEM to BOS to ORL); More favorable of HOU and OKC (via ATL to HOU)</p><p><strong>2026</strong> - 31-42 to ATL (via UTH); 43-60 to POR (via UTH to GOS); Most favorable of BOS, IND, LAC and MIA (via MIA to IND; via MIL to MEM; via MEM swap of IND or MIA for BOS; via MEM swap of BOS, IND or MIA for LAC)</p><p><strong>2027</strong> - To HOU (via LAC); ATL (via BOS)</p><p><strong>2028</strong> - To BRK (via PHX)</p><p><strong>2029</strong> - To BRK (via PHX)</p><p><strong>2030</strong> - Own; DAL (via BOS)</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Miami Heat"><p><a href="/nba/teams/Miami-Heat/15/Home" style="text-decoration: none;">Miami Heat</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Miami Heat"><p><strong>2024</strong> - Own #15</p><p><strong>2025</strong> - 1-14 Own; 15-30 to OKC (via LAC)</p><p><strong>2026</strong> - To OKC if not already settled (via LAC)</p><p><strong>2027</strong> - 1-14 Own; 15-30 to CHA if MIA conveys 1st round pick to OKC in 2025</p><p><strong>2028</strong> - To CHA if not already settled</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Miami Heat"><p><strong>2024</strong> - Own #43</p><p><strong>2025</strong> - 31-37 to IND; 38-59 to BRK (via IND)</p><p><strong>2026</strong> - More favorable of (i) SAN and (ii) less favorable of MIA and IND to SAN then other to MIN; less favorable of (i) BOS and (ii) more favorable of MIA and IND to BOS then other to MEM or to HOU [MEM can swap this pick for LAC; LAC then conveyed to HOU] (via MIA to IND; via SAN swap for IND or MIA; via MIL to MEM; via MEM swap of IND or MIA for BOS); LAL (via CLE)</p><p><strong>2027</strong> - Less favorable of (i) SAN and (ii) least favorable of MIA, OKC, HOU and IND then other to SAN; three most favorable of MIA, OKC, HOU and IND to OKC (via MIA to OKC to UTH to SAN to MIA; via HOU to DET to OKC)</p><p><strong>2028</strong> - To DAL if DAL conveys 1st round pick to CHA in 2027, or to CHA if DAL does not convey 1st round pick to CHA in 2027 (via SAN to DAL)</p><p><strong>2029</strong> - To OKC</p><p><strong>2030</strong> - To OKC</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Milwaukee Bucks"><p><a href="/nba/teams/Milwaukee-Bucks/16/Home" style="text-decoration: none;">Milwaukee Bucks</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Milwaukee Bucks"><p><strong>2024</strong> - To NOP; NOP #23 (via NOP swap for MIL)</p><p><strong>2025</strong> - 1-4 to NOP; 5-30 to NYK (via NOP to POR to DET)</p><p><strong>2026</strong> - Own or NOP (via NOP swap for MIL)</p><p><strong>2027</strong> - To NOP</p><p><strong>2028</strong> - Own or POR 1-14 if POR has not conveyed 1st round pick to CHI by 2027; or Own or POR if POR has conveyed 1st round pick to CHI by 2027 (via POR swap for MIL)</p><p><strong>2029</strong> - To POR</p><p><strong>2030</strong> - Own or POR (via POR swap for MIL)</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Milwaukee Bucks"><p><strong>2024</strong> - To GOS (via IND); POR #33 (via SAC)</p><p><strong>2025</strong> - To CLE</p><p><strong>2026</strong> - Two most favorable of MIL, DET and ORL to ORL then other to BRK (via DET to LAC to ORL; via ORL to PHX to BRK)</p><p><strong>2027</strong> - To PHL</p><p><strong>2028</strong> - To OKC (via BRK to HOU)</p><p><strong>2029</strong> - To DET (via BRK)</p><p><strong>2030</strong> - To ORL</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Minnesota Timberwolves"><p><a href="/nba/teams/Minnesota-Timberwolves/17/Home" style="text-decoration: none;">Minnesota Timberwolves</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Minnesota Timberwolves"><p><strong>2024</strong> - Own #27</p><p><strong>2025</strong> - To UTH</p><p><strong>2026</strong> - Less favorable of MIN and UTH 1-8; most favorable of MIN, UTH 1-8 and CLE to UTH; less favorable of (i) CLE and (ii) more favorable of MIN and UTH 1-8 to CLE if UTH does not convey 1st round pick to OKC in 2025;  or Less favorable of MIN and UTH; most favorable of MIN, UTH and CLE to UTH; less favorable of (i) CLE and (ii) more favorable of MIN and UTH to CLE if UTH conveys 1st round pick to OKC in 2025 (via UTH swap for MIN; via UTH swap of UTH or MIN for CLE)</p><p><strong>2027</strong> - To UTH</p><p><strong>2028</strong> - Own</p><p><strong>2029</strong> - 1-5 Own; 6-30 to UTH</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Minnesota Timberwolves"><p><strong>2024</strong> - To DEN (via OKC); MEM #37 (via LAL)</p><p><strong>2025</strong> - To ATL (via HOU); UTH</p><p><strong>2026</strong> - Less favorable of MIN and NYK to NYK; most favorable of MIN, NYK, NOP and POR to BOS; less favorable of (i) more favorable of MIN and NYK and (ii) more favorable of NOP and POR to WAS (via MIN to NYK; via NOP to POR to NOP; via POR to DET; via DET to BOS; via DET to WAS); Least favorable of IND, MIA and SAN (via MIA to IND; via SAN swap for IND or MIA)</p><p><strong>2027</strong> - To OKC (via HOU)</p><p><strong>2028</strong> - To SAN</p><p><strong>2029</strong> - To UTH if MIN does not convey 1st round pick to UTH in 2029</p><p><strong>2030</strong> - To DET</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="New Orleans Pelicans"><p><a href="/nba/teams/New-Orleans-Pelicans/19/Home" style="text-decoration: none;">New Orleans Pelicans</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="New Orleans Pelicans"><p><strong>2024</strong> - To MIL; MIL #21 (via NOP swap for MIL)</p><p><strong>2025</strong> - Own; LAL;  MIL 1-4</p><p><strong>2026</strong> - Own or swap for MIL</p><p><strong>2027</strong> - Own; MIL</p><p><strong>2028</strong> - Own</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="New Orleans Pelicans"><p><strong>2024</strong> - To IND</p><p><strong>2025</strong> - To SAN (via MEM to PHX)</p><p><strong>2026</strong> - Most favorable of NOP, POR, MIN and NYK to BOS; less favorable of NOP and POR to SAN; less favorable of (i) more favorable of NOP and POR and (ii) more favorable of MIN and NYK to WAS (via NOP to POR to NOP; via POR to DET; via MIN to NYK; via NOP to SAN; via DET to BOS; via DET to WAS)</p><p><strong>2027</strong> - More favorable of NOP and POR to CHA then other to POR [may be conveyed by POR to BOS] (via NOP to POR)</p><p><strong>2028</strong> - To SAN</p><p><strong>2029</strong> - To SAN</p><p><strong>2030</strong> - Own</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="New York Knicks"><p><a href="/nba/teams/New-York-Knicks/20/Home" style="text-decoration: none;">New York Knicks</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="New York Knicks"><p><strong>2024</strong> - Own #25; DAL #24</p><p><strong>2025</strong> - Own; DET 14-30 (via HOU to OKC); MIL 5-30 (via NOP to POR to DET); WAS 11-30 (via HOU to OKC)</p><p><strong>2026</strong> - Own; DET 12-30 if not already settled (via HOU to OKC); WAS 9-30 if not already settled (via HOU to OKC)</p><p><strong>2027</strong> - Own; DET 10-30 if not already settled (via HOU to OKC)</p><p><strong>2028</strong> - Own</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="New York Knicks"><p><strong>2024</strong> - To DET (via CHA to PHL); UTH #38</p><p><strong>2025</strong> - Forfeited; BRK (via ATL); DET 56-59</p><p><strong>2026</strong> - Less favorable of NYK and MIN; most favorable of NYK, MIN, NOP and POR to BOS; less favorable of (i) more favorable of NYK and MIN and (ii) more favorable of NOP and POR to WAS (via MIN to NYK; via NOP to POR to NOP; via POR to DET; via DET to BOS; via DET to WAS); WAS if WAS has not conveyed 1st round pick to NYK by 2026 (via HOU to OKC)</p><p><strong>2027</strong> - Own; DET if DET has not conveyed 1st round pick to NYK by 2027 (via HOU to OKC); WAS if WAS has not conveyed 1st round pick to NYK by 2026 (via HOU to OKC)</p><p><strong>2028</strong> - To DET; Less favorable of IND and PHX (via IND)</p><p><strong>2029</strong> - To DET; Less favorable of IND and WAS (via IND)</p><p><strong>2030</strong> - Own</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Oklahoma City Thunder"><p><a href="/nba/teams/Oklahoma-City-Thunder/33/Home" style="text-decoration: none;">Oklahoma City Thunder</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Oklahoma City Thunder"><p><strong>2024</strong> - To UTH (via IND to TOR); HOU #12</p><p><strong>2025</strong> - Own or swap for HOU 11-30 or LAC; more favorable of (i) BRK and (ii) less favorable of OKC and HOU 11-30 to HOU then other to BRK if HOU 11-30 more favorable than LAC (via OKC swap for HOU 11-30 or LAC; via HOU swap of HOU or OKC for BRK); MIA 15-30 (via LAC); PHL 7-30; UTH 11-30</p><p><strong>2026</strong> - Two most / more favorable of OKC, HOU 5-30 and LAC then other to PHL (via OKC); UTH 9-30 if not already settled; MIA if not already settled (via LAC); PHL 5-30 if not already settled</p><p><strong>2027</strong> - Two most / more favorable of OKC, DEN 6-30 if DEN conveys 1st round pick to ORL in 2025, and LAC (via OKC swap of OKC or DEN for LAC); PHL 5-30 if not already settled</p><p><strong>2028</strong> - Own or swap for DAL; DEN 6-30 if not already settled and if DEN has conveyed 1st round pick to ORL by 2026</p><p><strong>2029</strong> - Own; DEN 6-30 if not already settled; or DEN 6-30 if DEN has conveyed first potential 1st round pick to OKC by 2027</p><p><strong>2030</strong> - Own; DEN 6-30 if not already settled and if DEN has conveyed first potential 1st round pick to OKC by 2028</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Oklahoma City Thunder"><p><strong>2024</strong> - To MEM (via ATL to HOU)</p><p><strong>2025</strong> - More favorable of OKC and HOU to MEM then other to HOU (via ATL to HOU); ATL 41-59; More favorable of BOS and MEM (via MEM to BOS)</p><p><strong>2026</strong> - Most favorable of OKC, DAL and PHL; second most favorable to HOU and least favorable to SAN (via OKC to HOU; via OKC to MIA); GOS (via ATL); HOU if HOU 1-4 in 2026</p><p><strong>2027</strong> - Three most favorable of OKC, HOU, IND and MIA; more favorable of (i) SAN and (ii) least favorable of OKC, HOU, IND and MIA to SAN then other to MIA (via HOU to DET to OKC; via MIA to OKC to UTH to SAN to MIA); MIN (via HOU); PHL if PHL has not conveyed 1st round pick to OKC by 2027</p><p><strong>2028</strong> - Own; MIL (via BRK to HOU); UTH</p><p><strong>2029</strong> - Own; ATL; BOS; DEN if DEN has not conveyed first potential 1st round pick to OKC by 2029; HOU; MIA; PHX</p><p><strong>2030</strong> - Own; DEN if DEN has not conveyed second potential 1st round pick to OKC by 2030; HOU; MIA</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Orlando Magic"><p><a href="/nba/teams/Orlando-Magic/21/Home" style="text-decoration: none;">Orlando Magic</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Orlando Magic"><p><strong>2024</strong> - Own #18</p><p><strong>2025</strong> - Own; DEN 6-30</p><p><strong>2026</strong> - More favorable of (i) ORL and (ii) less favorable of PHX and WAS 1-8 [or (ii) PHX only if WAS not conveyable]; and more favorable of (i) MEM and (ii) least / less favorable of ORL, PHX and WAS 1-8 to MEM; and least favorable of ORL, WAS 1-8, MEM and PHX to PHX if WAS does not convey 1st round pick to NYK in 2025; or More favorable of (i) ORL and (ii) less favorable of PHX and WAS; and more favorable of (i) MEM and (ii) least favorable of ORL, PHX and WAS to MEM; and least favorable of ORL, WAS, MEM and PHX to PHX if WAS conveys 1st round pick to NYK in 2025 (via WAS swap for PHX; via ORL swap for PHX or WAS; via MEM swap for PHX, WAS or ORL); DEN 6-30 if not already settled</p><p><strong>2027</strong> - Own; DEN 6-30 if not already settled</p><p><strong>2028</strong> - Own</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Orlando Magic"><p><strong>2024</strong> - Own #47</p><p><strong>2025</strong> - Own; Less favorable of BOS and MEM (via MEM to BOS)</p><p><strong>2026</strong> - Two most favorable of ORL, DET and MIL then other to BRK (via DET to LAC to ORL; via ORL to PHX to BRK)</p><p><strong>2027</strong> - Own; BOS</p><p><strong>2028</strong> - Own; More favorable of LAL and WAS (via LAL)</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own; MIL</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Philadelphia Sixers"><p><a href="/nba/teams/Philadelphia-Sixers/22/Home" style="text-decoration: none;">Philadelphia Sixers</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Philadelphia Sixers"><p><strong>2024</strong> - Own #16</p><p><strong>2025</strong> - 1-6 Own; 7-30 to OKC</p><p><strong>2026</strong> - 1-4 Own; 5-30 to OKC if not already settled; Least / less favorable of OKC, HOU 5-30 and LAC (via OKC)</p><p><strong>2027</strong> - 1-4 Own; 5-30 to OKC if not already settled; or 1-8 Own; 9-30 to BRK if PHL conveys 1st round pick to OKC in 2025</p><p><strong>2028</strong> - 1-8 Own; two most / more favorable of PHL 9-30 if not already settled and if PHL has conveyed 1st round pick to OKC by 2026, BRK and PHX to BRK; more favorable of (i) WAS and (ii) least / less favorable of PHL 9-30 if conveyed to BRK, BRK and PHX to WAS then other to PHX (via BRK swap of BRK or PHL for PHX; via WAS swap for PHX, BRK or PHL); LAC</p><p><strong>2029</strong> - Own or swap for LAC 4-30</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Philadelphia Sixers"><p><strong>2024</strong> - Forfeited; CHI #41 (via NOP to SAN to BOS)</p><p><strong>2025</strong> - To CHA (via OKC)</p><p><strong>2026</strong> - Most favorable of PHL, OKC and DAL to OKC; second most favorable to HOU and least favorable to SAN (via OKC to HOU; via OKC to MIA)</p><p><strong>2027</strong> - To OKC if PHL has not conveyed 1st round pick to OKC by 2027; MIL</p><p><strong>2028</strong> - To BRK if PHL has not conveyed 1st round pick to BRK by 2028; DET 56-60</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Phoenix Suns"><p><a href="/nba/teams/Phoenix-Suns/23/Home" style="text-decoration: none;">Phoenix Suns</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Phoenix Suns"><p><strong>2024</strong> - Own #22</p><p><strong>2025</strong> - To BRK</p><p><strong>2026</strong> - Least favorable of PHX, ORL, WAS 1-8 and MEM; and more favorable of PHX and WAS 1-8 to WAS [or neither to WAS if WAS not conveyable]; and more favorable of (i) ORL and (ii) less favorable of PHX and WAS 1-8 [or (ii) PHX only if WAS not conveyable] to ORL; and more favorable of (i) MEM and (ii) least / less favorable of PHX, ORL and WAS 1-8 to MEM if WAS does not convey 1st round pick to NYK in 2025; or Least favorable of PHX, ORL, WAS and MEM; and more favorable of PHX and WAS to WAS; and more favorable of (i) ORL and (ii) less favorable of PHX and WAS to ORL; and more favorable of (i) MEM and (ii) least favorable of PHX, ORL and WAS to MEM if WAS conveys 1st round pick to NYK in 2025 (via WAS swap for PHX; via ORL swap for PHX or WAS; via MEM swap for PHX, WAS or ORL)</p><p><strong>2027</strong> - To BRK</p><p><strong>2028</strong> - Least favorable of PHX, PHL 9-30 if PHL does not convey 1st round pick to BRK in 2027 and if PHL has conveyed 1st round pick to OKC by 2026, BRK and WAS; two most / more favorable of PHX, PHL 9-30 if conveyed to BRK, and BRK to BRK; more favorable of (i) WAS and (ii) least / less favorable of PHX, PHL 9-30 if conveyed to BRK, and BRK to WAS (via BRK swap of BRK or PHL for PHX; via WAS swap for PHX, BRK or PHL)</p><p><strong>2029</strong> - To BRK</p><p><strong>2030</strong> - Least favorable of PHX, WAS and MEM; more favorable of PHX and WAS to WAS; more favorable of (i) MEM and (ii) less favorable of PHX and WAS to MEM (via WAS swap for PHX; via MEM swap for PHX or WAS)</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Phoenix Suns"><p><strong>2024</strong> - To WAS; Forfeited: DEN (via ORL)</p><p><strong>2025</strong> - To WAS</p><p><strong>2026</strong> - To WAS</p><p><strong>2027</strong> - To WAS</p><p><strong>2028</strong> - More favorable of PHX and IND to IND then other to NYK (via IND); BOS 46-60 (via ORL)</p><p><strong>2029</strong> - To OKC</p><p><strong>2030</strong> - To WAS</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Portland Trail Blazers"><p><a href="/nba/teams/Portland-Trail-Blazers/24/Home" style="text-decoration: none;">Portland Trail Blazers</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Portland Trail Blazers"><p><strong>2024</strong> - Own #7; GOS #14 (via MEM to BOS)</p><p><strong>2025</strong> - 1-14 Own; 15-30 to CHI</p><p><strong>2026</strong> - 1-14 Own; 15-30 to CHI if not already settled</p><p><strong>2027</strong> - 1-14 Own; 15-30 to CHI if not already settled</p><p><strong>2028</strong> - 1-14 Own or swap for MIL; 15-30 to CHI if not already settled; or Own or swap for MIL if POR has conveyed 1st round pick to CHI by 2027</p><p><strong>2029</strong> - Own; BOS; MIL</p><p><strong>2030</strong> - Own or swap for MIL</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Portland Trail Blazers"><p><strong>2024</strong> - To MIL (via SAC); CHA #34 (via NOP to OKC to DEN); ATL #40</p><p><strong>2025</strong> - To SAC; ATL 31-40</p><p><strong>2026</strong> - Most favorable of POR, NOP, MIN and NYK to BOS; less favorable of POR and NOP to SAN; less favorable of (i) more favorable of POR and NOP and (ii) more favorable of MIN and NYK to WAS (via NOP to POR to NOP; via POR to DET; via MIN to NYK; via NOP to SAN; via DET to BOS; via DET to WAS); MEM 43-60 (via UTH to GOS)</p><p><strong>2027</strong> - Less favorable of POR and NOP then other to CHA [may be conveyed to BOS; see following]; then less favorable of POR 56-60 and NOP 56-60 to BOS (via NOP to POR)</p><p><strong>2028</strong> - To CHI if POR has not conveyed 1st round pick to CHI by 2028; GOS</p><p><strong>2029</strong> - To IND (via PHL)</p><p><strong>2030</strong> - Own</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Sacramento Kings"><p><a href="/nba/teams/Sacramento-Kings/25/Home" style="text-decoration: none;">Sacramento Kings</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Sacramento Kings"><p><strong>2024</strong> - Own #13</p><p><strong>2025</strong> - 1-12 Own; 13-30 to ATL</p><p><strong>2026</strong> - 1-10 Own; 11-30 to ATL if not already settled</p><p><strong>2027</strong> - Own</p><p><strong>2028</strong> - Own</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Sacramento Kings"><p><strong>2024</strong> - Own #45</p><p><strong>2025</strong> - Own; POR</p><p><strong>2026</strong> - To ATL if SAC has not conveyed 1st round pick to ATL by 2026</p><p><strong>2027</strong> - To ATL if SAC has not conveyed 1st round pick to ATL by 2026</p><p><strong>2028</strong> - Own</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - To IND</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="San Antonio Spurs"><p><a href="/nba/teams/San-Antonio-Spurs/26/Home" style="text-decoration: none;">San Antonio Spurs</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="San Antonio Spurs"><p><strong>2024</strong> - Own #4; TOR #8</p><p><strong>2025</strong> - Own; ATL; CHA 15-30 (via NYK to ATL); CHI 11-30</p><p><strong>2026</strong> - Own or swap for ATL; CHI 9-30 if not already settled</p><p><strong>2027</strong> - Own; ATL; CHI 9-30 if not already settled</p><p><strong>2028</strong> - Own or swap for BOS 2-30</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own or swap for DAL</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="San Antonio Spurs"><p><strong>2024</strong> - Own #35; LAL #48 (via MEM)</p><p><strong>2025</strong> - Own; CHI; NOP (via MEM to PHX)</p><p><strong>2026</strong> - More favorable of (i) SAN and (ii) less favorable of IND and MIA then other to MIN (via MIA to IND; via SAN swap for IND or MIA); Least favorable of OKC, DAL and PHL (via OKC to MIA); Less favorable of NOP and POR (via NOP to POR to NOP; via NOP to SAN); UTH (via MIN); CHA if CHA does not convey 1st round pick to SAN in 2025 (via NYK to ATL)</p><p><strong>2027</strong> - More favorable of (i) SAN and (ii) least favorable of OKC, HOU, IND and MIA then other to MIA (via HOU to DET to OKC; via MIA to OKC to UTH to SAN to MIA); CHA if CHA does not convey 1st round pick to SAN in 2025 (via NYK to ATL)</p><p><strong>2028</strong> - Own; DEN 34-60; MIN; NOP; BOS 31-45 if BOS 1 in 2028; CHI if CHI has not conveyed 1st round pick to SAN by 2027</p><p><strong>2029</strong> - Own; LAC (via PHL); NOP</p><p><strong>2030</strong> - Own; CLE</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Toronto Raptors"><p><a href="/nba/teams/Toronto-Raptors/28/Home" style="text-decoration: none;">Toronto Raptors</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Toronto Raptors"><p><strong>2024</strong> - To SAN; IND #19</p><p><strong>2025</strong> - Own</p><p><strong>2026</strong> - Own; IND 5-30</p><p><strong>2027</strong> - Own; IND 5-30 if not already settled</p><p><strong>2028</strong> - Own</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Toronto Raptors"><p><strong>2024</strong> - To IND (via MEM to LAC to PHL); DET #31 (via LAC to NYK)</p><p><strong>2025</strong> - To DAL (via SAN)</p><p><strong>2026</strong> - Own</p><p><strong>2027</strong> - Own; UTH if IND has not conveyed second potential 1st round pick to TOR by 2027 (via CLE to IND)</p><p><strong>2028</strong> - Own; DAL if IND has not conveyed second potential 1st round pick to TOR by 2027 (via SAC to IND)</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - Own</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Utah Jazz"><p><a href="/nba/teams/Utah-Jazz/29/Home" style="text-decoration: none;">Utah Jazz</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Utah Jazz"><p><strong>2024</strong> - Own #10;  OKC #29 (via IND to TOR)</p><p><strong>2025</strong> - 1-10 Own; 11-30 to OKC; CLE; MIN</p><p><strong>2026</strong> - Most favorable of UTH 1-8, MIN and CLE; less favorable of UTH 1-8 and MIN to MIN; less favorable of (i) CLE and (ii) more favorable of UTH 1-8 and MIN to CLE; UTH 9-30 to OKC if not already settled; or Most favorable of UTH, MIN and CLE; less favorable of UTH and MIN to MIN; less favorable of (i) CLE and (ii) more favorable of UTH and MIN to CLE if UTH conveys 1st round pick to OKC in 2025 (via UTH swap for MIN; via UTH swap of UTH or MIN for CLE)</p><p><strong>2027</strong> - Own; CLE; LAL 5-30; MIN</p><p><strong>2028</strong> - Own or swap for CLE</p><p><strong>2029</strong> - Own; CLE; MIN 6-30</p><p><strong>2030</strong> - Own</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Utah Jazz"><p><strong>2024</strong> - To NYK; WAS #32 (via OKC to BRK to DET)</p><p><strong>2025</strong> - To MIN</p><p><strong>2026</strong> - To SAN (via MIN)</p><p><strong>2027</strong> - To IND if IND has conveyed second potential 1st round pick to TOR by 2027, or to TOR if IND has not conveyed second potential 1st round pick to TOR by 2027 (via CLE to IND); LAL if LAL does not convey 1st round pick to UTH in 2027</p><p><strong>2028</strong> - To OKC</p><p><strong>2029</strong> - Own; MIN if MIN does not convey 1st round pick to UTH in 2029</p><p><strong>2030</strong> - Own</p></td>
+</tr>
+<tr>
+<td data-th="Team" class="nowrap" style="vertical-align: top;" rel="Washington Wizards"><p><a href="/nba/teams/Washington-Wizards/30/Home" style="text-decoration: none;">Washington Wizards</a></p></td>
+<td data-th="First Round" style="vertical-align: top;" rel="Washington Wizards"><p><strong>2024</strong> - Own #2; LAC #26 (via OKC to DAL)</p><p><strong>2025</strong> - 1-10 Own; 11-30 to NYK (via HOU to OKC)</p><p><strong>2026</strong> - 1-8 Own or swap for PHX; and more favorable of (i) ORL and (ii) less favorable of WAS 1-8 and PHX [or (ii) PHX only if WAS not conveyable] to ORL; and  more favorable of (i) MEM and (ii) least / less favorable of WAS 1-8, ORL and PHX to MEM; and least favorable of WAS 1-8, ORL, MEM and PHX to PHX if WAS does not convey 1st round pick to NYK in 2025; or Own or swap for PHX; and more favorable of (i) ORL and (ii) less favorable of WAS and PHX to ORL; and more favorable of (i) MEM and (ii) least favorable of WAS, ORL and PHX to MEM; and least favorable of WAS, ORL, MEM and PHX to PHX if WAS conveys 1st round pick to NYK in 2025 (via WAS swap for PHX; via ORL swap for PHX or WAS; via MEM swap for PHX, WAS or ORL); WAS 9-30 to NYK if not already settled (via HOU to OKC)</p><p><strong>2027</strong> - Own</p><p><strong>2028</strong> - More favorable of (i) WAS and (ii) least / less favorable of BRK, PHL 9-30 if PHL does not convey 1st round pick to BRK in 2027 and if PHL has conveyed 1st round pick to OKC by 2026, and PHX then other to PHX (via BRK swap of BRK or PHL for PHX; via WAS swap for PHX, BRK or PHL)</p><p><strong>2029</strong> - Own</p><p><strong>2030</strong> - More favorable of WAS and PHX; more favorable of (i) MEM and (ii) less favorable of WAS and PHX to MEM then other to PHX (via WAS swap for PHX; via MEM swap for WAS or PHX); GOS 21-30</p></td>
+<td data-th="Second Round" style="vertical-align: top;" rel="Washington Wizards"><p><strong>2024</strong> - To UTH (via OKC to BRK to DET); PHX #51</p><p><strong>2025</strong> - Less favorable of WAS and GOS and another pick conditionally then other to BOS or DAL (via DET to LAC to POR to DET; via DET swap of GOS for WAS (via BRK); via DET and DAL to BOS; via DET to WAS); PHX</p><p><strong>2026</strong> - To NYK if WAS has not conveyed 1st round pick to NYK by 2026 (via HOU to OKC); CHI; Less favorable of (i) more favorable of MIN and NYK and (ii) more favorable of NOP and POR (via MIN to NYK; via NOP to POR to NOP; via POR to DET; via DET to WAS); PHX</p><p><strong>2027</strong> - To NYK if WAS has not conveyed 1st round pick to NYK by 2026 (via HOU to OKC); More favorable of BRK and DAL (via DAL to BRK to DET; via DET to WAS); CHI; GOS; PHX</p><p><strong>2028</strong> - Less favorable of WAS and LAL then other to ORL (via WAS to LAL to ORL; via LAL to WAS)</p><p><strong>2029</strong> - More favorable of WAS and IND to IND then other to NYK (via IND); LAL</p><p><strong>2030</strong> - Own; GOS if GOS does not convey 1st round pick to WAS in 2030; PHX</p></td>
+</tr>
+</tbody></table>
+               <div style="clear: both;"></div>
+               
+               <input type="hidden" name="pageid" value="nba_draft_future_summary_by_team" />
+            
+            </div> <!-- #main -->
+         
+                     
+         </div> <!-- #main-container -->
+
+         <footer class="container wrapper">
+            <div class="footer-logo-container wrapper clearfix">
+               <a href="/" class="footer-logo mobile-only"></a>
+               <a href="#" class="backtotop">&uarr;</a>
+            </div>
+            
+            <div class="link-lists-container">
+               <div class="link-lists">
+   <div class="list-column">
+      <h3><a href="/nba">NBA</a></h3>
+      <div class="links">
+         <a href="https://forums.realgm.com/boards/viewforum.php?f=6">Forums</a>
+         <a href="/nba/news">News</a>
+         <a href="/nba/news/analysis">Analysis</a>
+         <a href="/tradechecker">Trade Checker</a>
+         <a href="/nba/teams">Teams</a>
+         <a href="/nba/players">Players</a>
+         <a href="/nba/scores">Scores</a>
+         <a href="/nba/standings">Standings</a>
+         <a href="/nba/stats">Stats</a>
+         <a href="/nba/depth-charts">Depth Charts</a>
+         <a href="/nba/awards">Awards</a>
+         <a href="https://www.vividseats.com/?wsUser=958" target="_blank">Tickets</a>
+         <a href="/wnba">WNBA</a>
+         <a href="https://basketball.realgm.com/news/analysis/author/261/North-Star">North Star</a>
+      </div>
+   </div>
+
+   <div class="list-column">
+      <h3><a href="/ncaa">NCAA</a></h3>
+      <div class="links">
+         <a href="https://forums.realgm.com/boards/viewforum.php?f=36">Forums</a>
+         <a href="/ncaa/news">News</a>
+         <a href="/ncaa/news/analysis">Analysis</a>
+         <a href="/ncaa/teams">Teams</a>
+         <a href="/ncaa/tournaments">Tournaments</a>
+         <a href="/ncaa/players">Players</a>
+         <a href="/ncaa/scores">Scores</a>
+         <a href="/ncaa/standings">Standings</a>
+         <a href="/ncaa/stats">Stats</a>
+         <a href="/ncaa/conferences/America-East-Conference/18/depth-charts/2014">Depth Charts</a>
+         <a href="/ncaa/awards">Awards</a>
+         <a href="/ncaaw">Women's</a>
+               </div>
+   </div>
+
+   <div class="list-column">
+      <h3><a href="/dleague">G League</a></h3>
+      <div class="links">
+         <a href="https://forums.realgm.com/boards/viewforum.php?f=350">Forums</a>
+         <a href="/gleague/news">News</a>
+         <a href="/gleague/news/analysis">Analysis</a>
+         <a href="/gleague/teams">Teams</a>
+         <a href="/gleague/players">Players</a>
+         <a href="/gleague/scores">Scores</a>
+         <a href="/gleague/standings">Standings</a>
+         <a href="/gleague/stats">Stats</a>
+         <a href="/gleague/depth-charts">Depth Charts</a>
+         <a href="/gleague/awards">Awards</a>
+      </div>
+   </div>
+</div>
+<div class="link-lists">
+   <div class="list-column">
+      <h3><a href="/international">International</a></h3>
+      <div class="links">
+         <a href="https://forums.realgm.com/boards/viewforum.php?f=5">Forums</a>
+         <a href="/international/news">News</a>
+         <a href="/international/news/analysis">Analysis</a>
+         <a href="/international/teams">Teams</a>
+         <a href="/international/leagues">Leagues</a>
+         <a href="/international/schedules">Schedules</a>
+         <a href="/international/scores">Scores</a>
+         <a href="/international/stats">Stats</a>
+      </div>
+   </div>
+   
+   <div class="list-column">
+      <h3><a href="/national">National</a></h3>
+      <div class="links">
+         <a href="https://forums.realgm.com/boards/viewforum.php?f=347">Forums</a>
+         <a href="/national/news">News</a>
+         <a href="/national/news/analysis">Analysis</a>
+         <a href="/national/countries">Countries</a>
+         <a href="/national/tournaments">Events</a>
+         <a href="/national/schedules">Schedules</a>
+         <a href="/national/scores">Scores</a>
+         <a href="/national/stats">Stats</a>
+      </div>
+   </div>
+   
+   <div class="list-column">
+      <h3><a href="/highschool">High School</a></h3>
+      <div class="links">
+         <a href="https://forums.realgm.com/boards/viewforum.php?f=346">Forums</a>
+         <a href="/highschool/news">News</a>
+         <a href="/highschool/news/analysis">Analysis</a>
+         <a href="/highschool/schools">Schools</a>
+         <a href="/highschool/allstar">All-Star Games</a>
+         <a href="/highschool/awards">Awards</a>
+      </div>
+   </div>
+</div>
+            </div>
+            
+            <div class="about-us-container">
+               <div class="social clearfix">
+                  <h3>Follow Us</h3>
+<ul class="rrssb-buttons clearfix">
+   <li class="email">
+      <a href="https://realgm.m-pages.com/ug2pDT/sign-up" target="_blank">
+         <span class="icon">
+            <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" 
+               width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+               <g>
+                  <path d="M20.111 26.147c-2.336 1.051-4.361 1.401-7.125 1.401c-6.462 0-12.146-4.633-12.146-12.265 c0-7.94 5.762-14.833 14.561-14.833c6.853
+                     0 11.8 4.7 11.8 11.252c0 5.684-3.194 9.265-7.399 9.3 c-1.829 0-3.153-0.934-3.347-2.997h-0.077c-1.208 1.986-2.96 2.997-5.023 2.997c-2.532
+                     0-4.361-1.868-4.361-5.062 c0-4.749 3.504-9.071 9.111-9.071c1.713 0 3.7 0.4 4.6 0.973l-1.169 7.203c-0.388 2.298-0.116 3.3 1 3.4 c1.673 0
+                     3.773-2.102 3.773-6.58c0-5.061-3.27-8.994-9.303-8.994c-5.957 0-11.175 4.673-11.175 12.1 c0 6.5 4.2 10.2 10 10.201c1.986 0 4.089-0.43
+                     5.646-1.245L20.111 26.147z M16.646 10.1 c-0.311-0.078-0.701-0.155-1.207-0.155c-2.571 0-4.595 2.53-4.595 5.529c0 1.5 0.7 2.4 1.9 2.4 c1.441
+                     0 2.959-1.828 3.311-4.087L16.646 10.068z"/>
+               </g>
+            </svg>
+         </span>
+         <span class="text">newsletter</span>
+      </a>
+   </li>
+   <li class="twitter">
+      <a href="https://twitter.com/RealGM" target="_blank">
+         <span class="icon">
+              <svg version="1.1" id="Layer_1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                  <path d="M24.253,8.756C24.689,17.08,18.297,24.182,9.97,24.62c-3.122,0.162-6.219-0.646-8.861-2.32
+                  c2.703,0.179,5.376-0.648,7.508-2.321c-2.072-0.247-3.818-1.661-4.489-3.638c0.801,0.128,1.62,0.076,2.399-0.155
+                  C4.045,15.72,2.215,13.6,2.115,11.077c0.688,0.275,1.426,0.407,2.168,0.386c-2.135-1.65-2.729-4.621-1.394-6.965
+                  C5.575,7.816,9.54,9.84,13.803,10.071c-0.842-2.739,0.694-5.64,3.434-6.482c2.018-0.623,4.212,0.044,5.546,1.683
+                  c1.186-0.213,2.318-0.662,3.329-1.317c-0.385,1.256-1.247,2.312-2.399,2.942c1.048-0.106,2.069-0.394,3.019-0.851
+                  C26.275,7.229,25.39,8.196,24.253,8.756z"/>
+              </svg>
+         </span>
+         <span class="text">twitter</span>
+      </a>
+   </li>
+   <li class="facebook">
+      <a href="https://www.facebook.com/RealGM" target="_blank">
+         <span class="icon">
+            <svg version="1.1" id="Layer_1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" 
+               width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+               <path d="M27.825,4.783c0-2.427-2.182-4.608-4.608-4.608H4.783c-2.422,0-4.608,2.182-4.608,4.608v18.434
+                  c0,2.427,2.181,4.608,4.608,4.608H14V17.379h-3.379v-4.608H14v-1.795c0-3.089,2.335-5.885,5.192-5.885h3.718v4.608h-3.726
+                  c-0.408,0-0.884,0.492-0.884,1.236v1.836h4.609v4.608h-4.609v10.446h4.916c2.422,0,4.608-2.188,4.608-4.608V4.783z"/>
+            </svg>
+         </span>
+         <span class="text">facebook</span>
+      </a>
+   </li>
+   <li class="instagram">
+      <a href="https://www.instagram.com/realgmnba" target="_blank">
+         <span class="icon">
+            <svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+             <title>Instagram</title>
+             <defs></defs>
+             <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                 <g id="Black" transform="translate(-642.000000, -295.000000)" fill="#000000">
+                     <path d="M666.000048,295 C659.481991,295 658.664686,295.027628 656.104831,295.144427 C653.550311,295.260939 651.805665,295.666687 650.279088,296.260017 C648.700876,296.873258 647.362454,297.693897 646.028128,299.028128 C644.693897,300.362454 643.873258,301.700876 643.260017,303.279088 C642.666687,304.805665 642.260939,306.550311 642.144427,309.104831 C642.027628,311.664686 642,312.481991 642,319.000048 C642,325.518009 642.027628,326.335314 642.144427,328.895169 C642.260939,331.449689 642.666687,333.194335 643.260017,334.720912 C643.873258,336.299124 644.693897,337.637546 646.028128,338.971872 C647.362454,340.306103 648.700876,341.126742 650.279088,341.740079 C651.805665,342.333313 653.550311,342.739061 656.104831,342.855573 C658.664686,342.972372 659.481991,343 666.000048,343 C672.518009,343 673.335314,342.972372 675.895169,342.855573 C678.449689,342.739061 680.194335,342.333313 681.720912,341.740079 C683.299124,341.126742 684.637546,340.306103 685.971872,338.971872 C687.306103,337.637546 688.126742,336.299124 688.740079,334.720912 C689.333313,333.194335 689.739061,331.449689 689.855573,328.895169 C689.972372,326.335314 690,325.518009 690,319.000048 C690,312.481991 689.972372,311.664686 689.855573,309.104831 C689.739061,306.550311 689.333313,304.805665 688.740079,303.279088 C688.126742,301.700876 687.306103,300.362454 685.971872,299.028128 C684.637546,297.693897 683.299124,296.873258 681.720912,296.260017 C680.194335,295.666687 678.449689,295.260939 675.895169,295.144427 C673.335314,295.027628 672.518009,295 666.000048,295 Z M666.000048,299.324317 C672.40826,299.324317 673.167356,299.348801 675.69806,299.464266 C678.038036,299.570966 679.308818,299.961946 680.154513,300.290621 C681.274771,300.725997 682.074262,301.246066 682.91405,302.08595 C683.753934,302.925738 684.274003,303.725229 684.709379,304.845487 C685.038054,305.691182 685.429034,306.961964 685.535734,309.30194 C685.651199,311.832644 685.675683,312.59174 685.675683,319.000048 C685.675683,325.40826 685.651199,326.167356 685.535734,328.69806 C685.429034,331.038036 685.038054,332.308818 684.709379,333.154513 C684.274003,334.274771 683.753934,335.074262 682.91405,335.91405 C682.074262,336.753934 681.274771,337.274003 680.154513,337.709379 C679.308818,338.038054 678.038036,338.429034 675.69806,338.535734 C673.167737,338.651199 672.408736,338.675683 666.000048,338.675683 C659.591264,338.675683 658.832358,338.651199 656.30194,338.535734 C653.961964,338.429034 652.691182,338.038054 651.845487,337.709379 C650.725229,337.274003 649.925738,336.753934 649.08595,335.91405 C648.246161,335.074262 647.725997,334.274771 647.290621,333.154513 C646.961946,332.308818 646.570966,331.038036 646.464266,328.69806 C646.348801,326.167356 646.324317,325.40826 646.324317,319.000048 C646.324317,312.59174 646.348801,311.832644 646.464266,309.30194 C646.570966,306.961964 646.961946,305.691182 647.290621,304.845487 C647.725997,303.725229 648.246066,302.925738 649.08595,302.08595 C649.925738,301.246066 650.725229,300.725997 651.845487,300.290621 C652.691182,299.961946 653.961964,299.570966 656.30194,299.464266 C658.832644,299.348801 659.59174,299.324317 666.000048,299.324317 Z M666.000048,306.675683 C659.193424,306.675683 653.675683,312.193424 653.675683,319.000048 C653.675683,325.806576 659.193424,331.324317 666.000048,331.324317 C672.806576,331.324317 678.324317,325.806576 678.324317,319.000048 C678.324317,312.193424 672.806576,306.675683 666.000048,306.675683 Z M666.000048,327 C661.581701,327 658,323.418299 658,319.000048 C658,314.581701 661.581701,311 666.000048,311 C670.418299,311 674,314.581701 674,319.000048 C674,323.418299 670.418299,327 666.000048,327 Z M681.691284,306.188768 C681.691284,307.779365 680.401829,309.068724 678.811232,309.068724 C677.22073,309.068724 675.931276,307.779365 675.931276,306.188768 C675.931276,304.598171 677.22073,303.308716 678.811232,303.308716 C680.401829,303.308716 681.691284,304.598171 681.691284,306.188768 Z" id="Instagram"></path>
+                 </g>
+                 <g id="Credit" transform="translate(-1734.000000, -472.000000)"></g>
+             </g>
+         </svg>
+         </span>
+         <span class="text">instagram</span>
+      </a>
+   </li>
+</ul>
+<!-- Buttons end here -->               </div>
+               
+               <div class="list-column">
+                  <h3>RealGM</h3>
+                  <div class="links">
+                     <a href="/info/contact-us">Contact Us</a>
+                     <a href="/info/about-us">About Us</a>
+                     <a href="/info/contact-us/advertising">Advertising</a>
+                     <a href="/info/privacy-policy">Privacy Policy</a>
+                     <a href="/info/terms-of-use">Terms of Use</a>
+                  </div>
+               </div>
+            </div>
+            
+            <p class="copyright">All content &copy; 2000-2024 RealGM, L.L.C. All rights reserved.</p>
+            
+            <div style="height: 7em;">&nbsp;</div>
+         </footer>
+      
+      </div> <!-- #site-takeover -->
+
+      <script src="/js/vendor/jquery.hoverIntent.min.js"></script>
+      <script src="/js/main.js?v3"></script>
+      <script src="/js/plugins.js?v3"></script>
+     
+      
+   <script type="text/javascript" async src="https://btloader.com/tag?o=5698917485248512&upapi=true&domain=realgm.com"></script>
+
+   <script>!function(){"use strict";var e;e=document,function(){var t,n;function r(){var t=e.createElement("script");t.src="https://cafemedia-com.videoplayerhub.com/galleryplayer.js",e.head.appendChild(t)}function a(){var t=e.cookie.match("(^|[^;]+)\s*__adblocker\s*=\s*([^;]+)");return t&&t.pop()}function c(){clearInterval(n)}return{init:function(){var e;"true"===(t=a())?r():(e=0,n=setInterval((function(){100!==e&&"false" !== t || c(), "true" === t && (r(), c()), t = a(), e++}), 50))}}}().init()}();
+   </script>
+
+      
+    </body>
+</html>

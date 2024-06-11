@@ -1,0 +1,1641 @@
+[
+  {
+    "team": "ATL",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "ATL",
+            "originator": "ATL",
+            "position": "1"
+          }
+        ]
+      },
+      {
+        "year": "2028",
+        "picks": [
+          {
+            "owner": "ATL",
+            "originator": "ATL"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "ATL",
+            "originator": "ATL"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "ATL",
+            "originator": "ATL"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "BOS",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "BOS",
+            "originator": "BOS",
+            "position": "30"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "owner": "BOS",
+            "originator": "BOS"
+          }
+        ]
+      },
+      {
+        "year": "2026",
+        "picks": [
+          {
+            "owner": "BOS",
+            "originator": "BOS"
+          }
+        ]
+      },
+      {
+        "year": "2027",
+        "picks": [
+          {
+            "owner": "BOS",
+            "originator": "BOS"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "BOS",
+            "originator": "BOS"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "BRK",
+    "years": [
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "owner": "BRK",
+            "originator": "PHX"
+          }
+        ]
+      },
+      {
+        "year": "2027",
+        "picks": [
+          {
+            "owner": "BRK",
+            "originator": "PHX"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "BRK",
+            "originator": "BRK"
+          },
+          {
+            "owner": "BRK",
+            "originator": "DAL"
+          },
+          {
+            "owner": "BRK",
+            "originator": "PHX"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "BRK",
+            "originator": "BRK"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "CHA",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "CHA",
+            "originator": "CHA",
+            "position": "6"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "originator": "CHA",
+            "protections": {
+              "groups": [
+                {
+                  "rangeMin": "1",
+                  "rangeMax": "14",
+                  "owner": "CHA"
+                },
+                {
+                  "rangeMin": "15",
+                  "rangeMax": "30",
+                  "owner": "SAN"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "year": "2026",
+        "picks": [
+          {
+            "owner": "CHA",
+            "originator": "CHA"
+          }
+        ]
+      },
+      {
+        "year": "2027",
+        "picks": [
+          {
+            "owner": "CHA",
+            "originator": "CHA"
+          }
+        ]
+      },
+      {
+        "year": "2028",
+        "picks": [
+          {
+            "owner": "CHA",
+            "originator": "CHA"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "CHA",
+            "originator": "CHA"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "CHA",
+            "originator": "CHA"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "CHI",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "CHI",
+            "originator": "CHI",
+            "position": "11"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "originator": "CHI",
+            "protections": {
+              "groups": [
+                {
+                  "rangeMin": "1",
+                  "rangeMax": "10",
+                  "owner": "CHI"
+                },
+                {
+                  "rangeMin": "11",
+                  "rangeMax": "30",
+                  "owner": "SAN"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "year": "2028",
+        "picks": [
+          {
+            "owner": "CHI",
+            "originator": "CHI"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "CHI",
+            "originator": "CHI"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "CHI",
+            "originator": "CHI"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "CLE",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "CLE",
+            "originator": "CLE",
+            "position": "20"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "CLE",
+            "originator": "CLE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "DAL",
+    "years": [
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "owner": "DAL",
+            "originator": "DAL"
+          }
+        ]
+      },
+      {
+        "year": "2026",
+        "picks": [
+          {
+            "owner": "DAL",
+            "originator": "DAL"
+          }
+        ]
+      },
+      {
+        "year": "2027",
+        "picks": [
+          {
+            "originator": "DAL",
+            "protections": {
+              "groups": [
+                {
+                  "rangeMin": "1",
+                  "rangeMax": "2",
+                  "owner": "DAL"
+                },
+                {
+                  "rangeMin": "3",
+                  "rangeMax": "30",
+                  "owner": "CHA"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "DEN",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "DEN",
+            "originator": "DEN",
+            "position": "28"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "originator": "DEN",
+            "protections": {
+              "groups": [
+                {
+                  "rangeMin": "1",
+                  "rangeMax": "5",
+                  "owner": "DEN"
+                },
+                {
+                  "rangeMin": "6",
+                  "rangeMax": "30",
+                  "owner": "ORL"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "DET",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "DET",
+            "originator": "DET",
+            "position": "5"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "originator": "DET",
+            "protections": {
+              "groups": [
+                {
+                  "rangeMin": "1",
+                  "rangeMax": "13",
+                  "owner": "DET"
+                },
+                {
+                  "rangeMin": "14",
+                  "rangeMax": "30",
+                  "owner": "NYK"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "year": "2028",
+        "picks": [
+          {
+            "owner": "DET",
+            "originator": "DET"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "DET",
+            "originator": "DET"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "DET",
+            "originator": "DET"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "GOS",
+    "years": [
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "owner": "GOS",
+            "originator": "GOS"
+          }
+        ]
+      },
+      {
+        "year": "2026",
+        "picks": [
+          {
+            "owner": "GOS",
+            "originator": "GOS"
+          }
+        ]
+      },
+      {
+        "year": "2027",
+        "picks": [
+          {
+            "owner": "GOS",
+            "originator": "GOS"
+          }
+        ]
+      },
+      {
+        "year": "2028",
+        "picks": [
+          {
+            "owner": "GOS",
+            "originator": "GOS"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "GOS",
+            "originator": "GOS"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "originator": "GOS",
+            "protections": {
+              "groups": [
+                {
+                  "rangeMin": "1",
+                  "rangeMax": "20",
+                  "owner": "GOS"
+                },
+                {
+                  "rangeMin": "21",
+                  "rangeMax": "30",
+                  "owner": "WAS"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "HOU",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "HOU",
+            "originator": "BRK",
+            "position": "3"
+          }
+        ]
+      },
+      {
+        "year": "2026",
+        "picks": [
+          {
+            "owner": "HOU",
+            "originator": "BRK"
+          }
+        ]
+      },
+      {
+        "year": "2028",
+        "picks": [
+          {
+            "owner": "HOU",
+            "originator": "HOU"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "HOU",
+            "originator": "HOU"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "HOU",
+            "originator": "HOU"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "IND",
+    "years": [
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "owner": "IND",
+            "originator": "IND"
+          }
+        ]
+      },
+      {
+        "year": "2026",
+        "picks": [
+          {
+            "originator": "IND",
+            "protections": {
+              "groups": [
+                {
+                  "rangeMin": "1",
+                  "rangeMax": "4",
+                  "owner": "IND"
+                },
+                {
+                  "rangeMin": "5",
+                  "rangeMax": "30",
+                  "owner": "TOR"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "year": "2028",
+        "picks": [
+          {
+            "owner": "IND",
+            "originator": "IND"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "IND",
+            "originator": "IND"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "IND",
+            "originator": "IND"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "LAC",
+    "years": [
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "LAC",
+            "originator": "LAC"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "LAL",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "LAL",
+            "originator": "LAL",
+            "position": "17"
+          }
+        ]
+      },
+      {
+        "year": "2026",
+        "picks": [
+          {
+            "owner": "LAL",
+            "originator": "LAL"
+          }
+        ]
+      },
+      {
+        "year": "2027",
+        "picks": [
+          {
+            "originator": "LAL",
+            "protections": {
+              "groups": [
+                {
+                  "rangeMin": "1",
+                  "rangeMax": "4",
+                  "owner": "LAL"
+                },
+                {
+                  "rangeMin": "5",
+                  "rangeMax": "30",
+                  "owner": "UTH"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "year": "2028",
+        "picks": [
+          {
+            "owner": "LAL",
+            "originator": "LAL"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "LAL",
+            "originator": "LAL"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "LAL",
+            "originator": "LAL"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "MEM",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "MEM",
+            "originator": "MEM",
+            "position": "9"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "owner": "MEM",
+            "originator": "MEM"
+          }
+        ]
+      },
+      {
+        "year": "2027",
+        "picks": [
+          {
+            "owner": "MEM",
+            "originator": "MEM"
+          }
+        ]
+      },
+      {
+        "year": "2028",
+        "picks": [
+          {
+            "owner": "MEM",
+            "originator": "MEM"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "MEM",
+            "originator": "MEM"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "MIA",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "MIA",
+            "originator": "MIA",
+            "position": "15"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "originator": "MIA",
+            "protections": {
+              "groups": [
+                {
+                  "rangeMin": "1",
+                  "rangeMax": "14",
+                  "owner": "MIA"
+                },
+                {
+                  "rangeMin": "15",
+                  "rangeMax": "30",
+                  "owner": "OKC"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "MIA",
+            "originator": "MIA"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "MIA",
+            "originator": "MIA"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "MIL",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "MIL",
+            "originator": "NOP",
+            "position": "23"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "originator": "MIL",
+            "protections": {
+              "groups": [
+                {
+                  "rangeMin": "1",
+                  "rangeMax": "4",
+                  "owner": "NOP"
+                },
+                {
+                  "rangeMin": "5",
+                  "rangeMax": "30",
+                  "owner": "NYK"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "MIN",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "MIN",
+            "originator": "MIN",
+            "position": "27"
+          }
+        ]
+      },
+      {
+        "year": "2028",
+        "picks": [
+          {
+            "owner": "MIN",
+            "originator": "MIN"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "originator": "MIN",
+            "protections": {
+              "groups": [
+                {
+                  "rangeMin": "1",
+                  "rangeMax": "5",
+                  "owner": "MIN"
+                },
+                {
+                  "rangeMin": "6",
+                  "rangeMax": "30",
+                  "owner": "UTH"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "MIN",
+            "originator": "MIN"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "NOP",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "NOP",
+            "originator": "MIL",
+            "position": "21"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "owner": "NOP",
+            "originator": "NOP"
+          },
+          {
+            "owner": "NOP",
+            "originator": "LAL"
+          }
+        ]
+      },
+      {
+        "year": "2027",
+        "picks": [
+          {
+            "owner": "NOP",
+            "originator": "NOP"
+          },
+          {
+            "owner": "NOP",
+            "originator": "MIL"
+          }
+        ]
+      },
+      {
+        "year": "2028",
+        "picks": [
+          {
+            "owner": "NOP",
+            "originator": "NOP"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "NOP",
+            "originator": "NOP"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "NOP",
+            "originator": "NOP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "NYK",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "NYK",
+            "originator": "NYK",
+            "position": "25"
+          },
+          {
+            "owner": "NYK",
+            "originator": "DAL",
+            "position": "24"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "owner": "NYK",
+            "originator": "NYK"
+          }
+        ]
+      },
+      {
+        "year": "2026",
+        "picks": [
+          {
+            "owner": "NYK",
+            "originator": "NYK"
+          }
+        ]
+      },
+      {
+        "year": "2027",
+        "picks": [
+          {
+            "owner": "NYK",
+            "originator": "NYK"
+          }
+        ]
+      },
+      {
+        "year": "2028",
+        "picks": [
+          {
+            "owner": "NYK",
+            "originator": "NYK"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "NYK",
+            "originator": "NYK"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "NYK",
+            "originator": "NYK"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "OKC",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "OKC",
+            "originator": "HOU",
+            "position": "12"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "OKC",
+            "originator": "OKC"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "OKC",
+            "originator": "OKC"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "ORL",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "ORL",
+            "originator": "ORL",
+            "position": "18"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "owner": "ORL",
+            "originator": "ORL"
+          }
+        ]
+      },
+      {
+        "year": "2027",
+        "picks": [
+          {
+            "owner": "ORL",
+            "originator": "ORL"
+          }
+        ]
+      },
+      {
+        "year": "2028",
+        "picks": [
+          {
+            "owner": "ORL",
+            "originator": "ORL"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "ORL",
+            "originator": "ORL"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "ORL",
+            "originator": "ORL"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "PHL",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "PHL",
+            "originator": "PHL",
+            "position": "16"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "originator": "PHL",
+            "protections": {
+              "groups": [
+                {
+                  "rangeMin": "1",
+                  "rangeMax": "6",
+                  "owner": "PHL"
+                },
+                {
+                  "rangeMin": "7",
+                  "rangeMax": "30",
+                  "owner": "OKC"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "year": "2028",
+        "picks": [
+          {
+            "owner": "PHL",
+            "originator": "LAC"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "PHL",
+            "originator": "PHL"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "PHX",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "PHX",
+            "originator": "PHX",
+            "position": "22"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "POR",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "POR",
+            "originator": "POR",
+            "position": "7"
+          },
+          {
+            "owner": "POR",
+            "originator": "GOS",
+            "position": "14"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "originator": "POR",
+            "protections": {
+              "groups": [
+                {
+                  "rangeMin": "1",
+                  "rangeMax": "14",
+                  "owner": "POR"
+                },
+                {
+                  "rangeMin": "15",
+                  "rangeMax": "30",
+                  "owner": "CHI"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "POR",
+            "originator": "POR"
+          },
+          {
+            "owner": "POR",
+            "originator": "BOS"
+          },
+          {
+            "owner": "POR",
+            "originator": "MIL"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "SAC",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "SAC",
+            "originator": "SAC",
+            "position": "13"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "originator": "SAC",
+            "protections": {
+              "groups": [
+                {
+                  "rangeMin": "1",
+                  "rangeMax": "12",
+                  "owner": "SAC"
+                },
+                {
+                  "rangeMin": "13",
+                  "rangeMax": "30",
+                  "owner": "ATL"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "year": "2027",
+        "picks": [
+          {
+            "owner": "SAC",
+            "originator": "SAC"
+          }
+        ]
+      },
+      {
+        "year": "2028",
+        "picks": [
+          {
+            "owner": "SAC",
+            "originator": "SAC"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "SAC",
+            "originator": "SAC"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "SAC",
+            "originator": "SAC"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "SAN",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "SAN",
+            "originator": "SAN",
+            "position": "4"
+          },
+          {
+            "owner": "SAN",
+            "originator": "TOR",
+            "position": "8"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "owner": "SAN",
+            "originator": "SAN"
+          },
+          {
+            "owner": "SAN",
+            "originator": "ATL"
+          }
+        ]
+      },
+      {
+        "year": "2027",
+        "picks": [
+          {
+            "owner": "SAN",
+            "originator": "SAN"
+          },
+          {
+            "owner": "SAN",
+            "originator": "ATL"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "SAN",
+            "originator": "SAN"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "TOR",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "TOR",
+            "originator": "IND",
+            "position": "19"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "owner": "TOR",
+            "originator": "TOR"
+          }
+        ]
+      },
+      {
+        "year": "2026",
+        "picks": [
+          {
+            "owner": "TOR",
+            "originator": "TOR"
+          }
+        ]
+      },
+      {
+        "year": "2027",
+        "picks": [
+          {
+            "owner": "TOR",
+            "originator": "TOR"
+          }
+        ]
+      },
+      {
+        "year": "2028",
+        "picks": [
+          {
+            "owner": "TOR",
+            "originator": "TOR"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "TOR",
+            "originator": "TOR"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "TOR",
+            "originator": "TOR"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "UTH",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "UTH",
+            "originator": "UTH",
+            "position": "10"
+          },
+          {
+            "owner": "UTH",
+            "originator": "OKC",
+            "position": "29"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "originator": "UTH",
+            "protections": {
+              "groups": [
+                {
+                  "rangeMin": "1",
+                  "rangeMax": "10",
+                  "owner": "UTH"
+                },
+                {
+                  "rangeMin": "11",
+                  "rangeMax": "30",
+                  "owner": "OKC"
+                }
+              ]
+            }
+          },
+          {
+            "owner": "UTH",
+            "originator": "CLE"
+          },
+          {
+            "owner": "UTH",
+            "originator": "MIN"
+          }
+        ]
+      },
+      {
+        "year": "2027",
+        "picks": [
+          {
+            "owner": "UTH",
+            "originator": "UTH"
+          },
+          {
+            "owner": "UTH",
+            "originator": "CLE"
+          },
+          {
+            "owner": "UTH",
+            "originator": "MIN"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "UTH",
+            "originator": "UTH"
+          },
+          {
+            "owner": "UTH",
+            "originator": "CLE"
+          }
+        ]
+      },
+      {
+        "year": "2030",
+        "picks": [
+          {
+            "owner": "UTH",
+            "originator": "UTH"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "team": "WAS",
+    "years": [
+      {
+        "year": "2024",
+        "picks": [
+          {
+            "owner": "WAS",
+            "originator": "WAS",
+            "position": "2"
+          },
+          {
+            "owner": "WAS",
+            "originator": "LAC",
+            "position": "26"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "picks": [
+          {
+            "originator": "WAS",
+            "protections": {
+              "groups": [
+                {
+                  "rangeMin": "1",
+                  "rangeMax": "10",
+                  "owner": "WAS"
+                },
+                {
+                  "rangeMin": "11",
+                  "rangeMax": "30",
+                  "owner": "NYK"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "year": "2027",
+        "picks": [
+          {
+            "owner": "WAS",
+            "originator": "WAS"
+          }
+        ]
+      },
+      {
+        "year": "2029",
+        "picks": [
+          {
+            "owner": "WAS",
+            "originator": "WAS"
+          }
+        ]
+      }
+    ]
+  }
+]
