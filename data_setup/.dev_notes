@@ -1,0 +1,242 @@
+own
+protected
+conveying later
+swaps
+
+pick: {
+  originator?,
+  round,
+  year,
+  isForfeited,
+  isSwap,
+  isConditional,
+  
+  toTeam,
+  protections: {
+    if: {
+      rangeMin,
+      rangeMax,
+      team,
+    }
+    conveysTo: Pick
+  },
+  // ref to swap
+  // if there is a ref but not isSwap, then it's a swap this team is not a part of
+  swap,
+}
+
+swap: {
+  teams: team[],
+  picks: pick[],
+  protections: []
+}
+
+
+
+Conditional Picks (trade least favorable pick)
+Dependent picks (dependent on another trade conveying)
+Right to defer
+
+
+
+PHL 9-30 if PHL conveys 1st round pick to OKC in 2025
+
+== Swaps ==
+
+ > SAS or swap for ATL
+ > ATL or SAS
+ {
+  teams: [
+    SAS,
+    ATL
+  ],
+  picks: [
+    { SAS },
+    { ATL },
+  ],
+  protections: []
+ }
+
+> SAN or swap for BOS 2-30
+{
+  teams: [
+    SAS,
+    BOS,
+  ],
+  picks: [
+    SAS,
+    BOS (has protection on it)
+  ],
+  protections: [
+    { id: bosPick, range: 1-1, toTeam: BOS }
+  ]
+}
+
+> OKC or swap for HOU 11-30 or LAC
+{
+  teams: [
+    OKC,
+  ],
+  picks: [
+    OKC,
+    HOU,
+    LAC
+  ],
+  protections: [
+    { id: houPick, min: 1-10, toTeam: HOU }
+  ]
+}
+
+BRK> Own or HOU if HOU 1-10 or if HOU 11-30 less favorable than LAC; 
+or least favorable of BRK, HOU 11-30 and OKC; 
+and more favorable of (i) BRK and (ii) less favorable of HOU 11-30 and OKC to HOU if HOU 11-30 more favorable than LAC 
+
+(via OKC swap for HOU 11-30 or LAC; via HOU swap of HOU or OKC for BRK);9
+
+{
+  teams: [
+    HOU
+  ]
+  picks: [
+    BRK,
+  ],
+  swaps: [
+    OKC-HOU (above)
+  ]
+  protections: []
+}
+
+BRK > Two most / more favorable of BRK, PHX, and PHL 9-30 if PHL has conveyed 1st round pick to OKC by 2026; 
+more favorable of (i) WAS and (ii) least / less favorable of BRK, PHL 9-30 if conveyed to BRK, and PHX to WAS then other to PHX (via BRK swap of BRK or PHL for PHX; via WAS swap for PHX, BRK or PHL)
+
+BRK swap with PHX (KD trade)
+swap {
+  id: brk-phx-28-swap
+  picks: [
+    BRK,
+    PHX
+    PHI*
+  ],
+  bestTo: BRK,
+  worstTo: PHX,
+  remainderTo: BRK,
+}
+
+WAS swap with PHX (Beal trade)
+swap {
+  picks: [
+    WAS,
+  ],
+  swap: [
+    { phx pick from brk-phx-28-swap }
+  ]
+  bestTo: WAS,
+}
+
+
+PHI to OKC 2025 (1-6) => 2026 (1-4) => 2027 (1-4) => 2027 (2nd rnd)
+{
+  originator: PHI
+  year: 2025
+  protections: {
+    PHI 1-6,
+    OKC 7-30,
+  }
+  conveysTo: =>
+}
+{
+  originator: PHI
+  year: 2027
+  protections: {
+    PHI: 1-4
+    OKC: 5-30
+  }
+}
+PHI to BRK 2027 (1-8) => 2028 (1-8) => 2 x 2029 (2nd rnd)
+{
+  originator: PHI
+  protections: {
+    PHI 1-8,
+    BRK 9-30,
+  },
+  dependentOn: [above okc pick]
+}
+
+{
+  teams: [
+    BRK,
+    BRK,
+  ],
+  picks: [
+    BRK,
+    PHX,
+    PHL (dependent on OKC)
+  ],
+  swaps: [
+
+  ]
+}
+
+> PHI gets Least / less favorable of OKC, HOU 5-30 and LAC (via OKC)
+^ conditional pick 
+
+{
+  year: 2026,
+  originator: OKC,
+}
+{
+  year: 2026,
+  originator: HOU,
+  protections: {
+    HOU 1-4,
+    OKC 5-30,
+  }
+}
+{
+  year: 2026,
+  originator: LAC
+  toTeam: OKC
+}
+
+{
+  year: 2026
+  toTeam: PHI
+  
+}
+
+conditional {
+  picks: [
+    OKC,
+    LAC,
+    HOU,
+  ],
+  ownedBy: OKC
+  priority: {
+    OKC: 1+,
+    PHI: -1
+  }
+}
+
+> Skip
+
+Own or OKC (via OKC swap for DAL)
+Own or swap for BRK
+
+NOP #23 (via NOP swap for MIL)
+MIL #21 (via NOP swap for MIL)
+
+To UTH
+To POR (via MEM to BOS)
+
+> Read
+
+Own
+Own #27
+
+MIL
+BRK #3
+
+1-5 Own; 6-30 to UTH
+1-13 Own; 14-30 to NYK (via HOU to OKC)
+1-11 Own; 12-30 to NYK if not already settled (via HOU to OKC)
+1-5 Own; 6-30 to OKC if not already settled and if DEN has conveyed 1st round pick to ORL by 2026

@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "teams": "node ./update_teams.mjs",
-    "easy_picks": "node ./easy_picks.mjs"
+    "easy_picks": "node ./easy_picks.mjs",
+    "all_picks": "node ./all_picks.mjs",
+    "switch_team_ids": "node ./switch_team_ids.mjs",
+    "exec": "node"
   },
   "keywords": [],
   "author": "",

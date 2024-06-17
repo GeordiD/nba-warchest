@@ -11,6 +11,8 @@ const pb = new PocketBase('http://127.0.0.1:8090');
 await pb.admins.authWithPassword('geordi.dosher@gmail.com', 'testing1234');
 pb.autoCancellation(false);
 
+let count = 0;
+
 const doIt = async (picks, round) => {
   const picksByYear = picks.flatMap(x => x.years)
     .reduce((prev, curr) => {
@@ -82,21 +84,16 @@ const doIt = async (picks, round) => {
 
   Object.keys(picksByYear).forEach(year => {
     picksByYear[year].forEach(async pick => {
-      if (!pick.owner || !pick.originator) return;
+      if (!pick.owner && !pick.originator) return;
 
       const originator = getTeamId(pick.originator, pick);
       const pickId = getPickId(Number.parseInt(year), round, dataAbbrs[pick.originator])
 
-      const pickRequest = {
-        isForfeited: !!pick.isForfeited,
-      }
-
-      if (pick.position) pickRequest.position = pick.position;
-      if (pick.owner && pick.owner !== pick.originator) {
-        pickRequest.toTeam = getTeamId(pick.owner, pick);
-      }
 
       if (pick.protections) {
+        const pickRequest = {
+        }
+
         const promises = pick.protections.groups.map(async protection => {
           return await pb.collection('protections').create({
             rangeMin: Number.parseInt(protection.rangeMin),
@@ -110,18 +107,20 @@ const doIt = async (picks, round) => {
 
         pickRequest.protections = results.map(protectionRes => protectionRes.id)
 
-        const tryToTeam = pick.protections.groups.filter(protection => protection.owner !== originator);
+        const tryToTeam = pick.protections.groups.filter(protection => protection.owner !== pick.originator);
         if (tryToTeam.length) {
-          pickRequest.toTeam = tryToTeam[0];
+          pickRequest.toTeam = getTeamId(tryToTeam[0].owner, pick);
         }
-      }
 
-      await pb.collection('picks').update(pickId, {
-        ...pickRequest,
-      }, { requestKey: null });
+        await pb.collection('picks').update(pickId, {
+          ...pickRequest,
+        }, { requestKey: null });
+      }
     })
   })
 }
 
 await doIt(picks1, 1);
 await doIt(picks2, 2);
+
+console.log(count);
