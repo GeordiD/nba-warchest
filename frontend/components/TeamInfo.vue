@@ -36,30 +36,10 @@ const roundTwo = computed(() => teamPicks.value
     <table>
       <tr>
         <td class="pr-12 align-top">
-          <ul class="list-disc pl-4">
-            <li v-for="pick in roundOne" :key="pick.id">
-              {{ pick.year }}: {{ !!pick.conveysFrom ? '*' : ''}}{{ pick.originator?.abbr }} => {{ pick.toTeam?.abbr }}
-              <ul class="list-disc pl-4" v-if="pick.protections?.length">
-                <li v-for="protection in pick.protections" :key="protection.id">
-                  {{ protection.toTeam.abbr }}: {{ protection.rangeMin }}-{{ protection.rangeMax }}
-                </li>
-                <AddExtension :pick="pick" />
-              </ul> 
-            </li>
-          </ul>
+          <TeamRoundInfo :picks="roundOne" />
         </td>
         <td class="align-top">
-          <ul class="list-disc pl-4">
-            <li v-for="pick in roundTwo" :key="pick.id">
-              {{ pick.year }}: {{ !!pick.conveysFrom ? '*' : ''}}{{ pick.originator?.abbr }} => {{ pick.toTeam?.abbr }}
-              <ul class="list-disc pl-4" v-if="pick.protections?.length">
-                <li v-for="protection in pick.protections" :key="protection.id">
-                  {{ protection.toTeam.abbr }}: {{ protection.rangeMin }}-{{ protection.rangeMax }}
-                </li>
-                <AddExtension :pick="pick" />
-              </ul> 
-            </li>
-          </ul>
+          <TeamRoundInfo :picks="roundTwo" />
         </td>
       </tr>
     </table>

@@ -8,7 +8,8 @@ export type Pick = RecordModel & {
   originator?: string, // id
   toTeam?: string,
   conveysTo: string[],
-  isConditional: boolean,
+  conveysFrom: string,
+  swaps: string[],
   expand: {
     protections: {
       rangeMin: number,
