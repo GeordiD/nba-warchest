@@ -12,7 +12,7 @@ const props = defineProps({
 const output = reactive({
   year: 0,
   round: 1,
-  protection: 0
+  protection: props.pick.protections[0].rangeMax,
 })
 
 onMounted(() => {
@@ -63,6 +63,8 @@ async function submit() {
 
     await pb.collection('picks').update(pickRes.id, {
       protections: protectionResponses.map(x => x.id),
+      toTeam: toTeam.id,
+      conveysFrom: props.pick.id,
     })
   }
 

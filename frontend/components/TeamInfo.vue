@@ -38,7 +38,7 @@ const roundTwo = computed(() => teamPicks.value
         <td class="pr-12 align-top">
           <ul class="list-disc pl-4">
             <li v-for="pick in roundOne" :key="pick.id">
-              {{ pick.year }}: {{ pick.isConditional ? '*' : ''}}{{ pick.originator?.abbr }} => {{ pick.toTeam?.abbr }}
+              {{ pick.year }}: {{ !!pick.conveysFrom ? '*' : ''}}{{ pick.originator?.abbr }} => {{ pick.toTeam?.abbr }}
               <ul class="list-disc pl-4" v-if="pick.protections?.length">
                 <li v-for="protection in pick.protections" :key="protection.id">
                   {{ protection.toTeam.abbr }}: {{ protection.rangeMin }}-{{ protection.rangeMax }}
@@ -51,7 +51,7 @@ const roundTwo = computed(() => teamPicks.value
         <td class="align-top">
           <ul class="list-disc pl-4">
             <li v-for="pick in roundTwo" :key="pick.id">
-              {{ pick.year }}: {{ pick.isConditional ? '*' : ''}}{{ pick.originator?.abbr }} => {{ pick.toTeam?.abbr }}
+              {{ pick.year }}: {{ !!pick.conveysFrom ? '*' : ''}}{{ pick.originator?.abbr }} => {{ pick.toTeam?.abbr }}
               <ul class="list-disc pl-4" v-if="pick.protections?.length">
                 <li v-for="protection in pick.protections" :key="protection.id">
                   {{ protection.toTeam.abbr }}: {{ protection.rangeMin }}-{{ protection.rangeMax }}
