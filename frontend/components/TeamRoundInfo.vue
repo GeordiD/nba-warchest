@@ -9,8 +9,11 @@ const props = defineProps({
 
 <template>
 <ul class="list-disc pl-4">
-  <li v-for="pick in props.picks" :key="pick.id">
+  <li v-for="pick in props.picks" :key="pick.id" class="mb-1">
     <PickInfo :pick="pick" />
+    <EditControls 
+      :pick="pick"
+    />
   </li>
 </ul>
 </template>

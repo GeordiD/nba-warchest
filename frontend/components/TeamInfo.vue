@@ -34,14 +34,22 @@ const roundTwo = computed(() => teamPicks.value
   <div>
     <h2 class="font-semibold">{{ props.team.fullName }}</h2>
     <table>
-      <tr>
-        <td class="pr-12 align-top">
-          <TeamRoundInfo :picks="roundOne" />
-        </td>
-        <td class="align-top">
-          <TeamRoundInfo :picks="roundTwo" />
-        </td>
-      </tr>
+      <tbody>
+        <tr>
+          <td class="pr-12 align-top">
+            <TeamRoundInfo :picks="roundOne" />
+          </td>
+          <td class="align-top">
+            <TeamRoundInfo :picks="roundTwo" />
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </template>
+
+<style>
+button {
+  @apply px-1 bg-slate-600 rounded text-white
+}
+</style>
