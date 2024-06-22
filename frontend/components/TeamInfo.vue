@@ -1,38 +1,32 @@
 <script setup lang="ts">
-import type { Team } from '~/utils/types/Team';
-import type { ExpandedPick, Pick } from '~/utils/types/Pick';
+import type { Team } from '~/utils/types/Team'
 
 const props = defineProps({
   team: {
     type: Object as PropType<Team>,
     required: true,
   },
-  allPicks: {
-    type: Array as PropType<ExpandedPick[]>,
-    required: true,
-  },
 })
 
-const teamPicks = computed(() => props.allPicks.filter(pick =>
-  pick.originator?.id === props.team.id
-  || pick.toTeam?.id === props.team.id
-  || pick.protections.find(x => x.toTeam.id === props.team.id)
-));
+const teamInfoStore = useTeamInfoStore(props.team)();
 
-const roundOne = computed(() => teamPicks.value
-  .filter(pick => pick.round === 1)
-  .sort((a, b) => a.year - b.year)
-);
-
-const roundTwo = computed(() => teamPicks.value
-  .filter(pick => pick.round === 2)
-  .sort((a, b) => a.year - b.year)
-);
+const roundOne = computed(() => teamInfoStore.roundOnePicks.toSorted((a, b) => a.year - b.year))
+const roundTwo = computed(() => teamInfoStore.roundTwoPicks.toSorted((a, b) => a.year - b.year))
 </script>
 
 <template>
   <div>
-    <h2 class="font-semibold">{{ props.team.fullName }}</h2>
+    <h2 class="font-semibold text-lg">
+      {{ props.team.fullName }}
+    </h2>
+
+    <h3 class="font-semibold">
+      Stats:
+    </h3>
+
+    <h3 class="font-semibold">
+      Picks:
+    </h3>
     <table>
       <tbody>
         <tr>

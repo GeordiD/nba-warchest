@@ -1,25 +1,33 @@
 <script setup lang="ts">
-import type { ExpandedPick } from '~/utils/types/Pick';
+import type { ExpandedPick } from '~/utils/types/Pick'
 
 const {
-  pick
+  pick,
 } = defineProps({
   pick: {
     type: Object as PropType<ExpandedPick>,
     required: true,
-  }
-});
+  },
+})
 
-const isOpen = ref(false)
-
+const isOpen = ref(true)
 </script>
 
 <template>
-  <button class="" @click="() => { isOpen = !isOpen }">
+  <!-- <button
+    class=""
+    @click="() => { isOpen = !isOpen }"
+  >
     Edit
-  </button>
-  <div v-if="isOpen" class="flex flex-col gap-1 mt-1">
-    <AddExtension v-if="pick.protections.length" :pick="pick" />
-    <CreateSwap :pick="pick" />
+  </button> -->
+  <div
+    v-if="isOpen"
+    class="flex flex-col gap-1 mt-1"
+  >
+    <AddExtension
+      v-if="pick.protections.length"
+      :pick="pick"
+    />
+    <!-- <CreateSwap :pick="pick" /> -->
   </div>
 </template>

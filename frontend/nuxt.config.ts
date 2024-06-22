@@ -2,8 +2,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    "@nuxt/eslint",
-    "@nuxtjs/tailwindcss",
+    '@nuxt/eslint',
+    '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
+    '@nuxt/test-utils/module',
   ],
+  eslint: {
+    config: {
+      stylistic: true,
+    },
+  },
 })

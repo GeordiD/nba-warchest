@@ -6,6 +6,8 @@ const pickStore = usePickStore()
 
 await teamsStore.fetchAllTeams()
 await pickStore.fetchAll();
+
+const picks = pickStore.picks;
 </script>
 
 <template>
@@ -15,7 +17,10 @@ await pickStore.fetchAll();
       v-for="team in teamsStore.teams"
       :key="team.id"
     >
-      {{ team.abbr }}
+      <TeamInfo
+        :team="team"
+        :all-picks="picks"
+      />
     </div>
   </div>
 </template>
