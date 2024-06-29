@@ -1,6 +1,6 @@
 import { Teams } from '~/test/MockTeams';
 import { buildPick } from '~/test/buildPick';
-import type { ExpandedPick, ExpandedProtection, ExpandedSwap } from '~/utils/types/Pick';
+import type { Pick, Protection, Swap } from '~/utils/types/Pick';
 import type { Team } from '~/utils/types/Team';
 
 describe('DraftAsset', () => {
@@ -22,7 +22,7 @@ describe('DraftAsset', () => {
       bestTo?: Team,
       worstTo?: Team,
       remainderTo?: Team,
-      protections?: ExpandedProtection[],
+      protections?: Protection[],
     }
   } = {}) {
     const swaps = swap
@@ -36,7 +36,7 @@ describe('DraftAsset', () => {
             worstTo: swap.worstTo,
             remainderTo: swap.remainderTo,
             protections: swap.protections ?? [],
-          } as ExpandedSwap,
+          } as Swap,
         ]
       : [];
 
@@ -58,14 +58,14 @@ describe('DraftAsset', () => {
     remainderTo,
     protections = [],
   }: {
-    picks?: ExpandedPick[],
+    picks?: Pick[],
     pickTeams?: Team[],
     bestTo?: Team,
     worstTo?: Team,
     remainderTo?: Team,
-    protections?: ExpandedProtection[]
+    protections?: Protection[]
   }) => {
-    let builtPicks: ExpandedPick[];
+    let builtPicks: Pick[];
 
     if (picks.length) {
       builtPicks = picks;

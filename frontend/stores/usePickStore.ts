@@ -1,4 +1,4 @@
-import type { ExpandedPick, Pick } from '~/utils/types/Pick'
+import type { Pick, PickDto } from '~/utils/types/Pick'
 import type { Team } from '~/utils/types/Team'
 
 const getTeamById = (id?: string): Team => {
@@ -9,18 +9,18 @@ const getTeamById = (id?: string): Team => {
 
 export const usePickStore = defineStore('picks', () => {
   const data = reactive<{
-    picks: Pick[]
+    picks: PickDto[]
   }>({ picks: [] })
 
   async function fetchAll() {
     const pb = usePocketBase()
 
-    data.picks = await pb.collection('picks').getFullList<Pick>({
+    data.picks = await pb.collection('picks').getFullList<PickDto>({
       expand: 'protections,swaps,swaps.protections',
     })
   }
 
-  const picks = computed<ExpandedPick[]>(() => data.picks.map<ExpandedPick>(pick => ({
+  const picks = computed<Pick[]>(() => data.picks.map<Pick>(pick => ({
     ...pick,
     originator: getTeamById(pick.originator),
     toTeam: getTeamById(pick.toTeam),

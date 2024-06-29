@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ExpandedPick } from '~/utils/types/Pick';
+import type { Pick } from '~/utils/types/Pick';
 
 const pickStore = usePickStore();
 
@@ -7,7 +7,7 @@ const {
   pick,
 } = defineProps({
   pick: {
-    type: Object as PropType<ExpandedPick>,
+    type: Object as PropType<Pick>,
     required: true,
   },
 })

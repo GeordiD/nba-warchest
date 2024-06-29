@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { PropType } from 'vue'
-import type { ExpandedPick } from '~/utils/types/Pick'
+import type { Pick } from '~/utils/types/Pick'
 
 const props = defineProps({
-  picks: Object as PropType<ExpandedPick[]>,
+  picks: Object as PropType<Pick[]>,
 })
 </script>
 

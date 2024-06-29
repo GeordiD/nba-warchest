@@ -1,4 +1,4 @@
-import type { ExpandedSwap, Swap } from '~/utils/types/Pick';
+import type { Swap, SwapDto } from '~/utils/types/Pick';
 import type { Team } from '~/utils/types/Team'
 
 const getTeamById = (id?: string): Team | undefined => {
@@ -11,18 +11,18 @@ const getTeamById = (id?: string): Team | undefined => {
 
 export const useSwapStore = defineStore('swaps', () => {
   const data = reactive<{
-    swaps: Swap[]
+    swaps: SwapDto[]
   }>({ swaps: [] })
 
   async function fetchAll() {
     const pb = usePocketBase()
 
-    data.swaps = await pb.collection('swaps').getFullList<Swap>({
+    data.swaps = await pb.collection('swaps').getFullList<SwapDto>({
       expand: 'protections',
     })
   }
 
-  const swaps = computed<ExpandedSwap[]>(() => data.swaps.map<ExpandedSwap>(swap => ({
+  const swaps = computed<Swap[]>(() => data.swaps.map<Swap>(swap => ({
     picks: swap.picks,
     bestTo: getTeamById(swap.bestTo),
     worstTo: getTeamById(swap.worstTo),

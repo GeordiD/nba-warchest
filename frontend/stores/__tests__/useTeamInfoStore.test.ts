@@ -1,44 +1,20 @@
 import { setActivePinia, createPinia } from 'pinia';
 import { useSwapStore } from '~/stores/useSwapStore';
 import { Teams } from '~/test/MockTeams';
-import type { ExpandedPick, ExpandedSwap } from '~/utils/types/Pick';
+import type { Pick, Swap } from '~/utils/types/Pick';
 
 vi.mock('~/stores/usePickStore');
 vi.mock('~/stores/useSwapStore');
 
 describe('useTeamInfoStore', () => {
-  const buildPick = ({
-    originator = Teams.OKC,
-    toTeam = undefined,
-    id = 'test-id',
-    year = 2024,
-    round = 1,
-    protections = [],
-    conveysFrom = undefined,
-    conveysTo = [],
-    swaps = [],
-  }: Partial<ExpandedPick>): ExpandedPick => {
-    return {
-      originator,
-      toTeam,
-      id,
-      year,
-      round,
-      protections,
-      conveysFrom,
-      conveysTo,
-      swaps,
-    }
-  }
-
-  const mockPicks = (picks: ExpandedPick[]) => {
+  const mockPicks = (picks: Pick[]) => {
     const mockPicksStore = {
       picks,
     };
     vi.mocked(usePickStore).mockReturnValue(mockPicksStore as unknown as ReturnType<typeof usePickStore>);
   }
 
-  const mockSwaps = (swaps: ExpandedSwap[]) => {
+  const mockSwaps = (swaps: Swap[]) => {
     const mockSwapStore = {
       swaps,
     };
@@ -88,9 +64,9 @@ describe('useTeamInfoStore', () => {
     ].forEach(
       ({ desc, include, exclude, neg }: {
         desc: string,
-        include?: Partial<ExpandedPick>,
-        exclude?: Partial<ExpandedPick>,
-        neg?: Partial<ExpandedPick>,
+        include?: Partial<Pick>,
+        exclude?: Partial<Pick>,
+        neg?: Partial<Pick>,
       }) => {
         describe(desc, () => {
           if (include) {
@@ -164,9 +140,9 @@ describe('useTeamInfoStore', () => {
     ].forEach(
       ({ desc, include, exclude, neg }: {
         desc: string,
-        include?: Partial<ExpandedPick>,
-        exclude?: Partial<ExpandedPick>,
-        neg?: Partial<ExpandedPick>,
+        include?: Partial<Pick>,
+        exclude?: Partial<Pick>,
+        neg?: Partial<Pick>,
       }) => {
         describe(desc, () => {
           if (include) {

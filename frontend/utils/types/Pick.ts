@@ -1,21 +1,21 @@
 import type { RecordModel } from 'pocketbase'
 import type { Team } from '~/utils/types/Team'
 
-export type Protection = {
+export type ProtectionDto = {
   rangeMin: number
   rangeMax: number
   toTeam: string
   id: string
 }
 
-export type ExpandedProtection = {
+export type Protection = {
   rangeMin: number
   rangeMax: number
   toTeam: Team
   id: string
 }
 
-export type Swap = {
+export type SwapDto = {
   bestTo: string,
   worstTo: string,
   remainderTo: string,
@@ -24,21 +24,21 @@ export type Swap = {
   year: number,
   round: number,
   expand: {
-    protections: Protection[],
+    protections: ProtectionDto[],
   }
 }
 
-export type ExpandedSwap = {
+export type Swap = {
   bestTo?: Team,
   worstTo?: Team,
   remainderTo?: Team,
-  picks: ExpandedPick[],
-  protections: ExpandedProtection[]
+  picks: Pick[],
+  protections: Protection[]
   year: number,
   round: number;
 }
 
-export type Pick = RecordModel & {
+export type PickDto = RecordModel & {
   year: number
   round: number
   position?: number
@@ -48,20 +48,20 @@ export type Pick = RecordModel & {
   conveysFrom: string
   swaps: string[]
   expand: {
-    protections: Protection[]
-    swaps: Swap[]
+    protections: ProtectionDto[]
+    swaps: SwapDto[]
   }
 }
 
-export type ExpandedPick = {
+export type Pick = {
   id: string,
   year: number,
   round: number,
   position?: number,
   originator: Team
   toTeam?: Team
-  protections: ExpandedProtection[],
+  protections: Protection[],
   conveysTo: string[]
   conveysFrom?: string
-  swaps: ExpandedSwap[]
+  swaps: Swap[]
 }

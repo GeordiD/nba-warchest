@@ -1,5 +1,5 @@
 import { Teams } from '~/test/MockTeams'
-import type { ExpandedPick } from '~/utils/types/Pick'
+import type { Pick } from '~/utils/types/Pick'
 
 export const buildPick = ({
   originator = Teams.OKC,
@@ -11,7 +11,7 @@ export const buildPick = ({
   conveysFrom = undefined,
   conveysTo = [],
   swaps = [],
-}: Partial<ExpandedPick>): ExpandedPick => {
+}: Partial<Pick>): Pick => {
   return {
     originator,
     toTeam,

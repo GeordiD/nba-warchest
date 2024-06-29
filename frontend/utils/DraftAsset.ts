@@ -1,12 +1,12 @@
-import type { ExpandedPick, ExpandedSwap } from '~/utils/types/Pick';
+import type { Pick, Swap } from '~/utils/types/Pick';
 import type { Team } from '~/utils/types/Team';
 
-function isPick(asset: ExpandedPick | ExpandedSwap): asset is ExpandedPick {
-  return (asset as ExpandedPick).originator !== undefined;
+function isPick(asset: Pick | Swap): asset is Pick {
+  return (asset as Pick).originator !== undefined;
 }
 
-function isSwap(asset: ExpandedPick | ExpandedSwap): asset is ExpandedSwap {
-  return (asset as ExpandedSwap).picks !== undefined;
+function isSwap(asset: Pick | Swap): asset is Swap {
+  return (asset as Swap).picks !== undefined;
 }
 
 export class DraftAsset {
@@ -15,10 +15,10 @@ export class DraftAsset {
   round: number;
   year: number;
 
-  pick?: ExpandedPick;
-  swap?: ExpandedSwap;
+  pick?: Pick;
+  swap?: Swap;
 
-  constructor(team: Team, asset: ExpandedPick | ExpandedSwap) {
+  constructor(team: Team, asset: Pick | Swap) {
     this.team = team;
 
     this.round = asset.round;
@@ -72,11 +72,11 @@ export class DraftAsset {
   //   }
   // }
 
-  private hasPickInSwap(swap: ExpandedSwap) {
+  private hasPickInSwap(swap: Swap) {
     return swap.picks.map(x => x.originator.id).includes(this.team.id);
   }
 
-  private inBestWorstOrRemainder(swap: ExpandedSwap) {
+  private inBestWorstOrRemainder(swap: Swap) {
     return [swap.bestTo, swap.worstTo, swap.remainderTo]
       .some(x => x?.id === this.team.id);
   }
