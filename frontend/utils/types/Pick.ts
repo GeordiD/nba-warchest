@@ -20,7 +20,9 @@ export type Swap = {
   worstTo: string,
   remainderTo: string,
   picks: string[],
-  protections: string[]
+  protections: string[],
+  year: number,
+  round: number,
   expand: {
     protections: Protection[],
   }
@@ -30,8 +32,10 @@ export type ExpandedSwap = {
   bestTo?: Team,
   worstTo?: Team,
   remainderTo?: Team,
-  picks: string[],
+  picks: ExpandedPick[],
   protections: ExpandedProtection[]
+  year: number,
+  round: number;
 }
 
 export type Pick = RecordModel & {
