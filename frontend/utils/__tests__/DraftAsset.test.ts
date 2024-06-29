@@ -6,7 +6,6 @@ import type { Team } from '~/utils/types/Team';
 describe('DraftAsset', () => {
   const self = Teams.OKC;
   const otherTeam = Teams.ORL;
-  const secondTeam = Teams.BOS;
 
   function buildPickAsset({
     org = self,
@@ -18,7 +17,7 @@ describe('DraftAsset', () => {
     to?: Team,
     topXProtected?: number,
     swap?: {
-      with: Team,
+      with: Team[],
       bestTo?: Team,
       worstTo?: Team,
       remainderTo?: Team,
@@ -30,7 +29,7 @@ describe('DraftAsset', () => {
           {
             picks: [
               buildPick({ originator: org }),
-              buildPick({ originator: to }),
+              ...swap.with.map(x => buildPick({ originator: x })),
             ],
             bestTo: swap.bestTo,
             worstTo: swap.worstTo,
@@ -48,56 +47,6 @@ describe('DraftAsset', () => {
         : [],
       swaps,
     }))
-  }
-
-  const buildSwapAsset = ({
-    picks = [],
-    pickTeams = [],
-    bestTo,
-    worstTo,
-    remainderTo,
-    protections = [],
-  }: {
-    picks?: Pick[],
-    pickTeams?: Team[],
-    bestTo?: Team,
-    worstTo?: Team,
-    remainderTo?: Team,
-    protections?: Protection[]
-  }) => {
-    let builtPicks: Pick[];
-
-    if (picks.length) {
-      builtPicks = picks;
-    } else if (pickTeams.length) {
-      builtPicks = pickTeams.map(team => buildPick({ originator: team }));
-    } else {
-      throw Error('please use either picks or pickTeams');
-    }
-
-    return new DraftAsset(self, {
-      picks: builtPicks,
-      protections,
-      round: 1,
-      year: 2024,
-      bestTo,
-      worstTo,
-      remainderTo,
-    })
-  };
-
-  const memBosOkcOrlSituation = (from: Team) => {
-    return new DraftAsset(from, {
-      picks: [
-        buildPick({ originator: Teams.BOS, id: 'bos-pick' }),
-        buildPick({ originator: Teams.MEM, id: 'mem-pick' }),
-      ],
-      bestTo: Teams.OKC,
-      worstTo: Teams.ORL,
-      protections: [],
-      year: 2024,
-      round: 1,
-    })
   }
 
   describe('constructor', () => {
@@ -216,20 +165,62 @@ describe('DraftAsset', () => {
 
       expect(asset.isOwnedBySelf()).toBe(true);
     })
+  });
 
-    describe('when both picks underneath a swap have been traded (mem/bos to okc/orl)', () => {
-      [
-        { team: Teams.OKC, expected: true, desc: 'is receiving bestOf' },
-        { team: Teams.ORL, expected: true, desc: 'is receiving worstOf' },
-        { team: Teams.BOS, expected: false, desc: 'has traded away pick' },
-      ].forEach(({ team, expected, desc }) => {
-        it(`should be ${expected} when T ${desc}`, () => {
-          const asset = memBosOkcOrlSituation(team);
-
-          expect(asset.isOwnedBySelf()).toBe(expected);
-        })
+  describe('getNetQuantity', () => {
+    [
+      {
+        description: 'receiving a pick',
+        asset: buildPickAsset({ org: otherTeam, to: self }),
+        expected: 1,
+      },
+      {
+        description: 'sending a pick',
+        asset: buildPickAsset({ to: otherTeam }),
+        expected: -1,
+      },
+      {
+        description: 'swapping the pick',
+        asset: buildPickAsset({
+          org: self,
+          swap: {
+            with: [otherTeam],
+            bestTo: self,
+          },
+        }),
+        expected: 0,
+      },
+    ].forEach(({ description, asset, expected }) => {
+      it(`should be ${expected} when ${description}`, () => {
+        expect(asset.getNetQuantity()).toBe(expected);
       });
     });
+  });
+
+  describe('isProtected', () => {
+    it('should be true when receiving a protected pick', () => {
+      const asset = buildPickAsset({ org: otherTeam, to: self, topXProtected: 10 });
+
+      expect(asset.isProtected()).toBe(true);
+    })
+
+    it('should be true when sending a protected pick', () => {
+      const asset = buildPickAsset({ to: otherTeam, topXProtected: 10 });
+
+      expect(asset.isProtected()).toBe(true);
+    })
+
+    it('should be false when sending an unprotected pick', () => {
+      const asset = buildPickAsset({ to: otherTeam });
+
+      expect(asset.isProtected()).toBe(false);
+    })
+
+    it('should be false when receiving an unprotected pick', () => {
+      const asset = buildPickAsset({ org: otherTeam, to: self });
+
+      expect(asset.isProtected()).toBe(false);
+    })
   });
 });
 
@@ -299,3 +290,68 @@ describe('DraftAsset', () => {
 //     });
 //   });
 // })
+
+// const buildSwapAsset = ({
+//   picks = [],
+//   pickTeams = [],
+//   bestTo,
+//   worstTo,
+//   remainderTo,
+//   protections = [],
+// }: {
+//   picks?: Pick[],
+//   pickTeams?: Team[],
+//   bestTo?: Team,
+//   worstTo?: Team,
+//   remainderTo?: Team,
+//   protections?: Protection[]
+// }) => {
+//   let builtPicks: Pick[];
+
+//   if (picks.length) {
+//     builtPicks = picks;
+//   } else if (pickTeams.length) {
+//     builtPicks = pickTeams.map(team => buildPick({ originator: team }));
+//   } else {
+//     throw Error('please use either picks or pickTeams');
+//   }
+
+//   return new DraftAsset(self, {
+//     picks: builtPicks,
+//     protections,
+//     round: 1,
+//     year: 2024,
+//     bestTo,
+//     worstTo,
+//     remainderTo,
+//   })
+// };
+
+// const memBosOkcOrlSituation = (from: Team) => {
+//   return new DraftAsset(from, {
+//     picks: [
+//       buildPick({ originator: Teams.BOS, id: 'bos-pick' }),
+//       buildPick({ originator: Teams.MEM, id: 'mem-pick' }),
+//     ],
+//     bestTo: Teams.OKC,
+//     worstTo: Teams.ORL,
+//     protections: [],
+//     year: 2024,
+//     round: 1,
+//   })
+// }
+
+// // isOwnedBySelf
+// describe('when both picks underneath a swap have been traded (mem/bos to okc/orl)', () => {
+//   [
+//     { team: Teams.OKC, expected: true, desc: 'is receiving bestOf' },
+//     { team: Teams.ORL, expected: true, desc: 'is receiving worstOf' },
+//     { team: Teams.BOS, expected: false, desc: 'has traded away pick' },
+//   ].forEach(({ team, expected, desc }) => {
+//     it(`should be ${expected} when T ${desc}`, () => {
+//       const asset = memBosOkcOrlSituation(team);
+
+//       expect(asset.isOwnedBySelf()).toBe(expected);
+//     })
+//   });
+// });

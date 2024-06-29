@@ -1,13 +1,13 @@
 import type { Pick, Swap } from '~/utils/types/Pick';
 import type { Team } from '~/utils/types/Team';
 
-function isPick(asset: Pick | Swap): asset is Pick {
-  return (asset as Pick).originator !== undefined;
-}
+// function isPick(asset: Pick | Swap): asset is Pick {
+//   return (asset as Pick).originator !== undefined;
+// }
 
-function isSwap(asset: Pick | Swap): asset is Swap {
-  return (asset as Swap).picks !== undefined;
-}
+// function isSwap(asset: Pick | Swap): asset is Swap {
+//   return (asset as Swap).picks !== undefined;
+// }
 
 export class DraftAsset {
   team: Team;
@@ -15,47 +15,37 @@ export class DraftAsset {
   round: number;
   year: number;
 
-  pick?: Pick;
-  swap?: Swap;
+  pick: Pick;
 
-  constructor(team: Team, asset: Pick | Swap) {
+  constructor(team: Team, asset: Pick) {
     this.team = team;
 
     this.round = asset.round;
     this.year = asset.year;
-
-    if (isPick(asset)) {
-      this.pick = asset;
-    } else {
-      this.swap = asset;
-    }
+    this.pick = asset;
   }
 
   isOwn() {
-    return this.pick?.originator.id === this.team.id;
+    return this.pick.originator.id === this.team.id;
   }
 
   isOwnedBySelf() {
-    if (this.pick) {
-      return (this.isOwn() && !this.pick?.toTeam) // owns own pick
-        || (this.pick?.toTeam?.id === this.team.id) // owns other's pick
-    } else if (this.swap) {
-      return !this.hasPickInSwap(this.swap) && this.inBestWorstOrRemainder(this.swap)
+    return (this.isOwn() && !this.pick?.toTeam) // owns own pick
+      || (this.pick?.toTeam?.id === this.team.id) // owns other's pick
+  }
+
+  getNetQuantity() {
+    if (!this.pick.swaps.length) {
+      return this.isOwnedBySelf() ? 1 : -1;
     } else {
-      throw Error('must be either pick or swap');
+      return 0;
     }
   }
 
-  private hasPickInSwap(swap: Swap) {
-    return swap.picks.map(x => x.originator.id).includes(this.team.id);
+  isProtected() {
+    return this.pick.protections.length > 0;
   }
 
-  private inBestWorstOrRemainder(swap: Swap) {
-    return [swap.bestTo, swap.worstTo, swap.remainderTo]
-      .some(x => x?.id === this.team.id);
-  }
-
-  // quantity?
   // isProtected
   // isIncoming
   // isOutgoing
@@ -70,6 +60,16 @@ export class DraftAsset {
   // - has multiple swaps (I'm going to assume you can only have one for now)
 
   // TBD
+
+  // private hasPickInSwap(swap: Swap) {
+  //   return swap.picks.map(x => x.originator.id).includes(this.team.id);
+  // }
+
+  // private inBestWorstOrRemainder(swap: Swap) {
+  //   return [swap.bestTo, swap.worstTo, swap.remainderTo]
+  //     .some(x => x?.id === this.team.id);
+  // }
+
   // getNetQuantity() {
   //   if (this.pick) {
   //     if (!this.pick.swaps.length) {
