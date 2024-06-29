@@ -231,69 +231,71 @@ describe('DraftAsset', () => {
       });
     });
   });
-
-  // describe('getQuantity', () => {
-  //   [
-  //     {
-  //       description: 'receiving a pick',
-  //       asset: buildPickAsset({ org: otherTeam, to: self }),
-  //       expected: 1,
-  //     },
-  //     {
-  //       description: 'sending a pick',
-  //       asset: buildPickAsset({ to: otherTeam }),
-  //       expected: -1,
-  //     },
-  //     {
-  //       description: 'swapping (input as pick)',
-  //       asset: buildPickAsset({
-  //         org: self,
-  //         swap: {
-  //           with: otherTeam,
-  //           bestTo: self,
-  //         },
-  //       }),
-  //       expected: 0,
-  //     },
-  //     {
-  //       description: 'swapping (input as swap)',
-  //       asset: buildSwapAsset({
-  //         pickTeams: [self, otherTeam],
-  //         bestTo: self,
-  //       }),
-  //       expected: 0,
-  //     },
-  //     {
-  //       description: 'receiving a pick that looks like a swap',
-  //       asset: buildSwapAsset({
-  //         pickTeams: [Teams.BOS, Teams.MEM],
-  //         bestTo: self,
-  //         worstTo: Teams.ORL,
-  //       }),
-  //       expected: 1,
-  //     },
-  //     {
-  //       description: 'sending a pick that looks like a swap',
-  //       asset: buildSwapAsset({
-  //         pickTeams: [self, Teams.MEM],
-  //         bestTo: Teams.BOS,
-  //         worstTo: Teams.ORL,
-  //       }),
-  //       expected: -1,
-  //     },
-  //     {
-  //       description: 'sending worst pick of three',
-  //       asset: buildSwapAsset({
-  //         pickTeams: [self, otherTeam, secondTeam],
-  //         worstTo: otherTeam,
-  //         remainderTo: self,
-  //       }),
-  //       expected: 2,
-  //     },
-  //   ].forEach(({ description, asset, expected }) => {
-  //     it(`should be ${expected} when ${description}`, () => {
-  //       expect(asset.getNetQuantity()).toBe(expected);
-  //     });
-  //   });
-  // })
 });
+
+// TBD
+
+// describe('getQuantity', () => {
+//   [
+//     {
+//       description: 'receiving a pick',
+//       asset: buildPickAsset({ org: otherTeam, to: self }),
+//       expected: 1,
+//     },
+//     {
+//       description: 'sending a pick',
+//       asset: buildPickAsset({ to: otherTeam }),
+//       expected: -1,
+//     },
+//     {
+//       description: 'swapping (input as pick)',
+//       asset: buildPickAsset({
+//         org: self,
+//         swap: {
+//           with: otherTeam,
+//           bestTo: self,
+//         },
+//       }),
+//       expected: 0,
+//     },
+//     {
+//       description: 'swapping (input as swap)',
+//       asset: buildSwapAsset({
+//         pickTeams: [self, otherTeam],
+//         bestTo: self,
+//       }),
+//       expected: 0,
+//     },
+//     {
+//       description: 'receiving a pick that looks like a swap',
+//       asset: buildSwapAsset({
+//         pickTeams: [Teams.BOS, Teams.MEM],
+//         bestTo: self,
+//         worstTo: Teams.ORL,
+//       }),
+//       expected: 1,
+//     },
+//     {
+//       description: 'sending a pick that looks like a swap',
+//       asset: buildSwapAsset({
+//         pickTeams: [self, Teams.MEM],
+//         bestTo: Teams.BOS,
+//         worstTo: Teams.ORL,
+//       }),
+//       expected: -1,
+//     },
+//     {
+//       description: 'sending worst pick of three',
+//       asset: buildSwapAsset({
+//         pickTeams: [self, otherTeam, secondTeam],
+//         worstTo: otherTeam,
+//         remainderTo: self,
+//       }),
+//       expected: 2,
+//     },
+//   ].forEach(({ description, asset, expected }) => {
+//     it(`should be ${expected} when ${description}`, () => {
+//       expect(asset.getNetQuantity()).toBe(expected);
+//     });
+//   });
+// })

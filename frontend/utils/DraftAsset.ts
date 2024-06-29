@@ -46,6 +46,30 @@ export class DraftAsset {
     }
   }
 
+  private hasPickInSwap(swap: Swap) {
+    return swap.picks.map(x => x.originator.id).includes(this.team.id);
+  }
+
+  private inBestWorstOrRemainder(swap: Swap) {
+    return [swap.bestTo, swap.worstTo, swap.remainderTo]
+      .some(x => x?.id === this.team.id);
+  }
+
+  // quantity?
+  // isProtected
+  // isIncoming
+  // isOutgoing
+  // isFavorableSwap
+  // isUnfavorableSwap
+  // isPick
+  // isSwap
+
+  // hasErrors: self idenitify when data isn't right
+  // - has a swap AND has a to team
+  // - pick has swap but no pick in that swap
+  // - has multiple swaps (I'm going to assume you can only have one for now)
+
+  // TBD
   // getNetQuantity() {
   //   if (this.pick) {
   //     if (!this.pick.swaps.length) {
@@ -71,27 +95,4 @@ export class DraftAsset {
   //     }
   //   }
   // }
-
-  private hasPickInSwap(swap: Swap) {
-    return swap.picks.map(x => x.originator.id).includes(this.team.id);
-  }
-
-  private inBestWorstOrRemainder(swap: Swap) {
-    return [swap.bestTo, swap.worstTo, swap.remainderTo]
-      .some(x => x?.id === this.team.id);
-  }
-
-  // quantity?
-  // isProtected
-  // isIncoming
-  // isOutgoing
-  // isFavorableSwap
-  // isUnfavorableSwap
-  // isPick
-  // isSwap
-
-  // hasErrors: self idenitify when data isn't right
-  // - has a swap AND has a to team
-  // - pick has swap but no pick in that swap
-  // - has multiple swaps (I'm going to assume you can only have one for now)
 }
