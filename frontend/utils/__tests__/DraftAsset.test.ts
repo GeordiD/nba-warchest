@@ -49,6 +49,26 @@ describe('DraftAsset', () => {
     }))
   }
 
+  const cases = {
+    ownPick: buildPickAsset(),
+    sendUnprotectedPick: buildPickAsset({ to: otherTeam }),
+    sendProtectedPick: buildPickAsset({ to: otherTeam, topXProtected: 10 }),
+    receiveUnprotectedPick: buildPickAsset({ org: otherTeam, to: self }),
+    receiveProtectedPick: buildPickAsset({ org: otherTeam, to: self, topXProtected: 10 }),
+    favorableSwap: buildPickAsset({
+      swap: {
+        with: [otherTeam],
+        bestTo: self,
+      },
+    }),
+    unfavorableSwap: buildPickAsset({
+      swap: {
+        with: [otherTeam],
+        bestTo: otherTeam,
+      },
+    }),
+  }
+
   describe('constructor', () => {
     describe('basic pick', () => {
       const setup = () => {
@@ -222,74 +242,150 @@ describe('DraftAsset', () => {
       expect(asset.isProtected()).toBe(false);
     })
   });
+
+  describe('getProtection', () => {
+    it('should be 0 when unprotected', () => {
+      expect(cases.sendUnprotectedPick.getProtection()).toBe(0);
+    })
+
+    it('should be the top number when protected', () => {
+      expect(cases.sendProtectedPick.getProtection()).toBe(10);
+    });
+
+    it('should be 0 for an unprotected swap', () => {
+      const asset = buildPickAsset({
+        swap: {
+          with: [otherTeam],
+          bestTo: self,
+        },
+      })
+
+      expect(asset.getProtection()).toBe(0);
+    });
+
+    it('should be the top number when protected swap', () => {
+      const asset = buildPickAsset({
+        swap: {
+          with: [otherTeam],
+          protections: [
+            { id: '1', rangeMin: 1, rangeMax: 10, toTeam: otherTeam },
+            // adding both just for testing and in case we do
+            { id: '2', rangeMin: 11, rangeMax: 30, toTeam: self },
+          ],
+        },
+      })
+
+      expect(asset.getProtection()).toBe(10);
+    });
+  })
+
+  describe('isIncoming', () => {
+    it('should be true when receiving a pick', () => {
+      expect(cases.receiveProtectedPick.isIncoming()).toBe(true);
+    })
+
+    it('should be false when sending a pick', () => {
+      expect(cases.sendProtectedPick.isIncoming()).toBe(false);
+    })
+
+    it('should be false for own pick', () => {
+      expect(cases.ownPick.isIncoming()).toBe(false);
+    });
+
+    it('should be false when swapping a pick', () => {
+      expect(cases.favorableSwap.isIncoming()).toBe(false);
+    });
+  });
+
+  describe('isOutgoing', () => {
+    it('should be false when receiving a pick', () => {
+      expect(cases.receiveProtectedPick.isOutgoing()).toBe(false);
+    })
+
+    it('should be true when sending a pick', () => {
+      expect(cases.sendProtectedPick.isOutgoing()).toBe(true);
+    })
+
+    it('should be false for own pick', () => {
+      expect(cases.ownPick.isOutgoing()).toBe(false);
+    });
+
+    it('should be false when swapping a pick', () => {
+      expect(cases.favorableSwap.isOutgoing()).toBe(false);
+    });
+  });
+
+  describe('isSwap', () => {
+    it('should be false for a pick', () => {
+      expect(cases.sendProtectedPick.isSwap()).toBe(false);
+    });
+
+    it('should be true for a swap', () => {
+      expect(cases.favorableSwap.isSwap()).toBe(true);
+    });
+  });
+
+  describe('isFavorableSwap', () => {
+    it('should be false for a pick', () => {
+      expect(cases.sendProtectedPick.isFavorableSwap()).toBe(false);
+    });
+
+    it('should be true for a favorable swap', () => {
+      expect(cases.favorableSwap.isFavorableSwap()).toBe(true);
+    });
+
+    it('should be true for a unfavorable swap', () => {
+      expect(cases.unfavorableSwap.isFavorableSwap()).toBe(false);
+    });
+  });
+
+  describe('isUnfavorableSwap', () => {
+    it('should be false for a pick', () => {
+      expect(cases.sendProtectedPick.isUnfavorableSwap()).toBe(false);
+    });
+
+    it('should be true for a favorable swap', () => {
+      expect(cases.favorableSwap.isUnfavorableSwap()).toBe(false);
+    });
+
+    it('should be true for a unfavorable swap', () => {
+      expect(cases.unfavorableSwap.isUnfavorableSwap()).toBe(true);
+    });
+  });
+
+  describe('isPick', () => {
+    it('should be true for a pick', () => {
+      expect(cases.ownPick.isPick()).toBe(true);
+    });
+
+    it('should be false for a swap', () => {
+      expect(cases.favorableSwap.isPick()).toBe(false);
+    })
+  });
+
+  describe('hasErrors', () => {
+    describe('should be false', () => {
+      [
+        { asset: cases.ownPick, desc: 'own pick' },
+        { asset: cases.sendProtectedPick, desc: 'send protected pick' },
+        { asset: cases.unfavorableSwap, desc: 'unfavorable swap' },
+      ].forEach(({ asset, desc }) => {
+        it(`normally (${desc})`, () => {
+          expect(asset.hasErrors()).toBe(false);
+        })
+      })
+    })
+
+    it('should be true when has a swap AND a to Team', () => {
+      expect(buildPickAsset({
+        to: otherTeam,
+        swap: { with: [otherTeam], bestTo: otherTeam },
+      }).hasErrors()).toBe(true);
+    })
+  });
 });
 
 // TBD
-
-// describe('getQuantity', () => {
-//   [
-//     {
-//       description: 'receiving a pick',
-//       asset: buildPickAsset({ org: otherTeam, to: self }),
-//       expected: 1,
-//     },
-//     {
-//       description: 'sending a pick',
-//       asset: buildPickAsset({ to: otherTeam }),
-//       expected: -1,
-//     },
-//     {
-//       description: 'swapping (input as pick)',
-//       asset: buildPickAsset({
-//         org: self,
-//         swap: {
-//           with: otherTeam,
-//           bestTo: self,
-//         },
-//       }),
-//       expected: 0,
-//     },
-//     {
-//       description: 'swapping (input as swap)',
-//       asset: buildSwapAsset({
-//         pickTeams: [self, otherTeam],
-//         bestTo: self,
-//       }),
-//       expected: 0,
-//     },
-//     {
-//       description: 'receiving a pick that looks like a swap',
-//       asset: buildSwapAsset({
-//         pickTeams: [Teams.BOS, Teams.MEM],
-//         bestTo: self,
-//         worstTo: Teams.ORL,
-//       }),
-//       expected: 1,
-//     },
-//     {
-//       description: 'sending a pick that looks like a swap',
-//       asset: buildSwapAsset({
-//         pickTeams: [self, Teams.MEM],
-//         bestTo: Teams.BOS,
-//         worstTo: Teams.ORL,
-//       }),
-//       expected: -1,
-//     },
-//     {
-//       description: 'sending worst pick of three',
-//       asset: buildSwapAsset({
-//         pickTeams: [self, otherTeam, secondTeam],
-//         worstTo: otherTeam,
-//         remainderTo: self,
-//       }),
-//       expected: 2,
-//     },
-//   ].forEach(({ description, asset, expected }) => {
-//     it(`should be ${expected} when ${description}`, () => {
-//       expect(asset.getNetQuantity()).toBe(expected);
-//     });
-//   });
-// })
 
 // const buildSwapAsset = ({
 //   picks = [],

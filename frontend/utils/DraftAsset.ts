@@ -1,4 +1,4 @@
-import type { Pick, Swap } from '~/utils/types/Pick';
+import type { Pick, Protection, Swap } from '~/utils/types/Pick';
 import type { Team } from '~/utils/types/Team';
 
 // function isPick(asset: Pick | Swap): asset is Pick {
@@ -46,16 +46,72 @@ export class DraftAsset {
     return this.pick.protections.length > 0;
   }
 
-  // isProtected
-  // isIncoming
-  // isOutgoing
-  // isFavorableSwap
-  // isUnfavorableSwap
-  // isPick
-  // isSwap
+  getProtection() {
+    if (!this.pick.swaps.length) {
+      return this.pick.protections.length
+        ? this.getTopXProtected(this.pick.protections)
+        : 0;
+    } else {
+      return this.pick.swaps[0].protections.length
+        ? this.getTopXProtected(this.pick.swaps[0].protections)
+        : 0;
+    }
+  }
+
+  private getTopXProtected(protections: Protection[]) {
+    return protections.reduce((prev, current) => {
+      return prev > current.rangeMax ? current.rangeMax : prev;
+    }, 100)
+  }
+
+  isIncoming() {
+    return this.isSelf(this.pick.toTeam);
+  }
+
+  isOutgoing() {
+    return this.pick.toTeam
+      ? !this.isSelf(this.pick.toTeam)
+      : false;
+  }
+
+  private isSelf(team?: Team) {
+    return !!team && team.id === this.team.id;
+  }
+
+  isSwap() {
+    return this.pick.swaps.length > 0;
+  }
+
+  isPick() {
+    return !this.isSwap();
+  }
+
+  isFavorableSwap() {
+    if (this.pick.swaps.length) {
+      const swap = this.pick.swaps[0];
+      return this.isSelf(swap.bestTo);
+    }
+
+    return false;
+  }
+
+  isUnfavorableSwap() {
+    if (this.pick.swaps.length) {
+      const swap = this.pick.swaps[0];
+      return !this.isSelf(swap.bestTo);
+    }
+
+    return false;
+  }
+
+  hasErrors() {
+    if (!!this.pick.toTeam && this.pick.swaps.length > 0) return true;
+
+    return false;
+  }
 
   // hasErrors: self idenitify when data isn't right
-  // - has a swap AND has a to team
+  // x has a swap AND has a to team
   // - pick has swap but no pick in that swap
   // - has multiple swaps (I'm going to assume you can only have one for now)
 
