@@ -27,7 +27,7 @@ export class DraftAsset {
   }
 
   getNetQuantity() {
-    if (!this.pick.swaps.length) {
+    if (!this.isSwap()) {
       return this.isOwnedBySelf() ? 1 : -1;
     } else {
       return 0;
@@ -39,13 +39,14 @@ export class DraftAsset {
   }
 
   getProtection() {
-    if (!this.pick.swaps.length) {
-      return this.pick.protections.length
-        ? this.getTopXProtected(this.pick.protections)
-        : 0;
-    } else {
+    if (this.isSwap()) {
+      // doesn't work
       return this.pick.swaps[0].protections.length
         ? this.getTopXProtected(this.pick.swaps[0].protections)
+        : 0;
+    } else {
+      return this.pick.protections.length
+        ? this.getTopXProtected(this.pick.protections)
         : 0;
     }
   }
@@ -70,16 +71,16 @@ export class DraftAsset {
     return !!team && team.id === this.team.id;
   }
 
-  isSwap() {
-    return this.pick.swaps.length > 0;
-  }
-
   isPick() {
     return !this.isSwap();
   }
 
+  isSwap() {
+    return this.pick.swaps.length > 0;
+  }
+
   isFavorableSwap() {
-    if (this.pick.swaps.length) {
+    if (this.isSwap()) {
       const swap = this.pick.swaps[0];
       return this.isSelf(swap.bestTo);
     }
@@ -88,7 +89,7 @@ export class DraftAsset {
   }
 
   isUnfavorableSwap() {
-    if (this.pick.swaps.length) {
+    if (this.isSwap()) {
       const swap = this.pick.swaps[0];
       return !this.isSelf(swap.bestTo);
     }
@@ -104,6 +105,7 @@ export class DraftAsset {
 
   // Ideas:
   // conveyance rules?
+  // describe swap?
 
   // hasErrors: self idenitify when data isn't right
   // x has a swap AND has a to team
