@@ -1,6 +1,6 @@
 import { Teams } from '~/test/MockTeams';
 import { buildPick } from '~/test/buildPick';
-import type { Pick, Protection, Swap } from '~/utils/types/Pick';
+import type { Protection, Swap } from '~/utils/types/Pick';
 import type { Team } from '~/utils/types/Team';
 
 describe('DraftAsset', () => {
