@@ -40,7 +40,7 @@ export class DraftAsset {
 
   getProtection() {
     if (this.isSwap()) {
-      // doesn't work
+      // doesn't work - cause each pick can have protections.
       return this.pick.swaps[0].protections.length
         ? this.getTopXProtected(this.pick.swaps[0].protections)
         : 0;
