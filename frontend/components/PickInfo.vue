@@ -1,40 +1,32 @@
 <script setup lang="ts">
-import type { Pick } from '~/utils/types/Pick'
+import type { DraftAsset } from '#imports';
 
 const {
-  pick,
+  asset,
 } = defineProps({
-  pick: {
-    type: Object as PropType<Pick>,
+  asset: {
+    type: Object as PropType<DraftAsset>,
     required: true,
   },
 })
-
-const isOwn = computed(() => !pick.toTeam && !pick.swaps.length)
-const isSwap = computed(() => pick.swaps.length > 0);
 </script>
 
 <template>
   <div>
-    {{ pick.year }}:
-    <span v-if="isOwn">Own</span>
+    {{ asset.year }}:
+    <span v-if="asset.isOwn() && asset.isOwnedBySelf() && !asset.isSwap()">Own</span>
 
-    <span v-else-if="isSwap">
-      <SwapInfo :pick="pick" />
+    <span v-else-if="asset.isSwap()">
+      <!-- <SwapInfo :asset="asset" /> -->
+      {{ asset.isFavorableSwap() ? 'Favorable' : 'Unfavorable' }} swap
     </span>
-    <span v-else>{{ !!pick.conveysFrom ? '*' : '' }}{{ pick.originator?.abbr }} => {{ pick.toTeam?.abbr }}</span>
-    <span v-if="pick.position"> (#{{ pick.position }})</span>
+    <span v-else>{{ !!asset.pick.conveysFrom ? '*' : '' }}{{ asset.pick.originator?.abbr }} => {{ asset.pick.toTeam?.abbr }}</span>
+    <span v-if="asset.pick.position"> (#{{ asset.pick.position }})</span>
 
-    <ul
-      v-if="pick.protections?.length"
-      class="list-disc pl-4"
+    <span
+      v-if="asset.isProtected()"
     >
-      <li
-        v-for="protection in pick.protections"
-        :key="protection.id"
-      >
-        {{ protection.toTeam.abbr }}: {{ protection.rangeMin }}-{{ protection.rangeMax }}
-      </li>
-    </ul>
+      (Top {{ asset.getProtection() }} prot.)
+    </span>
   </div>
 </template>

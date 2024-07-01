@@ -4,6 +4,7 @@ import type { Team } from '~/utils/types/Team';
 export class DraftAsset {
   team: Team;
 
+  id: string;
   round: number;
   year: number;
 
@@ -12,6 +13,7 @@ export class DraftAsset {
   constructor(team: Team, asset: Pick) {
     this.team = team;
 
+    this.id = asset.id;
     this.round = asset.round;
     this.year = asset.year;
     this.pick = asset;
@@ -77,6 +79,10 @@ export class DraftAsset {
 
   isSwap() {
     return this.pick.swaps.length > 0;
+  }
+
+  swapWith() {
+    if (!this.isSwap()) return [];
   }
 
   isFavorableSwap() {

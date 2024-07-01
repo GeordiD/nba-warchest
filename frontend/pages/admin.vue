@@ -6,7 +6,6 @@ const pickStore = usePickStore()
 
 await teamsStore.fetchAllTeams()
 await pickStore.fetchAll();
-
 const picks = pickStore.picks;
 </script>
 

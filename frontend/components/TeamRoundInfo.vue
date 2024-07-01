@@ -1,22 +1,22 @@
 <script setup lang="ts">
 import type { PropType } from 'vue'
-import type { Pick } from '~/utils/types/Pick'
+import type { DraftAsset } from '@/utils/DraftAsset';
 
 const props = defineProps({
-  picks: Object as PropType<Pick[]>,
+  assets: Object as PropType<DraftAsset[]>,
 })
 </script>
 
 <template>
   <ul class="list-disc pl-4">
     <li
-      v-for="pick in props.picks"
-      :key="pick.id"
+      v-for="asset in props.assets"
+      :key="asset.id"
       class="mb-1"
     >
-      <PickInfo :pick="pick" />
+      <PickInfo :asset="asset" />
       <EditControls
-        :pick="pick"
+        :pick="asset.pick"
       />
     </li>
   </ul>

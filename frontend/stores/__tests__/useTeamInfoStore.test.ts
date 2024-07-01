@@ -34,7 +34,7 @@ describe('useTeamInfoStore', () => {
       ])
       const store = useTeamInfoStore(Teams.OKC)();
 
-      expect(store.picks).toEqual([]);
+      expect(store.assets).toEqual([]);
     });
 
     [
@@ -77,7 +77,7 @@ describe('useTeamInfoStore', () => {
               ])
               const store = useTeamInfoStore(Teams.OKC)();
 
-              expect(store.picks).toEqual([
+              expect(store.assets).toEqual([
                 pick,
               ]);
             })
@@ -91,7 +91,7 @@ describe('useTeamInfoStore', () => {
               ])
               const store = useTeamInfoStore(Teams.OKC)();
 
-              expect(store.picks).toEqual([
+              expect(store.assets).toEqual([
                 pick,
               ]);
             })
@@ -105,7 +105,7 @@ describe('useTeamInfoStore', () => {
               ])
               const store = useTeamInfoStore(Teams.OKC)();
 
-              expect(store.picks).toEqual([]);
+              expect(store.assets).toEqual([]);
             })
           }
         })

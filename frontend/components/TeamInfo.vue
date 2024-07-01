@@ -10,8 +10,8 @@ const props = defineProps({
 
 const teamInfoStore = useTeamInfoStore(props.team)();
 
-const roundOne = computed(() => teamInfoStore.roundOnePicks.toSorted((a, b) => a.year - b.year))
-const roundTwo = computed(() => teamInfoStore.roundTwoPicks.toSorted((a, b) => a.year - b.year))
+const roundOne = computed(() => teamInfoStore.roundOneAssets.toSorted((a, b) => a.year - b.year))
+const roundTwo = computed(() => teamInfoStore.roundTwoAssets.toSorted((a, b) => a.year - b.year))
 </script>
 
 <template>
@@ -31,10 +31,10 @@ const roundTwo = computed(() => teamInfoStore.roundTwoPicks.toSorted((a, b) => a
       <tbody>
         <tr>
           <td class="pr-12 align-top">
-            <TeamRoundInfo :picks="roundOne" />
+            <TeamRoundInfo :assets="roundOne" />
           </td>
           <td class="align-top">
-            <TeamRoundInfo :picks="roundTwo" />
+            <TeamRoundInfo :assets="roundTwo" />
           </td>
         </tr>
       </tbody>

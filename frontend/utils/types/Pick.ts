@@ -34,7 +34,7 @@ export type Swap = {
   bestTo?: Team,
   worstTo?: Team,
   remainderTo?: Team,
-  picks: Omit<Pick, 'swaps'>[] & { swaps: string[] },
+  picks: string[],
   protections: Protection[]
 }
 
