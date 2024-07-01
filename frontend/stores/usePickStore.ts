@@ -29,6 +29,8 @@ export const usePickStore = defineStore('picks', () => {
       toTeam: getTeamById(protection.toTeam),
     })) ?? [],
     swaps: pick.expand?.swaps?.map(swap => ({
+      year: swap.year,
+      round: swap.round,
       bestTo: getTeamById(swap.bestTo),
       worstTo: getTeamById(swap.worstTo),
       remainderTo: getTeamById(swap.remainderTo),

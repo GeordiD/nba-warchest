@@ -16,26 +16,26 @@ export type Protection = {
 }
 
 export type SwapDto = {
+  year: number,
+  round: number,
   bestTo: string,
   worstTo: string,
   remainderTo: string,
   picks: string[],
   protections: string[],
-  year: number,
-  round: number,
   expand: {
     protections: ProtectionDto[],
   }
 }
 
 export type Swap = {
+  year: number,
+  round: number;
   bestTo?: Team,
   worstTo?: Team,
   remainderTo?: Team,
-  picks: Pick[],
+  picks: Omit<Pick, 'swaps'>[] & { swaps: string[] },
   protections: Protection[]
-  year: number,
-  round: number;
 }
 
 export type PickDto = RecordModel & {
