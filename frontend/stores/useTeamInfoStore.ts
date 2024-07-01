@@ -18,11 +18,20 @@ export const useTeamInfoStore = (team: Team) => {
       asset.isOwnedBySelf(),
     ))
 
+    const tradableRoundOnePicks = computed(() => []);
+    const tradableRoundOneSwaps = computed(() => []);
+
     return {
       assets: relatedAssets,
-      roundOneAssets,
-      roundTwoAssets,
+
       availableAssets,
+
+      roundOneAssets,
+      availableAssetsRoundOne: computed(() => availableAssets.value.filter(x => x.round === 1)),
+      tradableRoundOnePicks,
+      tradableRoundOneSwaps,
+
+      roundTwoAssets,
     }
   })
 }

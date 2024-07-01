@@ -24,6 +24,13 @@ const roundTwo = computed(() => teamInfoStore.roundTwoAssets.toSorted((a, b) => 
       Stats:
     </h3>
 
+    <p>
+      Available: {{ teamInfoStore.availableAssetsRoundOne.length }}
+    </p>
+    <p>
+      Tradable: {{ teamInfoStore.tradableRoundOnePicks.length }} (+{{ teamInfoStore.tradableRoundOneSwaps.length }})
+    </p>
+
     <h3 class="font-semibold">
       Picks:
     </h3>
