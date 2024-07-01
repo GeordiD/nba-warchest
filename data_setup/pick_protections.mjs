@@ -1,17 +1,18 @@
-import PocketBase from 'pocketbase';
+// import PocketBase from 'pocketbase';
 import picks1 from './data/easy_picks_1.json' with { type: 'json' };
 import picks2 from './data/easy_picks_2.json' with { type: 'json' };
+import teams from './data/teams.json' with { type: 'json' };
+import basicPicks from './data/basic_picks.json' with { type: 'json' };
+import fs from 'node:fs';
 import util from "util";
 
 function deepLog(stuff) {
   return util.inspect(stuff, { showHidden: false, depth: null, colors: true });
 }
 
-const pb = new PocketBase('http://127.0.0.1:8090');
-await pb.admins.authWithPassword('geordi.dosher@gmail.com', 'testing1234');
-pb.autoCancellation(false);
-
-let count = 0;
+// const pb = new PocketBase('http://127.0.0.1:8090');
+// await pb.admins.authWithPassword('geordi.dosher@gmail.com', 'testing1234');
+// pb.autoCancellation(false);
 
 const doIt = async (picks, round) => {
   const picksByYear = picks.flatMap(x => x.years)
@@ -30,7 +31,7 @@ const doIt = async (picks, round) => {
       return out;
     }, {})
 
-  const allTeams = await pb.collection('teams').getFullList();
+  // const allTeams = await pb.collection('teams').getFullList();
 
   const dataAbbrs = {
     ATL: 'ATL',
@@ -66,19 +67,19 @@ const doIt = async (picks, round) => {
   }
 
   const getPickId = (year, round, abbr) => {
-    return `${year}x${round}x${abbr}xxxxx`
+    return `pick_${year}_${round}_${abbr}`
   }
 
   const getTeamId = (abbr, pick) => {
     const betterAbbr = dataAbbrs[abbr];
-    const team = allTeams.find(x => x.abbr === betterAbbr);
+    const team = teams.find(x => x.abbr === betterAbbr);
 
     if (!team) {
       console.error(pick);
       throw Error('no team found for ', pick);
     } 
 
-    return team.id;
+    return team.abbr;
   }
 
 
@@ -123,4 +124,4 @@ const doIt = async (picks, round) => {
 await doIt(picks1, 1);
 await doIt(picks2, 2);
 
-console.log(count);
+fs.writeFileSync('./output/picks.json', JSON.stringify(output));

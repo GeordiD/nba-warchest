@@ -1,0 +1,2522 @@
+[
+  {
+    "_id": "pick_2025_1_ATL",
+    "originator": "ATL",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_BOS",
+    "originator": "BOS",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_BKN",
+    "originator": "BKN",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_CHA",
+    "originator": "CHA",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_CHI",
+    "originator": "CHI",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_CLE",
+    "originator": "CLE",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_DAL",
+    "originator": "DAL",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_DEN",
+    "originator": "DEN",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_DET",
+    "originator": "DET",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_GSW",
+    "originator": "GSW",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_HOU",
+    "originator": "HOU",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_IND",
+    "originator": "IND",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_LAC",
+    "originator": "LAC",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_LAL",
+    "originator": "LAL",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_MEM",
+    "originator": "MEM",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_MIA",
+    "originator": "MIA",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_MIL",
+    "originator": "MIL",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_MIN",
+    "originator": "MIN",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_NOP",
+    "originator": "NOP",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_NYK",
+    "originator": "NYK",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_OKC",
+    "originator": "OKC",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_ORL",
+    "originator": "ORL",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_PHI",
+    "originator": "PHI",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_PHX",
+    "originator": "PHX",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_POR",
+    "originator": "POR",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_SAC",
+    "originator": "SAC",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_SAS",
+    "originator": "SAS",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_TOR",
+    "originator": "TOR",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_UTA",
+    "originator": "UTA",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_1_WAS",
+    "originator": "WAS",
+    "year": 2025,
+    "round": 1
+  },
+  {
+    "_id": "pick_2025_2_ATL",
+    "originator": "ATL",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_BOS",
+    "originator": "BOS",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_BKN",
+    "originator": "BKN",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_CHA",
+    "originator": "CHA",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_CHI",
+    "originator": "CHI",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_CLE",
+    "originator": "CLE",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_DAL",
+    "originator": "DAL",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_DEN",
+    "originator": "DEN",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_DET",
+    "originator": "DET",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_GSW",
+    "originator": "GSW",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_HOU",
+    "originator": "HOU",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_IND",
+    "originator": "IND",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_LAC",
+    "originator": "LAC",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_LAL",
+    "originator": "LAL",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_MEM",
+    "originator": "MEM",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_MIA",
+    "originator": "MIA",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_MIL",
+    "originator": "MIL",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_MIN",
+    "originator": "MIN",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_NOP",
+    "originator": "NOP",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_NYK",
+    "originator": "NYK",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_OKC",
+    "originator": "OKC",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_ORL",
+    "originator": "ORL",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_PHI",
+    "originator": "PHI",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_PHX",
+    "originator": "PHX",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_POR",
+    "originator": "POR",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_SAC",
+    "originator": "SAC",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_SAS",
+    "originator": "SAS",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_TOR",
+    "originator": "TOR",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_UTA",
+    "originator": "UTA",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2025_2_WAS",
+    "originator": "WAS",
+    "year": 2025,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_1_ATL",
+    "originator": "ATL",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_BOS",
+    "originator": "BOS",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_BKN",
+    "originator": "BKN",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_CHA",
+    "originator": "CHA",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_CHI",
+    "originator": "CHI",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_CLE",
+    "originator": "CLE",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_DAL",
+    "originator": "DAL",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_DEN",
+    "originator": "DEN",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_DET",
+    "originator": "DET",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_GSW",
+    "originator": "GSW",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_HOU",
+    "originator": "HOU",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_IND",
+    "originator": "IND",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_LAC",
+    "originator": "LAC",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_LAL",
+    "originator": "LAL",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_MEM",
+    "originator": "MEM",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_MIA",
+    "originator": "MIA",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_MIL",
+    "originator": "MIL",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_MIN",
+    "originator": "MIN",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_NOP",
+    "originator": "NOP",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_NYK",
+    "originator": "NYK",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_OKC",
+    "originator": "OKC",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_ORL",
+    "originator": "ORL",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_PHI",
+    "originator": "PHI",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_PHX",
+    "originator": "PHX",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_POR",
+    "originator": "POR",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_SAC",
+    "originator": "SAC",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_SAS",
+    "originator": "SAS",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_TOR",
+    "originator": "TOR",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_UTA",
+    "originator": "UTA",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_1_WAS",
+    "originator": "WAS",
+    "year": 2026,
+    "round": 1
+  },
+  {
+    "_id": "pick_2026_2_ATL",
+    "originator": "ATL",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_BOS",
+    "originator": "BOS",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_BKN",
+    "originator": "BKN",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_CHA",
+    "originator": "CHA",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_CHI",
+    "originator": "CHI",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_CLE",
+    "originator": "CLE",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_DAL",
+    "originator": "DAL",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_DEN",
+    "originator": "DEN",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_DET",
+    "originator": "DET",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_GSW",
+    "originator": "GSW",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_HOU",
+    "originator": "HOU",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_IND",
+    "originator": "IND",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_LAC",
+    "originator": "LAC",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_LAL",
+    "originator": "LAL",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_MEM",
+    "originator": "MEM",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_MIA",
+    "originator": "MIA",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_MIL",
+    "originator": "MIL",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_MIN",
+    "originator": "MIN",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_NOP",
+    "originator": "NOP",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_NYK",
+    "originator": "NYK",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_OKC",
+    "originator": "OKC",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_ORL",
+    "originator": "ORL",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_PHI",
+    "originator": "PHI",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_PHX",
+    "originator": "PHX",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_POR",
+    "originator": "POR",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_SAC",
+    "originator": "SAC",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_SAS",
+    "originator": "SAS",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_TOR",
+    "originator": "TOR",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_UTA",
+    "originator": "UTA",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2026_2_WAS",
+    "originator": "WAS",
+    "year": 2026,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_1_ATL",
+    "originator": "ATL",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_BOS",
+    "originator": "BOS",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_BKN",
+    "originator": "BKN",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_CHA",
+    "originator": "CHA",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_CHI",
+    "originator": "CHI",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_CLE",
+    "originator": "CLE",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_DAL",
+    "originator": "DAL",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_DEN",
+    "originator": "DEN",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_DET",
+    "originator": "DET",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_GSW",
+    "originator": "GSW",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_HOU",
+    "originator": "HOU",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_IND",
+    "originator": "IND",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_LAC",
+    "originator": "LAC",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_LAL",
+    "originator": "LAL",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_MEM",
+    "originator": "MEM",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_MIA",
+    "originator": "MIA",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_MIL",
+    "originator": "MIL",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_MIN",
+    "originator": "MIN",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_NOP",
+    "originator": "NOP",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_NYK",
+    "originator": "NYK",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_OKC",
+    "originator": "OKC",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_ORL",
+    "originator": "ORL",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_PHI",
+    "originator": "PHI",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_PHX",
+    "originator": "PHX",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_POR",
+    "originator": "POR",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_SAC",
+    "originator": "SAC",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_SAS",
+    "originator": "SAS",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_TOR",
+    "originator": "TOR",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_UTA",
+    "originator": "UTA",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_1_WAS",
+    "originator": "WAS",
+    "year": 2027,
+    "round": 1
+  },
+  {
+    "_id": "pick_2027_2_ATL",
+    "originator": "ATL",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_BOS",
+    "originator": "BOS",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_BKN",
+    "originator": "BKN",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_CHA",
+    "originator": "CHA",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_CHI",
+    "originator": "CHI",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_CLE",
+    "originator": "CLE",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_DAL",
+    "originator": "DAL",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_DEN",
+    "originator": "DEN",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_DET",
+    "originator": "DET",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_GSW",
+    "originator": "GSW",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_HOU",
+    "originator": "HOU",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_IND",
+    "originator": "IND",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_LAC",
+    "originator": "LAC",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_LAL",
+    "originator": "LAL",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_MEM",
+    "originator": "MEM",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_MIA",
+    "originator": "MIA",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_MIL",
+    "originator": "MIL",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_MIN",
+    "originator": "MIN",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_NOP",
+    "originator": "NOP",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_NYK",
+    "originator": "NYK",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_OKC",
+    "originator": "OKC",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_ORL",
+    "originator": "ORL",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_PHI",
+    "originator": "PHI",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_PHX",
+    "originator": "PHX",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_POR",
+    "originator": "POR",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_SAC",
+    "originator": "SAC",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_SAS",
+    "originator": "SAS",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_TOR",
+    "originator": "TOR",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_UTA",
+    "originator": "UTA",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2027_2_WAS",
+    "originator": "WAS",
+    "year": 2027,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_1_ATL",
+    "originator": "ATL",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_BOS",
+    "originator": "BOS",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_BKN",
+    "originator": "BKN",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_CHA",
+    "originator": "CHA",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_CHI",
+    "originator": "CHI",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_CLE",
+    "originator": "CLE",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_DAL",
+    "originator": "DAL",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_DEN",
+    "originator": "DEN",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_DET",
+    "originator": "DET",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_GSW",
+    "originator": "GSW",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_HOU",
+    "originator": "HOU",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_IND",
+    "originator": "IND",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_LAC",
+    "originator": "LAC",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_LAL",
+    "originator": "LAL",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_MEM",
+    "originator": "MEM",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_MIA",
+    "originator": "MIA",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_MIL",
+    "originator": "MIL",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_MIN",
+    "originator": "MIN",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_NOP",
+    "originator": "NOP",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_NYK",
+    "originator": "NYK",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_OKC",
+    "originator": "OKC",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_ORL",
+    "originator": "ORL",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_PHI",
+    "originator": "PHI",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_PHX",
+    "originator": "PHX",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_POR",
+    "originator": "POR",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_SAC",
+    "originator": "SAC",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_SAS",
+    "originator": "SAS",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_TOR",
+    "originator": "TOR",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_UTA",
+    "originator": "UTA",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_1_WAS",
+    "originator": "WAS",
+    "year": 2028,
+    "round": 1
+  },
+  {
+    "_id": "pick_2028_2_ATL",
+    "originator": "ATL",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_BOS",
+    "originator": "BOS",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_BKN",
+    "originator": "BKN",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_CHA",
+    "originator": "CHA",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_CHI",
+    "originator": "CHI",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_CLE",
+    "originator": "CLE",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_DAL",
+    "originator": "DAL",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_DEN",
+    "originator": "DEN",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_DET",
+    "originator": "DET",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_GSW",
+    "originator": "GSW",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_HOU",
+    "originator": "HOU",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_IND",
+    "originator": "IND",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_LAC",
+    "originator": "LAC",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_LAL",
+    "originator": "LAL",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_MEM",
+    "originator": "MEM",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_MIA",
+    "originator": "MIA",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_MIL",
+    "originator": "MIL",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_MIN",
+    "originator": "MIN",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_NOP",
+    "originator": "NOP",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_NYK",
+    "originator": "NYK",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_OKC",
+    "originator": "OKC",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_ORL",
+    "originator": "ORL",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_PHI",
+    "originator": "PHI",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_PHX",
+    "originator": "PHX",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_POR",
+    "originator": "POR",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_SAC",
+    "originator": "SAC",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_SAS",
+    "originator": "SAS",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_TOR",
+    "originator": "TOR",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_UTA",
+    "originator": "UTA",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2028_2_WAS",
+    "originator": "WAS",
+    "year": 2028,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_1_ATL",
+    "originator": "ATL",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_BOS",
+    "originator": "BOS",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_BKN",
+    "originator": "BKN",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_CHA",
+    "originator": "CHA",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_CHI",
+    "originator": "CHI",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_CLE",
+    "originator": "CLE",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_DAL",
+    "originator": "DAL",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_DEN",
+    "originator": "DEN",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_DET",
+    "originator": "DET",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_GSW",
+    "originator": "GSW",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_HOU",
+    "originator": "HOU",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_IND",
+    "originator": "IND",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_LAC",
+    "originator": "LAC",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_LAL",
+    "originator": "LAL",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_MEM",
+    "originator": "MEM",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_MIA",
+    "originator": "MIA",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_MIL",
+    "originator": "MIL",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_MIN",
+    "originator": "MIN",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_NOP",
+    "originator": "NOP",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_NYK",
+    "originator": "NYK",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_OKC",
+    "originator": "OKC",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_ORL",
+    "originator": "ORL",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_PHI",
+    "originator": "PHI",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_PHX",
+    "originator": "PHX",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_POR",
+    "originator": "POR",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_SAC",
+    "originator": "SAC",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_SAS",
+    "originator": "SAS",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_TOR",
+    "originator": "TOR",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_UTA",
+    "originator": "UTA",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_1_WAS",
+    "originator": "WAS",
+    "year": 2029,
+    "round": 1
+  },
+  {
+    "_id": "pick_2029_2_ATL",
+    "originator": "ATL",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_BOS",
+    "originator": "BOS",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_BKN",
+    "originator": "BKN",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_CHA",
+    "originator": "CHA",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_CHI",
+    "originator": "CHI",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_CLE",
+    "originator": "CLE",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_DAL",
+    "originator": "DAL",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_DEN",
+    "originator": "DEN",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_DET",
+    "originator": "DET",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_GSW",
+    "originator": "GSW",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_HOU",
+    "originator": "HOU",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_IND",
+    "originator": "IND",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_LAC",
+    "originator": "LAC",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_LAL",
+    "originator": "LAL",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_MEM",
+    "originator": "MEM",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_MIA",
+    "originator": "MIA",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_MIL",
+    "originator": "MIL",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_MIN",
+    "originator": "MIN",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_NOP",
+    "originator": "NOP",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_NYK",
+    "originator": "NYK",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_OKC",
+    "originator": "OKC",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_ORL",
+    "originator": "ORL",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_PHI",
+    "originator": "PHI",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_PHX",
+    "originator": "PHX",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_POR",
+    "originator": "POR",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_SAC",
+    "originator": "SAC",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_SAS",
+    "originator": "SAS",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_TOR",
+    "originator": "TOR",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_UTA",
+    "originator": "UTA",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2029_2_WAS",
+    "originator": "WAS",
+    "year": 2029,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_1_ATL",
+    "originator": "ATL",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_BOS",
+    "originator": "BOS",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_BKN",
+    "originator": "BKN",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_CHA",
+    "originator": "CHA",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_CHI",
+    "originator": "CHI",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_CLE",
+    "originator": "CLE",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_DAL",
+    "originator": "DAL",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_DEN",
+    "originator": "DEN",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_DET",
+    "originator": "DET",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_GSW",
+    "originator": "GSW",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_HOU",
+    "originator": "HOU",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_IND",
+    "originator": "IND",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_LAC",
+    "originator": "LAC",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_LAL",
+    "originator": "LAL",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_MEM",
+    "originator": "MEM",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_MIA",
+    "originator": "MIA",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_MIL",
+    "originator": "MIL",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_MIN",
+    "originator": "MIN",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_NOP",
+    "originator": "NOP",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_NYK",
+    "originator": "NYK",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_OKC",
+    "originator": "OKC",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_ORL",
+    "originator": "ORL",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_PHI",
+    "originator": "PHI",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_PHX",
+    "originator": "PHX",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_POR",
+    "originator": "POR",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_SAC",
+    "originator": "SAC",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_SAS",
+    "originator": "SAS",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_TOR",
+    "originator": "TOR",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_UTA",
+    "originator": "UTA",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_1_WAS",
+    "originator": "WAS",
+    "year": 2030,
+    "round": 1
+  },
+  {
+    "_id": "pick_2030_2_ATL",
+    "originator": "ATL",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_BOS",
+    "originator": "BOS",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_BKN",
+    "originator": "BKN",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_CHA",
+    "originator": "CHA",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_CHI",
+    "originator": "CHI",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_CLE",
+    "originator": "CLE",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_DAL",
+    "originator": "DAL",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_DEN",
+    "originator": "DEN",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_DET",
+    "originator": "DET",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_GSW",
+    "originator": "GSW",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_HOU",
+    "originator": "HOU",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_IND",
+    "originator": "IND",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_LAC",
+    "originator": "LAC",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_LAL",
+    "originator": "LAL",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_MEM",
+    "originator": "MEM",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_MIA",
+    "originator": "MIA",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_MIL",
+    "originator": "MIL",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_MIN",
+    "originator": "MIN",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_NOP",
+    "originator": "NOP",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_NYK",
+    "originator": "NYK",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_OKC",
+    "originator": "OKC",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_ORL",
+    "originator": "ORL",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_PHI",
+    "originator": "PHI",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_PHX",
+    "originator": "PHX",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_POR",
+    "originator": "POR",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_SAC",
+    "originator": "SAC",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_SAS",
+    "originator": "SAS",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_TOR",
+    "originator": "TOR",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_UTA",
+    "originator": "UTA",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2030_2_WAS",
+    "originator": "WAS",
+    "year": 2030,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_1_ATL",
+    "originator": "ATL",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_BOS",
+    "originator": "BOS",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_BKN",
+    "originator": "BKN",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_CHA",
+    "originator": "CHA",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_CHI",
+    "originator": "CHI",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_CLE",
+    "originator": "CLE",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_DAL",
+    "originator": "DAL",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_DEN",
+    "originator": "DEN",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_DET",
+    "originator": "DET",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_GSW",
+    "originator": "GSW",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_HOU",
+    "originator": "HOU",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_IND",
+    "originator": "IND",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_LAC",
+    "originator": "LAC",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_LAL",
+    "originator": "LAL",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_MEM",
+    "originator": "MEM",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_MIA",
+    "originator": "MIA",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_MIL",
+    "originator": "MIL",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_MIN",
+    "originator": "MIN",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_NOP",
+    "originator": "NOP",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_NYK",
+    "originator": "NYK",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_OKC",
+    "originator": "OKC",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_ORL",
+    "originator": "ORL",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_PHI",
+    "originator": "PHI",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_PHX",
+    "originator": "PHX",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_POR",
+    "originator": "POR",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_SAC",
+    "originator": "SAC",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_SAS",
+    "originator": "SAS",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_TOR",
+    "originator": "TOR",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_UTA",
+    "originator": "UTA",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_1_WAS",
+    "originator": "WAS",
+    "year": 2031,
+    "round": 1
+  },
+  {
+    "_id": "pick_2031_2_ATL",
+    "originator": "ATL",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_BOS",
+    "originator": "BOS",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_BKN",
+    "originator": "BKN",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_CHA",
+    "originator": "CHA",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_CHI",
+    "originator": "CHI",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_CLE",
+    "originator": "CLE",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_DAL",
+    "originator": "DAL",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_DEN",
+    "originator": "DEN",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_DET",
+    "originator": "DET",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_GSW",
+    "originator": "GSW",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_HOU",
+    "originator": "HOU",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_IND",
+    "originator": "IND",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_LAC",
+    "originator": "LAC",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_LAL",
+    "originator": "LAL",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_MEM",
+    "originator": "MEM",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_MIA",
+    "originator": "MIA",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_MIL",
+    "originator": "MIL",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_MIN",
+    "originator": "MIN",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_NOP",
+    "originator": "NOP",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_NYK",
+    "originator": "NYK",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_OKC",
+    "originator": "OKC",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_ORL",
+    "originator": "ORL",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_PHI",
+    "originator": "PHI",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_PHX",
+    "originator": "PHX",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_POR",
+    "originator": "POR",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_SAC",
+    "originator": "SAC",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_SAS",
+    "originator": "SAS",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_TOR",
+    "originator": "TOR",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_UTA",
+    "originator": "UTA",
+    "year": 2031,
+    "round": 2
+  },
+  {
+    "_id": "pick_2031_2_WAS",
+    "originator": "WAS",
+    "year": 2031,
+    "round": 2
+  }
+]

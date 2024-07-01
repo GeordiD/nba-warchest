@@ -1,0 +1,212 @@
+[
+  {
+    "abbr": "ATL",
+    "fullName": "Atlanta Hawks",
+    "name": "Hawks",
+    "location": "Atlanta",
+    "_id": "ATL"
+  },
+  {
+    "abbr": "BOS",
+    "fullName": "Boston Celtics",
+    "name": "Celtics",
+    "location": "Boston",
+    "_id": "BOS"
+  },
+  {
+    "abbr": "BKN",
+    "fullName": "Brooklyn Nets",
+    "name": "Nets",
+    "location": "Brooklyn",
+    "_id": "BKN"
+  },
+  {
+    "abbr": "CHA",
+    "fullName": "Charlotte Hornets",
+    "name": "Hornets",
+    "location": "Charlotte",
+    "_id": "CHA"
+  },
+  {
+    "abbr": "CHI",
+    "fullName": "Chicago Bulls",
+    "name": "Bulls",
+    "location": "Chicago",
+    "_id": "CHI"
+  },
+  {
+    "abbr": "CLE",
+    "fullName": "Cleveland Cavaliers",
+    "name": "Cavaliers",
+    "location": "Cleveland",
+    "_id": "CLE"
+  },
+  {
+    "abbr": "DAL",
+    "fullName": "Dallas Mavericks",
+    "name": "Mavericks",
+    "location": "Dallas",
+    "_id": "DAL"
+  },
+  {
+    "abbr": "DEN",
+    "fullName": "Denver Nuggets",
+    "name": "Nuggets",
+    "location": "Denver",
+    "_id": "DEN"
+  },
+  {
+    "abbr": "DET",
+    "fullName": "Detroit Pistons",
+    "name": "Pistons",
+    "location": "Detroit",
+    "_id": "DET"
+  },
+  {
+    "abbr": "GSW",
+    "fullName": "Golden State Warriors",
+    "name": "Warriors",
+    "location": "Golden State",
+    "_id": "GSW"
+  },
+  {
+    "abbr": "HOU",
+    "fullName": "Houston Rockets",
+    "name": "Rockets",
+    "location": "Houston",
+    "_id": "HOU"
+  },
+  {
+    "abbr": "IND",
+    "fullName": "Indiana Pacers",
+    "name": "Pacers",
+    "location": "Indiana",
+    "_id": "IND"
+  },
+  {
+    "abbr": "LAC",
+    "fullName": "Los Angeles Clippers",
+    "name": "Clippers",
+    "location": "Los Angeles",
+    "_id": "LAC"
+  },
+  {
+    "abbr": "LAL",
+    "fullName": "Los Angeles Lakers",
+    "name": "Lakers",
+    "location": "Los Angeles",
+    "_id": "LAL"
+  },
+  {
+    "abbr": "MEM",
+    "fullName": "Memphis Grizzlies",
+    "name": "Grizzlies",
+    "location": "Memphis",
+    "_id": "MEM"
+  },
+  {
+    "abbr": "MIA",
+    "fullName": "Miami Heat",
+    "name": "Heat",
+    "location": "Miami",
+    "_id": "MIA"
+  },
+  {
+    "abbr": "MIL",
+    "fullName": "Milwaukee Bucks",
+    "name": "Bucks",
+    "location": "Milwaukee",
+    "_id": "MIL"
+  },
+  {
+    "abbr": "MIN",
+    "fullName": "Minnesota Timberwolves",
+    "name": "Timberwolves",
+    "location": "Minnesota",
+    "_id": "MIN"
+  },
+  {
+    "abbr": "NOP",
+    "fullName": "New Orleans Pelicans",
+    "name": "Pelicans",
+    "location": "New Orleans",
+    "_id": "NOP"
+  },
+  {
+    "abbr": "NYK",
+    "fullName": "New York Knicks",
+    "name": "Knicks",
+    "location": "New York",
+    "_id": "NYK"
+  },
+  {
+    "abbr": "OKC",
+    "fullName": "Oklahoma City Thunder",
+    "name": "Thunder",
+    "location": "Oklahoma City",
+    "_id": "OKC"
+  },
+  {
+    "abbr": "ORL",
+    "fullName": "Orlando Magic",
+    "name": "Magic",
+    "location": "Orlando",
+    "_id": "ORL"
+  },
+  {
+    "abbr": "PHI",
+    "fullName": "Philadelphia 76ers",
+    "name": "76ers",
+    "location": "Philadelphia",
+    "_id": "PHI"
+  },
+  {
+    "abbr": "PHX",
+    "fullName": "Phoenix Suns",
+    "name": "Suns",
+    "location": "Phoenix",
+    "_id": "PHX"
+  },
+  {
+    "abbr": "POR",
+    "fullName": "Portland Trail Blazers",
+    "name": "Trail Blazers",
+    "location": "Portland",
+    "_id": "POR"
+  },
+  {
+    "abbr": "SAC",
+    "fullName": "Sacramento Kings",
+    "name": "Kings",
+    "location": "Sacramento",
+    "_id": "SAC"
+  },
+  {
+    "abbr": "SAS",
+    "fullName": "San Antonio Spurs",
+    "name": "Spurs",
+    "location": "San Antonio",
+    "_id": "SAS"
+  },
+  {
+    "abbr": "TOR",
+    "fullName": "Toronto Raptors",
+    "name": "Raptors",
+    "location": "Toronto",
+    "_id": "TOR"
+  },
+  {
+    "abbr": "UTA",
+    "fullName": "Utah Jazz",
+    "name": "Jazz",
+    "location": "Utah",
+    "_id": "UTA"
+  },
+  {
+    "abbr": "WAS",
+    "fullName": "Washington Wizards",
+    "name": "Wizards",
+    "location": "Washington",
+    "_id": "WAS"
+  }
+]
