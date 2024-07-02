@@ -1,4 +1,5 @@
 import type { Team } from '~/utils/types/Team';
+import { getTradeablePicks } from '~/utils/getTradeablePicks';
 
 export const useTeamInfoStore = (team: Team) => {
   return defineStore(`${team.abbr}-info`, () => {
@@ -17,8 +18,9 @@ export const useTeamInfoStore = (team: Team) => {
     const availableAssets = computed(() => relatedAssets.value.filter(asset =>
       asset.isOwnedBySelf(),
     ))
+    const availableAssetsRoundOne = computed(() => availableAssets.value.filter(x => x.round === 1));
 
-    const tradableRoundOnePicks = computed(() => []);
+    const tradableRoundOnePicks = computed(() => getTradeablePicks(availableAssetsRoundOne.value));
     const tradableRoundOneSwaps = computed(() => []);
 
     return {
@@ -27,11 +29,12 @@ export const useTeamInfoStore = (team: Team) => {
       availableAssets,
 
       roundOneAssets,
-      availableAssetsRoundOne: computed(() => availableAssets.value.filter(x => x.round === 1)),
+      availableAssetsRoundOne,
       tradableRoundOnePicks,
       tradableRoundOneSwaps,
 
       roundTwoAssets,
+      availableAssetsRoundTwo: computed(() => availableAssets.value.filter(x => x.round = 2)),
     }
   })
 }
