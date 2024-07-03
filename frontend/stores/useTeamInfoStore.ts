@@ -1,5 +1,5 @@
 import type { Team } from '~/utils/types/Team';
-import { getTradeablePicks } from '~/utils/getTradeablePicks';
+import { getTradeablePicks } from '~/utils/tradeable';
 
 export const useTeamInfoStore = (team: Team) => {
   return defineStore(`${team.abbr}-info`, () => {

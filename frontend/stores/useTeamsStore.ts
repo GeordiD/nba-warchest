@@ -13,6 +13,10 @@ export const useTeamsStore = defineStore('teams', () => {
       .sort((a, b) => a.fullName.toLowerCase() > b.fullName.toLowerCase()
         ? 1
         : (a.fullName.toLowerCase() < b.fullName.toLowerCase() ? -1 : 0))
+      .map(x => ({
+        ...x,
+        fullName: `${x.fullName}`,
+      }))
   }
 
   const teams = computed(() => data.teams)

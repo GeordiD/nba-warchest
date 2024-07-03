@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { DraftAsset } from '#imports';
 import type { Team } from '~/utils/types/Team'
 
 const props = defineProps({

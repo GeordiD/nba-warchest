@@ -35,6 +35,8 @@ describe('DraftAsset', () => {
             worstTo: swap.worstTo,
             remainderTo: swap.remainderTo,
             protections: swap.protections ?? [],
+            year: 2024,
+            round: 1,
           } as Swap,
         ]
       : [];
