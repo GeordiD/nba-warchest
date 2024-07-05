@@ -81,8 +81,10 @@ export class DraftAsset {
     return this.pick.swaps.length > 0;
   }
 
-  swapWith() {
+  swapWith(): Team[] {
     if (!this.isSwap()) return [];
+
+    return [];
   }
 
   isFavorableSwap() {
@@ -111,6 +113,8 @@ export class DraftAsset {
 
   // Ideas:
   // conveyance rules?
+  // isContingent
+  // isGuarenteed
   // describe swap?
 
   // hasErrors: self idenitify when data isn't right

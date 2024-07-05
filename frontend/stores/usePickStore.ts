@@ -9,15 +9,23 @@ const getTeamById = (id?: string): Team => {
 
 export const usePickStore = defineStore('picks', () => {
   const data = reactive<{
-    picks: PickDto[]
-  }>({ picks: [] })
+    picks: PickDto[],
+    isFetching: boolean,
+  }>({
+    picks: [],
+    isFetching: false,
+  })
 
   async function fetchAll() {
+    data.isFetching = true;
+
     const pb = usePocketBase()
 
     data.picks = await pb.collection('picks').getFullList<PickDto>({
       expand: 'protections,swaps,swaps.protections',
     })
+
+    data.isFetching = false;
   }
 
   const picks = computed<Pick[]>(() => data.picks.map<Pick>(pick => ({
@@ -42,8 +50,15 @@ export const usePickStore = defineStore('picks', () => {
     })) ?? [],
   })))
 
+  async function fetchIfNecessary() {
+    if (!picks.value.length && !data.isFetching) {
+      fetchAll();
+    }
+  }
+
   return {
     fetchAll,
+    fetchIfNecessary,
     picks,
   }
 })

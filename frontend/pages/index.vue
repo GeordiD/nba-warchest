@@ -15,7 +15,9 @@ await pickStore.fetchAll();
       v-for="team in teamsStore.teams"
       :key="team.id"
     >
-      {{ team.abbr }}
+      <NuxtLink :to="`/teams/${team.abbr}`">
+        {{ team.abbr }}
+      </NuxtLink>
     </div>
   </div>
 </template>

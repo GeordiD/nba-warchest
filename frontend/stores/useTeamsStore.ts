@@ -19,10 +19,17 @@ export const useTeamsStore = defineStore('teams', () => {
       }))
   }
 
+  async function fetchIfNecessary() {
+    if (!data.teams.length) {
+      await fetchAllTeams();
+    }
+  }
+
   const teams = computed(() => data.teams)
 
   return {
     fetchAllTeams,
+    fetchIfNecessary,
     teams,
   }
 })

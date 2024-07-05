@@ -13,14 +13,27 @@ const {
 
 <template>
   <div>
-    {{ asset.year }}:
-    <span v-if="asset.isOwn() && asset.isOwnedBySelf() && !asset.isSwap()">Own</span>
+    <div
+      v-if="asset.isOwn()"
+      class="inline-block"
+    >
+      <span v-if="asset.isSwap()">
+        Own
+        ({{ asset.isFavorableSwap() ? 'favorable' : 'unfavorable' }} swap with
+        {{ asset.swapWith().map(x => x.abbr).join(' / ') }}).
+      </span>
+      <span v-else-if="asset.isOwnedBySelf()">Own</span>
+      <span v-else>To {{ asset.pick.toTeam!.abbr }}</span>
+    </div>
 
+    <!-- I don't think this can happen anymore -->
     <span v-else-if="asset.isSwap()">
       <!-- <SwapInfo :asset="asset" /> -->
-      {{ asset.isFavorableSwap() ? 'Favorable' : 'Unfavorable' }} swap
+      <!-- {{ asset.isFavorableSwap() ? 'Favorable' : 'Unfavorable' }} swap -->
+      NON OWN SWAP!
     </span>
-    <span v-else>{{ !!asset.pick.conveysFrom ? '*' : '' }}{{ asset.pick.originator?.abbr }} => {{ asset.pick.toTeam?.abbr }}</span>
+
+    <span v-else>{{ asset.pick.originator?.abbr }}</span>
     <span v-if="asset.pick.position"> (#{{ asset.pick.position }})</span>
 
     <span
