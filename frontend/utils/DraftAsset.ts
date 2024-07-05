@@ -1,4 +1,4 @@
-import type { Pick, Protection } from '~/utils/types/Pick';
+import type { Pick, Protection, Swap } from '~/utils/types/Pick';
 import type { Team } from '~/utils/types/Team';
 
 export class DraftAsset {
@@ -81,10 +81,36 @@ export class DraftAsset {
     return this.pick.swaps.length > 0;
   }
 
-  swapWith(): Team[] {
+  isMultiSwap() {
+    return this.pick.swaps.length > 1;
+  }
+
+  private getOtherTeamsInSwap(swap: Swap, team = this.team): Team[] {
+    return swap.picks
+      .map(pick => pick.originator)
+      .filter(swapTeam => team.abbr !== swapTeam.abbr)
+  }
+
+  swapWith(swapIndex = 0): Team[] {
     if (!this.isSwap()) return [];
 
-    return [];
+    const swap = this.pick.swaps[swapIndex];
+    const allOtherTeams = this.getOtherTeamsInSwap(swap);
+
+    if (swap.picks.length > 2) {
+      if (swap.bestTo) {
+        return swap.bestTo?.id === this.team.id
+          ? allOtherTeams
+          : [swap.bestTo]
+      } else {
+        // todo
+        console.error(`Undefined behavior - pick (${this.pick.id}) is not a bestToSwap and has more than 3 teams.`)
+        return []
+      }
+    } else {
+      // Simple swap
+      return allOtherTeams;
+    }
   }
 
   isFavorableSwap() {
@@ -103,6 +129,21 @@ export class DraftAsset {
     }
 
     return false;
+  }
+
+  getFurtherExplanation(): string[] {
+    const output: string[] = [];
+
+    // Unfavorable swap with multiple teams
+    if (this.pick.swaps.length > 0
+      && this.pick.swaps[0].picks.length > 2
+      && this.pick.swaps[0].bestTo?.id !== this.team.id) {
+      const swap = this.pick.swaps[0];
+      const teamAbbrs = this.getOtherTeamsInSwap(swap, swap.bestTo).map(x => x.abbr);
+      output.push(`${swap.bestTo!.abbr} gets best of ${teamAbbrs.join(' / ')}`);
+    }
+
+    return output;
   }
 
   hasErrors() {

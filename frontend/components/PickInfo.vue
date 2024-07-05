@@ -9,6 +9,8 @@ const {
     required: true,
   },
 })
+
+const furtherExplanation = computed(() => asset.getFurtherExplanation());
 </script>
 
 <template>
@@ -41,5 +43,17 @@ const {
     >
       (Top {{ asset.getProtection() }} prot.)
     </span>
+
+    <ul
+      v-if="furtherExplanation.length"
+      class="list-disc pl-4"
+    >
+      <li
+        v-for="item in furtherExplanation"
+        :key="item"
+      >
+        {{ item }}
+      </li>
+    </ul>
   </div>
 </template>

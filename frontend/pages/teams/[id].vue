@@ -13,7 +13,10 @@ const team = computed(() => teamStore.teams.find(x =>
   x.abbr.toLowerCase() === (route.params.id as string).toLowerCase()),
 )
 
-const teamInfoStore = useTeamInfoStore(team.value!)();
+const {
+  roundOneAssets,
+  roundTwoAssets,
+} = useTeamAssets(team.value!);
 
 const years = [2024, 2025, 2026, 2027, 2028, 2029, 2030];
 
@@ -40,7 +43,7 @@ const picksForYear = (assets: DraftAsset[], year: number) => assets.filter(x => 
               </h3>
               <ul class="list-disc pl-4">
                 <li
-                  v-for="asset in picksForYear(teamInfoStore.roundOneAssets, year)"
+                  v-for="asset in picksForYear(roundOneAssets, year)"
                   :key="asset.id"
                 >
                   <PickInfo :asset="asset" />
@@ -53,7 +56,7 @@ const picksForYear = (assets: DraftAsset[], year: number) => assets.filter(x => 
               </h3>
               <ul class="list-disc pl-4">
                 <li
-                  v-for="asset in picksForYear(teamInfoStore.roundTwoAssets, year)"
+                  v-for="asset in picksForYear(roundTwoAssets, year)"
                   :key="asset.id"
                 >
                   <PickInfo :asset="asset" />

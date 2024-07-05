@@ -25,6 +25,7 @@ export type SwapDto = {
   protections: string[],
   expand: {
     protections: ProtectionDto[],
+    picks: PickDto[],
   }
 }
 
@@ -34,7 +35,7 @@ export type Swap = {
   bestTo?: Team,
   worstTo?: Team,
   remainderTo?: Team,
-  picks: string[],
+  picks: SwappedPick[],
   protections: Protection[]
 }
 
@@ -64,4 +65,8 @@ export type Pick = {
   conveysTo: string[]
   conveysFrom?: string
   swaps: Swap[]
+}
+
+export type SwappedPick = Omit<PickDto, 'originator'> & {
+  originator: Team,
 }

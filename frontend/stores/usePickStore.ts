@@ -22,7 +22,7 @@ export const usePickStore = defineStore('picks', () => {
     const pb = usePocketBase()
 
     data.picks = await pb.collection('picks').getFullList<PickDto>({
-      expand: 'protections,swaps,swaps.protections',
+      expand: 'protections,swaps,swaps.protections,swaps.picks',
     })
 
     data.isFetching = false;
@@ -39,10 +39,13 @@ export const usePickStore = defineStore('picks', () => {
     swaps: pick.expand?.swaps?.map(swap => ({
       year: swap.year,
       round: swap.round,
+      picks: swap.expand.picks.map(swappedPick => ({
+        ...swappedPick,
+        originator: getTeamById(swappedPick.originator),
+      })),
       bestTo: getTeamById(swap.bestTo),
       worstTo: getTeamById(swap.worstTo),
       remainderTo: getTeamById(swap.remainderTo),
-      picks: swap.picks,
       protections: swap.expand?.protections?.map(protection => ({
         ...protection,
         toTeam: getTeamById(protection.toTeam),
