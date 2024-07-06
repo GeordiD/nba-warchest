@@ -8,6 +8,12 @@ export default defineNuxtConfig({
     '@nuxt/test-utils/module',
     '@nuxt/icon',
   ],
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
   eslint: {
     config: {
       stylistic: true,
