@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { PickMeta } from '~/data/DraftAssetsMeta';
+import type { PickMeta } from '~/data/PicksByYear';
 
 const {
   item,

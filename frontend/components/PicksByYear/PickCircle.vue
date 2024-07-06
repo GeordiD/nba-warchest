@@ -21,22 +21,19 @@ const text = computed(() => pickData.teams?.length === 1
       : ''),
 )
 
-const isOver = ref(false);
-
-function onMouseOver() {
-  isOver.value = true;
-}
-
-function onMouseLeave() {
-  isOver.value = false;
-}
+const {
+  isIdActive,
+  isTarget,
+  onMouseOut,
+  onMouseOver,
+} = useHoverPick(pickData.id);
 </script>
 
 <template>
   <div
     class="flex items-center cursor-pointer"
     @mouseover="onMouseOver"
-    @mouseout="onMouseLeave"
+    @mouseout="onMouseOut"
   >
     <div class="w-4">
       <Icon
@@ -57,20 +54,31 @@ function onMouseLeave() {
     </div>
 
     <div
-      class="rounded-full h-10 w-10 bg-green-600 text-white flex items-center justify-center"
+      class="rounded-full h-10 w-10 bg-green-600 text-white flex items-center justify-center relative"
       :class="[
         isTradedAway ? 'traded-away' : (pickData.isConditional ? 'conditional' : 'owned'),
-        { hover: isOver },
+        { hover: isIdActive },
       ]"
     >
       <p class="text-xs">
         {{ text }}
       </p>
+      <div
+        v-if="isTarget"
+        class="tooltip"
+      >
+        tooltip
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.tooltip {
+  left: 3rem;
+  @apply absolute bg-white border border-gray-500 p-2 rounded-sm z-10 text-black;
+}
+
 .traded-away {
   @apply bg-gray-700;
 }
