@@ -10,10 +10,10 @@ const {
 
 const isFirsts = ref(true);
 const byYear = computed(() =>
-  getByYearForTeam(teamAbbr)
+  getMetadataForTeam(teamAbbr)
     ?.map(x => ({
       year: x.year,
-      roundData: isFirsts.value ? x.roundOne : x.roundTwo,
+      roundData: isFirsts.value ? x.roundOne.summary : x.roundTwo.summary,
     })),
 );
 </script>

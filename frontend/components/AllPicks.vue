@@ -10,7 +10,13 @@ const {
   },
 })
 
-const meta = computed(() => getAssetMetadataForTeam(teamAbbr));
+const meta = computed(() => getMetadataForTeam(teamAbbr)
+  ?.map(x => ({
+    year: x.year,
+    roundOne: x.roundOne.details,
+    roundTwo: x.roundTwo.details,
+  })),
+);
 </script>
 
 <template>
@@ -18,7 +24,7 @@ const meta = computed(() => getAssetMetadataForTeam(teamAbbr));
     <div v-if="!!meta">
       <div class="flex flex-col gap-4">
         <div
-          v-for="group in meta.years"
+          v-for="group in meta"
           :key="group.year"
         >
           <p class="font-semibold text-lg">
