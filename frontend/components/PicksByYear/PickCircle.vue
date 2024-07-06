@@ -20,10 +20,24 @@ const text = computed(() => pickData.teams?.length === 1
       ? pickData.teams?.length
       : ''),
 )
+
+const isOver = ref(false);
+
+function onMouseOver() {
+  isOver.value = true;
+}
+
+function onMouseLeave() {
+  isOver.value = false;
+}
 </script>
 
 <template>
-  <div class="flex items-center">
+  <div
+    class="flex items-center cursor-pointer"
+    @mouseover="onMouseOver"
+    @mouseout="onMouseLeave"
+  >
     <div class="w-4">
       <Icon
         v-if="pickData.swapType === 'mixed'"
@@ -44,7 +58,10 @@ const text = computed(() => pickData.teams?.length === 1
 
     <div
       class="rounded-full h-10 w-10 bg-green-600 text-white flex items-center justify-center"
-      :class="[isTradedAway ? 'traded-away' : (pickData.isConditional ? 'conditional' : 'owned')]"
+      :class="[
+        isTradedAway ? 'traded-away' : (pickData.isConditional ? 'conditional' : 'owned'),
+        { hover: isOver },
+      ]"
     >
       <p class="text-xs">
         {{ text }}
@@ -76,5 +93,9 @@ const text = computed(() => pickData.teams?.length === 1
 
 .arrow-mixed {
   @apply text-black;
+}
+
+.hover {
+  @apply border border-gray-500 shadow-lg shadow-gray-500;
 }
 </style>
