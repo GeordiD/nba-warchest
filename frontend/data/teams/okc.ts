@@ -1,5 +1,164 @@
-import type { DraftAssetsMeta } from '~/metadata/DraftAssetsMeta';
-import { favorableSwap, ifNotConvey, prot } from '~/metadata/shorthand';
+import type { DraftAssetsMeta } from '~/data/DraftAssetsMeta';
+import type { PicksByYear } from '~/data/PicksByYear';
+import { favorableSwap, ifNotConvey, prot } from '~/data/shorthand';
+
+export const OkcByYear: PicksByYear[] = [
+  {
+    year: 2025,
+    roundOne: {
+      own: {
+        isMoreFavorable: true,
+      },
+      others: [
+        {
+          from: 'MIA',
+          isConditional: true,
+        },
+        {
+          from: 'PHI',
+          isConditional: true,
+        },
+        {
+          from: 'UTA',
+          isConditional: true,
+        },
+      ],
+    },
+    roundTwo: {
+      own: {
+        to: 'HOU',
+      },
+      others: [
+        {
+          from: 'ATL',
+          isConditional: true,
+        },
+        {
+          from: ['BOS', 'MEM'],
+          isMoreFavorable: true,
+        },
+      ],
+    },
+  },
+  {
+    year: 2026,
+    roundOne: {
+      own: {
+        with: ['HOU', 'LAC'],
+        isMoreFavorable: true,
+      },
+      others: [
+        {
+          isConditional: true,
+          isMoreFavorable: true,
+          from: ['HOU', 'LAC'],
+        },
+      ],
+    },
+    roundTwo: {
+      own: {
+        with: ['DAL', 'PHI'],
+      },
+      others: [
+        {
+          from: 'GSW',
+        },
+      ],
+    },
+  },
+  {
+    year: 2027,
+    roundOne: {
+      own: {
+        isMoreFavorable: true,
+        with: ['DEN', 'LAC'],
+      },
+      others: [
+        {
+          isConditional: true,
+          isMoreFavorable: true,
+          from: ['DEN', 'LAC'],
+        },
+      ],
+    },
+    roundTwo: {
+      own: {
+
+      },
+      others: [
+
+      ],
+    },
+  },
+  {
+    year: 2028,
+    roundOne: {
+      own: {
+        with: ['DAL'],
+        isMoreFavorable: true,
+      },
+      others: [],
+    },
+    roundTwo: {
+      own: {
+
+      },
+      others: [
+
+      ],
+    },
+  },
+  {
+    year: 2029,
+    roundOne: {
+      own: {},
+      others: [
+        {
+          from: 'DEN',
+          isConditional: true,
+        },
+      ],
+    },
+    roundTwo: {
+      own: {
+
+      },
+      others: [
+
+      ],
+    },
+  },
+  {
+    year: 2030,
+    roundOne: {
+      own: {},
+      others: [],
+    },
+    roundTwo: {
+      own: {
+
+      },
+      others: [
+
+      ],
+    },
+  },
+  {
+    year: 2031,
+    roundOne: {
+      own: {},
+      others: [],
+    },
+    roundTwo: {
+      own: {
+
+      },
+      others: [
+
+      ],
+    },
+  },
+]
 
 export const OkcMeta: DraftAssetsMeta = {
   years: [
@@ -75,6 +234,7 @@ export const OkcMeta: DraftAssetsMeta = {
               `2029 1st ${prot(5)}`,
               '2029 2nd',
             ], 'DEN'),
+            'Least favorable to LAC',
           ],
         },
       ],
