@@ -1,16 +1,17 @@
 <script setup lang="ts">
-import type { PickMeta } from '~/metadata/DraftAssetsMeta';
+import type { PickMeta } from '~/data/DraftAssetsMeta';
 
 const {
   item,
 } = defineProps({
   item: {
-    type: Object as PropType<string | PickMeta>,
+    type: [String, Object],
     required: true,
   },
 })
 
 const isString = computed(() => typeof item === 'string');
+const metaObj = computed(() => item as PickMeta);
 </script>
 
 <template>
@@ -27,7 +28,7 @@ const isString = computed(() => typeof item === 'string');
       class="list-disc pl-4"
     >
       <li
-        v-for="(line, index) in (item as PickMeta).extra"
+        v-for="(line, index) in metaObj.extra"
         :key="index"
       >
         <span v-if="!Array.isArray(line)">{{ line }}</span>
