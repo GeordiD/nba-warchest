@@ -9,8 +9,13 @@ const {
 })
 
 const isFirsts = ref(true);
-
-const byYear = computed(() => getByYearForTeam(teamAbbr));
+const byYear = computed(() =>
+  getByYearForTeam(teamAbbr)
+    ?.map(x => ({
+      year: x.year,
+      roundData: isFirsts.value ? x.roundOne : x.roundTwo,
+    })),
+);
 </script>
 
 <template>
@@ -36,10 +41,10 @@ const byYear = computed(() => getByYearForTeam(teamAbbr));
         </button>
       </div>
     </div>
-    <div class="flex justify-between mx-4">
+    <div class="flex justify-between mx-4 pt-2">
       <div
         v-for="yearInfo in byYear"
-        :key="yearInfo.year"
+        :key="`${yearInfo.year}-${isFirsts ? 1 : 2}`"
         class="flex flex-col-reverse gap-2"
       >
         <div class="font-semibold px-4">
@@ -47,13 +52,13 @@ const byYear = computed(() => getByYearForTeam(teamAbbr));
         </div>
         <div class="mx-auto pr-4">
           <PickCircle
-            :pick-data="yearInfo.roundOne.own"
+            :pick-data="yearInfo.roundData.own"
             :is-own="true"
           />
         </div>
         <div class="flex-grow flex flex-col-reverse gap-2 mx-auto pr-4">
           <PickCircle
-            v-for="(pick, i) in yearInfo.roundOne.others"
+            v-for="(pick, i) in yearInfo.roundData.others"
             :key="i"
             :pick-data="pick"
           />

@@ -41,7 +41,7 @@ const text = computed(() => pickData.teams?.length === 1
     </div>
 
     <div
-      class="rounded-full h-8 w-8 bg-green-600 text-white flex items-center justify-center"
+      class="rounded-full h-10 w-10 bg-green-600 text-white flex items-center justify-center"
       :class="[isTradedAway ? 'traded-away' : (pickData.isConditional ? 'conditional' : 'owned')]"
     >
       <p class="text-xs">
