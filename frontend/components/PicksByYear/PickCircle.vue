@@ -16,7 +16,9 @@ const isTradedAway = computed(() => isOwn && pickData.isTradedAway)
 
 const text = computed(() => pickData.teams?.length === 1
   ? pickData.teams[0]
-  : '',
+  : (pickData.teams?.length
+      ? pickData.teams?.length
+      : ''),
 )
 </script>
 
@@ -45,7 +47,7 @@ const text = computed(() => pickData.teams?.length === 1
       :class="[isTradedAway ? 'traded-away' : (pickData.isConditional ? 'conditional' : 'owned')]"
     >
       <p class="text-xs">
-        {{ text ?? '' }}
+        {{ text }}
       </p>
     </div>
   </div>

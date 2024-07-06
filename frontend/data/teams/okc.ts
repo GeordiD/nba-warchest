@@ -60,6 +60,7 @@ export const OkcByYear: PicksByYear[] = [
     roundTwo: {
       own: {
         teams: ['DAL', 'PHI'],
+        swapType: 'favorable',
       },
       others: [
         {
