@@ -7,35 +7,37 @@ export const OkcByYear: PicksByYear[] = [
     year: 2025,
     roundOne: {
       own: {
-        isMoreFavorable: true,
+        swapType: 'favorable',
+        teams: ['HOU', 'LAC'],
       },
       others: [
         {
-          from: 'MIA',
+          teams: ['MIA'],
           isConditional: true,
         },
         {
-          from: 'PHI',
+          teams: ['PHI'],
           isConditional: true,
         },
         {
-          from: 'UTA',
+          teams: ['UTA'],
           isConditional: true,
         },
       ],
     },
     roundTwo: {
       own: {
-        to: 'HOU',
+        teams: ['HOU'],
+        isTradedAway: true,
       },
       others: [
         {
-          from: 'ATL',
+          teams: ['ATL'],
           isConditional: true,
         },
         {
-          from: ['BOS', 'MEM'],
-          isMoreFavorable: true,
+          teams: ['BOS', 'MEM'],
+          swapType: 'favorable',
         },
       ],
     },
@@ -44,24 +46,24 @@ export const OkcByYear: PicksByYear[] = [
     year: 2026,
     roundOne: {
       own: {
-        with: ['HOU', 'LAC'],
-        isMoreFavorable: true,
+        teams: ['HOU', 'LAC'],
+        swapType: 'favorable',
       },
       others: [
         {
           isConditional: true,
-          isMoreFavorable: true,
-          from: ['HOU', 'LAC'],
+          swapType: 'favorable',
+          teams: ['HOU', 'LAC'],
         },
       ],
     },
     roundTwo: {
       own: {
-        with: ['DAL', 'PHI'],
+        teams: ['DAL', 'PHI'],
       },
       others: [
         {
-          from: 'GSW',
+          teams: ['GSW'],
         },
       ],
     },
@@ -70,14 +72,14 @@ export const OkcByYear: PicksByYear[] = [
     year: 2027,
     roundOne: {
       own: {
-        isMoreFavorable: true,
-        with: ['DEN', 'LAC'],
+        swapType: 'favorable',
+        teams: ['DEN', 'LAC'],
       },
       others: [
         {
           isConditional: true,
-          isMoreFavorable: true,
-          from: ['DEN', 'LAC'],
+          swapType: 'favorable',
+          teams: ['DEN', 'LAC'],
         },
       ],
     },
@@ -94,8 +96,8 @@ export const OkcByYear: PicksByYear[] = [
     year: 2028,
     roundOne: {
       own: {
-        with: ['DAL'],
-        isMoreFavorable: true,
+        teams: ['DAL'],
+        swapType: 'favorable',
       },
       others: [],
     },
@@ -114,7 +116,7 @@ export const OkcByYear: PicksByYear[] = [
       own: {},
       others: [
         {
-          from: 'DEN',
+          teams: ['DEN'],
           isConditional: true,
         },
       ],

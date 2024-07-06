@@ -47,19 +47,15 @@ const byYear = computed(() => getByYearForTeam(teamAbbr));
         </div>
         <div class="mx-auto pr-4">
           <PickCircle
-            :is-conditional="yearInfo.roundOne.own.isConditional"
-            :is-more-favorable="yearInfo.roundOne.own.isMoreFavorable"
-            :is-less-favorable="yearInfo.roundOne.own.isLessFavorable"
+            :pick-data="yearInfo.roundOne.own"
+            :is-own="true"
           />
         </div>
         <div class="flex-grow flex flex-col-reverse gap-2 mx-auto pr-4">
           <PickCircle
             v-for="(pick, i) in yearInfo.roundOne.others"
             :key="i"
-            :text="Array.isArray(pick.from) ? '' : pick.from"
-            :is-conditional="pick.isConditional"
-            :is-more-favorable="pick.isMoreFavorable"
-            :is-less-favorable="pick.isLessFavorable"
+            :pick-data="pick"
           />
         </div>
       </div>

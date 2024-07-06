@@ -1,34 +1,40 @@
 <script setup lang="ts">
+import type { PickData } from '~/data/PicksByYear';
+
 const {
-  isConditional,
-  isTradedAway,
-  isMoreFavorable,
-  isLessFavorable,
-  text,
+  pickData,
+  isOwn,
 } = defineProps({
-  isConditional: Boolean,
-  isTradedAway: Boolean,
-  isMoreFavorable: Boolean,
-  isLessFavorable: Boolean,
-  text: String,
+  pickData: {
+    type: Object as PropType<PickData>,
+    required: true,
+  },
+  isOwn: Boolean,
 })
+
+const isTradedAway = computed(() => isOwn && pickData.isTradedAway)
+
+const text = computed(() => pickData.teams?.length === 1
+  ? pickData.teams[0]
+  : '',
+)
 </script>
 
 <template>
   <div class="flex items-center">
     <div class="w-4">
       <Icon
-        v-if="isMoreFavorable && isLessFavorable"
+        v-if="pickData.swapType === 'mixed'"
         name="material-symbols:sync-outline"
         class="arrow-mixed"
       />
       <Icon
-        v-else-if="isLessFavorable"
+        v-else-if="pickData.swapType === 'unfavorable'"
         name="material-symbols:arrow-downward-alt"
         class="arrow-unfavorable"
       />
       <Icon
-        v-else-if="isMoreFavorable"
+        v-else-if="pickData.swapType === 'favorable'"
         name="material-symbols:arrow-upward-alt"
         class="arrow-favorable"
       />
@@ -36,7 +42,7 @@ const {
 
     <div
       class="rounded-full h-8 w-8 bg-green-600 text-white flex items-center justify-center"
-      :class="[isTradedAway ? 'traded-away' : (isConditional ? 'conditional' : 'owned')]"
+      :class="[isTradedAway ? 'traded-away' : (pickData.isConditional ? 'conditional' : 'owned')]"
     >
       <p class="text-xs">
         {{ text ?? '' }}

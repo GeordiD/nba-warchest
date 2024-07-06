@@ -1,24 +1,17 @@
 import type { TeamAbbr } from '~/utils/TeamAbbr';
 
-interface PickData {
+export type SwapType = 'favorable' | 'unfavorable' | 'mixed';
+
+export interface PickData {
   isConditional?: boolean,
-  isMoreFavorable?: boolean,
-  isLessFavorable?: boolean,
-  notes?: string | string[];
+  swapType?: SwapType,
+  teams?: TeamAbbr[];
+  isTradedAway?: boolean;
 }
 
-interface OwnPickData extends PickData {
-  to?: TeamAbbr;
-  with?: TeamAbbr | TeamAbbr[];
-}
-
-interface OtherPickData extends PickData {
-  from: TeamAbbr | TeamAbbr[];
-}
-
-interface RoundPickData {
-  own: OwnPickData,
-  others: OtherPickData[]
+export interface RoundPickData {
+  own: PickData,
+  others: PickData[]
 }
 
 export interface PicksByYear {
