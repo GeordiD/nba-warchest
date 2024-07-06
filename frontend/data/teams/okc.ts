@@ -57,7 +57,7 @@ export const OkcCombinedMeta: CombinedMeta[] = [
         },
         {
           id: '2025.1.UTA',
-          headline: `UTA (${prot(10)})`,
+          headline: `UTA ${prot(10)}`,
           extra: [
             ifNotConvey([`2026 1st ${prot(8)}`]),
           ],

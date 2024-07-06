@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { PickMeta } from '~/data/PicksByYear';
+import type { PickDetails } from '~/data/PicksByYear';
 
 const {
   item,
@@ -11,7 +11,7 @@ const {
 })
 
 const isString = computed(() => typeof item === 'string');
-const metaObj = computed(() => item as PickMeta);
+const metaObj = computed(() => item as PickDetails);
 </script>
 
 <template>
@@ -20,7 +20,7 @@ const metaObj = computed(() => item as PickMeta);
       {{ item }}
     </span>
     <span v-else>
-      {{ (item as PickMeta).headline }}
+      {{ (item as PickDetails).headline }}
     </span>
 
     <ul

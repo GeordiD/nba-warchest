@@ -1,12 +1,17 @@
 <script setup lang="ts">
-import type { PickData } from '~/data/PicksByYear';
+import type { CombinedMeta, PickSummary } from '~/data/PicksByYear';
 
 const {
   pickData,
+  meta,
   isOwn,
 } = defineProps({
   pickData: {
-    type: Object as PropType<PickData>,
+    type: Object as PropType<PickSummary>,
+    required: true,
+  },
+  meta: {
+    type: Object as PropType<CombinedMeta[]>,
     required: true,
   },
   isOwn: Boolean,
@@ -20,6 +25,22 @@ const text = computed(() => pickData.teams?.length === 1
       ? pickData.teams?.length
       : ''),
 )
+
+const details = computed(() => {
+  const id = pickData.id;
+  const isFirst = id.at(5) === '1';
+
+  const details = meta
+    .map(x => isFirst ? x.roundOne : x.roundTwo)
+    .flatMap(x => x.details)
+    .find(x => x.id === id);
+
+  if (!details) {
+    return 'Pick details not found';
+  }
+
+  return details.headline;
+})
 
 const {
   isIdActive,
@@ -67,7 +88,7 @@ const {
         v-if="isTarget"
         class="tooltip"
       >
-        tooltip
+        {{ details }}
       </div>
     </div>
   </div>
@@ -76,7 +97,7 @@ const {
 <style scoped>
 .tooltip {
   left: 3rem;
-  @apply absolute bg-white border border-gray-500 p-2 rounded-sm z-10 text-black;
+  @apply absolute bg-white border border-gray-500 p-2 rounded-sm z-10 text-black w-48;
 }
 
 .traded-away {

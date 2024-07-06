@@ -6,13 +6,13 @@ export type Year = '2025' | '2026' | '2027' | '2028' | '2029' | '2030' | '2031';
 export type Round = '1' | '2';
 export type Id = `${Year}.${Round}` | `${Year}.${Round}.${string}`;
 
-export interface PickMeta {
+export interface PickDetails {
   id: Id;
   headline: string;
   extra?: (string | string[])[];
 }
 
-export interface PickData {
+export interface PickSummary {
   details?: number,
   id: Id,
 
@@ -23,13 +23,13 @@ export interface PickData {
 }
 
 export interface RoundPickData {
-  own: PickData,
-  others: PickData[]
+  own: PickSummary,
+  others: PickSummary[]
 }
 
 export interface CombinedRoundMeta {
   summary: RoundPickData,
-  details: PickMeta[]
+  details: PickDetails[]
 }
 
 export interface CombinedMeta {

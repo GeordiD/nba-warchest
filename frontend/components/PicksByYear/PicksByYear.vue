@@ -9,6 +9,7 @@ const {
 })
 
 const isFirsts = ref(true);
+const meta = computed(() => getMetadataForTeam(teamAbbr)!)
 const byYear = computed(() =>
   getMetadataForTeam(teamAbbr)
     ?.map(x => ({
@@ -53,6 +54,7 @@ const byYear = computed(() =>
         <div class="mx-auto pr-4">
           <PickCircle
             :pick-data="yearInfo.roundData.own"
+            :meta="meta"
             :is-own="true"
           />
         </div>
@@ -61,6 +63,7 @@ const byYear = computed(() =>
             v-for="(pick, i) in yearInfo.roundData.others"
             :key="i"
             :pick-data="pick"
+            :meta="meta"
           />
         </div>
       </div>
