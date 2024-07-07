@@ -13,8 +13,8 @@ const {
 const meta = computed(() => getMetadataForTeam(teamAbbr)
   ?.map(x => ({
     year: x.year,
-    roundOne: x.roundOne.details,
-    roundTwo: x.roundTwo.details,
+    roundOne: x.roundOne.map(x => x.details),
+    roundTwo: x.roundTwo.map(x => x.details),
   })),
 );
 </script>

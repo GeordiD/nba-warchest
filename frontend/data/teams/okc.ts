@@ -4,48 +4,37 @@ import { favorableSwap, ifNotConvey, prot } from '~/data/shorthand';
 export const OkcCombinedMeta: CombinedMeta[] = [
   {
     year: 2025,
-    roundOne: {
-      summary: {
-        own: {
-          id: '2025.1',
-          swapType: 'favorable',
-          teams: ['HOU', 'LAC'],
-        },
-        others: [
-          {
-            id: '2025.1.MIA',
-            teams: ['MIA'],
-            isConditional: true,
-          },
-          {
-            id: '2025.1.PHI',
-            teams: ['PHI'],
-            isConditional: true,
-          },
-          {
-            id: '2025.1.UTA',
-            teams: ['UTA'],
-            isConditional: true,
-          },
-        ],
-      },
-      details: [
-        {
-          id: '2025.1',
+    roundOne: [
+      {
+        id: '2025.1',
+        details: {
           headline: `Own (${favorableSwap} HOU / LAC)`,
           extra: [
             `HOU ${prot(10)}`,
           ],
         },
-        {
-          id: '2025.1.MIA',
+        summary: {
+          swapType: 'favorable',
+          teams: ['HOU', 'LAC'],
+          isOwn: true,
+        },
+      },
+      {
+        id: '2025.1.MIA',
+        details: {
           headline: `MIA ${prot(14)}`,
           extra: [
             ifNotConvey(['2026 1st (unprotected)']),
           ],
         },
-        {
-          id: '2025.1.PHI',
+        summary: {
+          teams: ['MIA'],
+          isConditional: true,
+        },
+      },
+      {
+        id: '2025.1.PHI',
+        details: {
           headline: `PHI ${prot(6)}`,
           extra: [
             ifNotConvey([
@@ -55,131 +44,111 @@ export const OkcCombinedMeta: CombinedMeta[] = [
             ]),
           ],
         },
-        {
-          id: '2025.1.UTA',
+        summary: {
+          teams: ['PHI'],
+          isConditional: true,
+        },
+      },
+      {
+        id: '2025.1.UTA',
+        details: {
           headline: `UTA ${prot(10)}`,
           extra: [
             ifNotConvey([`2026 1st ${prot(8)}`]),
           ],
         },
-      ],
-    },
-    roundTwo: {
-      summary: {
-        own: {
-          id: '2025.2',
+        summary: {
+          teams: ['UTA'],
+          isConditional: true,
+        },
+      },
+    ],
+    roundTwo: [
+      {
+        id: '2025.2',
+        details: 'To HOU',
+        summary: {
           teams: ['HOU'],
           isTradedAway: true,
+          isOwn: true,
         },
-        others: [
-          {
-            id: '2025.2.ATL',
-            teams: ['ATL'],
-            isConditional: true,
-          },
-          {
-            id: '2025.2.BOS-MEM',
-            teams: ['BOS', 'MEM'],
-            swapType: 'favorable',
-          },
-        ],
       },
-      details: [
-        {
-          id: '2025.2',
-          headline: 'To HOU',
+      {
+        id: '2025.2.ATL',
+        details: `ATL ${prot(40)}`,
+        summary: {
+          teams: ['ATL'],
+          isConditional: true,
         },
-        {
-          id: '2025.2',
-          headline: `ATL ${prot(40)}`,
+      },
+      {
+        id: '2025.2.BOS-MEM',
+        details: 'More favorable of BOS and MEM',
+        summary: {
+          teams: ['BOS', 'MEM'],
+          swapType: 'favorable',
         },
-        {
-          id: '2025.2',
-          headline: 'More favorable of BOS and MEM',
-        },
-      ],
-    },
+      },
+    ],
   },
   {
     year: 2026,
-    roundOne: {
-      summary: {
-        own: {
-          id: '2026.1',
-          teams: ['HOU', 'LAC'],
-          swapType: 'favorable',
-        },
-        others: [
-          {
-            id: '2026.1',
-            isConditional: true,
-            swapType: 'favorable',
-            teams: ['HOU', 'LAC'],
-          },
-        ],
-      },
-      details: [
-        {
-          id: '2026.1',
+    roundOne: [
+      {
+        id: '2026.1',
+        details: {
           headline: 'Two most favorable of OKC / HOU / LAC',
           extra: [
             `HOU ${prot(4)}`,
             `Least favorable to PHI`,
           ],
         },
-      ],
-    },
-    roundTwo: {
-      summary: {
-        own: {
-          id: '2026.2',
-          teams: ['DAL', 'PHI'],
-          swapType: 'favorable',
-        },
-        others: [
+        summary: [
           {
-            id: '2026.2.GSW',
-            teams: ['GSW'],
+            teams: ['HOU', 'LAC'],
+            swapType: 'favorable',
+            isOwn: true,
+          },
+          {
+            isConditional: true,
+            swapType: 'favorable',
+            teams: ['HOU', 'LAC'],
           },
         ],
       },
-      details: [
-        {
-          id: '2026.2',
+    ],
+    roundTwo: [
+      {
+        id: '2026.2',
+        details: {
           headline: 'Most favorable of OKC / DAL / PHL',
           extra: [
             'Second most favorable to HOU',
             'Least favorable to SAN',
           ],
         },
-        {
-          id: '2026.2.GSW',
-          headline: 'GSW',
+        summary: {
+          id: '2026.2',
+          teams: ['DAL', 'PHI'],
+          swapType: 'favorable',
+          isOwn: true,
         },
-      ],
-    },
+      },
+      {
+        id: '2026.2.GSW',
+        details: 'GSW',
+        summary: {
+          teams: ['GSW'],
+        },
+      },
+    ],
   },
   {
     year: 2027,
-    roundOne: {
-      summary: {
-        own: {
-          id: '2027.1',
-          swapType: 'favorable',
-          teams: ['DEN', 'LAC'],
-        },
-        others: [
-          {
-            id: '2027.1',
-            isConditional: true,
-            swapType: 'favorable',
-            teams: ['DEN', 'LAC'],
-          },
-        ],
-      },
-      details: [
-        {
-          id: '2027.1',
+    roundOne: [
+      {
+        id: '2027.1',
+        details: {
           headline: 'Two most favorable of OKC / DEN / LAC',
           extra: [
             `DEN (${prot(5, false)} and if DEN conveys 1st to ORL in 2025)`,
@@ -191,95 +160,104 @@ export const OkcCombinedMeta: CombinedMeta[] = [
             'Least favorable to LAC',
           ],
         },
-      ],
-    },
-    roundTwo: {
-      summary: {
-        own: {
-          id: '2027.2',
-        },
-        others: [
-
+        summary: [
+          {
+            swapType: 'favorable',
+            teams: ['DEN', 'LAC'],
+            isOwn: true,
+          },
+          {
+            isConditional: true,
+            swapType: 'favorable',
+            teams: ['DEN', 'LAC'],
+          },
         ],
       },
-      details: [
-        {
-          id: '2027.2',
+    ],
+    roundTwo: [
+      {
+        id: '2027.2',
+        details: {
           headline: 'Three most favorable of OKC / HOU / IND / MIA',
           extra: [
             'Least favorable to SAN',
           ],
         },
-        {
-          id: '2027.2.MIN',
-          headline: 'MIN',
-        },
-      ],
-    },
-  },
-  {
-    year: 2028,
-    roundOne: {
-      summary: {
-        own: {
-          id: '2028.1',
-          teams: ['DAL'],
-          swapType: 'favorable',
-        },
-        others: [],
-      },
-      details: [
-        {
-          id: '2028.1',
-          headline: `Own (${favorableSwap} DAL)`,
-        },
-      ],
-    },
-    roundTwo: {
-      summary: {
-        own: {
-          id: '2028.2',
-        },
-        others: [],
-      },
-      details: [
-        {
-          id: '2028.2',
-          headline: 'Own',
-        },
-        {
-          id: '2028.2.MIL',
-          headline: 'MIL',
-        },
-        {
-          id: '2028.2.UTA',
-          headline: 'UTA',
-        },
-      ],
-    },
-  },
-  {
-    year: 2029,
-    roundOne: {
-      summary: {
-        own: {
-          id: '2029.1',
-        },
-        others: [
+        summary: [
           {
-            id: '2029.1.DEN',
-            teams: ['DEN'],
-            isConditional: true,
+            isOwn: true,
+            swapType: 'favorable',
+            teams: ['HOU', 'IND', 'MIA'],
+          },
+          {
+            swapType: 'favorable',
+            teams: ['HOU', 'IND', 'MIA'],
+          },
+          {
+            swapType: 'favorable',
+            teams: ['HOU', 'IND', 'MIA'],
           },
         ],
       },
-      details: [
-        {
-          id: '2029.1',
-          headline: 'Own',
+      {
+        id: '2027.2.MIN',
+        details: 'MIN',
+        summary: {
+          teams: ['MIN'],
         },
-        {
-          id: '2029.1.DEN',
+      },
+    ],
+  },
+  {
+    year: 2028,
+    roundOne: [
+      {
+        id: '2028.1',
+        details: `Own (${favorableSwap} DAL)`,
+        summary: {
+          teams: ['DAL'],
+          swapType: 'favorable',
+          isOwn: true,
+        },
+      },
+    ],
+    roundTwo: [
+      {
+        id: '2028.2',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+      {
+        id: '2028.2.MIL',
+        details: 'MIL',
+        summary: {
+          teams: ['MIL'],
+        },
+      },
+      {
+        id: '2028.2.UTA',
+        details: 'UTA',
+        summary: {
+          teams: ['UTA'],
+        },
+      },
+    ],
+  },
+  {
+    year: 2029,
+    roundOne: [
+      {
+        id: '2029.1',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+      {
+        id: '2029.1.DEN',
+        details: {
           headline: `DEN ${prot(5)}`,
           extra: [
             'If DEN conveys 1st to OKC in 2027',
@@ -289,113 +267,111 @@ export const OkcCombinedMeta: CombinedMeta[] = [
             ]),
           ],
         },
-      ],
-    },
-    roundTwo: {
-      summary: {
-        own: {
-          id: '2029.2',
+        summary: {
+          teams: ['DEN'],
+          isConditional: true,
         },
-        others: [
-
-        ],
       },
-      details: [
-        {
-          id: '2029.2',
-          headline: 'Own',
+    ],
+    roundTwo: [
+      {
+        id: '2029.2',
+        details: 'Own',
+        summary: {
+          isOwn: true,
         },
-        {
-          id: '2029.2',
-          headline: 'ATL',
+      },
+      {
+        id: '2029.2',
+        details: 'ATL',
+        summary: {
+          teams: ['ATL'],
         },
-        {
-          id: '2029.2',
-          headline: 'BOS',
+      },
+      {
+        id: '2029.2',
+        details: 'BOS',
+        summary: {
+          teams: ['BOS'],
         },
-        {
-          id: '2029.2',
-          headline: 'HOU',
+      },
+      {
+        id: '2029.2',
+        details: 'HOU',
+        summary: {
+          teams: ['HOU'],
         },
-        {
-          id: '2029.2',
-          headline: 'MIA',
+      },
+      {
+        id: '2029.2',
+        details: 'MIA',
+        summary: {
+          teams: ['MIA'],
         },
-        {
-          id: '2029.2',
-          headline: 'PHX',
+      },
+      {
+        id: '2029.2',
+        details: 'PHX',
+        summary: {
+          teams: ['PHX'],
         },
-      ],
-    },
+      },
+    ],
   },
   {
     year: 2030,
-    roundOne: {
-      summary: {
-        own: {
-          id: '2030.1',
+    roundOne: [
+      {
+        id: '2030.1',
+        details: 'Own',
+        summary: {
+          isOwn: true,
         },
-        others: [],
       },
-      details: [
-        {
-          id: '2030.1',
-          headline: 'Own',
+    ],
+    roundTwo: [
+      {
+        id: '2030.2',
+        details: 'Own',
+        summary: {
+          isOwn: true,
         },
-      ],
-    },
-    roundTwo: {
-      summary: {
-        own: {
-          id: '2030.2',
-        },
-        others: [],
       },
-      details: [
-        {
-          id: '2030.2',
-          headline: 'Own',
+      {
+        id: '2030.2.HOU',
+        details: 'HOU',
+        summary: {
+          teams: ['HOU'],
         },
-        {
-          id: '2030.2.HOU',
-          headline: 'HOU',
+      },
+      {
+        id: '2030.2.MIA',
+        details: 'MIA',
+        summary: {
+          teams: ['MIA'],
         },
-        {
-          id: '2030.2.MIA',
-          headline: 'MIA',
-        },
-      ],
-    },
+      },
+    ],
   },
   {
     year: 2031,
-    roundOne: {
-      summary: {
-        own: {
-          id: '2031.1',
+    roundOne: [
+      {
+        id: '2031.1',
+        details: 'Own',
+        summary: {
+          isOwn: true,
         },
-        others: [],
       },
-      details: [
-        {
-          id: '2031.1',
-          headline: 'Own',
+    ],
+    roundTwo: [
+      {
+        id: '2031.2',
+        details: 'Own',
+        summary: {
+          isOwn: true,
         },
-      ],
-    },
-    roundTwo: {
-      summary: {
-        own: {
-          id: '2031.2',
-        },
-        others: [],
       },
-      details: [
-        {
-          id: '2031.2',
-          headline: 'Own',
-        },
-      ],
-    },
+    ],
   },
 ]

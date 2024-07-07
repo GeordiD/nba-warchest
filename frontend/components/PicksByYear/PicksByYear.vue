@@ -14,7 +14,12 @@ const byYear = computed(() =>
   getMetadataForTeam(teamAbbr)
     ?.map(x => ({
       year: x.year,
-      roundData: isFirsts.value ? x.roundOne.summary : x.roundTwo.summary,
+      roundData: (isFirsts.value ? x.roundOne : x.roundTwo)
+        .flatMap((y) => {
+          return Array.isArray(y.summary)
+            ? y.summary.map(z => ({ id: y.id, summary: z }))
+            : { id: y.id, summary: y.summary }
+        }),
     })),
 );
 </script>
@@ -51,18 +56,12 @@ const byYear = computed(() =>
         <div class="font-semibold px-4">
           {{ yearInfo.year }}
         </div>
-        <div class="mx-auto pr-4">
-          <PickCircle
-            :pick-data="yearInfo.roundData.own"
-            :meta="meta"
-            :is-own="true"
-          />
-        </div>
         <div class="flex-grow flex flex-col-reverse gap-2 mx-auto pr-4">
           <PickCircle
-            v-for="(pick, i) in yearInfo.roundData.others"
+            v-for="(pick, i) in yearInfo.roundData"
+            :id="pick.id"
             :key="i"
-            :pick-data="pick"
+            :pick-data="pick.summary"
             :meta="meta"
           />
         </div>

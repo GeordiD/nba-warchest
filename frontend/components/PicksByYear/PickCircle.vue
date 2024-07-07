@@ -3,11 +3,15 @@ import type { CombinedMeta, PickSummary } from '~/data/PicksByYear';
 
 const {
   pickData,
+  id,
   meta,
-  isOwn,
 } = defineProps({
   pickData: {
     type: Object as PropType<PickSummary>,
+    required: true,
+  },
+  id: {
+    type: String,
     required: true,
   },
   meta: {
@@ -17,7 +21,7 @@ const {
   isOwn: Boolean,
 })
 
-const isTradedAway = computed(() => isOwn && pickData.isTradedAway)
+const isTradedAway = computed(() => pickData.isOwn && pickData.isTradedAway)
 
 const text = computed(() => pickData.teams?.length === 1
   ? pickData.teams[0]
@@ -27,19 +31,18 @@ const text = computed(() => pickData.teams?.length === 1
 )
 
 const details = computed(() => {
-  const id = pickData.id;
   const isFirst = id.at(5) === '1';
 
   const details = meta
-    .map(x => isFirst ? x.roundOne : x.roundTwo)
-    .flatMap(x => x.details)
-    .find(x => x.id === id);
+    .flatMap(x => isFirst ? x.roundOne : x.roundTwo)
+    .find(x => x.id === id)
+    ?.details;
 
   if (!details) {
     return 'Pick details not found';
   }
 
-  return details.headline;
+  return typeof details === 'string' ? details : details.headline;
 })
 
 const {
@@ -47,7 +50,7 @@ const {
   isTarget,
   onMouseOut,
   onMouseOver,
-} = useHoverPick(pickData.id);
+} = useHoverPick(id);
 </script>
 
 <template>

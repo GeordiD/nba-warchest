@@ -7,33 +7,28 @@ export type Round = '1' | '2';
 export type Id = `${Year}.${Round}` | `${Year}.${Round}.${string}`;
 
 export interface PickDetails {
-  id: Id;
   headline: string;
   extra?: (string | string[])[];
 }
 
 export interface PickSummary {
   details?: number,
-  id: Id,
 
   isConditional?: boolean,
   swapType?: SwapType,
   teams?: TeamAbbr[];
   isTradedAway?: boolean;
+  isOwn?: boolean;
 }
 
-export interface RoundPickData {
-  own: PickSummary,
-  others: PickSummary[]
-}
-
-export interface CombinedRoundMeta {
-  summary: RoundPickData,
-  details: PickDetails[]
+export interface PickMeta {
+  id: string,
+  summary: PickSummary | PickSummary[],
+  details: string | PickDetails,
 }
 
 export interface CombinedMeta {
   year: number,
-  roundOne: CombinedRoundMeta,
-  roundTwo: CombinedRoundMeta,
+  roundOne: PickMeta[],
+  roundTwo: PickMeta[],
 }
