@@ -282,35 +282,35 @@ export const OkcCombinedMeta: CombinedMeta[] = [
         },
       },
       {
-        id: '2029.2',
+        id: '2029.2.ATL',
         details: 'ATL',
         summary: {
           teams: ['ATL'],
         },
       },
       {
-        id: '2029.2',
+        id: '2029.2.BOS',
         details: 'BOS',
         summary: {
           teams: ['BOS'],
         },
       },
       {
-        id: '2029.2',
+        id: '2029.2.HOU',
         details: 'HOU',
         summary: {
           teams: ['HOU'],
         },
       },
       {
-        id: '2029.2',
+        id: '2029.2.MIA',
         details: 'MIA',
         summary: {
           teams: ['MIA'],
         },
       },
       {
-        id: '2029.2',
+        id: '2029.2.PHX',
         details: 'PHX',
         summary: {
           teams: ['PHX'],

@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import type { CombinedMeta, PickSummary } from '~/data/PicksByYear';
+import type { CombinedMeta, PickDetails, PickSummary } from '~/data/PicksByYear';
 
 const {
   pickData,
-  id,
   meta,
 } = defineProps({
   pickData: {
-    type: Object as PropType<PickSummary>,
-    required: true,
-  },
-  id: {
-    type: String,
+    type: Object as PropType<{
+      id: string,
+      summary: PickSummary,
+      details: string | PickDetails,
+    }>,
     required: true,
   },
   meta: {
@@ -21,28 +20,29 @@ const {
   isOwn: Boolean,
 })
 
-const isTradedAway = computed(() => pickData.isOwn && pickData.isTradedAway)
+const isTradedAway = computed(() => pickData.summary.isOwn
+  && pickData.summary.isTradedAway)
 
-const text = computed(() => pickData.teams?.length === 1
-  ? pickData.teams[0]
-  : (pickData.teams?.length
-      ? pickData.teams?.length
+const text = computed(() => pickData.summary.teams?.length === 1
+  ? pickData.summary.teams[0]
+  : (pickData.summary.teams?.length
+      ? pickData.summary.teams?.length
       : ''),
 )
 
 const details = computed(() => {
-  const isFirst = id.at(5) === '1';
+  const isFirst = pickData.id.at(5) === '1';
 
   const details = meta
     .flatMap(x => isFirst ? x.roundOne : x.roundTwo)
-    .find(x => x.id === id)
+    .find(x => x.id === pickData.id)
     ?.details;
 
   if (!details) {
     return 'Pick details not found';
   }
 
-  return typeof details === 'string' ? details : details.headline;
+  return details;
 })
 
 const {
@@ -50,7 +50,7 @@ const {
   isTarget,
   onMouseOut,
   onMouseOver,
-} = useHoverPick(id);
+} = useHoverPick(pickData.id);
 </script>
 
 <template>
@@ -61,17 +61,17 @@ const {
   >
     <div class="w-4">
       <Icon
-        v-if="pickData.swapType === 'mixed'"
+        v-if="pickData.summary.swapType === 'mixed'"
         name="material-symbols:sync-outline"
         class="arrow-mixed"
       />
       <Icon
-        v-else-if="pickData.swapType === 'unfavorable'"
+        v-else-if="pickData.summary.swapType === 'unfavorable'"
         name="material-symbols:arrow-downward-alt"
         class="arrow-unfavorable"
       />
       <Icon
-        v-else-if="pickData.swapType === 'favorable'"
+        v-else-if="pickData.summary.swapType === 'favorable'"
         name="material-symbols:arrow-upward-alt"
         class="arrow-favorable"
       />
@@ -80,7 +80,7 @@ const {
     <div
       class="rounded-full h-10 w-10 bg-green-600 text-white flex items-center justify-center relative"
       :class="[
-        isTradedAway ? 'traded-away' : (pickData.isConditional ? 'conditional' : 'owned'),
+        isTradedAway ? 'traded-away' : (pickData.summary.isConditional ? 'conditional' : 'owned'),
         { hover: isIdActive },
       ]"
     >
@@ -91,7 +91,7 @@ const {
         v-if="isTarget"
         class="tooltip"
       >
-        {{ details }}
+        <DraftAssetMetaInfo :item="details" />
       </div>
     </div>
   </div>

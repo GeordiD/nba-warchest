@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { PickSummary } from '~/data/PicksByYear';
+
 const {
   teamAbbr,
 } = defineProps({
@@ -17,8 +19,8 @@ const byYear = computed(() =>
       roundData: (isFirsts.value ? x.roundOne : x.roundTwo)
         .flatMap((y) => {
           return Array.isArray(y.summary)
-            ? y.summary.map(z => ({ id: y.id, summary: z }))
-            : { id: y.id, summary: y.summary }
+            ? y.summary.map(z => ({ ...y, summary: z as PickSummary }))
+            : { ...y, summary: y.summary as PickSummary }
         }),
     })),
 );
@@ -61,7 +63,7 @@ const byYear = computed(() =>
             v-for="(pick, i) in yearInfo.roundData"
             :id="pick.id"
             :key="i"
-            :pick-data="pick.summary"
+            :pick-data="pick"
             :meta="meta"
           />
         </div>
