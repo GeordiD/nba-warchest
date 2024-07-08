@@ -1,28 +1,26 @@
 <script setup lang="ts">
-import type { PickSummary } from '~/data/PicksByYear';
+import type { CombinedMeta, PickSummary } from '~/data/PicksByYear';
 
 const {
-  teamAbbr,
+  picks,
 } = defineProps({
-  teamAbbr: {
-    type: String,
+  picks: {
+    type: Object as PropType<CombinedMeta[]>,
     required: true,
   },
 })
 
 const isFirsts = ref(true);
-const meta = computed(() => getMetadataForTeam(teamAbbr)!)
 const byYear = computed(() =>
-  getMetadataForTeam(teamAbbr)
-    ?.map(x => ({
-      year: x.year,
-      roundData: (isFirsts.value ? x.roundOne : x.roundTwo)
-        .flatMap((y) => {
-          return Array.isArray(y.summary)
-            ? y.summary.map(z => ({ ...y, summary: z as PickSummary }))
-            : { ...y, summary: y.summary as PickSummary }
-        }),
-    })),
+  picks.map(x => ({
+    year: x.year,
+    roundData: (isFirsts.value ? x.roundOne : x.roundTwo)
+      .flatMap((y) => {
+        return Array.isArray(y.summary)
+          ? y.summary.map(z => ({ ...y, summary: z as PickSummary }))
+          : { ...y, summary: y.summary as PickSummary }
+      }),
+  })),
 );
 </script>
 
@@ -64,7 +62,7 @@ const byYear = computed(() =>
             :id="pick.id"
             :key="i"
             :pick-data="pick"
-            :meta="meta"
+            :meta="picks"
           />
         </div>
       </div>

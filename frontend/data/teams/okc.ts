@@ -1,4 +1,5 @@
 import type { CombinedMeta } from '~/data/PicksByYear';
+import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import { favorableSwap, ifNotConvey, prot } from '~/data/shorthand';
 
 export const OkcCombinedMeta: CombinedMeta[] = [
@@ -128,7 +129,6 @@ export const OkcCombinedMeta: CombinedMeta[] = [
           ],
         },
         summary: {
-          id: '2026.2',
           teams: ['DAL', 'PHI'],
           swapType: 'favorable',
           isOwn: true,
@@ -375,3 +375,15 @@ export const OkcCombinedMeta: CombinedMeta[] = [
     ],
   },
 ]
+
+const info: TeamInfo = {
+  abbr: 'OKC',
+  fullName: 'Oklahoma City Thunder',
+  name: 'Thunder',
+  location: 'Oklahoma City',
+}
+
+export const okcMeta: TeamMeta = {
+  info,
+  picks: OkcCombinedMeta,
+}

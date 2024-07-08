@@ -1,10 +1,10 @@
-import type { CombinedMeta } from '~/data/PicksByYear';
-import { OkcCombinedMeta } from '~/data/teams/okc';
+import type { TeamMeta } from '~/data/TeamMeta';
+import { okcMeta } from '~/data/teams/okc';
 
-const metas: Record<string, CombinedMeta[]> = {
-  okc: OkcCombinedMeta,
+const metas: Record<string, TeamMeta> = {
+  okc: okcMeta,
 }
 
-export function getMetadataForTeam(abbr: string): CombinedMeta[] | undefined {
-  return metas[abbr]
+export function getMetadataForTeam(abbr: TeamAbbr): TeamMeta {
+  return metas[abbr];
 }

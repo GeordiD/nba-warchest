@@ -1,21 +1,22 @@
 <script setup lang="ts">
+import type { PropType } from 'vue';
 import DraftAssetMetaInfo from '~/components/DraftAssetMetaInfo.vue';
+import type { CombinedMeta } from '~/data/PicksByYear';
 
 const {
-  teamAbbr,
+  picks,
 } = defineProps({
-  teamAbbr: {
-    type: String,
+  picks: {
+    type: Object as PropType<CombinedMeta[]>,
     required: true,
   },
 })
 
-const meta = computed(() => getMetadataForTeam(teamAbbr)
-  ?.map(x => ({
-    year: x.year,
-    roundOne: x.roundOne.map(x => x.details),
-    roundTwo: x.roundTwo.map(x => x.details),
-  })),
+const meta = computed(() => picks.map(x => ({
+  year: x.year,
+  roundOne: x.roundOne.map(x => x.details),
+  roundTwo: x.roundTwo.map(x => x.details),
+})),
 );
 </script>
 

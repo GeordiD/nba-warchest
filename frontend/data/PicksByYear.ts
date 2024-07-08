@@ -12,13 +12,12 @@ export interface PickDetails {
 }
 
 export interface PickSummary {
-  details?: number,
-
   isConditional?: boolean,
   swapType?: SwapType,
   teams?: TeamAbbr[];
   isTradedAway?: boolean;
   isOwn?: boolean;
+  desc?: string;
 }
 
 export interface PickMeta {

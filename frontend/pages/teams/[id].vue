@@ -1,19 +1,16 @@
 <script setup lang="ts">
 const route = useRoute();
-const abbr = route.params.id;
+const abbr = route.params.id as TeamAbbr;
 
-// const teamStore = useTeamsStore();
-// await teamStore.fetchIfNecessary();
+const meta = computed(() => getMetadataForTeam(abbr))
 
-// const team = computed(() => teamStore.teams.find(x =>
-//   x.abbr.toLowerCase() === (route.params.id as string).toLowerCase()),
-// )
+getTradability(meta.value.picks);
 </script>
 
 <template>
   <div class="m-4 mx-8 flex flex-col gap-4">
-    <!-- <h1>{{ team?.fullName }}</h1> -->
-    <PicksByYear :team-abbr="(abbr as string)" />
-    <AllPicks :team-abbr="(abbr as string)" />
+    <h1>{{ meta.info.fullName }}</h1>
+    <PicksByYear :picks="meta.picks" />
+    <AllPicks :picks="meta.picks" />
   </div>
 </template>
