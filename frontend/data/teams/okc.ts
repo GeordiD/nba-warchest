@@ -9,10 +9,7 @@ export const OkcCombinedMeta: CombinedMeta[] = [
       {
         id: '2025.1',
         details: {
-          headline: `Own (${favorableSwap} HOU / LAC)`,
-          extra: [
-            `HOU ${prot(10)}`,
-          ],
+          headline: `Own (${favorableSwap} HOU ${prot(10)} / LAC)`,
         },
         summary: {
           swapType: 'favorable',
@@ -98,9 +95,8 @@ export const OkcCombinedMeta: CombinedMeta[] = [
       {
         id: '2026.1',
         details: {
-          headline: 'Two most favorable of OKC / HOU / LAC',
+          headline: `Two most favorable of OKC / HOU ${prot(4)} / LAC`,
           extra: [
-            `HOU ${prot(4)}`,
             `Least favorable to PHI`,
           ],
         },
@@ -109,11 +105,13 @@ export const OkcCombinedMeta: CombinedMeta[] = [
             teams: ['HOU', 'LAC'],
             swapType: 'favorable',
             isOwn: true,
+            desc: `Best of OKC / HOU ${prot(4)} / LAC`,
           },
           {
             isConditional: true,
             swapType: 'favorable',
             teams: ['HOU', 'LAC'],
+            desc: `Second best of OKC / HOU ${prot(4)} / LAC`,
           },
         ],
       },
@@ -149,7 +147,7 @@ export const OkcCombinedMeta: CombinedMeta[] = [
       {
         id: '2027.1',
         details: {
-          headline: 'Two most favorable of OKC / DEN / LAC',
+          headline: 'Two most favorable of OKC / DEN (prot.) / LAC',
           extra: [
             `DEN (${prot(5, false)} and if DEN conveys 1st to ORL in 2025)`,
             ifNotConvey([
@@ -165,11 +163,13 @@ export const OkcCombinedMeta: CombinedMeta[] = [
             swapType: 'favorable',
             teams: ['DEN', 'LAC'],
             isOwn: true,
+            desc: 'Best of OKC / DEN / LAC',
           },
           {
             isConditional: true,
             swapType: 'favorable',
             teams: ['DEN', 'LAC'],
+            desc: 'Second best of OKC / DEN / LAC',
           },
         ],
       },

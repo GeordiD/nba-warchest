@@ -1,13 +1,14 @@
-import type { CombinedMeta, PickSummary } from '~/data/PicksByYear';
+import type { CombinedMeta, PickDetails, PickSummary } from '~/data/PicksByYear';
 
 export interface PickSummaryMeta {
   id: string,
   year: number,
   summary: PickSummary,
+  details: string | PickDetails,
 }
 
 export interface TradablePicksResults {
-  tradableIds: string[][],
+  picks: string[],
   hasPickThisYear: boolean,
 }
 
@@ -19,12 +20,23 @@ function getPicksFromMeta(metas: CombinedMeta[]): PickSummaryMeta[] {
           year: x.year,
           id: y.id,
           summary: z,
+          details: y.details,
         }))
         : {
             year: x.year,
             id: y.id,
             summary: y.summary,
+            details: y.details,
           }));
+}
+
+function getPickData(pick: PickSummaryMeta): string {
+  if (pick.summary.desc)
+    return pick.summary.desc;
+
+  return typeof pick.details === 'string'
+    ? pick.details
+    : pick.details.headline;
 }
 
 function recurseThroughPicks(props: {
@@ -53,16 +65,16 @@ function recurseThroughPicks(props: {
 
       if (guarenteedPicks.length > 1) {
         outcome[year] = {
-          tradableIds: [
-            ...conditionalPicks.map(x => [x.id]),
-            guarenteedPicks.map(y => y.id),
+          picks: [
+            ...conditionalPicks.map(x => getPickData(x)),
+            ...guarenteedPicks.map(x => getPickData(x)),
           ],
           hasPickThisYear: true,
         }
       } else {
         outcome[year] = {
-          tradableIds: [
-            ...conditionalPicks.map(x => [x.id]),
+          picks: [
+            ...conditionalPicks.map(x => getPickData(x)),
           ],
           hasPickThisYear: true,
         }
@@ -84,7 +96,7 @@ function recurseThroughPicks(props: {
     }
   } else {
     outcome[year] = {
-      tradableIds: picks.map(x => [x.id]),
+      picks: picks.map(x => getPickData(x)),
       hasPickThisYear: false,
     }
   }
@@ -111,7 +123,7 @@ function getTradableGroups(picks: PickSummaryMeta[]) {
   const outcome = recurseThroughPicks({
     year: lastDraft + 1,
     allPicksByYear: byYear,
-    outcome: { [lastDraft]: { tradableIds: [], hasPickThisYear: hadPickInLastYearsDraft } },
+    outcome: { [lastDraft]: { picks: [], hasPickThisYear: hadPickInLastYearsDraft } },
     mustHaveGuarenteed: false,
   })
 
