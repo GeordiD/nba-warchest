@@ -65,13 +65,17 @@ function getPicksFromMeta(metas: CombinedMeta[]): PickSummaryMeta[] {
           }));
 }
 
-function getPickData(pick: PickSummaryMeta): string {
+function getPickDescription(pick: PickSummaryMeta): string {
   if (pick.summary.desc)
     return pick.summary.desc;
 
   return typeof pick.details === 'string'
     ? pick.details
     : pick.details.headline;
+}
+
+function getPickData(pick: PickSummaryMeta): string {
+  return `${pick.year} ${getPickDescription(pick)}`;
 }
 
 function forEachYear(

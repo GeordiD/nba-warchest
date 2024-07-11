@@ -12,7 +12,7 @@ describe('tradable', () => {
       summary: {
         isConditional: !isGuarenteed,
       },
-      details: `${year}.${id}`,
+      details: `${id}`,
     })
 
     const buildInputPicks = (...input: number[]) => {
@@ -38,9 +38,9 @@ describe('tradable', () => {
       ], defaultOptions);
 
       expect(result).toEqual([
-        '2025.2',
-        '2026.1',
-        '2027.2',
+        '2025 2',
+        '2026 1',
+        '2027 2',
       ])
     })
 
@@ -71,7 +71,7 @@ describe('tradable', () => {
 
         expect(result).toEqual([{
           total: 2,
-          picks: ['2026.1', '2026.2', '2026.3'],
+          picks: ['2026 1', '2026 2', '2026 3'],
         }])
       })
     })
@@ -86,7 +86,7 @@ describe('tradable', () => {
             defaultOptions,
           );
 
-          expect(result).toEqual(['2027.1'])
+          expect(result).toEqual(['2027 1'])
         })
 
         it('should mark all guarenteed picks as tradable when there are mulitple', () => {
@@ -95,7 +95,7 @@ describe('tradable', () => {
             defaultOptions,
           );
 
-          expect(result).toEqual(['2027.1', '2027.2'])
+          expect(result).toEqual(['2027 1', '2027 2'])
         })
       })
 
@@ -108,7 +108,7 @@ describe('tradable', () => {
 
           expect(result).toEqual([{
             total: 1,
-            picks: ['2026.1', '2027.1'],
+            picks: ['2026 1', '2027 1'],
           }])
         })
 
@@ -120,7 +120,7 @@ describe('tradable', () => {
 
           expect(result).toEqual([{
             total: 2,
-            picks: ['2026.1', '2027.1', '2027.2'],
+            picks: ['2026 1', '2027 1', '2027 2'],
           }])
         })
 
@@ -132,7 +132,7 @@ describe('tradable', () => {
 
           expect(result).toEqual([{
             total: 3,
-            picks: ['2026.1', '2026.2', '2027.1', '2027.2'],
+            picks: ['2026 1', '2026 2', '2027 1', '2027 2'],
           }])
         })
 
@@ -145,7 +145,7 @@ describe('tradable', () => {
           expect(result).toEqual([
             {
               total: 2,
-              picks: ['2026.1', '2027.1', '2028.1', '2029.1'],
+              picks: ['2026 1', '2027 1', '2028 1', '2029 1'],
             },
           ])
         })
@@ -158,7 +158,7 @@ describe('tradable', () => {
             defaultOptions,
           )
 
-          expect(result).toEqual(['2026.1', '2028.1', '2028.2'])
+          expect(result).toEqual(['2026 1', '2028 1', '2028 2'])
         })
 
         it('should mark all but one pick as tradable in the in between years', () => {
@@ -168,11 +168,11 @@ describe('tradable', () => {
           )
 
           expect(result).toEqual([
-            '2026.1', {
+            '2026 1', {
               total: 2,
-              picks: ['2027.1', '2027.2', '2027.3'],
+              picks: ['2027 1', '2027 2', '2027 3'],
             },
-            '2028.1',
+            '2028 1',
           ])
         });
       })
@@ -185,7 +185,7 @@ describe('tradable', () => {
         )
 
         expect(result).toEqual([
-          '2025.1', '2029.1', '2031.1',
+          '2025 1', '2029 1', '2031 1',
         ])
       })
     })
