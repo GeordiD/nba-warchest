@@ -29,9 +29,9 @@ export interface PickSummaryMeta {
   details: string | PickDetails,
 }
 
-export interface TradablePicksGroup {
+export interface TradablePicksGroup<T = PickSummaryMeta> {
   total: number;
-  picks: PickSummaryMeta[]
+  picks: T[]
 }
 
 function isEven(value: number) {
@@ -71,6 +71,21 @@ function getPickDescription(pick: PickSummaryMeta): string {
 
 function getPickData(pick: PickSummaryMeta): string {
   return `${pick.year} ${getPickDescription(pick)}`;
+}
+
+function isTradablePicksGroup(value: unknown): value is TradablePicksGroup {
+  return (value as TradablePicksGroup).total !== undefined
+}
+
+function stringifyPickGroups(input: PickSummaryMeta | TradablePicksGroup): (string | TradablePicksGroup<string>) {
+  if (isTradablePicksGroup(input)) {
+    return {
+      total: input.total,
+      picks: input.picks.map(x => getPickData(x)),
+    }
+  } else {
+    return getPickData(input as PickSummaryMeta);
+  }
 }
 
 function forEachYear(
@@ -190,21 +205,57 @@ export function getTradablePicks(
   return output;
 }
 
+function getSwappablePicks(allPicks: PickSummaryMeta[], tradablePicks: (PickSummaryMeta | TradablePicksGroup)[]) {
+  const flatTradablePicks = tradablePicks.flatMap(x => isTradablePicksGroup(x) ? x.picks : x);
+  const isSwappable = (pick: PickSummaryMeta) => pick.summary.swapType !== 'unfavorable'
+    && pick.summary.swapType !== 'mixed'
+
+  // if a pick is not tradable, it could be swappable
+  const untradableSwaps = allPicks
+    // find picks not marked as potentially tradable
+    .filter(x => !flatTradablePicks
+      .map(y => getPickData(y))
+      .includes(getPickData(x)))
+    .filter(x => isSwappable(x))
+
+  // Additionally, any picks left out of a pick group would be swappable
+  const groupedSwaps = tradablePicks
+    .filter(x => isTradablePicksGroup(x))
+    .map(x => x as TradablePicksGroup)
+    .map(x => ({
+      ...x,
+      // the inverse of what is tradable is swappable
+      total: x.picks.length - x.total,
+    }));
+
+  return [
+    ...untradableSwaps,
+    ...groupedSwaps,
+  ];
+}
+
+function getTotal(input: (PickSummaryMeta | TradablePicksGroup<PickSummaryMeta>)[]): number {
+  return input.reduce((prev, curr) => prev + (isTradablePicksGroup(curr) ? curr.total : 1), 0);
+}
+
 export function getTradability(metas: CombinedMeta[]) {
   const picks = getPicksFromMeta(metas);
   const tradables = getTradablePicks(picks, {
     startYear: 2025,
     hadPickLastYear: true, // TODO
   });
+  const swappables = getSwappablePicks(picks, tradables);
 
   return {
     tradable: {
-      total: 0,
-      picks: tradables,
+      total: getTotal(tradables),
+      asMeta: tradables,
+      asStrings: tradables.map(x => stringifyPickGroups(x)),
     },
     swappable: {
-      total: 0,
-      picks: [],
+      total: getTotal(swappables),
+      asMetas: swappables,
+      asStrings: swappables.map(x => stringifyPickGroups(x)),
     },
   }
 }
