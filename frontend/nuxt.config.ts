@@ -6,10 +6,20 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@nuxt/test-utils/module',
+    '@nuxt/icon',
+  ],
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
   ],
   eslint: {
     config: {
       stylistic: true,
     },
+  },
+  icon: {
+    mode: 'svg',
   },
 })
