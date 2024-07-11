@@ -4,8 +4,8 @@ describe('tradable', () => {
   describe('getTradablePicks', () => {
     const buildMeta = (
       year: number,
-      isGuarenteed: boolean,
-      id: number,
+      isGuarenteed = true,
+      id = 1,
     ): PickSummaryMeta => ({
       id: id.toString(),
       year,
@@ -38,9 +38,9 @@ describe('tradable', () => {
       ], defaultOptions);
 
       expect(result).toEqual([
-        '2025 2',
-        '2026 1',
-        '2027 2',
+        buildMeta(2025, false, 2),
+        buildMeta(2026, false, 1),
+        buildMeta(2027, false, 2),
       ])
     })
 
@@ -71,7 +71,7 @@ describe('tradable', () => {
 
         expect(result).toEqual([{
           total: 2,
-          picks: ['2026 1', '2026 2', '2026 3'],
+          picks: buildInputPicks(2026, 2026, 2026),
         }])
       })
     })
@@ -86,7 +86,7 @@ describe('tradable', () => {
             defaultOptions,
           );
 
-          expect(result).toEqual(['2027 1'])
+          expect(result).toEqual([buildMeta(2027)])
         })
 
         it('should mark all guarenteed picks as tradable when there are mulitple', () => {
@@ -95,7 +95,7 @@ describe('tradable', () => {
             defaultOptions,
           );
 
-          expect(result).toEqual(['2027 1', '2027 2'])
+          expect(result).toEqual(buildInputPicks(2027, 2027))
         })
       })
 
@@ -108,7 +108,7 @@ describe('tradable', () => {
 
           expect(result).toEqual([{
             total: 1,
-            picks: ['2026 1', '2027 1'],
+            picks: buildInputPicks(2026, 2027),
           }])
         })
 
@@ -120,7 +120,11 @@ describe('tradable', () => {
 
           expect(result).toEqual([{
             total: 2,
-            picks: ['2026 1', '2027 1', '2027 2'],
+            picks: [
+              buildMeta(2026),
+              buildMeta(2027),
+              buildMeta(2027, true, 2),
+            ],
           }])
         })
 
@@ -132,7 +136,12 @@ describe('tradable', () => {
 
           expect(result).toEqual([{
             total: 3,
-            picks: ['2026 1', '2026 2', '2027 1', '2027 2'],
+            picks: [
+              buildMeta(2026),
+              buildMeta(2026, true, 2),
+              buildMeta(2027),
+              buildMeta(2027, true, 2),
+            ],
           }])
         })
 
@@ -145,7 +154,7 @@ describe('tradable', () => {
           expect(result).toEqual([
             {
               total: 2,
-              picks: ['2026 1', '2027 1', '2028 1', '2029 1'],
+              picks: buildInputPicks(2026, 2027, 2028, 2029),
             },
           ])
         })
@@ -158,7 +167,11 @@ describe('tradable', () => {
             defaultOptions,
           )
 
-          expect(result).toEqual(['2026 1', '2028 1', '2028 2'])
+          expect(result).toEqual([
+            buildMeta(2026),
+            buildMeta(2028),
+            buildMeta(2028, true, '2'),
+          ])
         })
 
         it('should mark all but one pick as tradable in the in between years', () => {
@@ -168,11 +181,12 @@ describe('tradable', () => {
           )
 
           expect(result).toEqual([
-            '2026 1', {
+            buildMeta(2026),
+            {
               total: 2,
-              picks: ['2027 1', '2027 2', '2027 3'],
+              picks: buildInputPicks(2027, 2027, 2027),
             },
-            '2028 1',
+            buildMeta(2028),
           ])
         });
       })
@@ -185,7 +199,9 @@ describe('tradable', () => {
         )
 
         expect(result).toEqual([
-          '2025 1', '2029 1', '2031 1',
+          buildMeta(2025),
+          buildMeta(2029),
+          buildMeta(2031),
         ])
       })
     })

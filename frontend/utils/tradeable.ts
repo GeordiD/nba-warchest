@@ -31,12 +31,7 @@ export interface PickSummaryMeta {
 
 export interface TradablePicksGroup {
   total: number;
-  picks: string[]
-}
-
-export interface TradablePicksResult {
-  total: number,
-  picks: (string | TradablePicksGroup)[];
+  picks: PickSummaryMeta[]
 }
 
 function isEven(value: number) {
@@ -101,11 +96,10 @@ export function getTradablePicks(
     startYear,
     hadPickLastYear,
   } = options;
-  let output: (string | TradablePicksGroup)[] = [];
+  let output: (PickSummaryMeta | TradablePicksGroup)[] = [];
 
   // Add all conditional picks as tradable
-  output = picks.filter(x => x.summary.isConditional)
-    .map(x => getPickData(x))
+  output = picks.filter(x => x.summary.isConditional);
 
   // Organize guaranteed picks by year
   const guaranteedPicks = picks.filter(x => !x.summary.isConditional);
@@ -139,7 +133,7 @@ export function getTradablePicks(
         years[year] = true;
         output.push({
           total: guarenteedPicksThisYear.length - 1,
-          picks: guarenteedPicksThisYear.map(x => getPickData(x)),
+          picks: guarenteedPicksThisYear,
         })
       } else {
         // no picks this year or last/next year
@@ -168,14 +162,13 @@ export function getTradablePicks(
       const guarenteedPicksFromThisGroup = guaranteedPicks.filter(x => group.includes(x.year));
       const numPicksToKeep = group.length / 2;
       output.push({
-        picks: guarenteedPicksFromThisGroup.map(x => getPickData(x)),
+        picks: guarenteedPicksFromThisGroup,
         total: guarenteedPicksFromThisGroup.length - numPicksToKeep,
       })
     } else {
       group.forEach((year, i) => {
         const guarenteedPicksThisYear = guaranteedPicks
           .filter(x => x.year === year)
-          .map(x => getPickData(x));
 
         if (isEven(i)) {
           // Since arrays are 0 based, this is the odd years in a group
@@ -199,9 +192,19 @@ export function getTradablePicks(
 
 export function getTradability(metas: CombinedMeta[]) {
   const picks = getPicksFromMeta(metas);
-  const groups = getTradablePicks(picks, {
+  const tradables = getTradablePicks(picks, {
     startYear: 2025,
     hadPickLastYear: true, // TODO
   });
-  console.log(groups);
+
+  return {
+    tradable: {
+      total: 0,
+      picks: tradables,
+    },
+    swappable: {
+      total: 0,
+      picks: [],
+    },
+  }
 }
