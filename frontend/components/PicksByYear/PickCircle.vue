@@ -30,19 +30,23 @@ const text = computed(() => pickData.summary.teams?.length === 1
       : ''),
 )
 
-const details = computed(() => {
+const details = computed<string>(() => {
   const isFirst = pickData.id.at(5) === '1';
+
+  if (pickData.summary.desc) {
+    return pickData.summary.desc;
+  }
 
   const details = meta
     .flatMap(x => isFirst ? x.roundOne : x.roundTwo)
     .find(x => x.id === pickData.id)
-    ?.details;
+    ?.details
 
   if (!details) {
     return 'Pick details not found';
   }
 
-  return details;
+  return typeof details === 'string' ? details : details.headline;
 })
 
 const {
@@ -91,7 +95,7 @@ const {
         v-if="isTarget"
         class="tooltip"
       >
-        <DraftAssetMetaInfo :item="details" />
+        {{ details }}
       </div>
     </div>
   </div>
