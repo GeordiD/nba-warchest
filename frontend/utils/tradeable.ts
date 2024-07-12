@@ -114,10 +114,12 @@ export function getTradablePicks(
   let output: (PickSummaryMeta | TradablePicksGroup)[] = [];
 
   // Add all conditional picks as tradable
-  output = picks.filter(x => x.summary.isConditional);
+  output = picks.filter(x =>
+    x.summary.isConditional && !x.summary.isTradedAway,
+  );
 
   // Organize guaranteed picks by year
-  const guaranteedPicks = picks.filter(x => !x.summary.isConditional);
+  const guaranteedPicks = picks.filter(x => !x.summary.isConditional && !x.summary.isTradedAway);
 
   const years: Record<number, boolean> = {
     [startYear - 1]: hadPickLastYear,
@@ -209,6 +211,7 @@ function getSwappablePicks(allPicks: PickSummaryMeta[], tradablePicks: (PickSumm
   const flatTradablePicks = tradablePicks.flatMap(x => isTradablePicksGroup(x) ? x.picks : x);
   const isSwappable = (pick: PickSummaryMeta) => pick.summary.swapType !== 'unfavorable'
     && pick.summary.swapType !== 'mixed'
+    && !pick.summary.isTradedAway
 
   // if a pick is not tradable, it could be swappable
   const untradableSwaps = allPicks

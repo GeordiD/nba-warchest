@@ -44,6 +44,21 @@ describe('tradable', () => {
       ])
     })
 
+    it('should not include traded away picks as tradable', () => {
+      const result = getTradablePicks(
+        buildInputPicks(2025, 2026, 2027, 2028, 2029).map(x => ({
+          ...x,
+          summary: {
+            ...x.summary,
+            isTradedAway: true,
+          },
+        })),
+        defaultOptions,
+      );
+
+      expect(result).toEqual([]);
+    })
+
     describe('when there are no guarenteed picks the year before or after', () => {
       it('should be no tradable picks when there are no picks before AND after', () => {
         const result = getTradablePicks(
