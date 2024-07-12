@@ -1,7 +1,8 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
+import { prot, unfavorableSwap } from '~/data/shorthand';
 
-export const XxxPickMeta: YearMeta[] = [
+export const bosPickMeta: YearMeta[] = [
   {
     year: 2025,
     roundOne: [
@@ -16,9 +17,17 @@ export const XxxPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2025.2',
-        details: 'Own',
+        details: {
+          headline: 'To OKC or ORL',
+          extra: [
+            'More favorable of MEM / BOS to OKC',
+            'Less favorable to ORL',
+          ],
+        },
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['OKC', 'ORL'],
         },
       },
     ],
@@ -37,9 +46,20 @@ export const XxxPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2026.2',
-        details: 'Own',
+        details: {
+          headline: `Own (${unfavorableSwap} with better of IND / MIA)`,
+        },
         summary: {
           isOwn: true,
+          swapType: 'mixed',
+        },
+      },
+      {
+        id: '2026.2.MIN-NYK-NOP-POR',
+        details: `Most favorable of MIN / NYK / NOP / POR`,
+        summary: {
+          teams: ['MIN', 'NYK', 'NOP', 'POR'],
+          swapType: 'favorable',
         },
       },
     ],
@@ -58,9 +78,20 @@ export const XxxPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2027.2',
-        details: 'Own',
+        details: 'To ORL',
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['ORL'],
+        },
+      },
+      {
+        id: '2027.2.POR-NOP',
+        details: `Least favorable of POR and NOP ${prot(55)}`,
+        summary: {
+          teams: ['POR', 'NOP'],
+          isConditional: true,
+          swapType: 'unfavorable',
         },
       },
     ],
@@ -70,18 +101,21 @@ export const XxxPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2028.1',
-        details: 'Own',
+        details: `Own (${unfavorableSwap} SAN ${prot(1)})`,
         summary: {
           isOwn: true,
+          swapType: 'unfavorable',
         },
       },
     ],
     roundTwo: [
       {
         id: '2028.2',
-        details: 'Own',
+        details: `To PHX ${prot(45)}`,
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['PHX'],
         },
       },
     ],
@@ -91,18 +125,22 @@ export const XxxPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2029.1',
-        details: 'Own',
+        details: 'To POR',
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['POR'],
         },
       },
     ],
     roundTwo: [
       {
         id: '2029.2',
-        details: 'Own',
+        details: 'To OKC',
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['OKC'],
         },
       },
     ],
@@ -152,13 +190,13 @@ export const XxxPickMeta: YearMeta[] = [
 ]
 
 const info: TeamInfo = {
-  abbr: '',
-  fullName: '',
-  name: '',
-  location: '',
+  abbr: 'BOS',
+  fullName: 'Boston Celtics',
+  name: 'Celtics',
+  location: 'Boston',
 }
 
-export const xxxMeta: TeamMeta = {
+export const bosMeta: TeamMeta = {
   info,
-  picks: XxxPickMeta,
+  picks: bosPickMeta,
 }
