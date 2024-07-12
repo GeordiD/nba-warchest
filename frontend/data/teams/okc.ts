@@ -1,8 +1,8 @@
-import type { CombinedMeta } from '~/data/PicksByYear';
+import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import { favorableSwap, ifNotConvey, prot } from '~/data/shorthand';
 
-export const OkcCombinedMeta: CombinedMeta[] = [
+export const OkcCombinedMeta: YearMeta[] = [
   {
     year: 2025,
     roundOne: [

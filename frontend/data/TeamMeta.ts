@@ -1,4 +1,4 @@
-import type { CombinedMeta } from '~/data/PicksByYear';
+import type { YearMeta } from '~/data/PickMetaTypes';
 
 export interface TeamInfo {
   abbr: string,
@@ -9,5 +9,5 @@ export interface TeamInfo {
 
 export interface TeamMeta {
   info: TeamInfo,
-  picks: CombinedMeta[],
+  picks: YearMeta[],
 }

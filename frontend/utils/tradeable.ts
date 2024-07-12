@@ -1,4 +1,4 @@
-import type { CombinedMeta, PickDetails, PickSummary } from '~/data/PicksByYear';
+import type { YearMeta, PickDetails, PickSummary } from '~/data/PickMetaTypes';
 
 /*
 Algorithm
@@ -42,7 +42,7 @@ function isArrayEven(array: unknown[]) {
   return isEven(array.length);
 }
 
-function getPicksFromMeta(metas: CombinedMeta[]): PickSummaryMeta[] {
+function getPicksFromMeta(metas: YearMeta[]): PickSummaryMeta[] {
   return metas
     .flatMap(x => x.roundOne.flatMap(y =>
       Array.isArray(y.summary)
@@ -238,7 +238,7 @@ function getTotal(input: (PickSummaryMeta | TradablePicksGroup<PickSummaryMeta>)
   return input.reduce((prev, curr) => prev + (isTradablePicksGroup(curr) ? curr.total : 1), 0);
 }
 
-export function getTradability(metas: CombinedMeta[]) {
+export function getTradability(metas: YearMeta[]) {
   const picks = getPicksFromMeta(metas);
   const tradables = getTradablePicks(picks, {
     startYear: 2025,

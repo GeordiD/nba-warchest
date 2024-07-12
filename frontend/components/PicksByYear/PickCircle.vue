@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CombinedMeta, PickDetails, PickSummary } from '~/data/PicksByYear';
+import type { YearMeta, PickDetails, PickSummary } from '~/data/PickMetaTypes';
 
 const {
   pickData,
@@ -14,7 +14,7 @@ const {
     required: true,
   },
   meta: {
-    type: Object as PropType<CombinedMeta[]>,
+    type: Object as PropType<YearMeta[]>,
     required: true,
   },
   isOwn: Boolean,

@@ -21,12 +21,12 @@ export interface PickSummary {
 }
 
 export interface PickMeta {
-  id: string,
+  id: Id,
   summary: PickSummary | PickSummary[],
   details: string | PickDetails,
 }
 
-export interface CombinedMeta {
+export interface YearMeta {
   year: number,
   roundOne: PickMeta[],
   roundTwo: PickMeta[],

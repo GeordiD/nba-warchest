@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { CombinedMeta, PickSummary } from '~/data/PicksByYear';
+import type { YearMeta, PickSummary } from '~/data/PickMetaTypes';
 
 const {
   picks,
 } = defineProps({
   picks: {
-    type: Object as PropType<CombinedMeta[]>,
+    type: Object as PropType<YearMeta[]>,
     required: true,
   },
 })

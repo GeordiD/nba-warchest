@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import type { PropType } from 'vue';
 import DraftAssetMetaInfo from '~/components/DraftAssetMetaInfo.vue';
-import type { CombinedMeta } from '~/data/PicksByYear';
+import type { YearMeta } from '~/data/PickMetaTypes';
 
 const {
   picks,
 } = defineProps({
   picks: {
-    type: Object as PropType<CombinedMeta[]>,
+    type: Object as PropType<YearMeta[]>,
     required: true,
   },
 })

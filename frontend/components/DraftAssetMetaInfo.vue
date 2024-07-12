@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { PickDetails } from '~/data/PicksByYear';
+import type { PickDetails } from '~/data/PickMetaTypes';
 
 const {
   item,
