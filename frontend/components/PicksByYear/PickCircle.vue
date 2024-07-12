@@ -91,22 +91,23 @@ const {
       <p class="text-xs">
         {{ text }}
       </p>
-      <div
+      <PickHover
         v-if="isTarget"
-        class="tooltip"
-      >
-        {{ details }}
-      </div>
+        :pick-data="pickData"
+        :meta="meta"
+      />
+    </div>
+
+    <div class="w-4">
+      <Icon
+        v-if="pickData.summary.ifNotSettled"
+        name="material-symbols:asterisk"
+      />
     </div>
   </div>
 </template>
 
 <style scoped>
-.tooltip {
-  left: 3rem;
-  @apply absolute bg-white border border-gray-500 p-2 rounded-sm z-10 text-black w-48;
-}
-
 .traded-away {
   @apply bg-gray-700;
 }

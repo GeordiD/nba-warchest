@@ -59,6 +59,21 @@ describe('tradable', () => {
       expect(result).toEqual([]);
     })
 
+    it('should not include own pick as tradable when its also conditional', () => {
+      const meta = buildMeta(2025, false);
+      const result = getTradablePicks([
+        {
+          ...meta,
+          summary: {
+            ...meta.summary,
+            isOwn: true,
+          },
+        },
+      ], defaultOptions)
+
+      expect(result).toEqual([]);
+    });
+
     describe('when there are no guarenteed picks the year before or after', () => {
       it('should be no tradable picks when there are no picks before AND after', () => {
         const result = getTradablePicks(

@@ -77,6 +77,11 @@ function isTradablePicksGroup(value: unknown): value is TradablePicksGroup {
   return (value as TradablePicksGroup).total !== undefined
 }
 
+function isConsideredTradedAway(pick: PickSummaryMeta) {
+  return pick.summary.isTradedAway
+    || (pick.summary.isConditional && pick.summary.isOwn)
+}
+
 function stringifyPickGroups(input: PickSummaryMeta | TradablePicksGroup): (string | TradablePicksGroup<string>) {
   if (isTradablePicksGroup(input)) {
     return {
@@ -113,13 +118,16 @@ export function getTradablePicks(
   } = options;
   let output: (PickSummaryMeta | TradablePicksGroup)[] = [];
 
+  // NOTE: I am going to leave picks that have ifNotConveyed in this algo
+  // If the pick has conveyance protocols, it's still tradable, it would just have to be conditional
+
   // Add all conditional picks as tradable
   output = picks.filter(x =>
-    x.summary.isConditional && !x.summary.isTradedAway,
+    x.summary.isConditional && !isConsideredTradedAway(x),
   );
 
   // Organize guaranteed picks by year
-  const guaranteedPicks = picks.filter(x => !x.summary.isConditional && !x.summary.isTradedAway);
+  const guaranteedPicks = picks.filter(x => !x.summary.isConditional && !isConsideredTradedAway(x));
 
   const years: Record<number, boolean> = {
     [startYear - 1]: hadPickLastYear,
@@ -211,7 +219,7 @@ function getSwappablePicks(allPicks: PickSummaryMeta[], tradablePicks: (PickSumm
   const flatTradablePicks = tradablePicks.flatMap(x => isTradablePicksGroup(x) ? x.picks : x);
   const isSwappable = (pick: PickSummaryMeta) => pick.summary.swapType !== 'unfavorable'
     && pick.summary.swapType !== 'mixed'
-    && !pick.summary.isTradedAway
+    && !isConsideredTradedAway(pick)
 
   // if a pick is not tradable, it could be swappable
   const untradableSwaps = allPicks

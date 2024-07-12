@@ -56,7 +56,7 @@ const byYear = computed(() =>
         <div class="font-semibold px-4">
           {{ yearInfo.year }}
         </div>
-        <div class="flex-grow flex flex-col-reverse gap-2 mx-auto pr-4">
+        <div class="flex-grow flex flex-col-reverse gap-2 mx-auto">
           <PickCircle
             v-for="(pick, i) in yearInfo.roundData"
             :id="pick.id"

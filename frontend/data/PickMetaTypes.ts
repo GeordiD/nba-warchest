@@ -18,6 +18,10 @@ export interface PickSummary {
   isTradedAway?: boolean;
   isOwn?: boolean;
   desc?: string;
+  ifNotSettled?: {
+    id: Id,
+    result: string,
+  },
 }
 
 export interface PickMeta {
