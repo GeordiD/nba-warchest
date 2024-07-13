@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { getMetadataForTeam } from '~/data/getAssetMetadataForTeam';
+
 const route = useRoute();
 const abbr = route.params.id as TeamAbbr;
 

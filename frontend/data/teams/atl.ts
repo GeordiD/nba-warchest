@@ -1,56 +1,58 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { ifNotConvey, prot } from '~/data/shorthand';
+import { botProt, getPick, ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
-export const ChiPickMeta: YearMeta[] = [
+export const AtlPickMeta: YearMeta[] = [
   {
     year: 2025,
     roundOne: [
       {
         id: '2025.1',
-        details: {
-          headline: `To SAS ${prot(10)}`,
-          extra: [
-            ifNotConvey([
-              `2026 1st ${prot(8)}`,
-              `2027 1st ${prot(8)}`,
-              '2028 2nd',
-            ]),
-          ],
-        },
+        details: 'To SAS',
         summary: {
           isOwn: true,
-          isConditional: true,
+          isTradedAway: true,
           teams: ['SAS'],
         },
       },
       {
-        id: '2025.1.POR',
+        id: '2025.1.SAC',
         details: {
-          headline: `POR ${prot(14)}`,
+          headline: `SAC ${prot(12)}`,
           extra: [
             ifNotConvey([
-              `2026 1st ${prot(14)}`,
-              `2027 1st ${prot(14)}`,
-              `2028 1st ${prot(14)}`,
-              `2028 2nd`,
+              `2026 1st ${prot(10)}`,
+              '2026 2nd',
             ]),
           ],
         },
         summary: {
+          teams: ['SAC'],
           isConditional: true,
-          teams: ['POR'],
         },
       },
     ],
     roundTwo: [
       {
         id: '2025.2',
-        details: 'To SAS',
+        details: {
+          headline: 'To POR / OKC',
+          extra: [
+            `To POR ${prot(40)}`,
+            `Otherwise, to OKC`,
+          ],
+        },
         summary: {
-          isTradedAway: true,
           isOwn: true,
-          teams: ['SAS'],
+          isTradedAway: true,
+          teams: ['OKC', 'POR'],
+        },
+      },
+      {
+        id: '2025.2.MIN',
+        details: 'MIN',
+        summary: {
+          teams: ['MIN'],
         },
       },
     ],
@@ -60,24 +62,22 @@ export const ChiPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2026.1',
-        details: 'Own',
+        details: `Own (${unfavorableSwap} SAS)`,
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2025.1',
-            result: `To SAS ${prot(8)}`,
-          },
+          swapType: 'unfavorable',
+          teams: ['SAS'],
         },
       },
     ],
     roundTwo: [
+      tradePick(2026, 2, 'GSW'),
       {
-        id: '2026.2',
-        details: 'To WAS',
+        id: '2026.2.MEM',
+        details: `MEM ${botProt(43)}`,
         summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['WAS'],
+          isConditional: true,
+          teams: ['MEM'],
         },
       },
     ],
@@ -85,26 +85,15 @@ export const ChiPickMeta: YearMeta[] = [
   {
     year: 2027,
     roundOne: [
-      {
-        id: '2027.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-          ifNotSettled: {
-            id: '2026.1',
-            result: `To SAS ${prot(8)}`,
-          },
-        },
-      },
+      tradePick(2027, 1, 'SAS'),
     ],
     roundTwo: [
+      tradePick(2027, 2, 'MEM'),
       {
-        id: '2027.2',
-        details: 'To WAS',
+        id: '2027.2.LAC',
+        details: 'LAC',
         summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['WAS'],
+          teams: ['LAC'],
         },
       },
     ],
@@ -121,17 +110,8 @@ export const ChiPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2028.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-          ifNotSettled: {
-            id: '2027.1',
-            result: `To SAS`,
-          },
-        },
-      },
+      tradePick(2028, 2, 'GSW'),
+      getPick(2028, 2, 'HOU'),
     ],
   },
   {
@@ -146,13 +126,7 @@ export const ChiPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2029.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2029, 2, 'OKC'),
     ],
   },
   {
@@ -200,13 +174,13 @@ export const ChiPickMeta: YearMeta[] = [
 ]
 
 const info: TeamInfo = {
-  abbr: 'CHI',
-  fullName: 'Chicago Bulls',
-  name: 'Bulls',
-  location: 'Chicago',
+  abbr: 'ATL',
+  fullName: 'Atlanta Hawks',
+  location: 'Atlanta',
+  name: 'Hawks',
 }
 
-export const chiMeta: TeamMeta = {
+export const atlMeta: TeamMeta = {
   info,
-  picks: ChiPickMeta,
+  picks: AtlPickMeta,
 }

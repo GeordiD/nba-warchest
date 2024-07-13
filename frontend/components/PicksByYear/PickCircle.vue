@@ -30,25 +30,6 @@ const text = computed(() => pickData.summary.teams?.length === 1
       : ''),
 )
 
-const details = computed<string>(() => {
-  const isFirst = pickData.id.at(5) === '1';
-
-  if (pickData.summary.desc) {
-    return pickData.summary.desc;
-  }
-
-  const details = meta
-    .flatMap(x => isFirst ? x.roundOne : x.roundTwo)
-    .find(x => x.id === pickData.id)
-    ?.details
-
-  if (!details) {
-    return 'Pick details not found';
-  }
-
-  return typeof details === 'string' ? details : details.headline;
-})
-
 const {
   isIdActive,
   isTarget,

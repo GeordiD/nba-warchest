@@ -154,8 +154,8 @@ export const XxxPickMeta: YearMeta[] = [
 const info: TeamInfo = {
   abbr: '',
   fullName: '',
-  name: '',
   location: '',
+  name: '',
 }
 
 export const xxxMeta: TeamMeta = {
