@@ -1,5 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
+import { ifNotConvey, prot, tradePick } from '~/data/shorthand';
 
 export const DenPickMeta: YearMeta[] = [
   {
@@ -7,9 +8,19 @@ export const DenPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2025.1',
-        details: 'Own',
+        details: {
+          headline: `To ORL ${prot(5)}`,
+          extra: [
+            ifNotConvey([
+              `2026 1st ${prot(5)}`,
+              `2027 1st ${prot(5)}`,
+            ]),
+          ],
+        },
         summary: {
           isOwn: true,
+          isConditional: true,
+          teams: ['ORL'],
         },
       },
     ],
@@ -31,6 +42,10 @@ export const DenPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2025.1',
+            result: `To ORL ${prot(5)}`,
+          },
         },
       },
     ],
@@ -49,20 +64,31 @@ export const DenPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2027.1',
-        details: 'Own',
+        details: {
+          headline: `To OKC ${prot(5)}`,
+          extra: [
+            'If DEN conveys 1st to ORL in 2025',
+            'OKC can swap OKC or DEN with LAC',
+            ifNotConvey([
+              `2028 1st ${prot(5)} and if DEN has conveyed 1st to ORL by 2026`,
+              `2029 1st ${prot(5)}`,
+              `2029 2nd`,
+            ]),
+          ],
+        },
         summary: {
           isOwn: true,
+          isConditional: true,
+          teams: ['OKC'],
+          ifNotSettled: {
+            id: '2025.1',
+            result: `To ORL ${prot(5)}`,
+          },
         },
       },
     ],
     roundTwo: [
-      {
-        id: '2027.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2027, 2, 'CLE'),
     ],
   },
   {
@@ -73,15 +99,21 @@ export const DenPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2027.1',
+            result: `To OKC ${prot(5)}`,
+          },
         },
       },
     ],
     roundTwo: [
       {
         id: '2028.2',
-        details: 'Own',
+        details: `To SAS ${prot(33)}`,
         summary: {
           isOwn: true,
+          isConditional: true,
+          teams: ['SAS'],
         },
       },
     ],
@@ -91,7 +123,15 @@ export const DenPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2029.1',
-        details: 'Own',
+        details: {
+          headline: `To OKC ${prot(5)}`,
+          extra: [
+            ifNotConvey([
+              `2030 1st ${prot(5)}`,
+              '2030 2nd',
+            ]),
+          ],
+        },
         summary: {
           isOwn: true,
         },
@@ -103,6 +143,10 @@ export const DenPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2027.1',
+            result: 'To OKC',
+          },
         },
       },
     ],
@@ -115,6 +159,10 @@ export const DenPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2029.1',
+            result: `To OKC ${prot(5)}`,
+          },
         },
       },
     ],
@@ -124,6 +172,10 @@ export const DenPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2029.1',
+            result: `To OKC ${prot(5)}`,
+          },
         },
       },
     ],
