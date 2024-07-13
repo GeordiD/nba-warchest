@@ -1,5 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
+import { getPick, ifNotConvey, prot } from '~/data/shorthand';
 
 export const ChaPickMeta: YearMeta[] = [
   {
@@ -7,20 +8,32 @@ export const ChaPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2025.1',
-        details: 'Own',
+        details: {
+          headline: `To SAS ${prot(14)}`,
+          extra: [
+            ifNotConvey([
+              '2026 2nd',
+            ]),
+          ],
+        },
         summary: {
           isOwn: true,
+          isConditional: true,
+          teams: ['SAS'],
         },
       },
     ],
     roundTwo: [
       {
         id: '2025.2',
-        details: 'Own',
+        details: `To IND ${prot(55)}`,
         summary: {
           isOwn: true,
+          isConditional: true,
+          teams: ['IND'],
         },
       },
+      getPick(2025, 2, 'PHI'),
     ],
   },
   {
@@ -54,6 +67,37 @@ export const ChaPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      {
+        id: '2027.1.DAL',
+        details: {
+          headline: `DAL ${prot(2)}`,
+          extra: [
+            ifNotConvey([
+              '2028 MIA 2nd',
+            ]),
+          ],
+        },
+        summary: {
+          isConditional: true,
+          teams: ['DAL'],
+        },
+      },
+      {
+        id: '2027.1.MIA',
+        details: {
+          headline: `MIA ${prot(14)}`,
+          extra: [
+            'If MIA conveys 1st to OKC in 2025',
+            ifNotConvey([
+              '2028 1st',
+            ]),
+          ],
+        },
+        summary: {
+          isConditional: true,
+          teams: ['MIA'],
+        },
+      },
     ],
     roundTwo: [
       {
@@ -61,6 +105,14 @@ export const ChaPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+        },
+      },
+      {
+        id: '2027.2.POR-NOP',
+        details: 'Best of POR / NOP',
+        summary: {
+          swapType: 'favorable',
+          teams: ['POR', 'NOP'],
         },
       },
     ],
@@ -79,9 +131,16 @@ export const ChaPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2028.2',
-        details: 'Own',
+        details: {
+          headline: 'Best of CHA / LAC',
+          extra: [
+            'Worst to DAL',
+          ],
+        },
         summary: {
           isOwn: true,
+          teams: ['LAC'],
+          swapType: 'favorable',
         },
       },
     ],
