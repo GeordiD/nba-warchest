@@ -1,22 +1,22 @@
 <script setup lang="ts">
-await setupPocketBase()
+// await setupPocketBase()
 
-const teamsStore = useTeamsStore()
-const pickStore = usePickStore()
+// const teamsStore = useTeamsStore()
+// const pickStore = usePickStore()
 
-await teamsStore.fetchAllTeams()
-await pickStore.fetchAll();
+// await teamsStore.fetchAllTeams()
+// await pickStore.fetchAll();
 </script>
 
 <template>
   <div class="p-4">
     <h1>NBA Warchest</h1>
     <div
-      v-for="team in teamsStore.teams"
-      :key="team.id"
+      v-for="team in TeamAbbrs"
+      :key="team"
     >
-      <NuxtLink :to="`/teams/${team.abbr}`">
-        {{ team.abbr }}
+      <NuxtLink :to="`/teams/${team}`">
+        {{ team }}
       </NuxtLink>
     </div>
   </div>

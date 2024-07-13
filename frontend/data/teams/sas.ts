@@ -1,7 +1,7 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 
-export const XxxPickMeta: YearMeta[] = [
+export const SasPickMeta: YearMeta[] = [
   {
     year: 2025,
     roundOne: [
@@ -152,13 +152,13 @@ export const XxxPickMeta: YearMeta[] = [
 ]
 
 const info: TeamInfo = {
-  abbr: '',
-  fullName: '',
-  location: '',
-  name: '',
+  abbr: 'SAS',
+  fullName: 'San Antonio Spurs',
+  location: 'San Antonio',
+  name: 'Spurs',
 }
 
-export const xxxMeta: TeamMeta = {
+export const sasMeta: TeamMeta = {
   info,
-  picks: XxxPickMeta,
+  picks: SasPickMeta,
 }
