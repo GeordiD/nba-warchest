@@ -1,7 +1,7 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 
 export interface TeamInfo {
-  abbr: string,
+  abbr: TeamAbbr,
   fullName: string,
   name: string,
   location: string,
