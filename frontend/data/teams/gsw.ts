@@ -1,5 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
+import { getPick, ifNotConvey, prot, tradePick } from '~/data/shorthand';
 
 export const GswPickMeta: YearMeta[] = [
   {
@@ -16,9 +17,11 @@ export const GswPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2025.2',
-        details: 'Own',
+        details: 'To BOS / WAS / DAL',
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['BOS', 'DAL', 'WAS'],
         },
       },
     ],
@@ -35,13 +38,8 @@ export const GswPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2026.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2026, 2, 'OKC'),
+      getPick(2026, 2, 'ATL'),
     ],
   },
   {
@@ -56,13 +54,7 @@ export const GswPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2027.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2027, 2, 'WAS'),
     ],
   },
   {
@@ -77,13 +69,8 @@ export const GswPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2028.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2028, 2, 'POR'),
+      getPick(2028, 2, 'ATL'),
     ],
   },
   {
@@ -112,9 +99,18 @@ export const GswPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2030.1',
-        details: 'Own',
+        details: {
+          headline: `To WAS ${prot(20)}`,
+          extra: [
+            ifNotConvey([
+              '2030 2nd',
+            ]),
+          ],
+        },
         summary: {
           isOwn: true,
+          isConditional: true,
+          teams: ['WAS'],
         },
       },
     ],
@@ -124,6 +120,10 @@ export const GswPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2030.1',
+            result: 'To WAS',
+          },
         },
       },
     ],
