@@ -1,5 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
+import { botProt, favorableSwap, getPick, ifNotConvey, prot } from '~/data/shorthand';
 
 export const IndPickMeta: YearMeta[] = [
   {
@@ -21,6 +22,22 @@ export const IndPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      {
+        id: '2025.2.CHA',
+        details: `CHA ${prot(55)}`,
+        summary: {
+          teams: ['CHA'],
+          isConditional: true,
+        },
+      },
+      {
+        id: '2025.2.MIA',
+        details: `MIA ${botProt(38)}`,
+        summary: {
+          teams: ['MIA'],
+          isConditional: true,
+        },
+      },
     ],
   },
   {
@@ -28,18 +45,32 @@ export const IndPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2026.1',
-        details: 'Own',
+        details: {
+          headline: `To TOR ${prot(4)}`,
+          extra: [
+            ifNotConvey([
+              `2027 1st ${prot(4)}`,
+              `2027 UTA 2nd & 2028 DAL 2nd`,
+            ]),
+          ],
+        },
         summary: {
           isOwn: true,
+          isConditional: true,
+          teams: ['TOR'],
         },
       },
     ],
     roundTwo: [
       {
         id: '2026.2',
-        details: 'Own',
+        details: {
+          headline: 'To MIN / BOS / MEM / HOU',
+        },
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['MIN', 'BOS', 'MEM', 'HOU'],
         },
       },
     ],
@@ -52,15 +83,32 @@ export const IndPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2026.1',
+            result: `To TOR ${prot(4)}`,
+          },
         },
       },
     ],
     roundTwo: [
       {
         id: '2027.2',
-        details: 'Own',
+        details: 'To OKC / SAS / MIA',
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['OKC', 'SAS', 'MIA'],
+        },
+      },
+      {
+        id: '2027.2.UTA',
+        details: 'UTA',
+        summary: {
+          teams: ['UTA'],
+          ifNotSettled: {
+            id: '2026.1',
+            result: 'To TOR',
+          },
         },
       },
     ],
@@ -79,9 +127,27 @@ export const IndPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2028.2',
-        details: 'Own',
+        details: {
+          headline: `Best of IND / PHX`,
+          extra: [
+            'Worst to NYK',
+          ],
+        },
         summary: {
           isOwn: true,
+          swapType: 'favorable',
+          teams: ['IND', 'PHX'],
+        },
+      },
+      {
+        id: '2028.2.DAL',
+        details: 'DAL',
+        summary: {
+          teams: ['DAL'],
+          ifNotSettled: {
+            id: '2026.1',
+            result: 'To TOR',
+          },
         },
       },
     ],
@@ -100,11 +166,19 @@ export const IndPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2029.2',
-        details: 'Own',
+        details: {
+          headline: 'Best of IND / WAS',
+          extra: [
+            'Other to NYK',
+          ],
+        },
         summary: {
           isOwn: true,
+          teams: ['WAS'],
+          swapType: 'favorable',
         },
       },
+      getPick(2029, 2, 'POR'),
     ],
   },
   {
@@ -126,6 +200,7 @@ export const IndPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2030, 2, 'SAC'),
     ],
   },
   {

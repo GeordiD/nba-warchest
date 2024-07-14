@@ -1,5 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
+import { prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const LacPickMeta: YearMeta[] = [
   {
@@ -7,20 +8,21 @@ export const LacPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2025.1',
-        details: 'Own',
+        details: {
+          headline: `Own (${unfavorableSwap} OKC)`,
+          extra: [
+            `OKC gets best of OKC / HOU ${prot(10)} / LAC`,
+          ],
+        },
         summary: {
           isOwn: true,
+          swapType: 'unfavorable',
+          teams: ['OKC'],
         },
       },
     ],
     roundTwo: [
-      {
-        id: '2025.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2025, 2, 'LAL'),
     ],
   },
   {
@@ -28,18 +30,34 @@ export const LacPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2026.1',
-        details: 'Own',
+        details: {
+          headline: 'To OKC / PHI',
+          extra: [
+            `Two most favorable of LAC / HOU ${prot(4)} / OKC to OKC`,
+            `Worst to PHI`,
+          ],
+        },
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['OKC', 'PHI'],
         },
       },
     ],
     roundTwo: [
       {
         id: '2026.2',
-        details: 'Own',
+        details: {
+          headline: 'To HOU / MEM',
+          extra: [
+            'Worst between LAC and the best of BOS / IND / MIA to HOU',
+            'Other to MEM',
+          ],
+        },
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['MEM', 'HOU'],
         },
       },
     ],
@@ -49,39 +67,42 @@ export const LacPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2027.1',
-        details: 'Own',
+        details: {
+          headline: `Worst of LAC / DEN ${prot(5)} / OKC`,
+          extra: [
+            'If DEN conveys 1st to ORL in 2025',
+          ],
+        },
         summary: {
           isOwn: true,
+          teams: ['DEN', 'OKC'],
+          swapType: 'unfavorable',
         },
       },
     ],
     roundTwo: [
-      {
-        id: '2027.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2027, 2, 'ATL'),
     ],
   },
   {
     year: 2028,
     roundOne: [
-      {
-        id: '2028.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2028, 1, 'PHI'),
     ],
     roundTwo: [
       {
         id: '2028.2',
-        details: 'Own',
+        details: {
+          headline: 'To CHA / DAL',
+          extra: [
+            'Best of LAC / CHA to CHA',
+            'Worst to DAL',
+          ],
+        },
         summary: {
           isOwn: true,
+          teams: ['CHA', 'DAL'],
+          isTradedAway: true,
         },
       },
     ],
@@ -91,20 +112,16 @@ export const LacPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2029.1',
-        details: 'Own',
+        details: `Own (${unfavorableSwap} PHI ${prot(3)})`,
         summary: {
           isOwn: true,
+          swapType: 'unfavorable',
+          teams: ['PHI'],
         },
       },
     ],
     roundTwo: [
-      {
-        id: '2029.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2029, 2, 'SAS'),
     ],
   },
   {
