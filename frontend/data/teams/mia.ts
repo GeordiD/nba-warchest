@@ -1,5 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
+import { favorableSwap, getPick, ifNotConvey, prot, tradePick } from '~/data/shorthand';
 
 export const MiaPickMeta: YearMeta[] = [
   {
@@ -7,18 +8,35 @@ export const MiaPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2025.1',
-        details: 'Own',
+        details: {
+          headline: `To OKC ${prot(14)}`,
+          extra: [
+            ifNotConvey([
+              '2026 1st',
+            ]),
+          ],
+        },
         summary: {
           isOwn: true,
+          isConditional: true,
+          teams: ['OKC'],
         },
       },
     ],
     roundTwo: [
       {
         id: '2025.2',
-        details: 'Own',
+        details: {
+          headline: 'To IND / BKN',
+          extra: [
+            '31-37 to IND',
+            '38-60 to BKN',
+          ],
+        },
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['IND', 'BKN'],
         },
       },
     ],
@@ -31,17 +49,24 @@ export const MiaPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2025.1',
+            result: 'To OKC',
+          },
         },
       },
     ],
     roundTwo: [
       {
         id: '2026.2',
-        details: 'Own',
+        details: 'To BOS / MIN / SAS / MEM / HOU',
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['BOS', 'MIN', 'SAS', 'MEM', 'HOU'],
         },
       },
+      getPick(2026, 2, 'LAL'),
     ],
   },
   {
@@ -49,7 +74,15 @@ export const MiaPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2027.1',
-        details: 'Own',
+        details: {
+          headline: `To CHA ${prot(14)}`,
+          extra: [
+            'If MIA conveys 1st to OKC by 2025',
+            ifNotConvey([
+              '2028 1st',
+            ]),
+          ],
+        },
         summary: {
           isOwn: true,
         },
@@ -58,9 +91,18 @@ export const MiaPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2027.2',
-        details: 'Own',
+        details: {
+          headline: `Own (${favorableSwap} SAS and worst of MIA / OKC / HOU / IND)`,
+          extra: [
+            'Best three of MIA / OKC / HOU / IND to OKC',
+            'Best of remaining pick and SAS to MIA',
+            'Worst to SAS',
+          ],
+        },
         summary: {
           isOwn: true,
+          swapType: 'mixed',
+          teams: ['OKC', 'SAS', 'HOU', 'IND'],
         },
       },
     ],
@@ -73,17 +115,15 @@ export const MiaPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2027.1',
+            result: 'To CHA',
+          },
         },
       },
     ],
     roundTwo: [
-      {
-        id: '2028.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2028, 2, 'DAL'),
     ],
   },
   {
@@ -98,13 +138,7 @@ export const MiaPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2029.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2029, 2, 'OKC'),
     ],
   },
   {
@@ -119,13 +153,7 @@ export const MiaPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2030.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2030, 2, 'OKC'),
     ],
   },
   {

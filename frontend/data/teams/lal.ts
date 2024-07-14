@@ -1,17 +1,12 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
+import { getPick, ifNotConvey, prot, tradePick } from '~/data/shorthand';
 
 export const LalPickMeta: YearMeta[] = [
   {
     year: 2025,
     roundOne: [
-      {
-        id: '2025.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2025, 1, 'NOP'),
     ],
     roundTwo: [
       {
@@ -21,6 +16,7 @@ export const LalPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2025, 2, 'LAC'),
     ],
   },
   {
@@ -35,13 +31,7 @@ export const LalPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2026.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2026, 2, 'MIA'),
     ],
   },
   {
@@ -49,9 +39,18 @@ export const LalPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2027.1',
-        details: 'Own',
+        details: {
+          headline: `To UTA ${prot(4)}`,
+          extra: [
+            ifNotConvey([
+              '2027 2nd',
+            ]),
+          ],
+        },
         summary: {
           isOwn: true,
+          isConditional: true,
+          teams: ['UTA'],
         },
       },
     ],
@@ -61,6 +60,10 @@ export const LalPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2027.1',
+            result: 'To UTA',
+          },
         },
       },
     ],
@@ -79,9 +82,17 @@ export const LalPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2028.2',
-        details: 'Own',
+        details: {
+          headline: 'To ORL / WAS',
+          extra: [
+            'Best of LAL / WAS to ORL',
+            'Worst to WAS',
+          ],
+        },
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['ORL', 'WAS'],
         },
       },
     ],
@@ -98,13 +109,7 @@ export const LalPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2029.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2029, 2, 'WAS'),
     ],
   },
   {
