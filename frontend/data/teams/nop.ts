@@ -1,5 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
+import { botProt, favorableSwap, getPick, tradePick } from '~/data/shorthand';
 
 export const NopPickMeta: YearMeta[] = [
   {
@@ -12,15 +13,18 @@ export const NopPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-    ],
-    roundTwo: [
+      getPick(2025, 1, 'NOP'),
       {
-        id: '2025.2',
-        details: 'Own',
+        id: '2025.1.MIL',
+        details: `MIL ${botProt(4)}`,
         summary: {
-          isOwn: true,
+          teams: ['MIL'],
+          isConditional: true,
         },
       },
+    ],
+    roundTwo: [
+      tradePick(2025, 2, 'SAS'),
     ],
   },
   {
@@ -28,18 +32,22 @@ export const NopPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2026.1',
-        details: 'Own',
+        details: `Own (${favorableSwap} MIL)`,
         summary: {
           isOwn: true,
+          swapType: 'favorable',
+          teams: ['MIL'],
         },
       },
     ],
     roundTwo: [
       {
         id: '2026.2',
-        details: 'Own',
+        details: 'To BOS / SAS / WAS',
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['BOS', 'SAS', 'WAS'],
         },
       },
     ],
@@ -54,13 +62,23 @@ export const NopPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2027, 1, 'MIL'),
     ],
     roundTwo: [
       {
         id: '2027.2',
-        details: 'Own',
+        details: {
+          headline: 'To CHA / POR',
+          extra: [
+            'Best of NOP / POR to CHA',
+            'Worst to POR',
+            'POR may convey to BOS',
+          ],
+        },
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['CHA', 'POR'],
         },
       },
     ],
@@ -77,13 +95,7 @@ export const NopPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2028.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2028, 2, 'SAS'),
     ],
   },
   {
@@ -98,13 +110,7 @@ export const NopPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2029.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2028, 2, 'SAS'),
     ],
   },
   {

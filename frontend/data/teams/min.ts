@@ -1,26 +1,16 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
+import { getPick, ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const MinPickMeta: YearMeta[] = [
   {
     year: 2025,
     roundOne: [
-      {
-        id: '2025.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2025, 1, 'UTA'),
     ],
     roundTwo: [
-      {
-        id: '2025.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2025, 2, 'ATL'),
+      getPick(2025, 2, 'UTA'),
     ],
   },
   {
@@ -28,18 +18,35 @@ export const MinPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2026.1',
-        details: 'Own',
+        details: {
+          headline: `Own (${unfavorableSwap} UTA)`,
+          extra: [
+            'If UTA has not conveyed 1st to OKC in 2025, UTA can only swap if it\'s pick is 1-8',
+          ],
+        },
         summary: {
           isOwn: true,
+          teams: ['UTA'],
+          swapType: 'unfavorable',
         },
       },
     ],
     roundTwo: [
       {
         id: '2026.2',
-        details: 'Own',
+        details: 'To NYK / BOS / WAS',
         summary: {
           isOwn: true,
+          teams: ['NYK', 'BOS', 'WAS'],
+          isTradedAway: true,
+        },
+      },
+      {
+        id: '2026.2.IND-MIA-SAS',
+        details: 'Worst of IND / MIA / SAS',
+        summary: {
+          teams: ['IND', 'MIA', 'SAS'],
+          swapType: 'unfavorable',
         },
       },
     ],
@@ -47,22 +54,10 @@ export const MinPickMeta: YearMeta[] = [
   {
     year: 2027,
     roundOne: [
-      {
-        id: '2027.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2027, 1, 'UTA'),
     ],
     roundTwo: [
-      {
-        id: '2027.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2027, 2, 'OKC'),
     ],
   },
   {
@@ -77,13 +72,7 @@ export const MinPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2028.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2028, 2, 'SAS'),
     ],
   },
   {
@@ -91,9 +80,18 @@ export const MinPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2029.1',
-        details: 'Own',
+        details: {
+          headline: `To UTA ${prot(5)}`,
+          extra: [
+            ifNotConvey([
+              '2029 2nd',
+            ]),
+          ],
+        },
         summary: {
           isOwn: true,
+          isConditional: true,
+          teams: ['UTA'],
         },
       },
     ],
@@ -103,6 +101,10 @@ export const MinPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2029.1',
+            result: 'To UTA',
+          },
         },
       },
     ],
@@ -119,13 +121,7 @@ export const MinPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2030.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2030, 2, 'DET'),
     ],
   },
   {

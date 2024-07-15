@@ -1,5 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
+import { favorableSwap, getPick, ifNotConvey, prot } from '~/data/shorthand';
 
 export const OrlPickMeta: YearMeta[] = [
   {
@@ -12,6 +13,22 @@ export const OrlPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      {
+        id: '2025.1.DEN',
+        details: {
+          headline: `DEN ${prot(5)}`,
+          extra: [
+            ifNotConvey([
+              `2026 1st ${prot(5)}`,
+              `2027 1st ${prot(5)}`,
+            ]),
+          ],
+        },
+        summary: {
+          teams: ['DEN'],
+          isConditional: true,
+        },
+      },
     ],
     roundTwo: [
       {
@@ -21,6 +38,14 @@ export const OrlPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      {
+        id: '2025.2.BOS-MEM',
+        details: 'Worst of BOS / MEM',
+        summary: {
+          swapType: 'unfavorable',
+          teams: ['BOS', 'MEM'],
+        },
+      },
     ],
   },
   {
@@ -28,19 +53,40 @@ export const OrlPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2026.1',
-        details: 'Own',
+        details: {
+          headline: `Own (${favorableSwap} PHX / WAS)`,
+          extra: [
+            'If WAS does not convey 1st to NYK in 2025, WAS can only swap if it\'s pick is 1-8',
+          ],
+        },
         summary: {
           isOwn: true,
+          swapType: 'favorable',
         },
       },
     ],
     roundTwo: [
       {
         id: '2026.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
+        details: {
+          headline: 'Two most favorable of ORL / DET / MIL',
+          extra: [
+            'Worst to BKN',
+          ],
         },
+        summary: [
+          {
+            isOwn: true,
+            teams: ['DET', 'MIL'],
+            swapType: 'favorable',
+            desc: 'Best of ORL / DET / MIL',
+          },
+          {
+            desc: 'Second best of ORL / DET / MIL',
+            teams: ['DET', 'MIL'],
+            swapType: 'favorable',
+          },
+        ],
       },
     ],
   },
@@ -63,6 +109,7 @@ export const OrlPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2027, 2, 'BOS'),
     ],
   },
   {
@@ -82,6 +129,14 @@ export const OrlPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+        },
+      },
+      {
+        id: '2028.2.LAL-WAS',
+        details: 'Best of LAL / WAS',
+        summary: {
+          teams: ['LAL', 'WAS'],
+          swapType: 'favorable',
         },
       },
     ],
@@ -126,6 +181,7 @@ export const OrlPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2030, 2, 'MIL'),
     ],
   },
   {
