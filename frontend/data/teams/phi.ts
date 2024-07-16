@@ -1,5 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
+import { favorableSwap, getPick, ifNotConvey, prot, tradePick } from '~/data/shorthand';
 
 export const PhiPickMeta: YearMeta[] = [
   {
@@ -7,20 +8,25 @@ export const PhiPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2025.1',
-        details: 'Own',
+        details: {
+          headline: `To OKC ${prot(6)}`,
+          extra: [
+            ifNotConvey([
+              `2026 1st ${prot(4)}`,
+              `2027 1st ${prot(4)}`,
+              '2027 2nd',
+            ]),
+          ],
+        },
         summary: {
           isOwn: true,
+          isConditional: true,
+          teams: ['OKC'],
         },
       },
     ],
     roundTwo: [
-      {
-        id: '2025.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2025, 2, 'CHA'),
     ],
   },
   {
@@ -31,15 +37,36 @@ export const PhiPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2025.1',
+            result: `To OKC ${prot(4)}`,
+          },
+        },
+      },
+      {
+        id: '2026.1.OKC-HOU-LA',
+        details: `Worst of OKC / HOU ${prot(4)} / LAC`,
+        summary: {
+          teams: ['OKC', 'HOU', 'LAC'],
+          swapType: 'unfavorable',
         },
       },
     ],
     roundTwo: [
       {
         id: '2026.2',
-        details: 'Own',
+        details: {
+          headline: 'To OKC / HOU / SAS',
+          extra: [
+            'Best of PHI / OKC / DAl to OKC',
+            'Second beest to HOU',
+            'Worst to SAS',
+          ],
+        },
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['OKC', 'HOU', 'SAS'],
         },
       },
     ],
@@ -49,9 +76,23 @@ export const PhiPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2027.1',
-        details: 'Own',
+        details: {
+          headline: `To BKN ${prot}`,
+          extra: [
+            'If PHI has conveyed a 1st to OKC by 2025',
+            ifNotConvey([
+              `2028 1st ${prot(8)}`,
+            ]),
+          ],
+        },
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2025.1',
+            result: `To OKC ${prot(4)}`,
+          },
+          isConditional: true,
+          teams: ['BKN'],
         },
       },
     ],
@@ -61,8 +102,13 @@ export const PhiPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2025.1',
+            result: 'To OKC',
+          },
         },
       },
+      getPick(2027, 2, 'MIL'),
     ],
   },
   {
@@ -73,6 +119,10 @@ export const PhiPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2027.1',
+            result: `To BKN ${prot(8)}`,
+          },
         },
       },
     ],
@@ -82,6 +132,18 @@ export const PhiPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2027.1',
+            result: 'To BKN',
+          },
+        },
+      },
+      {
+        id: '2028.2.DET',
+        details: `DET ${prot(55)}`,
+        summary: {
+          isConditional: true,
+          teams: ['DET'],
         },
       },
     ],
@@ -91,9 +153,11 @@ export const PhiPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2029.1',
-        details: 'Own',
+        details: `Own (${favorableSwap} LAC ${prot(3)})`,
         summary: {
           isOwn: true,
+          swapType: 'favorable',
+          teams: ['LAC'],
         },
       },
     ],

@@ -1,5 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
+import { ifNotConvey, prot, tradePick } from '~/data/shorthand';
 
 export const TorPickMeta: YearMeta[] = [
   {
@@ -14,13 +15,7 @@ export const TorPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2025.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2025, 2, 'DAL'),
     ],
   },
   {
@@ -31,6 +26,22 @@ export const TorPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+        },
+      },
+      {
+        id: '2026.1.IND',
+        details: {
+          headline: `IND ${prot(4)}`,
+          extra: [
+            ifNotConvey([
+              `2027 1st ${prot(4)}`,
+              '2027 UTA 2nd & 2028 DAL 2nd',
+            ]),
+          ],
+        },
+        summary: {
+          teams: ['IND'],
+          isConditional: true,
         },
       },
     ],

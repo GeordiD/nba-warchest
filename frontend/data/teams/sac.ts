@@ -1,5 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
+import { getPick, ifNotConvey, prot, tradePick } from '~/data/shorthand';
 
 export const SacPickMeta: YearMeta[] = [
   {
@@ -7,9 +8,19 @@ export const SacPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2025.1',
-        details: 'Own',
+        details: {
+          headline: `To ATL ${prot(12)}`,
+          extra: [
+            ifNotConvey([
+              `2026 1st ${prot(10)}`,
+              '2026 2nd & 2027 2nd',
+            ]),
+          ],
+        },
         summary: {
           isOwn: true,
+          teams: ['ATL'],
+          isConditional: true,
         },
       },
     ],
@@ -21,6 +32,7 @@ export const SacPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2025, 2, 'POR'),
     ],
   },
   {
@@ -31,6 +43,10 @@ export const SacPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2025.1',
+            result: `To ATL ${prot(10)}`,
+          },
         },
       },
     ],
@@ -40,6 +56,10 @@ export const SacPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2025.1',
+            result: `To ATL`,
+          },
         },
       },
     ],
@@ -61,6 +81,10 @@ export const SacPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2025.1',
+            result: `To ATL`,
+          },
         },
       },
     ],
@@ -119,13 +143,7 @@ export const SacPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2030.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2030, 2, 'IND'),
     ],
   },
   {

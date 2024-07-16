@@ -1,5 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
+import { botProt, favorableSwap, getPick, ifNotConvey, prot } from '~/data/shorthand';
 
 export const SasPickMeta: YearMeta[] = [
   {
@@ -12,6 +13,38 @@ export const SasPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2025, 1, 'ATL'),
+      {
+        id: '2025.1.CHA',
+        details: {
+          headline: `CHA ${prot(14)}`,
+          extra: [
+            ifNotConvey([
+              `2026 2nd & 2027 2nd`,
+            ]),
+          ],
+        },
+        summary: {
+          isConditional: true,
+          teams: ['CHA'],
+        },
+      },
+      {
+        id: '2025.1.CHI',
+        details: {
+          headline: `CHI ${prot(10)}`,
+          extra: [
+            ifNotConvey([
+              `2027 1st ${prot(8)}`,
+              '2028 2nd',
+            ]),
+          ],
+        },
+        summary: {
+          isConditional: true,
+          teams: ['CHI'],
+        },
+      },
     ],
     roundTwo: [
       {
@@ -21,6 +54,8 @@ export const SasPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2025, 2, 'CHI'),
+      getPick(2025, 2, 'NOP'),
     ],
   },
   {
@@ -28,20 +63,47 @@ export const SasPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2026.1',
-        details: 'Own',
+        details: `Own (${favorableSwap} ATL)`,
         summary: {
           isOwn: true,
+          swapType: 'favorable',
+          teams: ['ATL'],
         },
       },
     ],
     roundTwo: [
       {
         id: '2026.2',
-        details: 'Own',
+        details: {
+          headline: 'Own (swap with IND / MIA)',
+          extra: [
+            'Better of SAS and worst of IND / MIA',
+            'Worst to MIN',
+          ],
+        },
         summary: {
           isOwn: true,
+          swapType: 'mixed',
+          teams: ['IND', 'MIA'],
         },
       },
+      {
+        id: '2026.2.OKC-DAL-PHI',
+        details: 'Worst of OKC / DAL / PHI',
+        summary: {
+          swapType: 'unfavorable',
+          teams: ['OKC', 'DAL', 'PHI'],
+        },
+      },
+      {
+        id: '2026.2.NOP-POR',
+        details: 'Worst of NOP / POR',
+        summary: {
+          swapType: 'unfavorable',
+          teams: ['NOP', 'POR'],
+        },
+      },
+      getPick(2026, 2, 'UTA'),
     ],
   },
   {
@@ -54,13 +116,22 @@ export const SasPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2027, 1, 'ATL'),
     ],
     roundTwo: [
       {
         id: '2027.2',
-        details: 'Own',
+        details: {
+          headline: 'Own (swap with OKC / HOU / IND / MIA',
+          extra: [
+            'Best of SAS and worst of OKC / HOU / IND / MIA',
+            'Worst to MIA',
+          ],
+        },
         summary: {
           isOwn: true,
+          swapType: 'mixed',
+          teams: ['OKC', 'HOU', 'IND', 'MIA'],
         },
       },
     ],
@@ -70,9 +141,18 @@ export const SasPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2028.1',
-        details: 'Own',
+        details: {
+          headline: `Own (${favorableSwap} BOS ${prot(1)})`,
+          extra: [
+            ifNotConvey([
+              `2028 1st ${botProt(46)}`,
+            ]),
+          ],
+        },
         summary: {
           isOwn: true,
+          swapType: 'favorable',
+          teams: ['BOS'],
         },
       },
     ],
@@ -84,6 +164,16 @@ export const SasPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      {
+        id: '2028.2.DEN',
+        details: `DEN ${prot(33)}`,
+        summary: {
+          teams: ['DEN'],
+          isConditional: true,
+        },
+      },
+      getPick(2028, 2, 'MIN'),
+      getPick(2028, 2, 'NOP'),
     ],
   },
   {
@@ -105,6 +195,8 @@ export const SasPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2029, 2, 'LAC'),
+      getPick(2029, 2, 'NOP'),
     ],
   },
   {
@@ -112,9 +204,11 @@ export const SasPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2030.1',
-        details: 'Own',
+        details: `Own (${favorableSwap} DAL)`,
         summary: {
           isOwn: true,
+          swapType: 'favorable',
+          teams: ['DAL'],
         },
       },
     ],
@@ -126,6 +220,7 @@ export const SasPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2030, 2, 'CLE'),
     ],
   },
   {
