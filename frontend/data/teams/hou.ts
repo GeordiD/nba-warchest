@@ -1,5 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
+import { favorableSwap, getPick, ifNotConvey, prot, tradePick } from '~/data/shorthand';
 
 export const HouPickMeta: YearMeta[] = [
   {
@@ -7,18 +8,34 @@ export const HouPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2025.1',
-        details: 'Own',
+        details: {
+          headline: `Best of PHX and worst of OKC / Own ${prot(10)}`,
+          extra: [
+            `OKC first has right to swap with HOU ${prot(10)} / LAC`,
+            'HOU has the right to swap the pick it receives with PHX',
+            'The remaining pick goes to BKN',
+          ],
+        },
         summary: {
           isOwn: true,
+          teams: ['PHX', 'OKC'],
+          swapType: 'mixed',
         },
       },
     ],
     roundTwo: [
       {
         id: '2025.2',
-        details: 'Own',
+        details: {
+          headline: 'Worst of HOU / OKC',
+          extra: [
+            'Best to MEM',
+          ],
+        },
         summary: {
           isOwn: true,
+          teams: ['OKC'],
+          swapType: 'unfavorable',
         },
       },
     ],
@@ -28,9 +45,18 @@ export const HouPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2026.1',
-        details: 'Own',
+        details: {
+          headline: `To OKC ${prot(4)}`,
+          extra: [
+            ifNotConvey([
+              '2026 2nd',
+            ]),
+          ],
+        },
         summary: {
           isOwn: true,
+          isConditional: true,
+          teams: ['OKC'],
         },
       },
     ],
@@ -40,6 +66,26 @@ export const HouPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+          ifNotSettled: {
+            id: '2026.1',
+            result: 'To OKC',
+          },
+        },
+      },
+      {
+        id: '2026.2.OKC-DAL-PHI',
+        details: 'Second best of OKC / DAL / PHI',
+        summary: {
+          teams: ['OKC', 'DAL', 'PHI'],
+          swapType: 'mixed',
+        },
+      },
+      {
+        id: '2026.2.LAC-BOS-IND-MIA',
+        details: 'Worst of LAC and best of BOS / IND / MIA',
+        summary: {
+          teams: ['LAC', 'BOS', 'IND', 'MIA'],
+          swapType: 'mixed',
         },
       },
     ],
@@ -49,18 +95,30 @@ export const HouPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2027.1',
-        details: 'Own',
+        details: `Own (${favorableSwap} BKN)`,
         summary: {
           isOwn: true,
+          swapType: 'favorable',
+          teams: ['BKN'],
         },
       },
+      getPick(2027, 1, 'PHX'),
     ],
     roundTwo: [
       {
         id: '2027.2',
-        details: 'Own',
+        details: {
+          headline: 'To OKC / SAS / MIA',
+          extra: [
+            'Three most favorable of HOU / OKC / IND / MIA to OKC',
+            'Best of SAS and worst of above to SAS',
+            'Worst to MIA',
+          ],
+        },
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['OKC', 'SAS', 'MIA'],
         },
       },
     ],
@@ -77,13 +135,7 @@ export const HouPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2028.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2028, 2, 'ATL'),
     ],
   },
   {
@@ -91,20 +143,27 @@ export const HouPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2029.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
+        details: {
+          headline: 'Two most favorable of HOU / DAL / PHX',
+          extra: [
+            'Worst to BKN',
+          ],
         },
+        summary: [
+          {
+            isOwn: true,
+            teams: ['DAL', 'PHX'],
+            swapType: 'favorable',
+          },
+          {
+            teams: ['DAL', 'PHX'],
+            swapType: 'favorable',
+          },
+        ],
       },
     ],
     roundTwo: [
-      {
-        id: '2029.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2029, 2, 'OKC'),
     ],
   },
   {
@@ -119,13 +178,7 @@ export const HouPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2030.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2030, 2, 'OKC'),
     ],
   },
   {

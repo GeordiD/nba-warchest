@@ -1,5 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
+import { prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const PhxPickMeta: YearMeta[] = [
   {
@@ -7,20 +8,22 @@ export const PhxPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2025.1',
-        details: 'Own',
+        details: {
+          headline: 'To BKN / HOU',
+          extra: [
+            'HOU gets best of PHX and own pick (after top 10 prot. swap with OKC)',
+            'Worst to BKN',
+          ],
+        },
         summary: {
           isOwn: true,
+          teams: ['BKN', 'HOU'],
+          isTradedAway: true,
         },
       },
     ],
     roundTwo: [
-      {
-        id: '2025.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2025, 2, 'WAS'),
     ],
   },
   {
@@ -28,41 +31,30 @@ export const PhxPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2026.1',
-        details: 'Own',
+        details: {
+          headline: 'Worst of PHX / ORL / WAS / MEM',
+          extra: [
+            'If WAS has not conveyed 1st to NYK in 2025, WAS pick is top 8 prot.',
+          ],
+        },
         summary: {
           isOwn: true,
+          swapType: 'unfavorable',
+          teams: ['ORL', 'WAS', 'MEM'],
         },
       },
     ],
     roundTwo: [
-      {
-        id: '2026.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2026, 2, 'WAS'),
     ],
   },
   {
     year: 2027,
     roundOne: [
-      {
-        id: '2027.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2027, 1, 'HOU'),
     ],
     roundTwo: [
-      {
-        id: '2027.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2027, 2, 'WAS'),
     ],
   },
   {
@@ -70,18 +62,37 @@ export const PhxPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2028.1',
-        details: 'Own',
+        details: {
+          headline: `Own (${unfavorableSwap} PHI ${prot(8)} / BKN / WAS)`,
+          extra: [
+            [
+              'PHI included if',
+              'PHI does not convey 1st to BKN in 2027',
+              'PHI has conveyed 1st to OKC in 2026',
+            ],
+          ],
+        },
         summary: {
           isOwn: true,
+          swapType: 'unfavorable',
+          teams: ['BKN', 'WAS', 'PHI'],
         },
       },
     ],
     roundTwo: [
       {
         id: '2028.2',
-        details: 'Own',
+        details: {
+          headline: 'To IND / NYK',
+          extra: [
+            'Best of PHX / IND to IND',
+            'Worst to NYK',
+          ],
+        },
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['IND', 'NYK'],
         },
       },
     ],
@@ -91,20 +102,22 @@ export const PhxPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2029.1',
-        details: 'Own',
+        details: {
+          headline: 'To HOU / BKN',
+          extra: [
+            'Two most favorable of PHX / DAL / HOU to HOU',
+            'Worst to BKN',
+          ],
+        },
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['HOU', 'BKN'],
         },
       },
     ],
     roundTwo: [
-      {
-        id: '2029.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2029, 2, 'OKC'),
     ],
   },
   {
@@ -112,20 +125,22 @@ export const PhxPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2030.1',
-        details: 'Own',
+        details: {
+          headline: `Own (${unfavorableSwap} WAS / MEM)`,
+          extra: [
+            'Best of PHX / WAS to WAS',
+            'Best of MEM and leftover of above to MEM',
+          ],
+        },
         summary: {
           isOwn: true,
+          swapType: 'unfavorable',
+          teams: ['WAS', 'MEM'],
         },
       },
     ],
     roundTwo: [
-      {
-        id: '2030.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2030, 2, 'WAS'),
     ],
   },
   {
