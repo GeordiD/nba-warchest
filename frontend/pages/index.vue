@@ -17,7 +17,7 @@ const tableData = computed(() =>
 
 <template>
   <div class="p-4 flex justify-center">
-    <table class="table-auto border-spacing-1 border-separate">
+    <table class="table-auto main-table">
       <thead>
         <tr>
           <th>
@@ -38,6 +38,7 @@ const tableData = computed(() =>
         <tr
           v-for="teamMeta in tableData"
           :key="teamMeta.info.abbr"
+          class="cursor-pointer  hover:shadow"
           @click="router.push(`/teams/${teamMeta.info.abbr}`)"
         >
           <td>{{ teamMeta.info.fullName }}</td>
@@ -49,3 +50,14 @@ const tableData = computed(() =>
     </table>
   </div>
 </template>
+
+<style scoped>
+.main-table td,
+.main-table th {
+  @apply px-2 py-1;
+}
+
+.main-table th {
+  @apply bg-slate-700 text-white;
+}
+</style>
