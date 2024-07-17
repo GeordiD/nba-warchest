@@ -5,8 +5,6 @@ const route = useRoute();
 const abbr = route.params.id as TeamAbbr;
 
 const meta = computed(() => getMetadataForTeam(abbr))
-
-console.log(getTradability(meta.value.picks));
 </script>
 
 <template>

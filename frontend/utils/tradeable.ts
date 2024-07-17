@@ -257,6 +257,11 @@ export function getTradability(metas: YearMeta[]) {
   });
   const swappables = getSwappablePicks(picks, tradables);
 
+  const totalSeconds = metas
+    .flatMap(x => x.roundTwo.flatMap(y => y.summary))
+    .filter(x => !x.isTradedAway && !(x.isOwn && x.isConditional))
+    .length
+
   return {
     tradable: {
       total: getTotal(tradables),
@@ -267,6 +272,9 @@ export function getTradability(metas: YearMeta[]) {
       total: getTotal(swappables),
       asMetas: swappables,
       asStrings: swappables.map(x => stringifyPickGroups(x)),
+    },
+    seconds: {
+      total: totalSeconds,
     },
   }
 }

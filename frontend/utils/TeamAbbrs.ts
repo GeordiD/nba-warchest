@@ -1,4 +1,4 @@
-export const TeamAbbrs = [
+export const TeamAbbrs: TeamAbbr[] = [
   'ATL',
   'BOS',
   'BKN',

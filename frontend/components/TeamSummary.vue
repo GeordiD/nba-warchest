@@ -11,11 +11,6 @@ const {
 })
 
 const tradabilityResult = computed(() => getTradability(picks));
-const totalSeconds = computed(() => picks
-  .flatMap(x => x.roundTwo.flatMap(y => y.summary))
-  .filter(x => !x.isTradedAway)
-  .length,
-)
 </script>
 
 <template>
@@ -30,7 +25,7 @@ const totalSeconds = computed(() => picks
     </p>
     <p>
       <span class="font-semibold">Seconds:</span>
-      {{ totalSeconds }}
+      {{ tradabilityResult.seconds.total }}
     </p>
   </div>
 </template>

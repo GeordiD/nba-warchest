@@ -27,4 +27,4 @@ export type TeamAbbr = 'ATL'
   | 'SAS'
   | 'TOR'
   | 'UTA'
-  | 'WAS'
+  | 'WAS';
