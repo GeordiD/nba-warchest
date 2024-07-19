@@ -31,7 +31,7 @@ const meta = computed(() => picks.map(x => ({
           <p class="font-semibold text-lg">
             {{ group.year }}
           </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <h3 class="font-semibold">
                 Firsts
