@@ -22,4 +22,15 @@ export default defineNuxtConfig({
   icon: {
     mode: 'svg',
   },
+  tailwindcss: {
+    config: {
+      theme: {
+        extend: {
+          screens: {
+            sm: '700px',
+          },
+        },
+      },
+    },
+  },
 })

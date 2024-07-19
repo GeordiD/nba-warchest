@@ -26,6 +26,7 @@ const byYear = computed(() =>
 
 <template>
   <div class="w-full min-h-32 rounded border border-slate-400 p-2 divide-y-2 divide-slate-200 flex flex-col gap-2">
+    <!-- Header -->
     <div class="flex justify-between items-center">
       <p class="text-lg">
         Picks by Year
@@ -47,16 +48,18 @@ const byYear = computed(() =>
         </button>
       </div>
     </div>
-    <div class="flex justify-between mx-4 pt-2">
+
+    <!-- Content -->
+    <div class="flex flex-col gap-4 pt-2 sm:flex-row sm:justify-between">
       <div
         v-for="yearInfo in byYear"
         :key="`${yearInfo.year}-${isFirsts ? 1 : 2}`"
-        class="flex flex-col-reverse gap-2"
+        class="flex items-center sm:flex-col-reverse"
       >
-        <div class="font-semibold px-4">
+        <div class="font-semibold mr-2">
           {{ yearInfo.year }}
         </div>
-        <div class="flex-grow flex flex-col-reverse gap-2 mx-auto">
+        <div class="flex-grow flex flex-wrap gap-1 sm:flex-nowrap sm:flex-col-reverse">
           <PickCircle
             v-for="(pick, i) in yearInfo.roundData"
             :id="pick.id"
