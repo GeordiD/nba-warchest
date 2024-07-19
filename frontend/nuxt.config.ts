@@ -21,7 +21,8 @@ export default defineNuxtConfig({
     },
   },
   icon: {
-    mode: 'svg',
+    mode: 'css',
+    provider: 'iconify',
   },
   tailwindcss: {
     config: {

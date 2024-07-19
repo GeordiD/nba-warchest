@@ -22,7 +22,10 @@ const shouldShowBackButton = computed(() => route.path !== '/')
         Teams
       </div>
     </div>
-    <div class="mx-auto">
+    <div
+      class="mx-auto"
+      @click="router.push('/')"
+    >
       NBA War Chest
     </div>
   </div>
