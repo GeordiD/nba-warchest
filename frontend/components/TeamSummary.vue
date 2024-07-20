@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import type { YearMeta } from '~/data/PickMetaTypes';
+const metaStore = useMetaStore();
 
 const {
-  picks,
+  abbr,
 } = defineProps({
-  picks: {
-    type: Object as PropType<YearMeta[]>,
+  abbr: {
+    type: String,
     required: true,
   },
 })
 
-const tradabilityResult = computed(() => getTradability(picks));
+const tradabilityResult = computed(() => metaStore.metaPerTeam[abbr].tradeInfo);
 </script>
 
 <template>

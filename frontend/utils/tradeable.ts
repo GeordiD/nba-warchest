@@ -1,4 +1,6 @@
 import type { YearMeta, PickDetails, PickSummary } from '~/data/PickMetaTypes';
+import type { TeamMeta } from '~/data/TeamMeta';
+import { teamsWithoutFirstLastYear } from '~/data/teamsWithoutFirstLastYear';
 
 /*
 Algorithm
@@ -249,15 +251,15 @@ function getTotal(input: (PickSummaryMeta | TradablePicksGroup<PickSummaryMeta>)
   return input.reduce((prev, curr) => prev + (isTradablePicksGroup(curr) ? curr.total : 1), 0);
 }
 
-export function getTradability(metas: YearMeta[]) {
-  const picks = getPicksFromMeta(metas);
+export function getTradability(meta: TeamMeta) {
+  const picks = getPicksFromMeta(meta.picks);
   const tradables = getTradablePicks(picks, {
     startYear: 2025,
-    hadPickLastYear: true, // TODO
+    hadPickLastYear: !teamsWithoutFirstLastYear.includes(meta.info.abbr),
   });
   const swappables = getSwappablePicks(picks, tradables);
 
-  const totalSeconds = metas
+  const totalSeconds = meta.picks
     .flatMap(x => x.roundTwo.flatMap(y => y.summary))
     .filter(x => !x.isTradedAway && !(x.isOwn && x.isConditional))
     .length

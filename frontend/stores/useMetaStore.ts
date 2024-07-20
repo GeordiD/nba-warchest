@@ -10,7 +10,7 @@ export interface RichTeamMeta extends TeamMeta {
 export const useMetaStore = defineStore('meta', () => {
   const teamMetas: RichTeamMeta[] = TeamAbbrs
     .map(x => getMetadataForTeam(x))
-    .map(x => ({ ...x, tradeInfo: getTradability(x.picks) }));
+    .map(x => ({ ...x, tradeInfo: getTradability(x) }));
 
   const metaPerTeam = computed<Record<string, RichTeamMeta>>(() => TeamAbbrs.reduce((prev, curr) => ({
     ...prev,

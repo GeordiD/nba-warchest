@@ -1,5 +1,16 @@
 Todo:
 
-* Teams I skipped:
-  * HOU
-* Need to update tradability calc - own picks that are conditional should not be considered tradable.
+* Add `cursor-pointer` to title
+* Real tooltip library
+
+* Design
+  * Add numbers to table
+  * Better swap iconography
+  * Total picks
+
+* Analytics
+  * Would be real cool to see which teams get the most traffic
+
+* Site Map
+  * About page
+  * I need some sort of cool graph outlet, but maybe that's something else?
