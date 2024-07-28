@@ -2,8 +2,13 @@
 import type { YearMeta, PickSummary } from '~/data/PickMetaTypes';
 
 const {
+  abbr,
   picks,
 } = defineProps({
+  abbr: {
+    type: String,
+    required: true,
+  },
   picks: {
     type: Object as PropType<YearMeta[]>,
     required: true,
@@ -66,6 +71,7 @@ const byYear = computed(() =>
             :key="i"
             :pick-data="pick"
             :meta="picks"
+            :related-abbr="abbr"
           />
         </div>
       </div>

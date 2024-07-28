@@ -11,7 +11,10 @@ const meta = computed(() => getMetadataForTeam(abbr))
   <div class="m-4 mx-8 flex flex-col gap-4">
     <h1>{{ meta.info.fullName }}</h1>
     <TeamSummary :abbr="abbr" />
-    <PicksByYear :picks="meta.picks" />
+    <PicksByYear
+      :abbr="abbr"
+      :picks="meta.picks"
+    />
     <AllPicks :picks="meta.picks" />
   </div>
 </template>

@@ -2,9 +2,18 @@
 import type { YearMeta, PickDetails, PickSummary } from '~/data/PickMetaTypes';
 
 const {
-  pickData,
   meta,
+  pickData,
+  relatedAbbr,
 } = defineProps({
+  relatedAbbr: {
+    type: String,
+    required: true,
+  },
+  meta: {
+    type: Object as PropType<YearMeta[]>,
+    required: true,
+  },
   pickData: {
     type: Object as PropType<{
       id: string,
@@ -13,22 +22,18 @@ const {
     }>,
     required: true,
   },
-  meta: {
-    type: Object as PropType<YearMeta[]>,
-    required: true,
-  },
-  isOwn: Boolean,
 })
 
 const isTradedAway = computed(() => pickData.summary.isOwn
   && pickData.summary.isTradedAway)
 
-const text = computed(() => pickData.summary.teams?.length === 1
-  ? pickData.summary.teams[0]
-  : (pickData.summary.teams?.length
-      ? pickData.summary.teams?.length
-      : ''),
-)
+const abbrs = computed(() => {
+  if (pickData.summary.isOwn && !pickData.summary.isTradedAway && !pickData.summary.teams?.length) {
+    return [relatedAbbr]
+  }
+
+  return pickData.summary.teams ?? [];
+})
 
 const {
   isIdActive,
@@ -44,7 +49,7 @@ const {
     @mouseover="onMouseOver"
     @mouseout="onMouseOut"
   >
-    <div class="w-4">
+    <!-- <div class="w-4">
       <Icon
         v-if="pickData.summary.swapType === 'mixed'"
         name="material-symbols:sync-outline"
@@ -60,18 +65,24 @@ const {
         name="material-symbols:arrow-upward-alt"
         class="arrow-favorable"
       />
-    </div>
+    </div> -->
 
     <div
-      class="rounded-full h-10 w-10 bg-green-600 text-white flex items-center justify-center relative"
+      class="rounded-full h-14 w-14 bg-green-600 flex items-center justify-center relative"
       :class="[
         isTradedAway ? 'traded-away' : (pickData.summary.isConditional ? 'conditional' : 'owned'),
         { hover: isIdActive },
       ]"
     >
-      <p class="text-xs">
-        {{ text }}
-      </p>
+      <div
+        v-if="abbrs.length === 1"
+        class="w-10 h-10"
+      >
+        <TeamLogo
+          :abbr="`${abbrs[0]}`"
+          filled
+        />
+      </div>
       <PickHover
         v-if="isTarget"
         :pick-data="pickData"
@@ -79,26 +90,30 @@ const {
       />
     </div>
 
-    <div class="w-4">
+    <!-- <div class="w-4">
       <Icon
         v-if="pickData.summary.ifNotSettled"
         name="material-symbols:asterisk"
       />
-    </div>
+    </div> -->
   </div>
 </template>
 
 <style scoped>
 .traded-away {
-  @apply bg-gray-700;
+  @apply bg-gray-400;
+  filter: grayscale(1) opacity(.3);
 }
 
 .owned {
-  @apply bg-green-600;
+  /* @apply bg-green-600; */
+  background-color: #CDF3CA;
 }
 
 .conditional {
-  @apply bg-yellow-500 text-black;
+  /* @apply bg-yellow-500 text-black; */
+  background-color: #E5DDB4;
+  color: black;
 }
 
 .arrow-favorable {
