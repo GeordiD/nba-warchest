@@ -56,6 +56,6 @@ const details = computed<string>(() => {
 <style scoped>
 .tooltip {
   left: 4rem;
-  @apply absolute bg-white border border-gray-500 p-2 rounded-sm z-10 text-black w-48;
+  @apply absolute bg-white border border-gray-500 p-2 rounded-sm z-50 text-black w-48;
 }
 </style>
