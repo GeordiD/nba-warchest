@@ -45,6 +45,25 @@ const abbrs = computed(() => {
   return teams;
 })
 
+const circleAbbrs = computed(() =>
+  abbrs.value.length > 4
+    ? abbrs.value.slice(0, 3)
+    : abbrs.value,
+);
+
+const swapClass = computed(() => {
+  switch (abbrs.value.length) {
+    case 1:
+      return 'one-swap';
+    case 2:
+      return 'two-swap';
+    case 3:
+      return 'three-swap';
+    default:
+      return 'four-swap';
+  }
+})
+
 const {
   isIdActive,
   isTarget,
@@ -59,90 +78,43 @@ const {
     @mouseover="onMouseOver"
     @mouseout="onMouseOut"
   >
-    <!-- <div class="w-4">
-      <Icon
-        v-if="pickData.summary.swapType === 'mixed'"
-        name="material-symbols:sync-outline"
-        class="arrow-mixed"
-      />
-      <Icon
-        v-else-if="pickData.summary.swapType === 'unfavorable'"
-        name="material-symbols:arrow-downward-alt"
-        class="arrow-unfavorable"
-      />
-      <Icon
-        v-else-if="pickData.summary.swapType === 'favorable'"
-        name="material-symbols:arrow-upward-alt"
-        class="arrow-favorable"
-      />
-    </div> -->
-
     <div
-      class="rounded-full h-14 w-14 flex items-center justify-center"
+      class="rounded-lg h-14 w-14 flex items-center justify-center relative"
       :class="[
         isTradedAway ? 'traded-away' : (pickData.summary.isConditional ? 'conditional' : 'owned'),
         { hover: isIdActive },
       ]"
     >
+      <SwapIcon
+        v-if="pickData.summary.swapType"
+        class="z-30"
+        :swap-type="pickData.summary.swapType"
+      />
+
+      <TradedAwayIcon
+        v-if="isTradedAway"
+        class="z-30"
+      />
+
       <div
-        v-if="abbrs.length === 1"
-        class="w-10 h-10"
-      >
-        <TeamLogo
-          :abbr="`${abbrs[0]}`"
-          filled
-        />
-      </div>
-      <div
-        v-else-if="abbrs.length === 2"
-        class="w-full h-full flex justify-center"
+        :class="swapClass"
       >
         <div
-          v-for="abbr in abbrs"
+          v-for="abbr in circleAbbrs"
           :key="abbr"
-          class="w-8 swap-group two-swap"
+          class="swap-logo"
         >
           <TeamLogo
             :abbr="`${abbr}`"
-            class="swap-logo"
             filled
           />
         </div>
-      </div>
-      <div
-        v-else
-        class="w-full h-full flex flex-col justify-center"
-      >
-        <div class="flex justify-center">
-          <div
-            v-for="abbr in [abbrs[0], abbrs[1]]"
-            :key="abbr"
-            class="w-8 swap-group two-swap"
-          >
-            <TeamLogo
-              :abbr="`${abbr}`"
-              class="swap-logo"
-              filled
-            />
-          </div>
-        </div>
-        <div class="flex justify-center -mt-6">
-          <div
-            class="w-8 swap-group"
-          >
-            <TeamLogo
-              v-if="abbrs.length === 3"
-              :abbr="abbrs[2]"
-              class="swap-logo"
-              filled
-            />
-            <div
-              v-else
-              class="rounded-full w-8 h-8 flex items-center justify-center extra-circle"
-            >
-              <p>+{{ abbrs.length-2 }}</p>
-            </div>
-          </div>
+
+        <div
+          v-if="abbrs.length > 4"
+          class="swap-logo rounded-full extra-circle flex items-center justify-center text-xs"
+        >
+          <p>+{{ abbrs.length - 3 }}</p>
         </div>
       </div>
     </div>
@@ -152,13 +124,6 @@ const {
       :pick-data="pickData"
       :meta="meta"
     />
-
-    <!-- <div class="w-4">
-      <Icon
-        v-if="pickData.summary.ifNotSettled"
-        name="material-symbols:asterisk"
-      />
-    </div> -->
   </div>
 </template>
 
@@ -171,12 +136,11 @@ const {
 }
 
 .traded-away {
-  @apply bg-gray-400;
+  @apply bg-transparent border-dashed border-2 border-gray-800;
   filter: grayscale(1) opacity(.3);
 }
 
 .owned {
-  /* @apply bg-green-600; */
   background-color: var(--bg-guarenteed);
 }
 
@@ -185,7 +149,6 @@ const {
 }
 
 .conditional {
-  /* @apply bg-yellow-500 text-black; */
   background-color: var(--bg-conditional);
   color: black;
 }
@@ -194,35 +157,76 @@ const {
   background-color: var(--bg-conditional-extra);
 }
 
-.arrow-favorable {
-  @apply text-green-600;
-}
-
-.arrow-unfavorable {
-  @apply text-red-700;
-}
-
-.arrow-mixed {
-  @apply text-black;
-}
-
 .hover {
-  @apply border border-gray-500 shadow-lg shadow-gray-500;
+  @apply shadow-lg shadow-gray-500;
 }
 
-.swap-group.two-swap:not(:first-child) {
-  @apply -ml-4;
+.one-swap {
+  & .swap-logo {
+    @apply h-12 w-12
+  }
 }
 
-.swap-group.two-swap:not(:first-child) .swap-logo {
-  @apply z-10;
+.two-swap {
+  display: flex;
+  flex-direction: column-reverse;
+
+  & .swap-logo {
+    @apply h-9 w-9;
+  }
+
+  & .swap-logo:first-child {
+    @apply -mt-6 mr-3;
+  }
+
+  & .swap-logo:last-child {
+    @apply ml-3 z-10;
+  }
 }
 
-.swap-group.three-swap:not(:first-child) {
-  @apply -ml-6;
+.three-swap {
+  display: flex;
+  flex-direction: column;
+
+  & .swap-logo {
+    @apply h-7 w-7;
+  }
+
+  & .swap-logo:nth-child(1) {
+    @apply ml-2;
+  }
+
+  & .swap-logo:nth-child(2) {
+    @apply -mt-3 mr-4;
+  }
+
+  & .swap-logo:nth-child(3) {
+    @apply -mt-7 ml-4;
+  }
 }
 
-.swap-group.three-swap:not(:first-child) .swap-logo {
-  @apply z-10;
+.four-swap {
+  display: flex;
+  flex-direction: column;
+
+  & .swap-logo {
+    @apply h-7 w-7;
+  }
+
+  & .swap-logo:nth-child(1) {
+    @apply mr-4;
+  }
+
+  & .swap-logo:nth-child(2) {
+    @apply -mt-7 ml-4;
+  }
+
+  & .swap-logo:nth-child(3) {
+    @apply -mt-3 mr-4;
+  }
+
+  & .swap-logo:nth-child(4) {
+    @apply -mt-7 ml-4;
+  }
 }
 </style>
