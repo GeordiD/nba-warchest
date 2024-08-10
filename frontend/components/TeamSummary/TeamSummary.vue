@@ -12,7 +12,7 @@ const {
 
 const teamMeta = computed(() => metaStore.metaPerTeam[abbr]);
 const tradabilityResult = computed(() => teamMeta.value.tradeInfo);
-const warchestRanking = computed(() => 12);
+const warchestRanking = computed(() => metaStore.tableData.find(x => x.info.abbr === abbr)?.ranking ?? '??');
 </script>
 
 <template>
