@@ -70,7 +70,6 @@ const byYear = computed(() =>
             :id="pick.id"
             :key="i"
             :pick-data="pick"
-            :meta="picks"
             :related-abbr="abbr"
           />
         </div>

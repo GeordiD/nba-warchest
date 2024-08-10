@@ -62,7 +62,7 @@ function getPicksFromMeta(metas: YearMeta[]): PickSummaryMeta[] {
           }));
 }
 
-function getPickDescription(pick: PickSummaryMeta): string {
+export function getPickDescription(pick: Omit<PickSummaryMeta, 'year'>): string {
   if (pick.summary.desc)
     return pick.summary.desc;
 
