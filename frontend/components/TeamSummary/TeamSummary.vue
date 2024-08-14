@@ -12,6 +12,12 @@ const {
 
 const teamMeta = computed(() => metaStore.metaPerTeam[abbr]);
 const tradabilityResult = computed(() => teamMeta.value.tradeInfo);
+
+const guarenteedFirsts = computed(() => tradabilityResult.value.firsts.picks.filter(x => !x.isConditional));
+const guarenteedSeconds = computed(() => tradabilityResult.value.seconds.picks.filter(x => !x.isConditional));
+
+const conditionalFirsts = computed(() => tradabilityResult.value.firsts.picks.filter(x => x.isConditional));
+const conditionalSeconds = computed(() => tradabilityResult.value.seconds.picks.filter(x => x.isConditional));
 </script>
 
 <template>
@@ -22,20 +28,20 @@ const tradabilityResult = computed(() => teamMeta.value.tradeInfo);
     >
       <div>
         <p>
-          <span class="font-semibold">Total Picks:</span> #
+          <span class="font-semibold">Total Picks:</span> {{ tradabilityResult.firsts.total }}
         </p>
         <p>
-          - Guaranteed: #
+          - Guaranteed: {{ guarenteedFirsts.length }}
         </p>
         <p>
-          - Conditional: #
+          - Conditional: {{ conditionalFirsts.length }}
         </p>
         <p>
-          - Swaps: #
+          - Swaps: {{ tradabilityResult.firsts.owned.swaps.length }}
         </p>
         <p>
           <span class="font-semibold">Own Picks:</span>
-          6/7
+          {{ tradabilityResult.firsts.owned.ownDestiny.length }}/7
         </p>
       </div>
     </SummaryCard>
@@ -48,10 +54,10 @@ const tradabilityResult = computed(() => teamMeta.value.tradeInfo);
           <span class="font-semibold">Firsts</span>
         </p>
         <p>
-          - Picks: {{ tradabilityResult.tradable.total }}
+          - Picks: {{ tradabilityResult.firsts.tradable.total }}
         </p>
         <p>
-          - Swaps: {{ tradabilityResult.swappable.total }}
+          - Swaps: {{ tradabilityResult.firsts.swappable.total }}
         </p>
         <p>
           <span class="font-semibold">Seconds:</span>
@@ -65,20 +71,20 @@ const tradabilityResult = computed(() => teamMeta.value.tradeInfo);
     >
       <div>
         <p>
-          <span class="font-semibold">Total Picks:</span> #
+          <span class="font-semibold">Total Picks:</span> {{ tradabilityResult.seconds.total }}
         </p>
         <p>
-          - Guaranteed: #
+          - Guaranteed: {{ guarenteedSeconds.length }}
         </p>
         <p>
-          - Conditional: #
+          - Conditional: {{ conditionalSeconds.length }}
         </p>
         <p>
-          - Swaps: #
+          - Swaps: {{ tradabilityResult.seconds.owned.swaps.length }}
         </p>
         <p>
           <span class="font-semibold">Own Picks:</span>
-          6/7
+          {{ tradabilityResult.seconds.owned.ownDestiny.length }}/7
         </p>
       </div>
     </SummaryCard>

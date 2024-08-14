@@ -32,8 +32,8 @@ const tableData = computed(() => metaStore.tableData);
           @click="router.push(`/teams/${teamMeta.info.abbr}`)"
         >
           <td>{{ teamMeta.info.fullName }}</td>
-          <td>{{ teamMeta.tradeInfo.tradable.total }}</td>
-          <td>{{ teamMeta.tradeInfo.swappable.total }}</td>
+          <td>{{ teamMeta.tradeInfo.firsts.tradable.total }}</td>
+          <td>{{ teamMeta.tradeInfo.firsts.swappable.total }}</td>
           <td>{{ teamMeta.tradeInfo.seconds.total }}</td>
         </tr>
       </tbody>
