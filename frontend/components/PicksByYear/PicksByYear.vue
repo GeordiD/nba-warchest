@@ -80,7 +80,7 @@ const byYear = computed(() =>
 
 <style scoped>
 .btn {
-  @apply px-2 py-1 cursor-pointer border border-slate-700;
+  @apply px-2 py-1 cursor-pointer border border-slate-700 rounded;
 }
 
 .active {

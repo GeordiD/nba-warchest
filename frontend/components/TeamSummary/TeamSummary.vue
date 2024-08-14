@@ -12,40 +12,75 @@ const {
 
 const teamMeta = computed(() => metaStore.metaPerTeam[abbr]);
 const tradabilityResult = computed(() => teamMeta.value.tradeInfo);
-const warchestRanking = computed(() => metaStore.tableData.find(x => x.info.abbr === abbr)?.ranking ?? '??');
 </script>
 
 <template>
-  <div class="w-full flex flex-col gap-4">
-    <div class="w-full flex gap-3">
-      <div class="h-14">
-        <TeamLogo
-          :abbr="`${abbr}`"
-          filled
-        />
-      </div>
-      <div class="flex flex-col h-full justify-center">
-        <h1 class="text-xl font-semibold">
-          {{ teamMeta.info.fullName }}
-        </h1>
-        <p class="text-sm font-light">
-          War Chest Rank: #{{ warchestRanking }}
+  <div class="flex w-full gap-2">
+    <SummaryCard
+      title="First Round"
+      class="flex-grow"
+    >
+      <div>
+        <p>
+          <span class="font-semibold">Total Picks:</span> #
+        </p>
+        <p>
+          - Guaranteed: #
+        </p>
+        <p>
+          - Conditional: #
+        </p>
+        <p>
+          - Swaps: #
+        </p>
+        <p>
+          <span class="font-semibold">Own Picks:</span>
+          6/7
         </p>
       </div>
-    </div>
-    <div>
-      <p>
-        <span class="font-semibold">Tradable Firsts:</span>
-        {{ tradabilityResult.tradable.total }}
-      </p>
-      <p>
-        <span class="font-semibold">Swappable Firsts:</span>
-        {{ tradabilityResult.swappable.total }}
-      </p>
-      <p>
-        <span class="font-semibold">Seconds:</span>
-        {{ tradabilityResult.seconds.total }}
-      </p>
-    </div>
+    </SummaryCard>
+    <SummaryCard
+      title="Tradable Assets"
+      class="flex-grow"
+    >
+      <div>
+        <p>
+          <span class="font-semibold">Firsts</span>
+        </p>
+        <p>
+          - Picks: {{ tradabilityResult.tradable.total }}
+        </p>
+        <p>
+          - Swaps: {{ tradabilityResult.swappable.total }}
+        </p>
+        <p>
+          <span class="font-semibold">Seconds:</span>
+          {{ tradabilityResult.seconds.total }}
+        </p>
+      </div>
+    </SummaryCard>
+    <SummaryCard
+      title="Second Round"
+      class="flex-grow"
+    >
+      <div>
+        <p>
+          <span class="font-semibold">Total Picks:</span> #
+        </p>
+        <p>
+          - Guaranteed: #
+        </p>
+        <p>
+          - Conditional: #
+        </p>
+        <p>
+          - Swaps: #
+        </p>
+        <p>
+          <span class="font-semibold">Own Picks:</span>
+          6/7
+        </p>
+      </div>
+    </SummaryCard>
   </div>
 </template>
