@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const {
-  primaryColor,
+  // primaryColor,
   title,
 } = defineProps({
   primaryColor: {
@@ -15,13 +15,13 @@ const {
 </script>
 
 <template>
-  <div class="rounded border">
-    <div class="bg-slate-900 text-white rounded-t p-2">
+  <div class="border border-gray-700 rounded flex flex-col">
+    <div class="rounded-t bg-gray-700 text-white p-2">
       <h2 class="font-semibold text-center">
         {{ title }}
       </h2>
     </div>
-    <div class="p-2">
+    <div class="p-4">
       <slot />
     </div>
   </div>

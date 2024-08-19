@@ -21,9 +21,9 @@ const conditionalSeconds = computed(() => tradabilityResult.value.seconds.picks.
 </script>
 
 <template>
-  <div class="flex w-full gap-2">
-    <SummaryCard
-      title="First Round"
+  <div class="flex w-full gap-4 justify-center">
+    <!-- <SummaryCard
+      title="Available Assets"
       class="flex-grow"
     >
       <div>
@@ -44,28 +44,40 @@ const conditionalSeconds = computed(() => tradabilityResult.value.seconds.picks.
           {{ tradabilityResult.firsts.owned.ownDestiny.length }}/7
         </p>
       </div>
-    </SummaryCard>
+    </SummaryCard> -->
     <SummaryCard
       title="Tradable Assets"
-      class="flex-grow"
+      class=""
     >
-      <div>
-        <p>
-          <span class="font-semibold">Firsts</span>
-        </p>
-        <p>
-          - Picks: {{ tradabilityResult.firsts.tradable.total }}
-        </p>
-        <p>
-          - Swaps: {{ tradabilityResult.firsts.swappable.total }}
-        </p>
-        <p>
-          <span class="font-semibold">Seconds:</span>
-          {{ tradabilityResult.seconds.total }}
-        </p>
+      <div class="flex gap-2 items-center">
+        <div class="flex flex-col gap-2 items-center">
+          <div class="flex gap-2">
+            <TradablePickBox
+              :value="tradabilityResult.firsts.tradable.total"
+              label="picks"
+            />
+            <TradablePickBox
+              :value="tradabilityResult.firsts.swappable.total"
+              label="swaps"
+            />
+          </div>
+          <p>
+            <span class="font-semibold text-lg">1sts</span>
+          </p>
+        </div>
+        <div class="border-l-2 border-black opacity-20 h-20 rounded-full" />
+        <div class="flex flex-col gap-2 items-center">
+          <TradablePickBox
+            :value="tradabilityResult.seconds.total"
+            label="picks"
+          />
+          <p>
+            <span class="font-semibold text-lg">2nds</span>
+          </p>
+        </div>
       </div>
     </SummaryCard>
-    <SummaryCard
+    <!-- <SummaryCard
       title="Second Round"
       class="flex-grow"
     >
@@ -87,6 +99,6 @@ const conditionalSeconds = computed(() => tradabilityResult.value.seconds.picks.
           {{ tradabilityResult.seconds.owned.ownDestiny.length }}/7
         </p>
       </div>
-    </SummaryCard>
+    </SummaryCard> -->
   </div>
 </template>
