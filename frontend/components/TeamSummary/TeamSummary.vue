@@ -21,37 +21,75 @@ const conditionalSeconds = computed(() => tradabilityResult.value.seconds.picks.
 </script>
 
 <template>
-  <div class="flex w-full gap-4 justify-center">
-    <!-- <SummaryCard
+  <div class="w-full gap-6 justify-center flex flex-col sm:flex-row">
+    <SummaryCard
       title="Available Assets"
-      class="flex-grow"
+      class="flex-grow basis-0"
     >
-      <div>
-        <p>
-          <span class="font-semibold">Total Picks:</span> {{ tradabilityResult.firsts.total }}
-        </p>
-        <p>
-          - Guaranteed: {{ guarenteedFirsts.length }}
-        </p>
-        <p>
-          - Conditional: {{ conditionalFirsts.length }}
-        </p>
-        <p>
-          - Swaps: {{ tradabilityResult.firsts.owned.swaps.length }}
-        </p>
-        <p>
-          <span class="font-semibold">Own Picks:</span>
-          {{ tradabilityResult.firsts.owned.ownDestiny.length }}/7
-        </p>
-      </div>
-    </SummaryCard> -->
+      <table class="pick-table">
+        <thead>
+          <tr>
+            <th />
+            <th>1sts</th>
+            <th>2nds</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              Total
+            </td>
+            <td>
+              {{ tradabilityResult.firsts.total }}
+            </td>
+            <td>
+              {{ tradabilityResult.seconds.total }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Guarenteed
+            </td>
+            <td>
+              {{ guarenteedFirsts.length }}
+            </td>
+            <td>
+              {{ guarenteedSeconds.length }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Conditional
+            </td>
+            <td>
+              {{ conditionalFirsts.length }}
+            </td>
+            <td>
+              {{ conditionalSeconds.length }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Own Picks
+            </td>
+            <td>
+              {{ tradabilityResult.firsts.owned.ownDestiny.length }}/7
+            </td>
+            <td>
+              {{ tradabilityResult.seconds.owned.ownDestiny.length }}/7
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </SummaryCard>
     <SummaryCard
       title="Tradable Assets"
-      class=""
+      class="flex-grow basis-0"
     >
-      <div class="flex gap-2 items-center">
+      <div class="flex gap-4 items-center justify-center">
         <div class="flex flex-col gap-2 items-center">
-          <div class="flex gap-2">
+          <div class="flex gap-4">
             <TradablePickBox
               :value="tradabilityResult.firsts.tradable.total"
               label="picks"
@@ -77,28 +115,21 @@ const conditionalSeconds = computed(() => tradabilityResult.value.seconds.picks.
         </div>
       </div>
     </SummaryCard>
-    <!-- <SummaryCard
-      title="Second Round"
-      class="flex-grow"
-    >
-      <div>
-        <p>
-          <span class="font-semibold">Total Picks:</span> {{ tradabilityResult.seconds.total }}
-        </p>
-        <p>
-          - Guaranteed: {{ guarenteedSeconds.length }}
-        </p>
-        <p>
-          - Conditional: {{ conditionalSeconds.length }}
-        </p>
-        <p>
-          - Swaps: {{ tradabilityResult.seconds.owned.swaps.length }}
-        </p>
-        <p>
-          <span class="font-semibold">Own Picks:</span>
-          {{ tradabilityResult.seconds.owned.ownDestiny.length }}/7
-        </p>
-      </div>
-    </SummaryCard> -->
   </div>
 </template>
+
+<style scoped>
+table {
+  width: 100%;
+}
+
+td, th {
+  padding: 0.25rem;
+  text-align: right;
+}
+
+td:first-of-type {
+  text-align: left;
+  /* padding-right: 10rem; */
+}
+</style>

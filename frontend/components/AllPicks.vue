@@ -28,12 +28,12 @@ const meta = computed(() => picks.map(x => ({
         :key="group.year"
         class="flex flex-col gap-2"
       >
-        <div class="flex items-center gap-6 justify-center">
-          <hr class="w-8">
+        <div class="flex items-center gap-6">
+          <!-- <hr class="w-8"> -->
           <p class="font-semibold text-lg text-center">
             {{ group.year }}
           </p>
-          <hr class="w-8">
+          <hr class="w-full">
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
