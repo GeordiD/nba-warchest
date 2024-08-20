@@ -2,17 +2,7 @@
 const metaStore = useMetaStore();
 const router = useRouter();
 
-const tableData = computed(() =>
-  Object.values(metaStore.metaPerTeam)
-    .sort((a, b) => {
-      // Trades > Swaps > Seconds (TBD)
-      const tradeDiff = b.tradeInfo.tradable.total - a.tradeInfo.tradable.total;
-      const swapDiff = b.tradeInfo.swappable.total - a.tradeInfo.swappable.total;
-      const secondDiff = b.tradeInfo.seconds.total - a.tradeInfo.seconds.total;
-
-      return tradeDiff * 10000 + swapDiff * 100 + secondDiff;
-    }),
-)
+const tableData = computed(() => metaStore.tableData);
 </script>
 
 <template>
@@ -42,8 +32,8 @@ const tableData = computed(() =>
           @click="router.push(`/teams/${teamMeta.info.abbr}`)"
         >
           <td>{{ teamMeta.info.fullName }}</td>
-          <td>{{ teamMeta.tradeInfo.tradable.total }}</td>
-          <td>{{ teamMeta.tradeInfo.swappable.total }}</td>
+          <td>{{ teamMeta.tradeInfo.firsts.tradable.total }}</td>
+          <td>{{ teamMeta.tradeInfo.firsts.swappable.total }}</td>
           <td>{{ teamMeta.tradeInfo.seconds.total }}</td>
         </tr>
       </tbody>

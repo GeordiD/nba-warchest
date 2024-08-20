@@ -1,3 +1,5 @@
+import Aura from '@primevue/themes/aura';
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
@@ -6,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
+    '@primevue/nuxt-module',
     '@nuxt/test-utils/module',
     '@nuxt/icon',
     'nuxt-svgo',
@@ -24,6 +27,16 @@ export default defineNuxtConfig({
   icon: {
     mode: 'css',
     provider: 'iconify',
+  },
+  primevue: {
+    options: {
+      theme: {
+        preset: Aura,
+        options: {
+          darkModeSelector: '.dark-mode',
+        },
+      },
+    },
   },
   tailwindcss: {
     config: {

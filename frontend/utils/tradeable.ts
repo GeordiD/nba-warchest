@@ -62,7 +62,7 @@ function getPicksFromMeta(metas: YearMeta[]): PickSummaryMeta[] {
           }));
 }
 
-function getPickDescription(pick: PickSummaryMeta): string {
+export function getPickDescription(pick: Omit<PickSummaryMeta, 'year'>): string {
   if (pick.summary.desc)
     return pick.summary.desc;
 
@@ -79,7 +79,7 @@ function isTradablePicksGroup(value: unknown): value is TradablePicksGroup {
   return (value as TradablePicksGroup).total !== undefined
 }
 
-function isConsideredTradedAway(pick: PickSummaryMeta) {
+function isConsideredTradedAway(pick: { summary: PickSummary }) {
   return pick.summary.isTradedAway
     || (pick.summary.isConditional && pick.summary.isOwn)
 }
@@ -251,6 +251,13 @@ function getTotal(input: (PickSummaryMeta | TradablePicksGroup<PickSummaryMeta>)
   return input.reduce((prev, curr) => prev + (isTradablePicksGroup(curr) ? curr.total : 1), 0);
 }
 
+function getOwnedObject(input: PickSummary[]) {
+  return {
+    swaps: input.filter(x => x.swapType && x.swapType !== 'unfavorable'),
+    ownDestiny: input.filter(x => x.isOwn),
+  }
+}
+
 export function getTradability(meta: TeamMeta) {
   const picks = getPicksFromMeta(meta.picks);
   const tradables = getTradablePicks(picks, {
@@ -259,24 +266,34 @@ export function getTradability(meta: TeamMeta) {
   });
   const swappables = getSwappablePicks(picks, tradables);
 
-  const totalSeconds = meta.picks
+  const allFirsts = meta.picks
+    .flatMap(x => x.roundOne.flatMap(y => y.summary))
+    .filter(x => !isConsideredTradedAway({ summary: x }))
+
+  const allSeconds = meta.picks
     .flatMap(x => x.roundTwo.flatMap(y => y.summary))
     .filter(x => !x.isTradedAway && !(x.isOwn && x.isConditional))
-    .length
 
   return {
-    tradable: {
-      total: getTotal(tradables),
-      asMeta: tradables,
-      asStrings: tradables.map(x => stringifyPickGroups(x)),
-    },
-    swappable: {
-      total: getTotal(swappables),
-      asMetas: swappables,
-      asStrings: swappables.map(x => stringifyPickGroups(x)),
+    firsts: {
+      picks: allFirsts,
+      total: allFirsts.length,
+      owned: getOwnedObject(allFirsts),
+      tradable: {
+        total: getTotal(tradables),
+        asMeta: tradables,
+        asStrings: tradables.map(x => stringifyPickGroups(x)),
+      },
+      swappable: {
+        total: getTotal(swappables),
+        asMetas: swappables,
+        asStrings: swappables.map(x => stringifyPickGroups(x)),
+      },
     },
     seconds: {
-      total: totalSeconds,
+      owned: getOwnedObject(allSeconds),
+      picks: allSeconds,
+      total: allSeconds.length,
     },
   }
 }

@@ -1,17 +1,12 @@
 <script setup lang="ts">
-import type { YearMeta, PickDetails, PickSummary } from '~/data/PickMetaTypes';
+import type { PickDetails, PickSummary } from '~/data/PickMetaTypes';
 
 const {
-  meta,
   pickData,
   relatedAbbr,
 } = defineProps({
   relatedAbbr: {
     type: String,
-    required: true,
-  },
-  meta: {
-    type: Object as PropType<YearMeta[]>,
     required: true,
   },
   pickData: {
@@ -64,9 +59,10 @@ const swapClass = computed(() => {
   }
 })
 
+const pickDescription = computed(() => getPickDescription(pickData))
+
 const {
   isIdActive,
-  isTarget,
   onMouseOut,
   onMouseOver,
 } = useHoverPick(pickData.id);
@@ -79,6 +75,7 @@ const {
     @mouseout="onMouseOut"
   >
     <div
+      v-tooltip="pickDescription"
       class="rounded-lg h-14 w-14 flex items-center justify-center relative"
       :class="[
         isTradedAway ? 'traded-away' : (pickData.summary.isConditional ? 'conditional' : 'owned'),
@@ -118,12 +115,6 @@ const {
         </div>
       </div>
     </div>
-
-    <PickHover
-      v-if="isTarget"
-      :pick-data="pickData"
-      :meta="meta"
-    />
   </div>
 </template>
 

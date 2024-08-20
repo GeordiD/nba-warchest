@@ -30,12 +30,8 @@ const byYear = computed(() =>
 </script>
 
 <template>
-  <div class="w-full min-h-32 rounded border border-slate-400 p-2 divide-y-2 divide-slate-200 flex flex-col gap-2">
-    <!-- Header -->
-    <div class="flex justify-between items-center">
-      <p class="text-lg">
-        Picks by Year
-      </p>
+  <SummaryCard title="Picks By Year">
+    <template #header-right>
       <div class="flex gap-2">
         <button
           class="btn"
@@ -52,9 +48,8 @@ const byYear = computed(() =>
           Seconds
         </button>
       </div>
-    </div>
+    </template>
 
-    <!-- Content -->
     <div class="flex flex-col gap-4 pt-2 sm:flex-row sm:justify-between">
       <div
         v-for="yearInfo in byYear"
@@ -70,18 +65,17 @@ const byYear = computed(() =>
             :id="pick.id"
             :key="i"
             :pick-data="pick"
-            :meta="picks"
             :related-abbr="abbr"
           />
         </div>
       </div>
     </div>
-  </div>
+  </SummaryCard>
 </template>
 
 <style scoped>
 .btn {
-  @apply px-2 py-1 cursor-pointer border border-slate-700;
+  @apply px-2 py-1 cursor-pointer border border-slate-700 rounded;
 }
 
 .active {
