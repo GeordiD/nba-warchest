@@ -5,23 +5,23 @@ import ColumnGroup from 'primevue/columngroup';
 import Row from 'primevue/row';
 
 const metaStore = useMetaStore();
-const router = useRouter();
 
 const tableData = computed(() => metaStore.tableData);
 </script>
 
 <template>
-  <div class="p-4 flex justify-center">
+  <div class="p-4 overflow-auto">
     <DataTable
       :value="tableData"
       striped-rows
-      sort-order="1"
+      :sort-order="1"
       sort-field="ranking"
+      size="small"
+      class="mb-8"
     >
       <ColumnGroup type="header">
         <Row>
           <Column
-            header="Rank"
             :rowspan="2"
             sortable
             field="ranking"
@@ -72,18 +72,23 @@ const tableData = computed(() => metaStore.tableData);
         field="info.fullName"
       >
         <template #body="slotProps">
-          <div
-            class="flex items-center gap-2"
-            @click="router.push(`/teams/${slotProps.data.info.abbr}`)"
+          <a
+            class="flex items-center gap-2 select-none"
+            :href="`/teams/${slotProps.data.info.abbr}`"
           >
-            <div class="h-6">
+            <div class="h-6 w-6">
               <TeamLogo
                 :abbr="`${slotProps.data.info.abbr}`"
                 filled
               />
             </div>
-            {{ slotProps.data.info.fullName }}
-          </div>
+            <p class="hidden sm:block">
+              {{ slotProps.data.info.fullName }}
+            </p>
+            <p class="block sm:hidden">
+              {{ slotProps.data.info.name }}
+            </p>
+          </a>
         </template>
       </Column>
       <Column
@@ -109,12 +114,4 @@ const tableData = computed(() => metaStore.tableData);
 </template>
 
 <style scoped>
-.main-table td,
-.main-table th {
-  @apply px-2 py-1;
-}
-
-.main-table th {
-  @apply bg-slate-700 text-white;
-}
 </style>
