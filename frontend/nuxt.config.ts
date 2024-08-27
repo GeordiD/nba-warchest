@@ -27,6 +27,7 @@ export default defineNuxtConfig({
   icon: {
     mode: 'css',
     provider: 'iconify',
+    size: '100%',
   },
   primevue: {
     options: {
