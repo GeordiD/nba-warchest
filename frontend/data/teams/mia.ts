@@ -85,6 +85,8 @@ export const MiaPickMeta: YearMeta[] = [
         },
         summary: {
           isOwn: true,
+          teams: ['CHA'],
+          isConditional: true,
         },
       },
     ],
