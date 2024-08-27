@@ -30,6 +30,7 @@ export default defineNuxtConfig({
     size: '100%',
   },
   primevue: {
+    autoImport: false,
     options: {
       theme: {
         preset: Aura,
