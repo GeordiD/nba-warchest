@@ -85,6 +85,7 @@ const {
       class="rounded-lg h-14 w-14 flex items-center justify-center relative"
       :class="[
         isTradedAway ? 'traded-away' : (pickData.summary.isConditional ? 'conditional' : 'owned'),
+        pickData.summary.isOwn ? 'is-own' : '',
         { hover: isIdActive },
       ]"
     >
@@ -148,6 +149,11 @@ const {
 .conditional {
   background-color: var(--bg-conditional);
   color: black;
+}
+
+.conditional.is-own {
+  @apply border-dashed border-2;
+  border-color: #a49a67;
 }
 
 .conditional .extra-circle {
