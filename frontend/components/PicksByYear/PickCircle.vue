@@ -4,6 +4,7 @@ import type { PickDetails, PickSummary } from '~/data/PickMetaTypes';
 const {
   pickData,
   relatedAbbr,
+  year,
 } = defineProps({
   relatedAbbr: {
     type: String,
@@ -15,6 +16,10 @@ const {
       summary: PickSummary,
       details: string | PickDetails,
     }>,
+    required: true,
+  },
+  year: {
+    type: Number,
     required: true,
   },
 })
@@ -69,8 +74,9 @@ const {
 </script>
 
 <template>
-  <div
+  <a
     class="flex items-center cursor-pointer relative pick-circle"
+    :href="`#${year}`"
     @mouseover="onMouseOver"
     @mouseout="onMouseOut"
   >
@@ -115,7 +121,7 @@ const {
         </div>
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <style scoped>
