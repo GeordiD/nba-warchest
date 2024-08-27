@@ -198,6 +198,7 @@ export const BknPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2030, 2, 'DAL'),
     ],
   },
   {

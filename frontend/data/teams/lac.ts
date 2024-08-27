@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { prot, tradePick, unfavorableSwap } from '~/data/shorthand';
+import { favorableSwap, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const LacPickMeta: YearMeta[] = [
   {
@@ -138,9 +138,11 @@ export const LacPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2030.2',
-        details: 'Own',
+        details: `Own (${favorableSwap} UTA)`,
         summary: {
           isOwn: true,
+          teams: ['UTA'],
+          swapType: 'favorable',
         },
       },
     ],
