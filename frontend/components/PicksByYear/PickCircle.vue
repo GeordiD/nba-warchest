@@ -110,7 +110,6 @@ const {
         >
           <TeamLogo
             :abbr="`${abbr}`"
-            filled
           />
         </div>
 

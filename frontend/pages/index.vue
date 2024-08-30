@@ -78,8 +78,7 @@ const tableData = computed(() => metaStore.tableData);
           >
             <div class="h-6 w-6">
               <TeamLogo
-                :abbr="`${slotProps.data.info.abbr}`"
-                filled
+                :abbr="slotProps.data.info.abbr"
               />
             </div>
             <p class="hidden sm:block">

@@ -20,7 +20,6 @@ const warchestRanking = computed(() => metaStore.tableData.find(x => x.info.abbr
       <div class="h-20">
         <TeamLogo
           :abbr="`${abbr}`"
-          filled
         />
       </div>
       <div class="flex flex-col h-full justify-center gap-1">

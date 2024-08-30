@@ -46,45 +46,48 @@ const {
   },
 })
 
-const logo = computed(() => (
-  {
-    ATL: SvgoAtl,
-    BOS: SvgoBos,
-    BKN: SvgoBkn,
-    CHA: SvgoCha,
-    CHI: SvgoChi,
-    CLE: SvgoCle,
-    DAL: SvgoDal,
-    DEN: SvgoDen,
-    DET: SvgoDet,
-    GSW: SvgoGsw,
-    HOU: SvgoHou,
-    IND: SvgoInd,
-    LAC: SvgoLac,
-    LAL: SvgoLal,
-    MEM: SvgoMem,
-    MIA: SvgoMia,
-    MIL: SvgoMil,
-    MIN: SvgoMin,
-    NOP: SvgoNop,
-    NYK: SvgoNyk,
-    OKC: SvgoOkc,
-    ORL: SvgoOrl,
-    PHI: SvgoPhi,
-    PHX: SvgoPhx,
-    POR: SvgoPor,
-    SAC: SvgoSac,
-    SAS: SvgoSas,
-    TOR: SvgoTor,
-    UTA: SvgoUta,
-    WAS: SvgoWas,
-  }[abbr]
-))
+const test = computed(() => {
+  return abbr;
+})
+
+const logos: Record<string, unknown> = {
+  ATL: SvgoAtl,
+  BOS: SvgoBos,
+  BKN: SvgoBkn,
+  CHA: SvgoCha,
+  CHI: SvgoChi,
+  CLE: SvgoCle,
+  DAL: SvgoDal,
+  DEN: SvgoDen,
+  DET: SvgoDet,
+  GSW: SvgoGsw,
+  HOU: SvgoHou,
+  IND: SvgoInd,
+  LAC: SvgoLac,
+  LAL: SvgoLal,
+  MEM: SvgoMem,
+  MIA: SvgoMia,
+  MIL: SvgoMil,
+  MIN: SvgoMin,
+  NOP: SvgoNop,
+  NYK: SvgoNyk,
+  OKC: SvgoOkc,
+  ORL: SvgoOrl,
+  PHI: SvgoPhi,
+  PHX: SvgoPhx,
+  POR: SvgoPor,
+  SAC: SvgoSac,
+  SAS: SvgoSas,
+  TOR: SvgoTor,
+  UTA: SvgoUta,
+  WAS: SvgoWas,
+}
 </script>
 
 <template>
   <component
-    :is="logo"
+    :is="logos[abbr]"
+    filled
   />
 </template>
 
