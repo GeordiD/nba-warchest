@@ -19,6 +19,7 @@
     "@primevue/themes": "^4.0.4",
     "nuxt": "^3.11.2",
     "nuxt-svgo": "^4.0.2",
+    "nuxt-umami": "^2.6.4",
     "pinia": "^2.1.7",
     "pocketbase": "^0.21.3",
     "primevue": "^4.0.3",

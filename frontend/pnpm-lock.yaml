@@ -29,6 +29,9 @@ importers:
       nuxt-svgo:
         specifier: ^4.0.2
         version: 4.0.2(magicast@0.3.4)(rollup@4.18.0)(vue@3.4.31(typescript@5.5.3))
+      nuxt-umami:
+        specifier: ^2.6.4
+        version: 2.6.4
       pinia:
         specifier: ^2.1.7
         version: 2.1.7(typescript@5.5.3)(vue@3.4.31(typescript@5.5.3))
@@ -3206,6 +3209,9 @@ packages:
         optional: true
       vue-svg-loader:
         optional: true
+
+  nuxt-umami@2.6.4:
+    resolution: {integrity: sha512-R+Fv+chpa3CcLLkAERzeCFmvZcFv3irUhtAH9x4Ukm12hjHGKeUSArZK07Ld/bzkq+2WJp6QqmXdr/KK/f6g1w==}
 
   nuxt@3.12.3:
     resolution: {integrity: sha512-Qdkc+ucWwFcKsiL/OTF87jbgyFSymwPRKiiu0mvzsd/RXTn4hGiBduAlF3f7Yy0F9pDjSj8XHKDSnHYsDzm6rA==}
@@ -8163,6 +8169,8 @@ snapshots:
       - magicast
       - rollup
       - supports-color
+
+  nuxt-umami@2.6.4: {}
 
   nuxt@3.12.3(@parcel/watcher@2.4.1)(@types/node@20.14.10)(eslint@8.57.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.0)(terser@5.31.1)(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.10)(terser@5.31.1))(vue-tsc@1.8.27(typescript@5.5.3)):
     dependencies:

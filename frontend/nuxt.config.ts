@@ -1,9 +1,9 @@
 import Aura from '@primevue/themes/aura';
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
   devtools: { enabled: true },
+  extends: ['nuxt-umami'],
   modules: [
     '@nuxt/eslint',
     '@nuxtjs/tailwindcss',
