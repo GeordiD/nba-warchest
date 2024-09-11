@@ -13,6 +13,11 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     'nuxt-svgo',
   ],
+  app: {
+    head: {
+      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    },
+  },
   components: [
     {
       path: '~/components',
