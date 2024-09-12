@@ -29,6 +29,14 @@ export const BknPickMeta: YearMeta[] = [
           swapType: 'unfavorable',
         },
       },
+      {
+        id: '2025.1.MIL',
+        details: `MIL ${prot(4)}`,
+        summary: {
+          teams: ['MIL'],
+          isConditional: true,
+        },
+      },
     ],
     roundTwo: [
       tradePick(2025, 2, 'NYK'),
@@ -83,6 +91,7 @@ export const BknPickMeta: YearMeta[] = [
           teams: ['HOU'],
         },
       },
+      getPick(2027, 1, 'NYK'),
       {
         id: '2027.1.PHI',
         details: {
@@ -125,7 +134,7 @@ export const BknPickMeta: YearMeta[] = [
       {
         id: '2028.1',
         details: {
-          headline: `Own (${favorableSwap} PHX)`,
+          headline: `Own (${favorableSwap} PHX / NYK)`,
           extra: [
             `If PHI 1st does not convey in 2027, PHI ${prot(8)} included in this swap (BKN getting the two most favorable)`,
           ],
@@ -133,7 +142,7 @@ export const BknPickMeta: YearMeta[] = [
         summary: {
           isOwn: true,
           swapType: 'favorable',
-          teams: ['PHX'],
+          teams: ['NYK', 'PHX'],
         },
       },
     ],
@@ -158,6 +167,7 @@ export const BknPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2029, 1, 'NYK'),
       {
         id: '2029.1.DAL-PHX-HOU',
         details: 'Worst of DAL / PHX / HOU',
@@ -211,6 +221,7 @@ export const BknPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2031, 1, 'NYK'),
     ],
     roundTwo: [
       {

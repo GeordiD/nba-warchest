@@ -1,18 +1,12 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { getPick, ifNotConvey, prot, tradePick } from '~/data/shorthand';
+import { getPick, ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const NykPickMeta: YearMeta[] = [
   {
     year: 2025,
     roundOne: [
-      {
-        id: '2025.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2025, 1, 'BKN'),
       {
         id: '2025.1.DET',
         details: {
@@ -28,14 +22,6 @@ export const NykPickMeta: YearMeta[] = [
         summary: {
           isConditional: true,
           teams: ['DET'],
-        },
-      },
-      {
-        id: '2025.1.MIL',
-        details: `MIL ${prot(4)}`,
-        summary: {
-          teams: ['MIL'],
-          isConditional: true,
         },
       },
       {
@@ -101,13 +87,7 @@ export const NykPickMeta: YearMeta[] = [
   {
     year: 2027,
     roundOne: [
-      {
-        id: '2027.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2027, 1, 'BKN'),
     ],
     roundTwo: [
       {
@@ -124,9 +104,11 @@ export const NykPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2028.1',
-        details: 'Own',
+        details: `Own (${unfavorableSwap} BKN / PHX)`,
         summary: {
           isOwn: true,
+          swapType: 'unfavorable',
+          teams: ['BKN', 'PHX'],
         },
       },
     ],
@@ -145,13 +127,7 @@ export const NykPickMeta: YearMeta[] = [
   {
     year: 2029,
     roundOne: [
-      {
-        id: '2029.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2029, 1, 'BKN'),
     ],
     roundTwo: [
       tradePick(2029, 2, 'DET'),
@@ -189,13 +165,7 @@ export const NykPickMeta: YearMeta[] = [
   {
     year: 2031,
     roundOne: [
-      {
-        id: '2031.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2031, 1, 'BKN'),
     ],
     roundTwo: [
       {
