@@ -15,7 +15,7 @@ const {
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center bg-green-700 text-white rounded-lg h-20 w-20">
+  <div class="flex flex-col items-center justify-center bg-gray-700 text-white rounded-lg h-20 w-20">
     <p class="text-5xl font-bold leading-none">
       {{ value }}
     </p>
