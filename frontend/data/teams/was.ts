@@ -165,6 +165,15 @@ export const WasPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      {
+        id: '2029.1.BOS.MIL.POR',
+        details: 'Second best of BOS / MIL / POR',
+        summary: {
+          teams: ['BOS', 'MIL', 'POR'],
+          swapType: 'mixed',
+          ownNotIncluded: true,
+        },
+      },
     ],
     roundTwo: [
       {

@@ -62,6 +62,7 @@ export const OrlPickMeta: YearMeta[] = [
         summary: {
           isOwn: true,
           swapType: 'favorable',
+          teams: ['PHX', 'WAS'],
         },
       },
     ],

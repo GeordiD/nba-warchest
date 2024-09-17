@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { botProt, favorableSwap, getPick, tradePick } from '~/data/shorthand';
+import { botProt, favorableSwap, getPick, prot, tradePick } from '~/data/shorthand';
 
 export const NopPickMeta: YearMeta[] = [
   {
@@ -13,7 +13,6 @@ export const NopPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2025, 1, 'NOP'),
       {
         id: '2025.1.MIL',
         details: `MIL ${botProt(4)}`,
@@ -57,12 +56,26 @@ export const NopPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2027.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
+        details: {
+          headline: `Best of NOP / MIL`,
+          extra: [
+            `Worst of MIL / NOP to ATL ${prot(4)}`,
+          ],
         },
+        summary: [
+          {
+            isOwn: true,
+            swapType: 'favorable',
+            teams: ['MIL'],
+          },
+          {
+            isConditional: true,
+            isTradedAway: true,
+            swapType: 'favorable',
+            teams: ['MIL'],
+          },
+        ],
       },
-      getPick(2027, 1, 'MIL'),
     ],
     roundTwo: [
       {

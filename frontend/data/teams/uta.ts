@@ -22,6 +22,8 @@ export const UtaPickMeta: YearMeta[] = [
           isConditional: true,
         },
       },
+      getPick(2025, 1, 'CLE'),
+      getPick(2025, 1, 'MIN'),
     ],
     roundTwo: [
       tradePick(2025, 2, 'MIN'),
@@ -66,6 +68,7 @@ export const UtaPickMeta: YearMeta[] = [
         },
       },
       getPick(2027, 1, 'CLE'),
+      getPick(2027, 1, 'MIN'),
       {
         id: '2027.1.LAL',
         details: {
@@ -79,7 +82,6 @@ export const UtaPickMeta: YearMeta[] = [
           isConditional: true,
         },
       },
-      getPick(2027, 1, 'MIN'),
     ],
     roundTwo: [
       {

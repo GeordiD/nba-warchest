@@ -135,6 +135,7 @@ export const DenPickMeta: YearMeta[] = [
         summary: {
           isOwn: true,
           isConditional: true,
+          teams: ['OKC'],
         },
       },
     ],

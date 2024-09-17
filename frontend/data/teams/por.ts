@@ -149,13 +149,24 @@ export const PorPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2029.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
+        details: {
+          headline: 'Best and worst of BOS / MIL / POR',
+          extra: [
+            'Second best to WAS',
+          ],
         },
+        summary: [
+          {
+            isOwn: true,
+            teams: ['BOS', 'MIL'],
+            swapType: 'favorable',
+          },
+          {
+            teams: ['BOS', 'MIL'],
+            swapType: 'unfavorable',
+          },
+        ],
       },
-      getPick(2029, 1, 'BOS'),
-      getPick(2029, 1, 'MIL'),
     ],
     roundTwo: [
       tradePick(2029, 2, 'IND'),

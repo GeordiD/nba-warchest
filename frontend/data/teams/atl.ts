@@ -15,6 +15,7 @@ export const AtlPickMeta: YearMeta[] = [
           teams: ['SAS'],
         },
       },
+      getPick(2025, 1, 'LAL'),
       {
         id: '2025.1.SAC',
         details: {

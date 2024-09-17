@@ -204,11 +204,11 @@ export const SasPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2030.1',
-        details: `Own (${favorableSwap} DAL)`,
+        details: `Own (${favorableSwap} DAL / MIN ${prot(1)})`,
         summary: {
           isOwn: true,
           swapType: 'favorable',
-          teams: ['DAL'],
+          teams: ['DAL', 'MIN'],
         },
       },
     ],
@@ -228,11 +228,13 @@ export const SasPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2031.1',
-        details: 'Own',
+        details: `Own (${favorableSwap})`,
         summary: {
           isOwn: true,
+          swapType: 'favorable',
         },
       },
+      getPick(2031, 1, 'MIN'),
     ],
     roundTwo: [
       {

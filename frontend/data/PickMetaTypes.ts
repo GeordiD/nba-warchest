@@ -14,6 +14,7 @@ export interface PickDetails {
 export interface PickSummary {
   isConditional?: boolean,
   swapType?: SwapType,
+  ownNotIncluded?: boolean,
   teams?: TeamAbbr[];
   isTradedAway?: boolean;
   isOwn?: boolean;

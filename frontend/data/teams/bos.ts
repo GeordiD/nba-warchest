@@ -125,11 +125,17 @@ export const bosPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2029.1',
-        details: 'To POR',
+        details: {
+          headline: 'To POR / WAS',
+          extra: [
+            'Best and least favorable of BOS / POR / WAS to POR',
+            'Second most favorable to WAS',
+          ],
+        },
         summary: {
           isOwn: true,
           isTradedAway: true,
-          teams: ['POR'],
+          teams: ['POR', 'WAS'],
         },
       },
     ],

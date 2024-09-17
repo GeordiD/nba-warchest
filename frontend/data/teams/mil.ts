@@ -9,16 +9,16 @@ export const MilPickMeta: YearMeta[] = [
       {
         id: '2025.1',
         details: {
-          headline: 'To NOP / NYK',
+          headline: 'To NOP / BKN',
           extra: [
             '1-4 to NOP',
-            '5-30 to NYK',
+            '5-30 to BKN',
           ],
         },
         summary: {
           isOwn: true,
           isTradedAway: true,
-          teams: ['NOP', 'NYK'],
+          teams: ['NOP', 'BKN'],
         },
       },
     ],
@@ -60,7 +60,21 @@ export const MilPickMeta: YearMeta[] = [
   {
     year: 2027,
     roundOne: [
-      tradePick(2027, 1, 'NOP'),
+      {
+        id: '2027.1',
+        details: {
+          headline: 'To ATL / NOP',
+          extra: [
+            'Best of MIL / NOP to NOP',
+            'Worst to ATL',
+          ],
+        },
+        summary: {
+          isOwn: true,
+          isTradedAway: true,
+          teams: ['ATL', 'NOP'],
+        },
+      },
     ],
     roundTwo: [
       tradePick(2027, 2, 'PHI'),
@@ -91,7 +105,21 @@ export const MilPickMeta: YearMeta[] = [
   {
     year: 2029,
     roundOne: [
-      tradePick(2029, 1, 'POR'),
+      {
+        id: '2029.1',
+        details: {
+          headline: 'To POR / WAS',
+          extra: [
+            'Best and worst of BOS / MIL / POR to POR',
+            'Second best to WAS',
+          ],
+        },
+        summary: {
+          isOwn: true,
+          isTradedAway: true,
+          teams: ['POR', 'WAS'],
+        },
+      },
     ],
     roundTwo: [
       tradePick(2029, 2, 'DET'),

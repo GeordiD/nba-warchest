@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { getPick, ifNotConvey, prot, tradePick } from '~/data/shorthand';
+import { getPick, ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const SacPickMeta: YearMeta[] = [
   {
@@ -151,9 +151,11 @@ export const SacPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2031.1',
-        details: 'Own',
+        details: `Own (${unfavorableSwap} SAS)`,
         summary: {
           isOwn: true,
+          teams: ['SAS'],
+          swapType: 'unfavorable',
         },
       },
     ],

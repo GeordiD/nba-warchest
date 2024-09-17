@@ -36,10 +36,14 @@ const abbrs = computed(() => {
   }
 
   if (summary.swapType) {
-    return [
-      relatedAbbr,
-      ...teams,
-    ]
+    if (!summary.ownNotIncluded) {
+      return [
+        relatedAbbr,
+        ...teams,
+      ]
+    } else {
+      return teams;
+    }
   }
 
   return teams;

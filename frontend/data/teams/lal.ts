@@ -6,7 +6,7 @@ export const LalPickMeta: YearMeta[] = [
   {
     year: 2025,
     roundOne: [
-      tradePick(2025, 1, 'NOP'),
+      tradePick(2025, 1, 'ATL'),
     ],
     roundTwo: [
       {

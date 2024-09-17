@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { getPick, ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
+import { favorableSwap, getPick, ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const MinPickMeta: YearMeta[] = [
   {
@@ -114,9 +114,11 @@ export const MinPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2030.1',
-        details: 'Own',
+        details: `Own (${unfavorableSwap} best of DAL / SAS) ${prot(1)}`,
         summary: {
           isOwn: true,
+          swapType: 'mixed',
+          teams: ['DAL', 'SAS'],
         },
       },
     ],
@@ -127,13 +129,7 @@ export const MinPickMeta: YearMeta[] = [
   {
     year: 2031,
     roundOne: [
-      {
-        id: '2031.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2031, 1, 'SAS'),
     ],
     roundTwo: [
       {
