@@ -49,7 +49,7 @@ const conditionalSeconds = computed(() => tradabilityResult.value.seconds.picks.
           </tr>
           <tr>
             <td>
-              Guarenteed
+              Guaranteed
             </td>
             <td>
               {{ guarenteedFirsts.length }}
