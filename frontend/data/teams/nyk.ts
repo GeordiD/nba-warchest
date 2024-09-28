@@ -8,23 +8,6 @@ export const NykPickMeta: YearMeta[] = [
     roundOne: [
       tradePick(2025, 1, 'BKN'),
       {
-        id: '2025.1.DET',
-        details: {
-          headline: `DET ${prot(13)}`,
-          extra: [
-            ifNotConvey([
-              `2026 1st ${prot(11)}`,
-              `2027 1st ${prot(9)}`,
-              '2026 2nd & 2027 2nd',
-            ]),
-          ],
-        },
-        summary: {
-          isConditional: true,
-          teams: ['DET'],
-        },
-      },
-      {
         id: '2025.1.WAS',
         details: {
           headline: `WAS ${prot(10)}`,
