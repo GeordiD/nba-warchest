@@ -1,9 +1,4 @@
-import type { TeamMeta } from '~/data/TeamMeta';
 import { getMetadataForTeam } from '~/data/getAssetMetadataForTeam';
-
-export interface RichTeamMeta extends TeamMeta {
-  tradeInfo: ReturnType<typeof getTradability>;
-}
 
 // None of this needs to be reactive, but we are using a store
 // to reduce computation "costs"
@@ -19,13 +14,12 @@ export const useMetaStore = defineStore('meta', () => {
 
   const tableData = computed(() => Object.values(metaPerTeam.value)
     .map(x => x as RichTeamMeta)
-    .sort((a, b) => {
-      // Trades > Swaps > Seconds (TBD)
-      const tradeDiff = b.tradeInfo.firsts.tradable.total - a.tradeInfo.firsts.tradable.total;
-      const swapDiff = b.tradeInfo.firsts.swappable.total - a.tradeInfo.firsts.swappable.total;
-      const secondDiff = b.tradeInfo.seconds.total - a.tradeInfo.seconds.total;
-
-      return tradeDiff * 10000 + swapDiff * 100 + secondDiff;
+    .sort(rankAlgo)
+    .map((x) => {
+      const data = getData(x)
+      const s = score(data)
+      console.log(`${x.info.abbr}: ${s} (${data.guaranteed_firsts}, ${data.conditional_firsts}, ${data.swaps}, ${data.seconds})`)
+      return x;
     })
     .map((x, i) => ({
       ...x,

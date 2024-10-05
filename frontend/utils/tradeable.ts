@@ -36,6 +36,10 @@ export interface TradablePicksGroup<T = PickSummaryMeta> {
   picks: T[]
 }
 
+export interface RichTeamMeta extends TeamMeta {
+  tradeInfo: ReturnType<typeof getTradability>;
+}
+
 function isEven(value: number) {
   return value % 2 === 0;
 }
