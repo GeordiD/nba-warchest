@@ -10,6 +10,8 @@ const {
   },
 })
 
+const showInfoModal = ref(false);
+
 const teamMeta = computed(() => metaStore.metaPerTeam[abbr]);
 const tradabilityResult = computed(() => teamMeta.value.tradeInfo);
 
@@ -114,8 +116,30 @@ const conditionalSeconds = computed(() => tradabilityResult.value.seconds.picks.
           </p>
         </div>
       </div>
+      <template #header-right>
+        <Icon
+          name="fe:info"
+          class="w-5 h-5 cursor-pointer"
+          @click="showInfoModal = true"
+        />
+      </template>
     </SummaryCard>
   </div>
+  <Dialog
+    v-model:visible="showInfoModal"
+    modal
+    header="About Tradability"
+    class="w-[30rem]"
+    dismissable-mask
+  >
+    <p class="mb-2">
+      When trading first round picks, teams must follow the Stepien rule.
+      This requires teams to have at least one first round draft pick in every other draft.
+    </p>
+    <p class="mb-2">
+      NBA War Chest uses this rule to calculate how many of a team's first round assets are actually tradable when taking into account the Stepien rule.
+    </p>
+  </Dialog>
 </template>
 
 <style scoped>

@@ -36,7 +36,7 @@ const showRankModal = ref(false);
           </p>
           <Icon
             name="fe:info"
-            class="w-5 h-5"
+            class="w-5 h-5 cursor-pointer"
             @click="showRankModal = true"
           />
         </div>
@@ -49,6 +49,7 @@ const showRankModal = ref(false);
     modal
     header="About Ranking"
     class="w-[30rem]"
+    dismissable-mask
   >
     <p>
       The NBA War Chest ranking is derived from the following:
