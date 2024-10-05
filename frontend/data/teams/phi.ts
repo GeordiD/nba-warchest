@@ -125,6 +125,7 @@ export const PhiPickMeta: YearMeta[] = [
           },
         },
       },
+      getPick(2028, 1, 'LAC'),
     ],
     roundTwo: [
       {
