@@ -38,7 +38,7 @@ export const GswPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2026, 2, 'OKC'),
+      tradePick(2026, 2, 'CHA'),
       getPick(2026, 2, 'ATL'),
     ],
   },

@@ -132,13 +132,6 @@ export const OkcCombinedMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      {
-        id: '2026.2.GSW',
-        details: 'GSW',
-        summary: {
-          teams: ['GSW'],
-        },
-      },
     ],
   },
   {

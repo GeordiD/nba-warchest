@@ -55,6 +55,7 @@ export const ChaPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2026, 2, 'CHA'),
     ],
   },
   {
@@ -206,6 +207,7 @@ export const ChaPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2031, 2, 'NYK'),
     ],
   },
 ]

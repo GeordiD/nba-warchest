@@ -151,13 +151,7 @@ export const NykPickMeta: YearMeta[] = [
       tradePick(2031, 1, 'BKN'),
     ],
     roundTwo: [
-      {
-        id: '2031.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2031, 2, 'CHA'),
     ],
   },
 ]
