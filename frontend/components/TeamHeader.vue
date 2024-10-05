@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Dialog from 'primevue/dialog';
+
 const metaStore = useMetaStore();
 
 const {
@@ -12,6 +14,8 @@ const {
 
 const teamMeta = computed(() => metaStore.metaPerTeam[abbr]);
 const warchestRanking = computed(() => metaStore.tableData.find(x => x.info.abbr === abbr)?.ranking ?? '??');
+
+const showRankModal = ref(false);
 </script>
 
 <template>
@@ -26,10 +30,38 @@ const warchestRanking = computed(() => metaStore.tableData.find(x => x.info.abbr
         <h1 class="text-2xl font-semibold">
           {{ teamMeta.info.fullName }}
         </h1>
-        <p class="font-light">
-          War Chest Rank: #{{ warchestRanking }}
-        </p>
+        <div class="flex items-center gap-2">
+          <p class="font-light">
+            War Chest Rank: #{{ warchestRanking }}
+          </p>
+          <Icon
+            name="fe:info"
+            class="w-5 h-5"
+            @click="showRankModal = true"
+          />
+        </div>
       </div>
     </div>
   </div>
+
+  <Dialog
+    v-model:visible="showRankModal"
+    modal
+    header="About Ranking"
+    class="w-[30rem]"
+  >
+    <p>
+      The NBA War Chest ranking is derived from the following:
+    </p>
+
+    <ol class="list-decimal ml-8 mt-4">
+      <li>Tradable, guaranteed first round picks</li>
+      <li>Tradable, conditional first round picks</li>
+      <ul class="list-disc ml-4">
+        <li>2 conditional picks = 1 guarenteed pick</li>
+      </ul>
+      <li>Available first round pick swaps</li>
+      <li>Available second round picks</li>
+    </ol>
+  </Dialog>
 </template>
