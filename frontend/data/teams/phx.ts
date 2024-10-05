@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { prot, tradePick, unfavorableSwap } from '~/data/shorthand';
+import { getPick, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const PhxPickMeta: YearMeta[] = [
   {
@@ -46,6 +46,7 @@ export const PhxPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       tradePick(2026, 2, 'WAS'),
+      getPick(2026, 2, 'DEN'),
     ],
   },
   {
@@ -162,6 +163,7 @@ export const PhxPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2031, 2, 'DEN'),
     ],
   },
 ]

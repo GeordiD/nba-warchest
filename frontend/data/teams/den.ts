@@ -50,13 +50,7 @@ export const DenPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2026.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2026, 2, 'PHX'),
     ],
   },
   {
@@ -194,13 +188,7 @@ export const DenPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2031.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2031, 2, 'PHX'),
     ],
   },
 ]
