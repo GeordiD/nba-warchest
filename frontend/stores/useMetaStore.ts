@@ -15,12 +15,6 @@ export const useMetaStore = defineStore('meta', () => {
   const tableData = computed(() => Object.values(metaPerTeam.value)
     .map(x => x as RichTeamMeta)
     .sort(rankAlgo)
-    .map((x) => {
-      const data = getData(x)
-      const s = score(data)
-      console.log(`${x.info.abbr}: ${s} (${data.guaranteed_firsts}, ${data.conditional_firsts}, ${data.swaps}, ${data.seconds})`)
-      return x;
-    })
     .map((x, i) => ({
       ...x,
       ranking: i + 1,
