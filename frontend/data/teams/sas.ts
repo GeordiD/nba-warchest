@@ -244,6 +244,7 @@ export const SasPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2031, 2, 'SAC'),
     ],
   },
 ]

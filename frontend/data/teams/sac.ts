@@ -160,13 +160,7 @@ export const SacPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2031.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2031, 2, 'SAS'),
     ],
   },
 ]
