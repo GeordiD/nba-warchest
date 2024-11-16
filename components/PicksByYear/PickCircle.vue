@@ -70,6 +70,18 @@ const swapClass = computed(() => {
 
 const pickDescription = computed(() => getPickDescription(pickData))
 
+const protection = computed(() => {
+  const isTradedPickWithOneTradePartner = circleAbbrs.value.length === 1 && pickData.summary.isConditional;
+  const isSwappedPickWithOneTradePartner = circleAbbrs.value.length <= 2 && pickData.summary.swapType;
+  if (isSwappedPickWithOneTradePartner || isTradedPickWithOneTradePartner) {
+    const headline = (pickData.details as PickDetails).headline ?? pickData.details;
+    const find = headline.match(/\[top (\d+) prot\.\]/);
+
+    return find?.at(1) ?? '';
+  }
+  return '';
+});
+
 const {
   isIdActive,
   onMouseOut,
@@ -102,6 +114,12 @@ const {
       <TradedAwayIcon
         v-if="isTradedAway"
         class="z-30"
+      />
+
+      <Protection
+        v-if="protection"
+        :protection="protection"
+        :is-conditional="pickData.summary.isConditional ?? false"
       />
 
       <div
@@ -235,4 +253,4 @@ const {
     @apply -mt-7 ml-4;
   }
 }
-</style>
+ </style>
