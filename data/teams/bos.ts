@@ -105,6 +105,7 @@ export const bosPickMeta: YearMeta[] = [
         summary: {
           isOwn: true,
           swapType: 'unfavorable',
+          teams: ['SAS'],
         },
       },
     ],
