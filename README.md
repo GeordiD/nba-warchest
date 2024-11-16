@@ -1,75 +1,13 @@
-# Nuxt 3 Minimal Starter
+# NBA War Chest
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[https://nbawarchest.com/](https://nbawarchest.com/)
 
-## Setup
+A website to track NBA teams' draft assets and visualize them in an easy to consume way.
 
-Make sure to install the dependencies:
+<img width="835" alt="image" src="https://github.com/user-attachments/assets/e7397d4f-aea1-4b71-9195-52b9ef653315">
+<img width="837" alt="image" src="https://github.com/user-attachments/assets/ac442871-af19-4537-9ef3-0c2baff74c96">
 
-```bash
-# npm
-npm install
 
-# pnpm
-pnpm install
+## For Corrections / Feedback
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+I have to maintian the data for this website manually. If you see anything that's incorrect or want to make some suggestions, please follow the [steps here](https://nbawarchest.com/about) to contact me or throw up an issue to the reposititory. Happy to review PRs to fix data issues as well!
