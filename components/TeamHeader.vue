@@ -14,6 +14,7 @@ const {
 
 const teamMeta = computed(() => metaStore.metaPerTeam[abbr]);
 const warchestRanking = computed(() => metaStore.tableData.find(x => x.info.abbr === abbr)?.ranking ?? '??');
+const teamRecord = computed(() => 'Record: 11-2');
 
 const showRankModal = ref(false);
 </script>
@@ -26,7 +27,7 @@ const showRankModal = ref(false);
           :abbr="`${abbr}`"
         />
       </div>
-      <div class="flex flex-col h-full justify-center gap-1">
+      <div class="flex flex-col h-full justify-center">
         <h1 class="text-2xl font-semibold">
           {{ teamMeta.info.fullName }}
         </h1>
@@ -40,6 +41,9 @@ const showRankModal = ref(false);
             @click="showRankModal = true"
           />
         </div>
+        <p class="font-light">
+          {{ teamRecord }}
+        </p>
       </div>
     </div>
   </div>
