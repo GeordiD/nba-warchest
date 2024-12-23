@@ -24,6 +24,14 @@ export const GswPickMeta: YearMeta[] = [
           teams: ['BOS', 'DAL', 'WAS'],
         },
       },
+      {
+        id: '2025.2.MIA',
+        details: `MIA ${prot(37)}`,
+        summary: {
+          isConditional: true,
+          teams: ['MIA'],
+        },
+      },
     ],
   },
   {
@@ -37,10 +45,7 @@ export const GswPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2026, 2, 'CHA'),
-      getPick(2026, 2, 'ATL'),
-    ],
+    roundTwo: [tradePick(2026, 2, 'CHA')],
   },
   {
     year: 2027,
@@ -53,9 +58,7 @@ export const GswPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2027, 2, 'WAS'),
-    ],
+    roundTwo: [tradePick(2027, 2, 'WAS')],
   },
   {
     year: 2028,
@@ -68,10 +71,7 @@ export const GswPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2028, 2, 'POR'),
-      getPick(2028, 2, 'ATL'),
-    ],
+    roundTwo: [tradePick(2028, 2, 'POR')],
   },
   {
     year: 2029,
@@ -84,15 +84,7 @@ export const GswPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      {
-        id: '2029.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-    ],
+    roundTwo: [tradePick(2029, 2, 'BKN')],
   },
   {
     year: 2030,
@@ -101,11 +93,7 @@ export const GswPickMeta: YearMeta[] = [
         id: '2030.1',
         details: {
           headline: `To WAS ${prot(20)}`,
-          extra: [
-            ifNotConvey([
-              '2030 2nd',
-            ]),
-          ],
+          extra: [ifNotConvey(['2030 2nd'])],
         },
         summary: {
           isOwn: true,
@@ -149,16 +137,16 @@ export const GswPickMeta: YearMeta[] = [
       },
     ],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'GSW',
   fullName: 'Golden State Warriors',
   location: 'Golden State',
   name: 'Warriors',
-}
+};
 
 export const gswMeta: TeamMeta = {
   info,
   picks: GswPickMeta,
-}
+};

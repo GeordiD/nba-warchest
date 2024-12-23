@@ -29,13 +29,13 @@ export const MiaPickMeta: YearMeta[] = [
       {
         id: '2025.2',
         details: {
-          headline: 'To IND / BKN',
-          extra: ['31-37 to IND', '38-60 to BKN'],
+          headline: 'To GSW / BKN',
+          extra: ['31-37 to GSW', '38-60 to BKN'],
         },
         summary: {
           isOwn: true,
           isTradedAway: true,
-          teams: ['IND', 'BKN'],
+          teams: ['GSW', 'BKN'],
         },
       },
     ],

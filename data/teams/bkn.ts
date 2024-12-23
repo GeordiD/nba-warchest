@@ -1,6 +1,13 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { favorableSwap, getPick, ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
+import {
+  favorableSwap,
+  getPick,
+  ifNotConvey,
+  prot,
+  tradePick,
+  unfavorableSwap,
+} from '~/data/shorthand';
 
 export const BknPickMeta: YearMeta[] = [
   {
@@ -38,17 +45,7 @@ export const BknPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2025, 2, 'NYK'),
-      {
-        id: '2025.2.MIA',
-        details: `MIA ${prot(37)}`,
-        summary: {
-          isConditional: true,
-          teams: ['MIA'],
-        },
-      },
-    ],
+    roundTwo: [tradePick(2025, 2, 'NYK')],
   },
   {
     year: 2026,
@@ -77,6 +74,7 @@ export const BknPickMeta: YearMeta[] = [
           teams: ['DET', 'MIL', 'ORL'],
         },
       },
+      getPick(2026, 2, 'ATL'),
     ],
   },
   {
@@ -115,10 +113,7 @@ export const BknPickMeta: YearMeta[] = [
         id: '2027.2',
         details: {
           headline: 'To WAS / DET',
-          extra: [
-            'Best of BKN / DAL to WAS',
-            'Worst to DET',
-          ],
+          extra: ['Best of BKN / DAL to WAS', 'Worst to DET'],
         },
         summary: {
           isOwn: true,
@@ -136,7 +131,9 @@ export const BknPickMeta: YearMeta[] = [
         details: {
           headline: `Own (${favorableSwap} PHX / NYK)`,
           extra: [
-            `If PHI 1st does not convey in 2027, PHI ${prot(8)} included in this swap (BKN getting the two most favorable)`,
+            `If PHI 1st does not convey in 2027, PHI ${prot(
+              8
+            )} included in this swap (BKN getting the two most favorable)`,
           ],
         },
         summary: {
@@ -155,6 +152,7 @@ export const BknPickMeta: YearMeta[] = [
         },
       },
       getPick(2028, 2, 'MEM'),
+      getPick(2028, 2, 'ATL'),
     ],
   },
   {
@@ -187,6 +185,7 @@ export const BknPickMeta: YearMeta[] = [
       },
       getPick(2029, 2, 'DAL'),
       getPick(2029, 2, 'MEM'),
+      getPick(2029, 2, 'GSW'),
     ],
   },
   {
@@ -233,16 +232,16 @@ export const BknPickMeta: YearMeta[] = [
       },
     ],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'BKN',
   fullName: 'Brooklyn Nets',
   location: 'Brookly',
   name: 'Nets',
-}
+};
 
 export const bknMeta: TeamMeta = {
   info,
   picks: BknPickMeta,
-}
+};

@@ -1,6 +1,13 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { botProt, getPick, ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
+import {
+  botProt,
+  getPick,
+  ifNotConvey,
+  prot,
+  tradePick,
+  unfavorableSwap,
+} from '~/data/shorthand';
 
 export const AtlPickMeta: YearMeta[] = [
   {
@@ -20,12 +27,7 @@ export const AtlPickMeta: YearMeta[] = [
         id: '2025.1.SAC',
         details: {
           headline: `SAC ${prot(12)}`,
-          extra: [
-            ifNotConvey([
-              `2026 1st ${prot(10)}`,
-              '2026 2nd',
-            ]),
-          ],
+          extra: [ifNotConvey([`2026 1st ${prot(10)}`, '2026 2nd'])],
         },
         summary: {
           teams: ['SAC'],
@@ -38,10 +40,7 @@ export const AtlPickMeta: YearMeta[] = [
         id: '2025.2',
         details: {
           headline: 'To POR / OKC',
-          extra: [
-            `To POR ${prot(40)}`,
-            `Otherwise, to OKC`,
-          ],
+          extra: [`To POR ${prot(40)}`, `Otherwise, to OKC`],
         },
         summary: {
           isOwn: true,
@@ -72,7 +71,7 @@ export const AtlPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2026, 2, 'GSW'),
+      tradePick(2026, 2, 'BKN'),
       {
         id: '2026.2.MEM',
         details: `MEM ${botProt(43)}`,
@@ -85,9 +84,7 @@ export const AtlPickMeta: YearMeta[] = [
   },
   {
     year: 2027,
-    roundOne: [
-      tradePick(2027, 1, 'SAS'),
-    ],
+    roundOne: [tradePick(2027, 1, 'SAS')],
     roundTwo: [
       tradePick(2027, 2, 'MEM'),
       {
@@ -110,10 +107,7 @@ export const AtlPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2028, 2, 'GSW'),
-      getPick(2028, 2, 'HOU'),
-    ],
+    roundTwo: [tradePick(2028, 2, 'BKN'), getPick(2028, 2, 'HOU')],
   },
   {
     year: 2029,
@@ -126,9 +120,7 @@ export const AtlPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2029, 2, 'OKC'),
-    ],
+    roundTwo: [tradePick(2029, 2, 'OKC')],
   },
   {
     year: 2030,
@@ -172,16 +164,16 @@ export const AtlPickMeta: YearMeta[] = [
       },
     ],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'ATL',
   fullName: 'Atlanta Hawks',
   location: 'Atlanta',
   name: 'Hawks',
-}
+};
 
 export const atlMeta: TeamMeta = {
   info,
   picks: AtlPickMeta,
-}
+};
