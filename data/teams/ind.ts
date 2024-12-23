@@ -1,6 +1,13 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { botProt, favorableSwap, getPick, ifNotConvey, prot } from '~/data/shorthand';
+import {
+  botProt,
+  favorableSwap,
+  getPick,
+  ifNotConvey,
+  prot,
+} from '~/data/shorthand';
+import { unfavorableSwap } from '../shorthand';
 
 export const IndPickMeta: YearMeta[] = [
   {
@@ -48,10 +55,7 @@ export const IndPickMeta: YearMeta[] = [
         details: {
           headline: `To TOR ${prot(4)}`,
           extra: [
-            ifNotConvey([
-              `2027 1st ${prot(4)}`,
-              `2027 UTA 2nd & 2028 DAL 2nd`,
-            ]),
+            ifNotConvey([`2027 1st ${prot(4)}`, `2027 UTA 2nd & 2028 DAL 2nd`]),
           ],
         },
         summary: {
@@ -129,9 +133,7 @@ export const IndPickMeta: YearMeta[] = [
         id: '2028.2',
         details: {
           headline: `Best of IND / PHX`,
-          extra: [
-            'Worst to NYK',
-          ],
+          extra: ['Worst to NYK'],
         },
         summary: {
           isOwn: true,
@@ -168,9 +170,7 @@ export const IndPickMeta: YearMeta[] = [
         id: '2029.2',
         details: {
           headline: 'Best of IND / WAS',
-          extra: [
-            'Other to NYK',
-          ],
+          extra: ['Other to NYK'],
         },
         summary: {
           isOwn: true,
@@ -217,23 +217,25 @@ export const IndPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2031.2',
-        details: 'Own',
+        details: `Own (${unfavorableSwap} MIA)`,
         summary: {
           isOwn: true,
+          swapType: 'unfavorable',
+          teams: ['MIA'],
         },
       },
     ],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'IND',
   fullName: 'Indiana Pacers',
   location: 'Indiana',
   name: 'Pacers',
-}
+};
 
 export const indMeta: TeamMeta = {
   info,
   picks: IndPickMeta,
-}
+};
