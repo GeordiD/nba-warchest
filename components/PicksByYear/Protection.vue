@@ -8,15 +8,15 @@ const props = defineProps({
     type: Boolean,
     required: true,
   },
-})
-
-console.log(props.protection, props.isConditional);
+});
 </script>
 
 <template>
   <div
     class="rounded-bl-lg rounded-tr-lg w-5 h-5 absolute -top-0.5 -right-0.5 flex items-center justify-center text-xs font-semibold z-50 text-white"
-    :class="[isConditional ? 'protection-conditional-bg' : 'protection-guarenteed-bg']"
+    :class="[
+      isConditional ? 'protection-conditional-bg' : 'protection-guarenteed-bg',
+    ]"
   >
     {{ props.protection }}
   </div>
@@ -24,10 +24,10 @@ console.log(props.protection, props.isConditional);
 
 <style scoped>
 .protection-conditional-bg {
-  background-color: #B67513;
+  background-color: #b67513;
 }
 
 .protection-guarenteed-bg {
-  background-color: #0E624E;
+  background-color: #0e624e;
 }
 </style>

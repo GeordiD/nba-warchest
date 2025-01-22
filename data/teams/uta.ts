@@ -1,6 +1,13 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { favorableSwap, getPick, ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
+import {
+  favorableSwap,
+  getPick,
+  ifNotConvey,
+  prot,
+  tradePick,
+  unfavorableSwap,
+} from '~/data/shorthand';
 
 export const UtaPickMeta: YearMeta[] = [
   {
@@ -10,11 +17,7 @@ export const UtaPickMeta: YearMeta[] = [
         id: '2025.1',
         details: {
           headline: `To OKC ${prot(10)}`,
-          extra: [
-            ifNotConvey([
-              `2026 1st ${prot(8)}`,
-            ]),
-          ],
+          extra: [ifNotConvey([`2026 1st ${prot(8)}`])],
         },
         summary: {
           isOwn: true,
@@ -22,12 +25,19 @@ export const UtaPickMeta: YearMeta[] = [
           isConditional: true,
         },
       },
-      getPick(2025, 1, 'CLE'),
-      getPick(2025, 1, 'MIN'),
+      {
+        id: '2025.1',
+        details: {
+          headline: 'Best of CLE / MIN / UTA (if not conveyed)',
+          extra: ['Least favorable to PHX'],
+        },
+        summary: {
+          teams: ['CLE', 'MIN'],
+          swapType: 'favorable',
+        },
+      },
     ],
-    roundTwo: [
-      tradePick(2025, 2, 'MIN'),
-    ],
+    roundTwo: [tradePick(2025, 2, 'MIN')],
   },
   {
     year: 2026,
@@ -53,29 +63,34 @@ export const UtaPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2026, 2, 'SAS'),
-    ],
+    roundTwo: [tradePick(2026, 2, 'SAS')],
   },
   {
     year: 2027,
     roundOne: [
       {
         id: '2027.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
+        details: {
+          headline: 'Two most favorable of UTA / CLE / MIN',
+          extra: ['Least favorable to PHX'],
         },
+        summary: [
+          {
+            isOwn: true,
+            swapType: 'favorable',
+            teams: ['UTA', 'CLE', 'MIN'],
+          },
+          {
+            swapType: 'favorable',
+            teams: ['UTA', 'CLE', 'MIN'],
+          },
+        ],
       },
-      getPick(2027, 1, 'CLE'),
-      getPick(2027, 1, 'MIN'),
       {
         id: '2027.1.LAL',
         details: {
           headline: `LAL ${prot(4)}`,
-          extra: [
-            '2027 2nd',
-          ],
+          extra: ['2027 2nd'],
         },
         summary: {
           teams: ['LAL'],
@@ -108,35 +123,31 @@ export const UtaPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2028, 2, 'OKC'),
-    ],
+    roundTwo: [tradePick(2028, 2, 'OKC')],
   },
   {
     year: 2029,
     roundOne: [
       {
         id: '2029.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-      getPick(2029, 1, 'CLE'),
-      {
-        id: '2029.1.MIN',
         details: {
-          headline: `MIN ${prot(5)}`,
-          extra: [
-            ifNotConvey([
-              '2029 2nd',
-            ]),
-          ],
+          headline: `1-2 most favorable of UTA / CLE / MIN ${prot(5)}`,
+          extra: ['Least favorable to PHX', ifNotConvey(['2029 2nd'])],
         },
-        summary: {
-          teams: ['MIN'],
-          isConditional: true,
-        },
+        summary: [
+          {
+            isOwn: true,
+            swapType: 'favorable',
+            teams: ['UTA', 'CLE', 'MIN'],
+            desc: `Most favorable of UTA / CLE / MIN ${prot(5)}`,
+          },
+          {
+            swapType: 'favorable',
+            teams: ['UTA', 'CLE', 'MIN'],
+            isConditional: true,
+            desc: `Second most favorable of UTA / CLE / MIN ${prot(5)}`,
+          },
+        ],
       },
     ],
     roundTwo: [
@@ -182,6 +193,7 @@ export const UtaPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2031, 1, 'PHX'),
     ],
     roundTwo: [
       {
@@ -193,16 +205,16 @@ export const UtaPickMeta: YearMeta[] = [
       },
     ],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'UTA',
   fullName: 'Utah Jazz',
   location: 'Utah',
   name: 'Jazz',
-}
+};
 
 export const utaMeta: TeamMeta = {
   info,
   picks: UtaPickMeta,
-}
+};

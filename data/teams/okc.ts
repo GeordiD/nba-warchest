@@ -21,9 +21,7 @@ export const OkcCombinedMeta: YearMeta[] = [
         id: '2025.1.MIA',
         details: {
           headline: `MIA ${prot(14)}`,
-          extra: [
-            ifNotConvey(['2026 1st (unprotected)']),
-          ],
+          extra: [ifNotConvey(['2026 1st (unprotected)'])],
         },
         summary: {
           teams: ['MIA'],
@@ -51,9 +49,7 @@ export const OkcCombinedMeta: YearMeta[] = [
         id: '2025.1.UTA',
         details: {
           headline: `UTA ${prot(10)}`,
-          extra: [
-            ifNotConvey([`2026 1st ${prot(8)}`]),
-          ],
+          extra: [ifNotConvey([`2026 1st ${prot(8)}`])],
         },
         summary: {
           teams: ['UTA'],
@@ -96,9 +92,7 @@ export const OkcCombinedMeta: YearMeta[] = [
         id: '2026.1',
         details: {
           headline: `Two most favorable of OKC / HOU ${prot(4)} / LAC`,
-          extra: [
-            `Least favorable to PHI`,
-          ],
+          extra: [`Least favorable to PHI`],
         },
         summary: [
           {
@@ -108,9 +102,9 @@ export const OkcCombinedMeta: YearMeta[] = [
             desc: `Best of OKC / HOU ${prot(4)} / LAC`,
           },
           {
-            isConditional: true,
-            swapType: 'favorable',
             teams: ['HOU', 'LAC'],
+            swapType: 'favorable',
+            isConditional: true,
             desc: `Second best of OKC / HOU ${prot(4)} / LAC`,
           },
         ],
@@ -121,10 +115,7 @@ export const OkcCombinedMeta: YearMeta[] = [
         id: '2026.2',
         details: {
           headline: 'Most favorable of OKC / DAL / PHL',
-          extra: [
-            'Second most favorable to HOU',
-            'Least favorable to SAN',
-          ],
+          extra: ['Second most favorable to HOU', 'Least favorable to SAN'],
         },
         summary: {
           teams: ['DAL', 'PHI'],
@@ -143,11 +134,17 @@ export const OkcCombinedMeta: YearMeta[] = [
           headline: 'Two most favorable of OKC / DEN (prot.) / LAC',
           extra: [
             `DEN (${prot(5, false)} and if DEN conveys 1st to ORL in 2025)`,
-            ifNotConvey([
-              `2028 1st (${prot(5, false)} and if DEN conveys 1st to ORL in 2026)`,
-              `2029 1st ${prot(5)}`,
-              '2029 2nd',
-            ], 'DEN'),
+            ifNotConvey(
+              [
+                `2028 1st (${prot(
+                  5,
+                  false
+                )} and if DEN conveys 1st to ORL in 2026)`,
+                `2029 1st ${prot(5)}`,
+                '2029 2nd',
+              ],
+              'DEN'
+            ),
             'Least favorable to LAC',
           ],
         },
@@ -172,9 +169,7 @@ export const OkcCombinedMeta: YearMeta[] = [
         id: '2027.2',
         details: {
           headline: 'Three most favorable of OKC / HOU / IND / MIA',
-          extra: [
-            'Least favorable to SAN',
-          ],
+          extra: ['Least favorable to SAN'],
         },
         summary: [
           {
@@ -255,7 +250,10 @@ export const OkcCombinedMeta: YearMeta[] = [
           extra: [
             'If DEN conveys 1st to OKC in 2027',
             ifNotConvey([
-              `2030 1st (${prot(5, false)} and if DEN conveys 1st to OKC in 2028`,
+              `2030 1st (${prot(
+                5,
+                false
+              )} and if DEN conveys 1st to OKC in 2028`,
               '2030 2nd',
             ]),
           ],
@@ -367,16 +365,16 @@ export const OkcCombinedMeta: YearMeta[] = [
       },
     ],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'OKC',
   fullName: 'Oklahoma City Thunder',
   name: 'Thunder',
   location: 'Oklahoma City',
-}
+};
 
 export const okcMeta: TeamMeta = {
   info,
   picks: OkcCombinedMeta,
-}
+};

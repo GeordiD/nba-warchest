@@ -1,6 +1,12 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { getPick, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
+import {
+  botProt,
+  getPick,
+  prot,
+  tradePick,
+  unfavorableSwap,
+} from '~/data/shorthand';
 
 export const PhxPickMeta: YearMeta[] = [
   {
@@ -21,10 +27,17 @@ export const PhxPickMeta: YearMeta[] = [
           isTradedAway: true,
         },
       },
+      {
+        id: '2025.1.UTA-CLE-MIN',
+        details: `Least favorable of CLE / MIN / UTA ${botProt(10)}`,
+        summary: {
+          teams: ['UTA', 'CLE', 'MIN'],
+          swapType: 'unfavorable',
+          ownNotIncluded: true,
+        },
+      },
     ],
-    roundTwo: [
-      tradePick(2025, 2, 'WAS'),
-    ],
+    roundTwo: [tradePick(2025, 2, 'WAS')],
   },
   {
     year: 2026,
@@ -44,19 +57,23 @@ export const PhxPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2026, 2, 'WAS'),
-      getPick(2026, 2, 'DEN'),
-    ],
+    roundTwo: [tradePick(2026, 2, 'WAS'), getPick(2026, 2, 'DEN')],
   },
   {
     year: 2027,
     roundOne: [
       tradePick(2027, 1, 'HOU'),
+      {
+        id: '2027.1.UTA-CLE-MIN',
+        details: 'Least favorable of CLE / MIN / UTA',
+        summary: {
+          teams: ['UTA', 'CLE', 'MIN'],
+          swapType: 'unfavorable',
+          ownNotIncluded: true,
+        },
+      },
     ],
-    roundTwo: [
-      tradePick(2027, 2, 'WAS'),
-    ],
+    roundTwo: [tradePick(2027, 2, 'WAS')],
   },
   {
     year: 2028,
@@ -85,10 +102,7 @@ export const PhxPickMeta: YearMeta[] = [
         id: '2028.2',
         details: {
           headline: 'To IND / NYK',
-          extra: [
-            'Best of PHX / IND to IND',
-            'Worst to NYK',
-          ],
+          extra: ['Best of PHX / IND to IND', 'Worst to NYK'],
         },
         summary: {
           isOwn: true,
@@ -116,10 +130,17 @@ export const PhxPickMeta: YearMeta[] = [
           teams: ['HOU', 'BKN'],
         },
       },
+      {
+        id: '2029.1.UTA-CLE-MIN',
+        details: 'Least favorable of CLE / MIN / UTA',
+        summary: {
+          teams: ['UTA', 'CLE', 'MIN'],
+          swapType: 'unfavorable',
+          ownNotIncluded: true,
+        },
+      },
     ],
-    roundTwo: [
-      tradePick(2029, 2, 'OKC'),
-    ],
+    roundTwo: [tradePick(2029, 2, 'OKC')],
   },
   {
     year: 2030,
@@ -140,21 +161,11 @@ export const PhxPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2030, 2, 'WAS'),
-    ],
+    roundTwo: [tradePick(2030, 2, 'WAS')],
   },
   {
     year: 2031,
-    roundOne: [
-      {
-        id: '2031.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-    ],
+    roundOne: [tradePick(2031, 1, 'UTA')],
     roundTwo: [
       {
         id: '2031.2',
@@ -166,16 +177,16 @@ export const PhxPickMeta: YearMeta[] = [
       getPick(2031, 2, 'DEN'),
     ],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'PHX',
   fullName: 'Phoenix Suns',
   location: 'Phoenix',
   name: 'Suns',
-}
+};
 
 export const phxMeta: TeamMeta = {
   info,
   picks: PhxPickMeta,
-}
+};
