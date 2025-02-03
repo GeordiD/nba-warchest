@@ -5,9 +5,7 @@ import { getPick, ifNotConvey, prot, tradePick } from '~/data/shorthand';
 export const LalPickMeta: YearMeta[] = [
   {
     year: 2025,
-    roundOne: [
-      tradePick(2025, 1, 'ATL'),
-    ],
+    roundOne: [tradePick(2025, 1, 'ATL')],
     roundTwo: [
       {
         id: '2025.2',
@@ -16,7 +14,6 @@ export const LalPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2025, 2, 'LAC'),
     ],
   },
   {
@@ -30,9 +27,7 @@ export const LalPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2026, 2, 'MIA'),
-    ],
+    roundTwo: [tradePick(2026, 2, 'MIA')],
   },
   {
     year: 2027,
@@ -41,11 +36,7 @@ export const LalPickMeta: YearMeta[] = [
         id: '2027.1',
         details: {
           headline: `To UTA ${prot(4)}`,
-          extra: [
-            ifNotConvey([
-              '2027 2nd',
-            ]),
-          ],
+          extra: [ifNotConvey(['2027 2nd'])],
         },
         summary: {
           isOwn: true,
@@ -84,10 +75,7 @@ export const LalPickMeta: YearMeta[] = [
         id: '2028.2',
         details: {
           headline: 'To ORL / WAS',
-          extra: [
-            'Best of LAL / WAS to ORL',
-            'Worst to WAS',
-          ],
+          extra: ['Best of LAL / WAS to ORL', 'Worst to WAS'],
         },
         summary: {
           isOwn: true,
@@ -99,18 +87,8 @@ export const LalPickMeta: YearMeta[] = [
   },
   {
     year: 2029,
-    roundOne: [
-      {
-        id: '2029.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-    ],
-    roundTwo: [
-      tradePick(2029, 2, 'WAS'),
-    ],
+    roundOne: [tradePick(2029, 1, 'DAL')],
+    roundTwo: [tradePick(2029, 2, 'WAS')],
   },
   {
     year: 2030,
@@ -154,16 +132,16 @@ export const LalPickMeta: YearMeta[] = [
       },
     ],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'LAL',
   fullName: 'Los Angeles Lakers',
   location: 'Los Angeles',
   name: 'Lakers',
-}
+};
 
 export const lalMeta: TeamMeta = {
   info,
   picks: LalPickMeta,
-}
+};

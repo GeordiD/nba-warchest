@@ -1,6 +1,12 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
+import {
+  getPick,
+  ifNotConvey,
+  prot,
+  tradePick,
+  unfavorableSwap,
+} from '~/data/shorthand';
 
 export const DalPickMeta: YearMeta[] = [
   {
@@ -19,9 +25,7 @@ export const DalPickMeta: YearMeta[] = [
         id: '2025.2',
         details: {
           headline: 'To BOS',
-          extra: [
-            'DAL may receive a 2nd conditionally',
-          ],
+          extra: ['DAL may receive a 2nd conditionally'],
         },
         summary: {
           isOwn: true,
@@ -68,11 +72,7 @@ export const DalPickMeta: YearMeta[] = [
         id: '2027.1',
         details: {
           headline: `To CHA ${prot(2)}`,
-          extra: [
-            ifNotConvey([
-              '2028 MIA 2nd',
-            ]),
-          ],
+          extra: [ifNotConvey(['2028 MIA 2nd'])],
         },
         summary: {
           isOwn: true,
@@ -86,10 +86,7 @@ export const DalPickMeta: YearMeta[] = [
         id: '2027.2',
         details: {
           headline: 'To WAS / DET',
-          extra: [
-            'Best of DAL / BKN to WAS',
-            'Worst to DET',
-          ],
+          extra: ['Best of DAL / BKN to WAS', 'Worst to DET'],
         },
         summary: {
           isOwn: true,
@@ -140,9 +137,7 @@ export const DalPickMeta: YearMeta[] = [
         id: '2028.2.DAL',
         details: {
           headline: 'MIA',
-          extra: [
-            'If DAL conveys 1st to CHA in 2027',
-          ],
+          extra: ['If DAL conveys 1st to CHA in 2027'],
         },
         summary: {
           isConditional: true,
@@ -169,10 +164,9 @@ export const DalPickMeta: YearMeta[] = [
           teams: ['HOU', 'BKN'],
         },
       },
+      getPick(2029, 1, 'LAL'),
     ],
-    roundTwo: [
-      tradePick(2029, 2, 'BKN'),
-    ],
+    roundTwo: [tradePick(2029, 2, 'BKN')],
   },
   {
     year: 2030,
@@ -187,9 +181,7 @@ export const DalPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2030, 2, 'MEM'),
-    ],
+    roundTwo: [tradePick(2030, 2, 'MEM')],
   },
   {
     year: 2031,
@@ -212,16 +204,16 @@ export const DalPickMeta: YearMeta[] = [
       },
     ],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'DAL',
   fullName: 'Dallas Mavericks',
   location: 'Dallas',
   name: 'Mavericks',
-}
+};
 
 export const dalMeta: TeamMeta = {
   info,
   picks: DalPickMeta,
-}
+};

@@ -37,7 +37,7 @@ export const UtaPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2025, 2, 'MIN')],
+    roundTwo: [tradePick(2025, 2, 'MIN'), getPick(2025, 2, 'LAC')],
   },
   {
     year: 2026,
@@ -174,13 +174,12 @@ export const UtaPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2030.2',
-        details: `Own (${unfavorableSwap} LAC)`,
+        details: `Own`,
         summary: {
           isOwn: true,
-          teams: ['LAC'],
-          swapType: 'unfavorable',
         },
       },
+      getPick(2030, 2, 'LAC'),
     ],
   },
   {
