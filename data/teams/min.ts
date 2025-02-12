@@ -1,6 +1,12 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { getPick, ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
+import {
+  getPick,
+  ifNotConvey,
+  prot,
+  tradePick,
+  unfavorableSwap,
+} from '~/data/shorthand';
 
 export const MinPickMeta: YearMeta[] = [
   {
@@ -25,10 +31,7 @@ export const MinPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2025, 2, 'ATL'),
-      getPick(2025, 2, 'UTA'),
-    ],
+    roundTwo: [tradePick(2025, 2, 'ATL'), getPick(2025, 2, 'UTA')],
   },
   {
     year: 2026,
@@ -38,7 +41,7 @@ export const MinPickMeta: YearMeta[] = [
         details: {
           headline: `Own (${unfavorableSwap} UTA)`,
           extra: [
-            'If UTA has not conveyed 1st to OKC in 2025, UTA can only swap if it\'s pick is 1-8',
+            "If UTA has not conveyed 1st to OKC in 2025, UTA can only swap if it's pick is 1-8",
           ],
         },
         summary: {
@@ -70,12 +73,8 @@ export const MinPickMeta: YearMeta[] = [
   },
   {
     year: 2027,
-    roundOne: [
-      tradePick(2027, 1, 'UTA'),
-    ],
-    roundTwo: [
-      tradePick(2027, 2, 'OKC'),
-    ],
+    roundOne: [tradePick(2027, 1, 'UTA')],
+    roundTwo: [tradePick(2027, 2, 'OKC')],
   },
   {
     year: 2028,
@@ -88,9 +87,7 @@ export const MinPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2028, 2, 'SAS'),
-    ],
+    roundTwo: [tradePick(2028, 2, 'SAS')],
   },
   {
     year: 2029,
@@ -99,11 +96,7 @@ export const MinPickMeta: YearMeta[] = [
         id: '2029.1',
         details: {
           headline: `To UTA ${prot(5)}`,
-          extra: [
-            ifNotConvey([
-              '2029 2nd',
-            ]),
-          ],
+          extra: [ifNotConvey(['2029 2nd'])],
         },
         summary: {
           isOwn: true,
@@ -139,15 +132,11 @@ export const MinPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2030, 2, 'DET'),
-    ],
+    roundTwo: [tradePick(2030, 2, 'DET')],
   },
   {
     year: 2031,
-    roundOne: [
-      tradePick(2031, 1, 'SAS'),
-    ],
+    roundOne: [tradePick(2031, 1, 'SAC')],
     roundTwo: [
       {
         id: '2031.2',
@@ -158,16 +147,16 @@ export const MinPickMeta: YearMeta[] = [
       },
     ],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'MIN',
   fullName: 'Minnesota Timberwolves',
   location: 'Minnesota',
   name: 'Timberwolves',
-}
+};
 
 export const minMeta: TeamMeta = {
   info,
   picks: MinPickMeta,
-}
+};

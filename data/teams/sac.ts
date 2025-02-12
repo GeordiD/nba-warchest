@@ -1,6 +1,12 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { getPick, ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
+import {
+  getPick,
+  ifNotConvey,
+  prot,
+  tradePick,
+  unfavorableSwap,
+} from '~/data/shorthand';
 
 export const SacPickMeta: YearMeta[] = [
   {
@@ -10,17 +16,23 @@ export const SacPickMeta: YearMeta[] = [
         id: '2025.1',
         details: {
           headline: `To ATL ${prot(12)}`,
-          extra: [
-            ifNotConvey([
-              `2026 1st ${prot(10)}`,
-              '2026 2nd & 2027 2nd',
-            ]),
-          ],
+          extra: [ifNotConvey([`2026 1st ${prot(10)}`, '2026 2nd & 2027 2nd'])],
         },
         summary: {
           isOwn: true,
           teams: ['ATL'],
           isConditional: true,
+        },
+      },
+      {
+        id: '2025.1.CHA',
+        details: {
+          headline: `CHA ${prot(14)}`,
+          extra: [ifNotConvey([`2026 2nd & 2027 2nd`])],
+        },
+        summary: {
+          isConditional: true,
+          teams: ['CHA'],
         },
       },
     ],
@@ -33,6 +45,7 @@ export const SacPickMeta: YearMeta[] = [
         },
       },
       getPick(2025, 2, 'POR'),
+      getPick(2025, 2, 'CHI'),
     ],
   },
   {
@@ -74,6 +87,7 @@ export const SacPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2027, 1, 'SAS'),
     ],
     roundTwo: [
       {
@@ -106,6 +120,14 @@ export const SacPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+        },
+      },
+      {
+        id: '2028.2.DEN',
+        details: `DEN ${prot(33)}`,
+        summary: {
+          teams: ['DEN'],
+          isConditional: true,
         },
       },
     ],
@@ -142,9 +164,7 @@ export const SacPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2030, 2, 'IND'),
-    ],
+    roundTwo: [tradePick(2030, 2, 'IND')],
   },
   {
     year: 2031,
@@ -158,21 +178,20 @@ export const SacPickMeta: YearMeta[] = [
           swapType: 'unfavorable',
         },
       },
+      getPick(2031, 1, 'MIN'),
     ],
-    roundTwo: [
-      tradePick(2031, 2, 'SAS'),
-    ],
+    roundTwo: [tradePick(2031, 2, 'SAS')],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'SAC',
   fullName: 'Sacramento Kings',
   location: 'Sacramento',
   name: 'Kings',
-}
+};
 
 export const sacMeta: TeamMeta = {
   info,
   picks: SacPickMeta,
-}
+};

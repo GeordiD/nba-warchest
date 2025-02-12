@@ -1,6 +1,13 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { botProt, favorableSwap, getPick, ifNotConvey, prot } from '~/data/shorthand';
+import {
+  botProt,
+  favorableSwap,
+  getPick,
+  ifNotConvey,
+  prot,
+  tradePick,
+} from '~/data/shorthand';
 
 export const SasPickMeta: YearMeta[] = [
   {
@@ -14,37 +21,6 @@ export const SasPickMeta: YearMeta[] = [
         },
       },
       getPick(2025, 1, 'ATL'),
-      {
-        id: '2025.1.CHA',
-        details: {
-          headline: `CHA ${prot(14)}`,
-          extra: [
-            ifNotConvey([
-              `2026 2nd & 2027 2nd`,
-            ]),
-          ],
-        },
-        summary: {
-          isConditional: true,
-          teams: ['CHA'],
-        },
-      },
-      {
-        id: '2025.1.CHI',
-        details: {
-          headline: `CHI ${prot(10)}`,
-          extra: [
-            ifNotConvey([
-              `2027 1st ${prot(8)}`,
-              '2028 2nd',
-            ]),
-          ],
-        },
-        summary: {
-          isConditional: true,
-          teams: ['CHI'],
-        },
-      },
     ],
     roundTwo: [
       {
@@ -54,7 +30,6 @@ export const SasPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2025, 2, 'CHI'),
       getPick(2025, 2, 'NOP'),
     ],
   },
@@ -76,10 +51,7 @@ export const SasPickMeta: YearMeta[] = [
         id: '2026.2',
         details: {
           headline: 'Own (swap with IND / MIA)',
-          extra: [
-            'Better of SAS and worst of IND / MIA',
-            'Worst to MIN',
-          ],
+          extra: ['Better of SAS and worst of IND / MIA', 'Worst to MIN'],
         },
         summary: {
           isOwn: true,
@@ -108,16 +80,7 @@ export const SasPickMeta: YearMeta[] = [
   },
   {
     year: 2027,
-    roundOne: [
-      {
-        id: '2027.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-      getPick(2027, 1, 'ATL'),
-    ],
+    roundOne: [tradePick(2027, 1, 'SAC'), getPick(2027, 1, 'ATL')],
     roundTwo: [
       {
         id: '2027.2',
@@ -143,11 +106,7 @@ export const SasPickMeta: YearMeta[] = [
         id: '2028.1',
         details: {
           headline: `Own (${favorableSwap} BOS ${prot(1)})`,
-          extra: [
-            ifNotConvey([
-              `2028 1st ${botProt(46)}`,
-            ]),
-          ],
+          extra: [ifNotConvey([`2028 1st ${botProt(46)}`])],
         },
         summary: {
           isOwn: true,
@@ -162,14 +121,6 @@ export const SasPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-        },
-      },
-      {
-        id: '2028.2.DEN',
-        details: `DEN ${prot(33)}`,
-        summary: {
-          teams: ['DEN'],
-          isConditional: true,
         },
       },
       getPick(2028, 2, 'MIN'),
@@ -234,7 +185,6 @@ export const SasPickMeta: YearMeta[] = [
           swapType: 'favorable',
         },
       },
-      getPick(2031, 1, 'MIN'),
     ],
     roundTwo: [
       {
@@ -247,16 +197,16 @@ export const SasPickMeta: YearMeta[] = [
       getPick(2031, 2, 'SAC'),
     ],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'SAS',
   fullName: 'San Antonio Spurs',
   location: 'San Antonio',
   name: 'Spurs',
-}
+};
 
 export const sasMeta: TeamMeta = {
   info,
   picks: SasPickMeta,
-}
+};

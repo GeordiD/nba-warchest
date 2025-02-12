@@ -10,12 +10,7 @@ export const DenPickMeta: YearMeta[] = [
         id: '2025.1',
         details: {
           headline: `To ORL ${prot(5)}`,
-          extra: [
-            ifNotConvey([
-              `2026 1st ${prot(5)}`,
-              `2027 1st ${prot(5)}`,
-            ]),
-          ],
+          extra: [ifNotConvey([`2026 1st ${prot(5)}`, `2027 1st ${prot(5)}`])],
         },
         summary: {
           isOwn: true,
@@ -49,9 +44,7 @@ export const DenPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2026, 2, 'PHX'),
-    ],
+    roundTwo: [tradePick(2026, 2, 'PHX')],
   },
   {
     year: 2027,
@@ -81,9 +74,7 @@ export const DenPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2027, 2, 'CLE'),
-    ],
+    roundTwo: [tradePick(2027, 2, 'CLE')],
   },
   {
     year: 2028,
@@ -103,11 +94,11 @@ export const DenPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2028.2',
-        details: `To SAS ${prot(33)}`,
+        details: `To DEN ${prot(33)}`,
         summary: {
           isOwn: true,
           isConditional: true,
-          teams: ['SAS'],
+          teams: ['DEN'],
         },
       },
     ],
@@ -119,12 +110,7 @@ export const DenPickMeta: YearMeta[] = [
         id: '2029.1',
         details: {
           headline: `To OKC ${prot(5)}`,
-          extra: [
-            ifNotConvey([
-              `2030 1st ${prot(5)}`,
-              '2030 2nd',
-            ]),
-          ],
+          extra: [ifNotConvey([`2030 1st ${prot(5)}`, '2030 2nd'])],
         },
         summary: {
           isOwn: true,
@@ -187,20 +173,18 @@ export const DenPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2031, 2, 'PHX'),
-    ],
+    roundTwo: [tradePick(2031, 2, 'PHX')],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'DEN',
   fullName: 'Denver Nuggets',
   location: 'Denver',
   name: 'Nuggets',
-}
+};
 
 export const denMeta: TeamMeta = {
   info,
   picks: DenPickMeta,
-}
+};

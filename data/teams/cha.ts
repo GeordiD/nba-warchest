@@ -9,17 +9,13 @@ export const ChaPickMeta: YearMeta[] = [
       {
         id: '2025.1',
         details: {
-          headline: `To SAS ${prot(14)}`,
-          extra: [
-            ifNotConvey([
-              '2026 2nd',
-            ]),
-          ],
+          headline: `To SAC ${prot(14)}`,
+          extra: [ifNotConvey(['2026 2nd'])],
         },
         summary: {
           isOwn: true,
           isConditional: true,
-          teams: ['SAS'],
+          teams: ['SAC'],
         },
       },
     ],
@@ -72,11 +68,7 @@ export const ChaPickMeta: YearMeta[] = [
         id: '2027.1.DAL',
         details: {
           headline: `DAL ${prot(2)}`,
-          extra: [
-            ifNotConvey([
-              '2028 MIA 2nd',
-            ]),
-          ],
+          extra: [ifNotConvey(['2028 MIA 2nd'])],
         },
         summary: {
           isConditional: true,
@@ -89,9 +81,7 @@ export const ChaPickMeta: YearMeta[] = [
           headline: `MIA ${prot(14)}`,
           extra: [
             'If MIA conveys 1st to OKC in 2025',
-            ifNotConvey([
-              '2028 1st',
-            ]),
+            ifNotConvey(['2028 1st']),
           ],
         },
         summary: {
@@ -134,9 +124,7 @@ export const ChaPickMeta: YearMeta[] = [
         id: '2028.2',
         details: {
           headline: 'Best of CHA / LAC',
-          extra: [
-            'Worst to DAL',
-          ],
+          extra: ['Worst to DAL'],
         },
         summary: {
           isOwn: true,
@@ -210,16 +198,16 @@ export const ChaPickMeta: YearMeta[] = [
       getPick(2031, 2, 'NYK'),
     ],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'CHA',
   fullName: 'Charlotte Hornets',
   location: 'Charlotte',
   name: 'Hornets',
-}
+};
 
 export const chaMeta: TeamMeta = {
   info,
   picks: ChaPickMeta,
-}
+};

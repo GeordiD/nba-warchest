@@ -1,29 +1,12 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { ifNotConvey, prot } from '~/data/shorthand';
+import { ifNotConvey, ownPick, prot } from '~/data/shorthand';
 
 export const ChiPickMeta: YearMeta[] = [
   {
     year: 2025,
     roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: `To SAS ${prot(10)}`,
-          extra: [
-            ifNotConvey([
-              `2026 1st ${prot(8)}`,
-              `2027 1st ${prot(8)}`,
-              '2028 2nd',
-            ]),
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isConditional: true,
-          teams: ['SAS'],
-        },
-      },
+      ownPick(2025, 1),
       {
         id: '2025.1.POR',
         details: {
@@ -46,11 +29,11 @@ export const ChiPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2025.2',
-        details: 'To SAS',
+        details: 'To SAC',
         summary: {
           isTradedAway: true,
           isOwn: true,
-          teams: ['SAS'],
+          teams: ['SAC'],
         },
       },
     ],
@@ -126,10 +109,6 @@ export const ChiPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2027.1',
-            result: `To SAS`,
-          },
         },
       },
     ],
@@ -197,16 +176,16 @@ export const ChiPickMeta: YearMeta[] = [
       },
     ],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'CHI',
   fullName: 'Chicago Bulls',
   name: 'Bulls',
   location: 'Chicago',
-}
+};
 
 export const chiMeta: TeamMeta = {
   info,
   picks: ChiPickMeta,
-}
+};
