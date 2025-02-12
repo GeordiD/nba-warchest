@@ -148,19 +148,7 @@ export const DenPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      {
-        id: '2030.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-          ifNotSettled: {
-            id: '2029.1',
-            result: `To OKC ${prot(5)}`,
-          },
-        },
-      },
-    ],
+    roundTwo: [tradePick(2030, 2, 'OKC')],
   },
   {
     year: 2031,

@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { favorableSwap, ifNotConvey, prot } from '~/data/shorthand';
+import { favorableSwap, getPick, ifNotConvey, prot } from '~/data/shorthand';
 
 export const OkcCombinedMeta: YearMeta[] = [
   {
@@ -300,13 +300,6 @@ export const OkcCombinedMeta: YearMeta[] = [
           teams: ['MIA'],
         },
       },
-      {
-        id: '2029.2.PHX',
-        details: 'PHX',
-        summary: {
-          teams: ['PHX'],
-        },
-      },
     ],
   },
   {
@@ -342,6 +335,7 @@ export const OkcCombinedMeta: YearMeta[] = [
           teams: ['MIA'],
         },
       },
+      getPick(2030, 2, 'DEN'),
     ],
   },
   {

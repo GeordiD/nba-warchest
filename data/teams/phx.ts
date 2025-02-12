@@ -140,7 +140,7 @@ export const PhxPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2029, 2, 'OKC')],
+    roundTwo: [tradePick(2029, 2, 'CHA')],
   },
   {
     year: 2030,

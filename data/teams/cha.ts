@@ -153,6 +153,13 @@ export const ChaPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      {
+        id: '2029.2.PHX',
+        details: 'PHX',
+        summary: {
+          teams: ['PHX'],
+        },
+      },
     ],
   },
   {
