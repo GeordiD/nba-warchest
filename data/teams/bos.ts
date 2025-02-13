@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { prot, unfavorableSwap } from '~/data/shorthand';
+import { prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const bosPickMeta: YearMeta[] = [
   {
@@ -163,15 +163,7 @@ export const bosPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      {
-        id: '2030.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-    ],
+    roundTwo: [tradePick(2030, 2, 'HOU')],
   },
   {
     year: 2031,
@@ -194,16 +186,16 @@ export const bosPickMeta: YearMeta[] = [
       },
     ],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'BOS',
   fullName: 'Boston Celtics',
   name: 'Celtics',
   location: 'Boston',
-}
+};
 
 export const bosMeta: TeamMeta = {
   info,
   picks: bosPickMeta,
-}
+};

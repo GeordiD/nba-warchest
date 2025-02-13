@@ -1,6 +1,12 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { favorableSwap, getPick, ifNotConvey, prot, tradePick } from '~/data/shorthand';
+import {
+  favorableSwap,
+  getPick,
+  ifNotConvey,
+  prot,
+  tradePick,
+} from '~/data/shorthand';
 
 export const PhiPickMeta: YearMeta[] = [
   {
@@ -25,9 +31,7 @@ export const PhiPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2025, 2, 'CHA'),
-    ],
+    roundTwo: [tradePick(2025, 2, 'CHA')],
   },
   {
     year: 2026,
@@ -80,9 +84,7 @@ export const PhiPickMeta: YearMeta[] = [
           headline: `To BKN ${prot}`,
           extra: [
             'If PHI has conveyed a 1st to OKC by 2025',
-            ifNotConvey([
-              `2028 1st ${prot(8)}`,
-            ]),
+            ifNotConvey([`2028 1st ${prot(8)}`]),
           ],
         },
         summary: {
@@ -183,15 +185,7 @@ export const PhiPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      {
-        id: '2030.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-    ],
+    roundTwo: [tradePick(2030, 2, 'DAL')],
   },
   {
     year: 2031,
@@ -214,16 +208,16 @@ export const PhiPickMeta: YearMeta[] = [
       },
     ],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'PHI',
   fullName: 'Philadelphia 76ers',
   location: 'Philadelphia',
   name: '76ers',
-}
+};
 
 export const phiMeta: TeamMeta = {
   info,
   picks: PhiPickMeta,
-}
+};

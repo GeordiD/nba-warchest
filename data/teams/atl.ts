@@ -84,17 +84,19 @@ export const AtlPickMeta: YearMeta[] = [
   },
   {
     year: 2027,
-    roundOne: [tradePick(2027, 1, 'SAS')],
-    roundTwo: [
-      tradePick(2027, 2, 'MEM'),
+    roundOne: [
+      tradePick(2027, 1, 'SAS'),
       {
-        id: '2027.2.LAC',
-        details: 'LAC',
+        id: '2027.1.MIL.NOP',
+        details: `Least favorable of MIL ${prot(4)} and NOP ${prot(4)}`,
         summary: {
-          teams: ['LAC'],
+          swapType: 'unfavorable',
+          teams: ['MIL', 'NOP'],
+          ownNotIncluded: true,
         },
       },
     ],
+    roundTwo: [tradePick(2027, 2, 'MEM'), getPick(2027, 2, 'LAC')],
   },
   {
     year: 2028,

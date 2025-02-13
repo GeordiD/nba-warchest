@@ -1,6 +1,12 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { favorableSwap, getPick, ifNotConvey, prot, tradePick } from '~/data/shorthand';
+import {
+  favorableSwap,
+  getPick,
+  ifNotConvey,
+  prot,
+  tradePick,
+} from '~/data/shorthand';
 
 export const HouPickMeta: YearMeta[] = [
   {
@@ -28,9 +34,7 @@ export const HouPickMeta: YearMeta[] = [
         id: '2025.2',
         details: {
           headline: 'Worst of HOU / OKC',
-          extra: [
-            'Best to MEM',
-          ],
+          extra: ['Best to MEM'],
         },
         summary: {
           isOwn: true,
@@ -47,11 +51,7 @@ export const HouPickMeta: YearMeta[] = [
         id: '2026.1',
         details: {
           headline: `To OKC ${prot(4)}`,
-          extra: [
-            ifNotConvey([
-              '2026 2nd',
-            ]),
-          ],
+          extra: [ifNotConvey(['2026 2nd'])],
         },
         summary: {
           isOwn: true,
@@ -134,9 +134,7 @@ export const HouPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2028, 2, 'ATL'),
-    ],
+    roundTwo: [tradePick(2028, 2, 'ATL')],
   },
   {
     year: 2029,
@@ -145,9 +143,7 @@ export const HouPickMeta: YearMeta[] = [
         id: '2029.1',
         details: {
           headline: 'Two most favorable of HOU / DAL / PHX',
-          extra: [
-            'Worst to BKN',
-          ],
+          extra: ['Worst to BKN'],
         },
         summary: [
           {
@@ -162,9 +158,7 @@ export const HouPickMeta: YearMeta[] = [
         ],
       },
     ],
-    roundTwo: [
-      tradePick(2029, 2, 'OKC'),
-    ],
+    roundTwo: [tradePick(2029, 2, 'OKC')],
   },
   {
     year: 2030,
@@ -177,9 +171,7 @@ export const HouPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [
-      tradePick(2030, 2, 'OKC'),
-    ],
+    roundTwo: [tradePick(2030, 2, 'OKC'), getPick(2030, 2, 'BOS')],
   },
   {
     year: 2031,
@@ -202,16 +194,16 @@ export const HouPickMeta: YearMeta[] = [
       },
     ],
   },
-]
+];
 
 const info: TeamInfo = {
   abbr: 'HOU',
   fullName: 'Houston Rockets',
   location: 'Houston',
   name: 'Rockets',
-}
+};
 
 export const houMeta: TeamMeta = {
   info,
   picks: HouPickMeta,
-}
+};

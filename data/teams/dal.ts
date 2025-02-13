@@ -181,7 +181,7 @@ export const DalPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2030, 2, 'MEM')],
+    roundTwo: [tradePick(2030, 2, 'MEM'), getPick(2030, 2, 'PHI')],
   },
   {
     year: 2031,
