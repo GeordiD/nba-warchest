@@ -10,45 +10,6 @@ import {
 
 export const SacPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: `To ATL ${prot(12)}`,
-          extra: [ifNotConvey([`2026 1st ${prot(10)}`, '2026 2nd & 2027 2nd'])],
-        },
-        summary: {
-          isOwn: true,
-          teams: ['ATL'],
-          isConditional: true,
-        },
-      },
-      {
-        id: '2025.1.CHA',
-        details: {
-          headline: `CHA ${prot(14)}`,
-          extra: [ifNotConvey([`2026 2nd & 2027 2nd`])],
-        },
-        summary: {
-          isConditional: true,
-          teams: ['CHA'],
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-      getPick(2025, 2, 'POR'),
-      getPick(2025, 2, 'CHI'),
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

@@ -11,43 +11,6 @@ import {
 
 export const BknPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-      {
-        id: '2025.1.PHX-HOU',
-        details: {
-          headline: `Worst of PHX / HOU`,
-          extra: [
-            [
-              `HOU's pick resulting from ${unfavorableSwap} OKC`,
-              `OKC has right to swap with LAC / HOU ${prot(10)}`,
-            ],
-          ],
-        },
-        summary: {
-          teams: ['PHX', 'HOU'],
-          swapType: 'unfavorable',
-        },
-      },
-      {
-        id: '2025.1.MIL',
-        details: `MIL ${prot(4)}`,
-        summary: {
-          teams: ['MIL'],
-          isConditional: true,
-        },
-      },
-    ],
-    roundTwo: [tradePick(2025, 2, 'NYK')],
-  },
-  {
     year: 2026,
     roundOne: [
       {

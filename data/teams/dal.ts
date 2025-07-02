@@ -10,32 +10,6 @@ import {
 
 export const DalPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: {
-          headline: 'To BOS',
-          extra: ['DAL may receive a 2nd conditionally'],
-        },
-        summary: {
-          isOwn: true,
-          isConditional: true,
-          teams: ['BOS'],
-        },
-      },
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

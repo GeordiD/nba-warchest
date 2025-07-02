@@ -9,24 +9,6 @@ import {
 
 export const LacPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: `Own (${unfavorableSwap} OKC)`,
-          extra: [`OKC gets best of OKC / HOU ${prot(10)} / LAC`],
-        },
-        summary: {
-          isOwn: true,
-          swapType: 'unfavorable',
-          teams: ['OKC'],
-        },
-      },
-    ],
-    roundTwo: [tradePick(2025, 2, 'LAL')],
-  },
-  {
     year: 2026,
     roundOne: [
       {

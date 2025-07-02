@@ -4,41 +4,6 @@ import { botProt, favorableSwap, getPick, ifNotConvey, prot, tradePick } from '~
 
 export const PorPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: `To CHI ${prot(14)}`,
-          extra: [
-            ifNotConvey([
-              `2026 1st ${prot(14)}`,
-              `2027 1st ${prot(14)}`,
-              `2028 1st ${prot(14)}`,
-              '2028 2nd',
-            ]),
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isConditional: true,
-          teams: ['CHI'],
-        },
-      },
-    ],
-    roundTwo: [
-      tradePick(2025, 2, 'SAC'),
-      {
-        id: '2025.2.ATL',
-        details: `ATL ${botProt(41)}`,
-        summary: {
-          teams: ['ATL'],
-          isConditional: true,
-        },
-      },
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

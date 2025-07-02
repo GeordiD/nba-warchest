@@ -4,51 +4,6 @@ import { favorableSwap, getPick, ifNotConvey, prot } from '~/data/shorthand';
 
 export const OrlPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-      {
-        id: '2025.1.DEN',
-        details: {
-          headline: `DEN ${prot(5)}`,
-          extra: [
-            ifNotConvey([
-              `2026 1st ${prot(5)}`,
-              `2027 1st ${prot(5)}`,
-            ]),
-          ],
-        },
-        summary: {
-          teams: ['DEN'],
-          isConditional: true,
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-      {
-        id: '2025.2.BOS-MEM',
-        details: 'Worst of BOS / MEM',
-        summary: {
-          swapType: 'unfavorable',
-          teams: ['BOS', 'MEM'],
-        },
-      },
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

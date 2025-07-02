@@ -3,7 +3,6 @@ import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import {
   botProt,
   getPick,
-  ifNotConvey,
   prot,
   tradePick,
   unfavorableSwap,
@@ -11,55 +10,24 @@ import {
 
 export const AtlPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: 'To SAS',
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['SAS'],
-        },
-      },
-      getPick(2025, 1, 'LAL'),
-      {
-        id: '2025.1.SAC',
-        details: {
-          headline: `SAC ${prot(12)}`,
-          extra: [ifNotConvey([`2026 1st ${prot(10)}`, '2026 2nd'])],
-        },
-        summary: {
-          teams: ['SAC'],
-          isConditional: true,
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: {
-          headline: 'To POR / OKC',
-          extra: [`To POR ${prot(40)}`, `Otherwise, to OKC`],
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['OKC', 'POR'],
-        },
-      },
-      {
-        id: '2025.2.MIN',
-        details: 'MIN',
-        summary: {
-          teams: ['MIN'],
-        },
-      },
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
+      {
+        id: '2026.1',
+        details: {
+          headline: `Own (swap with SAS / CLE / UTA / MIN)`,
+          extra: [
+            'ATL receives more favorable of (1) and (2):',
+            '(1): Worst of SAS / ATL',
+            `(2): Best of CLE / UTA ${prot(8)} / MIN. If UTA falls in 1-8, then (2) becomes CLE`,
+          ],
+        },
+        summary: {
+          isOwn: true,
+          swapType: 'mixed',
+          teams: ['SAS', 'CLE', 'UTA', 'MIN'],
+        },
+      },
       {
         id: '2026.1',
         details: `Own (${unfavorableSwap} SAS)`,

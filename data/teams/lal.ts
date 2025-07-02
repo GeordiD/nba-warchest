@@ -4,19 +4,6 @@ import { getPick, ifNotConvey, prot, tradePick } from '~/data/shorthand';
 
 export const LalPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [tradePick(2025, 1, 'ATL')],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

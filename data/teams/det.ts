@@ -4,46 +4,6 @@ import { getPick, ifNotConvey, prot } from '~/data/shorthand';
 
 export const DetPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: `To NYK ${prot(13)}`,
-          extra: [
-            ifNotConvey([
-              `2026 1st ${prot(11)}`,
-              `2027 1st ${prot(9)}`,
-              '2027 2nd',
-            ]),
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isConditional: true,
-          teams: ['NYK'],
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: {
-          headline: `To BOS / DAL / WAS / NYK`,
-          extra: [
-            'If 31-55, to BOS, DAL or WAS',
-            '56+, to NYK',
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['BOS', 'DAL', 'WAS'],
-        },
-      },
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

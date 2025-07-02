@@ -10,36 +10,6 @@ import {
 
 export const PhxPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: 'To BKN / HOU',
-          extra: [
-            'HOU gets best of PHX and own pick (after top 10 prot. swap with OKC)',
-            'Worst to BKN',
-          ],
-        },
-        summary: {
-          isOwn: true,
-          teams: ['BKN', 'HOU'],
-          isTradedAway: true,
-        },
-      },
-      {
-        id: '2025.1.UTA-CLE-MIN',
-        details: `Least favorable of CLE / MIN / UTA ${botProt(10)}`,
-        summary: {
-          teams: ['UTA', 'CLE', 'MIN'],
-          swapType: 'unfavorable',
-          ownNotIncluded: true,
-        },
-      },
-    ],
-    roundTwo: [tradePick(2025, 2, 'WAS')],
-  },
-  {
     year: 2026,
     roundOne: [
       {

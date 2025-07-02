@@ -4,29 +4,6 @@ import { botProt, favorableSwap, getPick, prot, tradePick } from '~/data/shortha
 
 export const NopPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-      {
-        id: '2025.1.MIL',
-        details: `MIL ${botProt(4)}`,
-        summary: {
-          teams: ['MIL'],
-          isConditional: true,
-        },
-      },
-    ],
-    roundTwo: [
-      tradePick(2025, 2, 'SAS'),
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

@@ -10,30 +10,6 @@ import {
 
 export const PhiPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: `To OKC ${prot(6)}`,
-          extra: [
-            ifNotConvey([
-              `2026 1st ${prot(4)}`,
-              `2027 1st ${prot(4)}`,
-              '2027 2nd',
-            ]),
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isConditional: true,
-          teams: ['OKC'],
-        },
-      },
-    ],
-    roundTwo: [tradePick(2025, 2, 'CHA')],
-  },
-  {
     year: 2026,
     roundOne: [
       {

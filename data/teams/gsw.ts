@@ -4,37 +4,6 @@ import { getPick, ifNotConvey, prot, tradePick } from '~/data/shorthand';
 
 export const GswPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: 'To BOS / WAS / DAL',
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['BOS', 'DAL', 'WAS'],
-        },
-      },
-      {
-        id: '2025.2.MIA',
-        details: `MIA ${prot(37)}`,
-        summary: {
-          isConditional: true,
-          teams: ['MIA'],
-        },
-      },
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

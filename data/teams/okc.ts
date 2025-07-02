@@ -4,88 +4,6 @@ import { favorableSwap, getPick, ifNotConvey, prot } from '~/data/shorthand';
 
 export const OkcCombinedMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: `Own (${favorableSwap} HOU ${prot(10)} / LAC)`,
-        },
-        summary: {
-          swapType: 'favorable',
-          teams: ['HOU', 'LAC'],
-          isOwn: true,
-        },
-      },
-      {
-        id: '2025.1.MIA',
-        details: {
-          headline: `MIA ${prot(14)}`,
-          extra: [ifNotConvey(['2026 1st (unprotected)'])],
-        },
-        summary: {
-          teams: ['MIA'],
-          isConditional: true,
-        },
-      },
-      {
-        id: '2025.1.PHI',
-        details: {
-          headline: `PHI ${prot(6)}`,
-          extra: [
-            ifNotConvey([
-              `2026 1st ${prot(4)}`,
-              `2027 1st ${prot(4)}`,
-              `2027 2nd`,
-            ]),
-          ],
-        },
-        summary: {
-          teams: ['PHI'],
-          isConditional: true,
-        },
-      },
-      {
-        id: '2025.1.UTA',
-        details: {
-          headline: `UTA ${prot(10)}`,
-          extra: [ifNotConvey([`2026 1st ${prot(8)}`])],
-        },
-        summary: {
-          teams: ['UTA'],
-          isConditional: true,
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: 'To HOU',
-        summary: {
-          teams: ['HOU'],
-          isTradedAway: true,
-          isOwn: true,
-        },
-      },
-      {
-        id: '2025.2.ATL',
-        details: `ATL ${prot(40)}`,
-        summary: {
-          teams: ['ATL'],
-          isConditional: true,
-        },
-      },
-      {
-        id: '2025.2.BOS-MEM',
-        details: 'More favorable of BOS and MEM',
-        summary: {
-          teams: ['BOS', 'MEM'],
-          swapType: 'favorable',
-        },
-      },
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {
@@ -138,12 +56,12 @@ export const OkcCombinedMeta: YearMeta[] = [
               [
                 `2028 1st (${prot(
                   5,
-                  false
+                  false,
                 )} and if DEN conveys 1st to ORL in 2026)`,
                 `2029 1st ${prot(5)}`,
                 '2029 2nd',
               ],
-              'DEN'
+              'DEN',
             ),
             'Least favorable to LAC',
           ],
@@ -252,7 +170,7 @@ export const OkcCombinedMeta: YearMeta[] = [
             ifNotConvey([
               `2030 1st (${prot(
                 5,
-                false
+                false,
               )} and if DEN conveys 1st to OKC in 2028`,
               '2030 2nd',
             ]),

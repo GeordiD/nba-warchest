@@ -4,41 +4,6 @@ import { ifNotConvey, ownPick, prot } from '~/data/shorthand';
 
 export const ChiPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      ownPick(2025, 1),
-      {
-        id: '2025.1.POR',
-        details: {
-          headline: `POR ${prot(14)}`,
-          extra: [
-            ifNotConvey([
-              `2026 1st ${prot(14)}`,
-              `2027 1st ${prot(14)}`,
-              `2028 1st ${prot(14)}`,
-              `2028 2nd`,
-            ]),
-          ],
-        },
-        summary: {
-          isConditional: true,
-          teams: ['POR'],
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: 'To SAC',
-        summary: {
-          isTradedAway: true,
-          isOwn: true,
-          teams: ['SAC'],
-        },
-      },
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

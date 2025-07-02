@@ -11,35 +11,6 @@ import {
 
 export const UtaPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: `To OKC ${prot(10)}`,
-          extra: [ifNotConvey([`2026 1st ${prot(8)}`])],
-        },
-        summary: {
-          isOwn: true,
-          teams: ['OKC'],
-          isConditional: true,
-        },
-      },
-      {
-        id: '2025.1',
-        details: {
-          headline: 'Best of CLE / MIN / UTA (if not conveyed)',
-          extra: ['Least favorable to PHX'],
-        },
-        summary: {
-          teams: ['CLE', 'MIN'],
-          swapType: 'favorable',
-        },
-      },
-    ],
-    roundTwo: [tradePick(2025, 2, 'MIN'), getPick(2025, 2, 'LAC')],
-  },
-  {
     year: 2026,
     roundOne: [
       {

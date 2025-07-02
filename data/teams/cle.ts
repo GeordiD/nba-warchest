@@ -4,22 +4,6 @@ import { getPick, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const ClePickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      tradePick(2025, 1, 'UTA'),
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-      getPick(2025, 2, 'MIL'),
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

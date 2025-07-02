@@ -11,29 +11,6 @@ import {
 
 export const SasPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-      getPick(2025, 1, 'ATL'),
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-      getPick(2025, 2, 'NOP'),
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

@@ -4,21 +4,6 @@ import { ifNotConvey, prot, tradePick } from '~/data/shorthand';
 
 export const TorPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-    ],
-    roundTwo: [
-      tradePick(2025, 2, 'DAL'),
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

@@ -10,41 +10,6 @@ import {
 
 export const HouPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: `Best of PHX and worst of OKC / Own ${prot(10)}`,
-          extra: [
-            `OKC first has right to swap with HOU ${prot(10)} / LAC`,
-            'HOU has the right to swap the pick it receives with PHX',
-            'The remaining pick goes to BKN',
-          ],
-        },
-        summary: {
-          isOwn: true,
-          teams: ['PHX', 'OKC'],
-          swapType: 'mixed',
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: {
-          headline: 'Worst of HOU / OKC',
-          extra: ['Best to MEM'],
-        },
-        summary: {
-          isOwn: true,
-          teams: ['OKC'],
-          swapType: 'unfavorable',
-        },
-      },
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

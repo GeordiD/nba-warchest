@@ -4,35 +4,6 @@ import { getPick, ifNotConvey, prot } from '~/data/shorthand';
 
 export const ChaPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: `To SAC ${prot(14)}`,
-          extra: [ifNotConvey(['2026 2nd'])],
-        },
-        summary: {
-          isOwn: true,
-          isConditional: true,
-          teams: ['SAC'],
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: `To IND ${prot(55)}`,
-        summary: {
-          isOwn: true,
-          isConditional: true,
-          teams: ['IND'],
-        },
-      },
-      getPick(2025, 2, 'PHI'),
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

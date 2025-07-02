@@ -4,32 +4,6 @@ import { ifNotConvey, prot, tradePick } from '~/data/shorthand';
 
 export const DenPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: `To ORL ${prot(5)}`,
-          extra: [ifNotConvey([`2026 1st ${prot(5)}`, `2027 1st ${prot(5)}`])],
-        },
-        summary: {
-          isOwn: true,
-          isConditional: true,
-          teams: ['ORL'],
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

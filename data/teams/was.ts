@@ -4,39 +4,6 @@ import { favorableSwap, getPick, ifNotConvey, prot, unfavorableSwap } from '~/da
 
 export const WasPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: `To NYK ${prot(10)}`,
-          extra: [
-            ifNotConvey([
-              `2026 1st ${prot(8)}`,
-              '2026 2nd & 2027 2nd',
-            ]),
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isConditional: true,
-          teams: ['NYK'],
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: `Own (${unfavorableSwap} GSW)`,
-        summary: {
-          isOwn: true,
-          teams: ['GSW'],
-          swapType: 'unfavorable',
-        },
-      },
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

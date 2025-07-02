@@ -11,43 +11,6 @@ import { unfavorableSwap } from '../shorthand';
 
 export const IndPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-      {
-        id: '2025.2.CHA',
-        details: `CHA ${prot(55)}`,
-        summary: {
-          teams: ['CHA'],
-          isConditional: true,
-        },
-      },
-      {
-        id: '2025.2.MIA',
-        details: `MIA ${botProt(38)}`,
-        summary: {
-          teams: ['MIA'],
-          isConditional: true,
-        },
-      },
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

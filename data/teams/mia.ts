@@ -10,37 +10,6 @@ import {
 
 export const MiaPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: `To OKC ${prot(14)}`,
-          extra: [ifNotConvey(['2026 1st'])],
-        },
-        summary: {
-          isOwn: true,
-          isConditional: true,
-          teams: ['OKC'],
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: {
-          headline: 'To GSW / BKN',
-          extra: ['31-37 to GSW', '38-60 to BKN'],
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['GSW', 'BKN'],
-        },
-      },
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

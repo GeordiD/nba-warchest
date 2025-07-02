@@ -4,47 +4,6 @@ import { getPick, ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/s
 
 export const NykPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      tradePick(2025, 1, 'BKN'),
-      {
-        id: '2025.1.WAS',
-        details: {
-          headline: `WAS ${prot(10)}`,
-          extra: [
-            ifNotConvey([
-              `2026 1st ${prot(8)}`,
-              '2026 2nd',
-            ]),
-          ],
-        },
-        summary: {
-          teams: ['WAS'],
-          isConditional: true,
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: 'Forfeited Own Pick',
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-        },
-      },
-      getPick(2025, 2, 'BKN'),
-      {
-        id: '2025.2.DET',
-        details: `DET ${prot(55)}`,
-        summary: {
-          teams: ['DET'],
-          isConditional: true,
-        },
-      },
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

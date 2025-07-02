@@ -4,43 +4,6 @@ import { favorableSwap, getPick, prot, tradePick } from '~/data/shorthand';
 
 export const MemPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: {
-          headline: 'TO OKC / ORL',
-          extra: [
-            'Best of BOS / MEM to OKC',
-            'Worst to ORL',
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['OKC', 'ORL'],
-        },
-      },
-      {
-        id: '2025.2.HOU-OKC',
-        details: 'Best of HOU / OKC',
-        summary: {
-          teams: ['HOU', 'OKC'],
-          swapType: 'favorable',
-        },
-      },
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

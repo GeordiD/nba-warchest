@@ -4,35 +4,6 @@ import { prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const bosPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: {
-          headline: 'To OKC or ORL',
-          extra: [
-            'More favorable of MEM / BOS to OKC',
-            'Less favorable to ORL',
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['OKC', 'ORL'],
-        },
-      },
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {

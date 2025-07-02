@@ -4,29 +4,6 @@ import { tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const MilPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: 'To NOP / BKN',
-          extra: [
-            '1-4 to NOP',
-            '5-30 to BKN',
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['NOP', 'BKN'],
-        },
-      },
-    ],
-    roundTwo: [
-      tradePick(2025, 2, 'CLE'),
-    ],
-  },
-  {
     year: 2026,
     roundOne: [
       {
