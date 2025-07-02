@@ -1,11 +1,9 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import {
-  botProt,
   getPick,
   prot,
   tradePick,
-  unfavorableSwap,
 } from '~/data/shorthand';
 
 export const AtlPickMeta: YearMeta[] = [
@@ -29,23 +27,33 @@ export const AtlPickMeta: YearMeta[] = [
         },
       },
       {
-        id: '2026.1',
-        details: `Own (${unfavorableSwap} SAS)`,
+        id: '2026.1.MIL-NOP',
+        details: `Most favorable of MIL / NOP`,
         summary: {
           isOwn: true,
           swapType: 'unfavorable',
-          teams: ['SAS'],
+          ownNotIncluded: true,
+          teams: ['MIL', 'NOP'],
         },
       },
     ],
     roundTwo: [
       tradePick(2026, 2, 'BKN'),
       {
-        id: '2026.2.MEM',
-        details: `MEM ${botProt(43)}`,
+        id: '2026.2.et-all',
+        details: {
+          headline: `One of BOS / IND / MIA / MIN / NYK / NOP / POR`,
+          extra: [
+            'ATL receives least favorable of (1) and (2):',
+            '(1): Least favorable of BOS and the most favorable of IND / MIA',
+            '(2): Most favorable of NYK / NOP / POR',
+          ],
+        },
         summary: {
           isConditional: true,
-          teams: ['MEM'],
+          swapType: 'mixed',
+          ownNotIncluded: true,
+          teams: ['BOS', 'IND', 'MIA', 'MIN', 'NYK', 'NOP', 'POR'],
         },
       },
     ],
@@ -64,20 +72,27 @@ export const AtlPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2027, 2, 'MEM'), getPick(2027, 2, 'LAC')],
+    roundTwo: [tradePick(2027, 2, 'POR'), getPick(2027, 2, 'CLE')],
   },
   {
     year: 2028,
     roundOne: [
       {
         id: '2028.1',
-        details: 'Own',
+        details: {
+          headline: 'Swap with UTA / CLE',
+          extra: [
+            'More favorable of ATL and less favorable of UTA and CLE',
+          ],
+        },
         summary: {
           isOwn: true,
+          swapType: 'mixed',
+          teams: ['UTA', 'CLE'],
         },
       },
     ],
-    roundTwo: [tradePick(2028, 2, 'BKN'), getPick(2028, 2, 'HOU')],
+    roundTwo: [tradePick(2028, 2, 'BKN')],
   },
   {
     year: 2029,

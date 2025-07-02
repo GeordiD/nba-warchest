@@ -18,6 +18,7 @@ export interface PickSummary {
   teams?: TeamAbbr[];
   isTradedAway?: boolean;
   isOwn?: boolean;
+  frozen?: number; // 2028
   desc?: string;
   ifNotSettled?: {
     id: Id,
