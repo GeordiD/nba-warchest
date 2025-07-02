@@ -134,6 +134,27 @@ export const AtlPickMeta: YearMeta[] = [
       },
     ],
   },
+  {
+    year: 2032,
+    roundOne: [
+      {
+        id: '2032.1',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+    ],
+    roundTwo: [
+      {
+        id: '2032.2',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+    ],
+  },
 ];
 
 const info: TeamInfo = {

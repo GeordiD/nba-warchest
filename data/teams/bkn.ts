@@ -5,7 +5,6 @@ import {
   getPick,
   ifNotConvey,
   prot,
-  tradePick,
   unfavorableSwap,
 } from '~/data/shorthand';
 
@@ -95,7 +94,7 @@ export const BknPickMeta: YearMeta[] = [
           headline: `Own (${favorableSwap} PHX / NYK)`,
           extra: [
             `If PHI 1st does not convey in 2027, PHI ${prot(
-              8
+              8,
             )} included in this swap (BKN getting the two most favorable)`,
           ],
         },
@@ -188,6 +187,27 @@ export const BknPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2031.2',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+    ],
+  },
+  {
+    year: 2032,
+    roundOne: [
+      {
+        id: '2032.1',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+    ],
+    roundTwo: [
+      {
+        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

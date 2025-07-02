@@ -3,7 +3,14 @@
     "allow": [
       "Bash(find:*)",
       "Bash(grep:*)",
-      "mcp__ide__getDiagnostics"
+      "mcp__ide__getDiagnostics",
+      "Bash(for:*)",
+      "Bash(do if ! grep -q \"year: 2032\" \"$file\")",
+      "Bash(then echo \"$file\")",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(do echo \"=== $file ===\")",
+      "Bash(tail:*)"
     ],
     "deny": []
   }

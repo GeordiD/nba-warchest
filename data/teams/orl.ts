@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { favorableSwap, getPick, ifNotConvey, prot } from '~/data/shorthand';
+import { favorableSwap, getPick, ifNotConvey, ownPick, prot } from '~/data/shorthand';
 
 export const OrlPickMeta: YearMeta[] = [
   {
@@ -159,6 +159,15 @@ export const OrlPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+    ],
+  },
+  {
+    year: 2032,
+    roundOne: [
+      ownPick(2032, 1),
+    ],
+    roundTwo: [
+      ownPick(2032, 2),
     ],
   },
 ]

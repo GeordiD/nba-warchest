@@ -1,7 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import {
-  getPick,
   ifNotConvey,
   prot,
   tradePick,
@@ -17,7 +16,7 @@ export const MinPickMeta: YearMeta[] = [
         details: {
           headline: `Own (${unfavorableSwap} UTA)`,
           extra: [
-            "If UTA has not conveyed 1st to OKC in 2025, UTA can only swap if it's pick is 1-8",
+            'If UTA has not conveyed 1st to OKC in 2025, UTA can only swap if it\'s pick is 1-8',
           ],
         },
         summary: {
@@ -116,6 +115,27 @@ export const MinPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2031.2',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+    ],
+  },
+  {
+    year: 2032,
+    roundOne: [
+      {
+        id: '2032.1',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+    ],
+    roundTwo: [
+      {
+        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

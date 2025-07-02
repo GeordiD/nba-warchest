@@ -176,6 +176,27 @@ export const ChaPickMeta: YearMeta[] = [
       getPick(2031, 2, 'NYK'),
     ],
   },
+  {
+    year: 2032,
+    roundOne: [
+      {
+        id: '2032.1',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+    ],
+    roundTwo: [
+      {
+        id: '2032.2',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+    ],
+  },
 ];
 
 const info: TeamInfo = {

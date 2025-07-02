@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { ifNotConvey, prot, tradePick } from '~/data/shorthand';
+import { ifNotConvey, ownPick, prot, tradePick } from '~/data/shorthand';
 
 export const TorPickMeta: YearMeta[] = [
   {
@@ -143,6 +143,15 @@ export const TorPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+    ],
+  },
+  {
+    year: 2032,
+    roundOne: [
+      ownPick(2032, 1),
+    ],
+    roundTwo: [
+      ownPick(2032, 2),
     ],
   },
 ]

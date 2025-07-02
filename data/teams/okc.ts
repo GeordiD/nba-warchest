@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { favorableSwap, getPick, ifNotConvey, prot } from '~/data/shorthand';
+import { favorableSwap, getPick, ifNotConvey, prot, ownPick } from '~/data/shorthand';
 
 export const OkcCombinedMeta: YearMeta[] = [
   {
@@ -54,10 +54,7 @@ export const OkcCombinedMeta: YearMeta[] = [
             `DEN (${prot(5, false)} and if DEN conveys 1st to ORL in 2025)`,
             ifNotConvey(
               [
-                `2028 1st (${prot(
-                  5,
-                  false,
-                )} and if DEN conveys 1st to ORL in 2026)`,
+                `2028 1st (${prot(5, false)} and if DEN conveys 1st to ORL in 2026)`,
                 `2029 1st ${prot(5)}`,
                 '2029 2nd',
               ],
@@ -168,10 +165,7 @@ export const OkcCombinedMeta: YearMeta[] = [
           extra: [
             'If DEN conveys 1st to OKC in 2027',
             ifNotConvey([
-              `2030 1st (${prot(
-                5,
-                false,
-              )} and if DEN conveys 1st to OKC in 2028`,
+              `2030 1st (${prot(5, false)} and if DEN conveys 1st to OKC in 2028`,
               '2030 2nd',
             ]),
           ],
@@ -275,6 +269,15 @@ export const OkcCombinedMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+    ],
+  },
+  {
+    year: 2032,
+    roundOne: [
+      ownPick(2032, 1),
+    ],
+    roundTwo: [
+      ownPick(2032, 2),
     ],
   },
 ];

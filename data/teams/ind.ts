@@ -1,3 +1,4 @@
+import { unfavorableSwap } from '../shorthand';
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import {
@@ -7,7 +8,6 @@ import {
   ifNotConvey,
   prot,
 } from '~/data/shorthand';
-import { unfavorableSwap } from '../shorthand';
 
 export const IndPickMeta: YearMeta[] = [
   {
@@ -185,6 +185,27 @@ export const IndPickMeta: YearMeta[] = [
           isOwn: true,
           swapType: 'unfavorable',
           teams: ['MIA'],
+        },
+      },
+    ],
+  },
+  {
+    year: 2032,
+    roundOne: [
+      {
+        id: '2032.1',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+    ],
+    roundTwo: [
+      {
+        id: '2032.2',
+        details: 'Own',
+        summary: {
+          isOwn: true,
         },
       },
     ],
