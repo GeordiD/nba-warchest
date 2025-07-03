@@ -1,12 +1,12 @@
-import type { YearMeta, PickDetails, PickSummary } from '~/data/PickMetaTypes';
+import type { PickDetails, PickSummary, YearMeta } from '~/data/PickMetaTypes';
 import type { TeamMeta } from '~/data/TeamMeta';
 import { teamsWithoutFirstLastYear } from '~/data/teamsWithoutFirstLastYear';
 
 /*
 Algorithm
 
-- Trim to guarenteed picks (we don't care about conditional)
-- Any year without any picks, `hasGuarenteedPick=false`
+- Trim to guaranteed picks (we don't care about conditional)
+- Any year without any picks, `hasGuaranteedPick=false`
   - Make sure the last draft year is in this list and marked accordingly
 - For each year next to a FALSE value:
   - If num picks = 0; Error
@@ -105,7 +105,7 @@ function forEachYear(
     year: number,
     isLastYear: boolean,
   ) => void) {
-  const endYear = 2031;
+  const endYear = 2032;
   for (let i = startAt; i <= (startAt + 6); i++) {
     callback(i, i === endYear);
   }
@@ -265,7 +265,7 @@ function getOwnedObject(input: PickSummary[]) {
 export function getTradability(meta: TeamMeta) {
   const picks = getPicksFromMeta(meta.picks);
   const tradables = getTradablePicks(picks, {
-    startYear: 2025,
+    startYear: 2026,
     hadPickLastYear: !teamsWithoutFirstLastYear.includes(meta.info.abbr),
   });
   const swappables = getSwappablePicks(picks, tradables);

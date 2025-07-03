@@ -62,7 +62,6 @@ export const ChaPickMeta: YearMeta[] = [
         details: {
           headline: `MIA ${prot(14)}`,
           extra: [
-            'If MIA conveys 1st to OKC in 2025',
             ifNotConvey([
               '2028 1st',
             ]),

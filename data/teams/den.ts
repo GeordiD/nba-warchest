@@ -24,7 +24,6 @@ export const DenPickMeta: YearMeta[] = [
         details: {
           headline: `To OKC ${prot(5)}`,
           extra: [
-            'If DEN conveys 1st to ORL in 2025',
             'OKC can swap OKC or DEN with LAC',
             ifNotConvey([
               `2028 1st ${prot(5)} and if DEN has conveyed 1st to ORL by 2026`,
