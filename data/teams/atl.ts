@@ -15,9 +15,11 @@ export const AtlPickMeta: YearMeta[] = [
         details: {
           headline: `Own (swap with SAS / CLE / UTA / MIN)`,
           extra: [
-            'ATL receives more favorable of (1) and (2):',
-            '(1): Worst of SAS / ATL',
-            `(2): Best of CLE / UTA ${prot(8)} / MIN. If UTA falls in 1-8, then (2) becomes CLE`,
+            [
+              'ATL receives more favorable of (1) and (2):',
+              '(1): Worst of SAS / ATL',
+              `(2): Best of CLE / UTA ${prot(8)} / MIN. If UTA falls in 1-8, then (2) becomes CLE`,
+            ],
           ],
         },
         summary: {
@@ -43,11 +45,11 @@ export const AtlPickMeta: YearMeta[] = [
         id: '2026.2.et-all',
         details: {
           headline: `One of BOS / IND / MIA / MIN / NYK / NOP / POR`,
-          extra: [
+          extra: [[
             'ATL receives least favorable of (1) and (2):',
             '(1): Least favorable of BOS and the most favorable of IND / MIA',
             '(2): Most favorable of NYK / NOP / POR',
-          ],
+          ]],
         },
         summary: {
           isConditional: true,

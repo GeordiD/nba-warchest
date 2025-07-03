@@ -14,14 +14,15 @@ export const MinPickMeta: YearMeta[] = [
       {
         id: '2026.1',
         details: {
-          headline: `Own (${unfavorableSwap} UTA)`,
+          headline: `To CLE / UTA (conditionally)`,
           extra: [
-            'If UTA has not conveyed 1st to OKC in 2025, UTA can only swap if it\'s pick is 1-8',
+            'If UTA 1-8, MIN will receives the worst of CLE / UTA / MIN',
           ],
         },
         summary: {
           isOwn: true,
-          teams: ['UTA'],
+          isConditional: true,
+          teams: ['UTA', 'CLE'],
           swapType: 'unfavorable',
         },
       },
@@ -49,7 +50,7 @@ export const MinPickMeta: YearMeta[] = [
   {
     year: 2027,
     roundOne: [tradePick(2027, 1, 'UTA')],
-    roundTwo: [tradePick(2027, 2, 'OKC')],
+    roundTwo: [tradePick(2027, 2, 'POR')],
   },
   {
     year: 2028,
@@ -86,10 +87,6 @@ export const MinPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2029.1',
-            result: 'To UTA',
-          },
         },
       },
     ],
@@ -107,7 +104,17 @@ export const MinPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2030, 2, 'DET')],
+    roundTwo: [
+      tradePick(2030, 2, 'DET'),
+      {
+        id: '2030.2.MEM',
+        details: `MEM ${prot(50)}`,
+        summary: {
+          isConditional: true,
+          teams: ['MEM'],
+        },
+      },
+    ],
   },
   {
     year: 2031,
@@ -115,9 +122,11 @@ export const MinPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2031.2',
-        details: 'Own',
+        details: 'Best of MIN / GSW',
         summary: {
           isOwn: true,
+          swapType: 'favorable',
+          teams: ['GSW'],
         },
       },
     ],
@@ -127,13 +136,16 @@ export const MinPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2032.1',
-        details: 'Own',
+        details: 'Ow (frozen through 2027-28',
         summary: {
           isOwn: true,
+          isTradedAway: true, // temporary until implement frozen
+          frozen: 2028,
         },
       },
     ],
     roundTwo: [
+      // TODO: 2 unspecified 2nd round picks from PHX
       {
         id: '2032.2',
         details: 'Own',

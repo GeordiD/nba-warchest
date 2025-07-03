@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 import ColumnGroup from 'primevue/columngroup';
+import DataTable from 'primevue/datatable';
 import Row from 'primevue/row';
 
 const metaStore = useMetaStore();

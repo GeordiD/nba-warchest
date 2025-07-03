@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { favorableSwap, getPick, ifNotConvey, prot, ownPick } from '~/data/shorthand';
+import { favorableSwap, getPick, ifNotConvey, ownPick, prot } from '~/data/shorthand';
 
 export const OkcCombinedMeta: YearMeta[] = [
   {
@@ -10,7 +10,7 @@ export const OkcCombinedMeta: YearMeta[] = [
         id: '2026.1',
         details: {
           headline: `Two most favorable of OKC / HOU ${prot(4)} / LAC`,
-          extra: [`Least favorable to PHI`],
+          extra: [`Least favorable to WAS`],
         },
         summary: [
           {
@@ -27,6 +27,32 @@ export const OkcCombinedMeta: YearMeta[] = [
           },
         ],
       },
+      {
+        id: '2026.1.PHI',
+        details: {
+          headline: `PHI ${prot(4)}`,
+          extra: [
+            ifNotConvey([
+              `2027 1st ${prot(4)}`,
+              `2027 2nd`,
+            ]),
+          ],
+        },
+        summary: {
+          isConditional: true,
+          teams: ['PHI'],
+        },
+      },
+      {
+        id: '2026.1.UTA',
+        details: {
+          headline: `UTA ${prot(8)}`,
+        },
+        summary: {
+          isConditional: true,
+          teams: ['UTA'],
+        },
+      },
     ],
     roundTwo: [
       {
@@ -36,9 +62,9 @@ export const OkcCombinedMeta: YearMeta[] = [
           extra: ['Second most favorable to HOU', 'Least favorable to SAN'],
         },
         summary: {
+          isOwn: true,
           teams: ['DAL', 'PHI'],
           swapType: 'favorable',
-          isOwn: true,
         },
       },
     ],
@@ -49,9 +75,8 @@ export const OkcCombinedMeta: YearMeta[] = [
       {
         id: '2027.1',
         details: {
-          headline: 'Two most favorable of OKC / DEN (prot.) / LAC',
+          headline: `Two most favorable of OKC / DEN ${prot(5)} / LAC`,
           extra: [
-            `DEN (${prot(5, false)} and if DEN conveys 1st to ORL in 2025)`,
             ifNotConvey(
               [
                 `2028 1st (${prot(5, false)} and if DEN conveys 1st to ORL in 2026)`,
@@ -78,13 +103,20 @@ export const OkcCombinedMeta: YearMeta[] = [
           },
         ],
       },
+      {
+        id: '2027.1.SAS',
+        details: `SAS ${prot(16)}`,
+        summary: {
+          isConditional: true,
+          teams: ['SAS'],
+        },
+      },
     ],
     roundTwo: [
       {
         id: '2027.2',
         details: {
-          headline: 'Three most favorable of OKC / HOU / IND / MIA',
-          extra: ['Least favorable to SAN'],
+          headline: 'Most favorable of OKC / HOU / IND / MIA',
         },
         summary: [
           {
@@ -92,21 +124,34 @@ export const OkcCombinedMeta: YearMeta[] = [
             swapType: 'favorable',
             teams: ['HOU', 'IND', 'MIA'],
           },
-          {
-            swapType: 'favorable',
-            teams: ['HOU', 'IND', 'MIA'],
-          },
-          {
-            swapType: 'favorable',
-            teams: ['HOU', 'IND', 'MIA'],
-          },
         ],
       },
       {
-        id: '2027.2.MIN',
-        details: 'MIN',
+        id: '2027.2.CHA',
+        details: {
+          headline: 'CHA',
+          extra: [
+            'If SAS 1-16 in 2027',
+          ],
+        },
         summary: {
-          teams: ['MIN'],
+          isConditional: true,
+          teams: ['CHA'],
+          desc: 'CHA (conditionally)',
+        },
+      },
+      {
+        id: '2027.2.SAC',
+        details: {
+          headline: 'SAC',
+          extra: [
+            'If SAS 1-16 in 2027',
+          ],
+        },
+        summary: {
+          isConditional: true,
+          teams: ['SAC'],
+          desc: 'SAC (conditionally)',
         },
       },
     ],
@@ -199,13 +244,6 @@ export const OkcCombinedMeta: YearMeta[] = [
         },
       },
       {
-        id: '2029.2.HOU',
-        details: 'HOU',
-        summary: {
-          teams: ['HOU'],
-        },
-      },
-      {
         id: '2029.2.MIA',
         details: 'MIA',
         summary: {
@@ -267,6 +305,14 @@ export const OkcCombinedMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+        },
+      },
+      {
+        id: '2031.2.NOP-ORL',
+        details: 'Worst of NOP / ORL',
+        summary: {
+          swapType: 'unfavorable',
+          teams: ['ORL', 'NOP'],
         },
       },
     ],

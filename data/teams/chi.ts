@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { ifNotConvey, ownPick, prot } from '~/data/shorthand';
+import { ifNotConvey, prot } from '~/data/shorthand';
 
 export const ChiPickMeta: YearMeta[] = [
   {
@@ -11,10 +11,23 @@ export const ChiPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2025.1',
-            result: `To SAS ${prot(8)}`,
-          },
+        },
+      },
+      {
+        id: '2026.1.POR',
+        details: {
+          headline: `POR ${prot(14)}`,
+          extra: [
+            ifNotConvey([
+              `2027 1st ${prot(14)}`,
+              `2028 1st ${prot(14)}`,
+              `2028 2nd`,
+            ]),
+          ],
+        },
+        summary: {
+          isConditional: true,
+          teams: ['POR'],
         },
       },
     ],

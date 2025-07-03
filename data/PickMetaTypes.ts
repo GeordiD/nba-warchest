@@ -14,12 +14,16 @@ export interface PickDetails {
 export interface PickSummary {
   isConditional?: boolean,
   swapType?: SwapType,
-  ownNotIncluded?: boolean,
+  ownNotIncluded?: boolean, // Probably deprecated: should be checking if isOwn instead
+  includeOwn?: boolean, // Sometimes needed to get around new logic above. Is isOwn fine here too?
   teams?: TeamAbbr[];
   isTradedAway?: boolean;
   isOwn?: boolean;
   frozen?: number; // 2028
   desc?: string;
+  /**
+   * @deprecated we're not using, so I'm not updating. If we want to use, must update data
+   */
   ifNotSettled?: {
     id: Id,
     result: string,

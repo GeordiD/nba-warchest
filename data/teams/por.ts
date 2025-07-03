@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { botProt, favorableSwap, getPick, ifNotConvey, ownPick, prot, tradePick } from '~/data/shorthand';
+import { favorableSwap, getPick, ifNotConvey, ownPick, prot, tradePick } from '~/data/shorthand';
 
 export const PorPickMeta: YearMeta[] = [
   {
@@ -8,23 +8,30 @@ export const PorPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2026.1',
-        details: 'Own',
+        details: {
+          headline: `To CHI ${prot(14)}`,
+          extra: [
+            ifNotConvey([
+              `2027 1st ${prot(14)}`,
+              `2028 1st ${prot(14)}`,
+              '2028 2nd',
+            ]),
+          ],
+        },
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2025.1',
-            result: `To CHI ${prot(14)}`,
-          },
+          isConditional: true,
+          teams: ['CHI'],
         },
       },
     ],
     roundTwo: [
       {
         id: '2026.2',
-        details: 'To BOS / SAS / MIN / WAS',
+        details: 'To BOS / SAS / WAS',
         summary: {
           isOwn: true,
-          teams: ['BOS', 'SAS', 'MIN', 'WAS'],
+          teams: ['BOS', 'SAS', 'WAS'],
           isTradedAway: true,
         },
       },
@@ -46,10 +53,6 @@ export const PorPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2025.1',
-            result: `To CHI ${prot(14)}`,
-          },
         },
       },
     ],
@@ -60,12 +63,13 @@ export const PorPickMeta: YearMeta[] = [
           headline: `Worst of POR / NOP`,
           extra: [
             'Best to CHA',
-            'If 56-60, pick goes to BOS',
+            'If 56-60, pick goes to HOU',
           ],
         },
         summary: {
           isOwn: true,
           swapType: 'unfavorable',
+          isConditional: true,
           teams: ['NOP'],
         },
       },
@@ -87,12 +91,9 @@ export const PorPickMeta: YearMeta[] = [
           isOwn: true,
           teams: ['MIL'],
           swapType: 'favorable',
-          ifNotSettled: {
-            id: '2025.1',
-            result: `To CHI ${prot(14)}`,
-          },
         },
       },
+      getPick(2028, 1, 'ORL'),
     ],
     roundTwo: [
       {
@@ -100,13 +101,9 @@ export const PorPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2025.1',
-            result: `To CHI`,
-          },
         },
       },
-      getPick(2028, 2, 'GSW'),
+      getPick(2028, 2, 'SAC'),
     ],
   },
   {
@@ -135,6 +132,14 @@ export const PorPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       tradePick(2029, 2, 'IND'),
+      {
+        id: '2029.2.IND-WAS',
+        details: 'Worst of IND / WAS',
+        summary: {
+          swapType: 'unfavorable',
+          teams: ['IND', 'WAS'],
+        },
+      },
     ],
   },
   {
@@ -151,13 +156,7 @@ export const PorPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2030.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2030, 2, ['PHI', 'WAS']),
     ],
   },
   {
@@ -172,13 +171,7 @@ export const PorPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2031.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2031, 2, 'BOS'),
     ],
   },
   {

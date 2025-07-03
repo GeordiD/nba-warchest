@@ -47,6 +47,7 @@ const details = computed<string>(() => {
     <p>
       {{ details }}
     </p>
+    <!-- IMPORTANT - ifNotSettled is not up to date anymore -->
     <p v-if="pickData.summary.ifNotSettled">
       If not settled: {{ pickData.summary.ifNotSettled.result }}
     </p>

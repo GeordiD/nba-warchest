@@ -84,40 +84,7 @@ export const DalPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2028.2',
-        details: {
-          headline: 'To IND / TOR',
-          extra: [
-            'To IND if IND conveys 1st to TOR by 2027',
-            'Otherwise, to TOR',
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['IND', 'TOR'],
-        },
-      },
-      {
-        id: '2028.2.CHA-LAC',
-        details: 'Worst of CHA / LAC',
-        summary: {
-          swapType: 'unfavorable',
-          teams: ['CHA', 'LAC'],
-        },
-      },
-      {
-        id: '2028.2.DAL',
-        details: {
-          headline: 'MIA',
-          extra: ['If DAL conveys 1st to CHA in 2027'],
-        },
-        summary: {
-          isConditional: true,
-          teams: ['MIA'],
-        },
-      },
+      tradePick(2028, 2, 'IND'),
     ],
   },
   {
@@ -147,7 +114,12 @@ export const DalPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2030.1',
-        details: `Own (${unfavorableSwap} SAS)`,
+        details: {
+          headline: `Own (${unfavorableSwap} SAS)`,
+          extra: [
+            'SAS has included this pick in a swap with MIN, but DAL can only swap with SAS',
+          ],
+        },
         summary: {
           isOwn: true,
           swapType: 'unfavorable',
@@ -155,7 +127,7 @@ export const DalPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2030, 2, 'MEM'), getPick(2030, 2, 'PHI')],
+    roundTwo: [tradePick(2030, 2, 'BKN'), getPick(2030, 2, 'PHI')],
   },
   {
     year: 2031,
@@ -169,13 +141,7 @@ export const DalPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2031.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2031, 2, 'DET'),
     ],
   },
   {

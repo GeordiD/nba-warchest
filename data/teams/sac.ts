@@ -1,9 +1,8 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import {
+  botProt,
   getPick,
-  ifNotConvey,
-  prot,
   tradePick,
   unfavorableSwap,
 } from '~/data/shorthand';
@@ -17,10 +16,6 @@ export const SacPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2025.1',
-            result: `To ATL ${prot(10)}`,
-          },
         },
       },
     ],
@@ -30,12 +25,9 @@ export const SacPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2025.1',
-            result: `To ATL`,
-          },
         },
       },
+      getPick(2026, 2, 'CHA'),
     ],
   },
   {
@@ -48,18 +40,23 @@ export const SacPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2027, 1, 'SAS'),
+      {
+        id: '2027.1.SAS',
+        details: `SAS ${botProt(17)}`,
+        summary: {
+          isConditional: true,
+          teams: ['SAS'],
+        },
+      },
     ],
     roundTwo: [
       {
         id: '2027.2',
-        details: 'Own',
+        details: 'To OKC / CHA',
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2025.1',
-            result: `To ATL`,
-          },
+          isTradedAway: true,
+          teams: ['OKC', 'CHA'],
         },
       },
     ],
@@ -83,14 +80,7 @@ export const SacPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      {
-        id: '2028.2.DEN',
-        details: `DEN ${prot(33)}`,
-        summary: {
-          teams: ['DEN'],
-          isConditional: true,
-        },
-      },
+      tradePick(2028, 2, 'POR'),
     ],
   },
   {
@@ -105,13 +95,7 @@ export const SacPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2029.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2029, 2, 'WAS'),
     ],
   },
   {
@@ -125,7 +109,7 @@ export const SacPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2030, 2, 'IND')],
+    roundTwo: [tradePick(2030, 2, 'SAS')],
   },
   {
     year: 2031,

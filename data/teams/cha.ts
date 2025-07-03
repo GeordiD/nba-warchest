@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { getPick, ifNotConvey, prot } from '~/data/shorthand';
+import { getPick, ifNotConvey, prot, tradePick } from '~/data/shorthand';
 
 export const ChaPickMeta: YearMeta[] = [
   {
@@ -13,16 +13,27 @@ export const ChaPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-    ],
-    roundTwo: [
       {
-        id: '2026.2',
-        details: 'Own',
+        id: '2026.1.PHX-WAS-ORL-MEM',
+        details: `Worst of MEM / ORL / WAS ${prot(8)} / PHX`,
         summary: {
-          isOwn: true,
+          swapType: 'unfavorable',
+          ownNotIncluded: true,
+          teams: ['PHX', 'WAS', 'ORL', 'MEM'],
         },
       },
-      getPick(2026, 2, 'GSW'),
+    ],
+    roundTwo: [
+      tradePick(2026, 2, 'SAC'),
+      {
+        id: '2026.2.DEN-GSW',
+        details: 'Best of DEN / GSW',
+        summary: {
+          swapType: 'favorable',
+          ownNotIncluded: true,
+          teams: ['DEN', 'GSW'],
+        },
+      },
     ],
   },
   {
@@ -52,7 +63,9 @@ export const ChaPickMeta: YearMeta[] = [
           headline: `MIA ${prot(14)}`,
           extra: [
             'If MIA conveys 1st to OKC in 2025',
-            ifNotConvey(['2028 1st']),
+            ifNotConvey([
+              '2028 1st',
+            ]),
           ],
         },
         summary: {
@@ -62,13 +75,7 @@ export const ChaPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2027.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2027, 2, 'SAC'),
       {
         id: '2027.2.POR-NOP',
         details: 'Best of POR / NOP',
@@ -95,7 +102,7 @@ export const ChaPickMeta: YearMeta[] = [
         id: '2028.2',
         details: {
           headline: 'Best of CHA / LAC',
-          extra: ['Worst to DAL'],
+          extra: ['Worst to DET'],
         },
         summary: {
           isOwn: true,
@@ -115,6 +122,14 @@ export const ChaPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      {
+        id: '2029.1.CLE-UTA-MIN',
+        details: `Worst of CLE / MIN ${prot(5)} / UTA`,
+        summary: {
+          swapType: 'unfavorable',
+          teams: ['CLE', 'UTA', 'MIN'],
+        },
+      },
     ],
     roundTwo: [
       {
@@ -125,10 +140,17 @@ export const ChaPickMeta: YearMeta[] = [
         },
       },
       {
-        id: '2029.2.PHX',
-        details: 'PHX',
+        id: '2029.2.DEN',
+        details: {
+          headline: 'DEN',
+          extra: [
+            'If DEN has conveyed a 1st to OKC by 2029',
+          ],
+        },
         summary: {
-          teams: ['PHX'],
+          teams: ['DEN'],
+          isConditional: true,
+          desc: 'DEN (conditionally)',
         },
       },
     ],
@@ -150,6 +172,14 @@ export const ChaPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+        },
+      },
+      {
+        id: '2030.2.LAC-UTA',
+        details: 'Best of LAC / UTA',
+        summary: {
+          swapType: 'favorable',
+          teams: ['LAC', 'UTA'],
         },
       },
     ],
@@ -174,6 +204,9 @@ export const ChaPickMeta: YearMeta[] = [
         },
       },
       getPick(2031, 2, 'NYK'),
+      getPick(2031, 2, 'DEN'),
+      getPick(2031, 2, 'MIL'),
+      getPick(2031, 2, 'PHX'),
     ],
   },
   {
@@ -195,6 +228,7 @@ export const ChaPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2032, 2, 'MIL'),
     ],
   },
 ];

@@ -1,12 +1,8 @@
-import { unfavorableSwap } from '../shorthand';
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import {
-  botProt,
-  favorableSwap,
   getPick,
-  ifNotConvey,
-  prot,
+  unfavorableSwap,
 } from '~/data/shorthand';
 
 export const IndPickMeta: YearMeta[] = [
@@ -15,16 +11,9 @@ export const IndPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2026.1',
-        details: {
-          headline: `To TOR ${prot(4)}`,
-          extra: [
-            ifNotConvey([`2027 1st ${prot(4)}`, `2027 UTA 2nd & 2028 DAL 2nd`]),
-          ],
-        },
+        details: 'Own',
         summary: {
           isOwn: true,
-          isConditional: true,
-          teams: ['TOR'],
         },
       },
     ],
@@ -50,21 +39,17 @@ export const IndPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2026.1',
-            result: `To TOR ${prot(4)}`,
-          },
         },
       },
     ],
     roundTwo: [
       {
         id: '2027.2',
-        details: 'To OKC / SAS / MIA',
+        details: 'To OKC / NYK / SAS / MIA',
         summary: {
           isOwn: true,
           isTradedAway: true,
-          teams: ['OKC', 'SAS', 'MIA'],
+          teams: ['OKC', 'SAS', 'NYK', 'MIA'],
         },
       },
       {
@@ -72,10 +57,6 @@ export const IndPickMeta: YearMeta[] = [
         details: 'UTA',
         summary: {
           teams: ['UTA'],
-          ifNotSettled: {
-            id: '2026.1',
-            result: 'To TOR',
-          },
         },
       },
     ],
@@ -109,10 +90,6 @@ export const IndPickMeta: YearMeta[] = [
         details: 'DAL',
         summary: {
           teams: ['DAL'],
-          ifNotSettled: {
-            id: '2026.1',
-            result: 'To TOR',
-          },
         },
       },
     ],
@@ -133,7 +110,7 @@ export const IndPickMeta: YearMeta[] = [
         id: '2029.2',
         details: {
           headline: 'Best of IND / WAS',
-          extra: ['Other to NYK'],
+          extra: ['Other to POR'],
         },
         summary: {
           isOwn: true,
@@ -163,7 +140,6 @@ export const IndPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2030, 2, 'SAC'),
     ],
   },
   {

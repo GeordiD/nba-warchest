@@ -1,10 +1,7 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import {
-  favorableSwap,
   getPick,
-  ifNotConvey,
-  prot,
   unfavorableSwap,
 } from '~/data/shorthand';
 
@@ -28,14 +25,6 @@ export const BknPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      {
-        id: '2026.2.DET-MIL-ORL',
-        details: 'Worst of DET / MIL / ORL',
-        summary: {
-          swapType: 'unfavorable',
-          teams: ['DET', 'MIL', 'ORL'],
-        },
-      },
       getPick(2026, 2, 'ATL'),
     ],
   },
@@ -52,23 +41,6 @@ export const BknPickMeta: YearMeta[] = [
         },
       },
       getPick(2027, 1, 'NYK'),
-      {
-        id: '2027.1.PHI',
-        details: {
-          headline: `PHI ${prot(8)}`,
-          extra: [
-            'If PHI conveys 1st to OKC in 2025',
-            ifNotConvey([
-              `2028 1st ${prot(8)} and if PHI conveys 1st to OKC by 2026`,
-              '2028 2nd',
-            ]),
-          ],
-        },
-        summary: {
-          teams: ['PHI'],
-          isConditional: true,
-        },
-      },
     ],
     roundTwo: [
       {
@@ -91,18 +63,25 @@ export const BknPickMeta: YearMeta[] = [
       {
         id: '2028.1',
         details: {
-          headline: `Own (${favorableSwap} PHX / NYK)`,
+          headline: `Two most favorable of BKN / PHX / NYK / PHI)`,
           extra: [
-            `If PHI 1st does not convey in 2027, PHI ${prot(
-              8,
-            )} included in this swap (BKN getting the two most favorable)`,
+            `PHI only included in swap if PHI conveys 1st to OKC in 2026`,
+            'If PHI is included and is the third most favorable, and NYK is the first or second most favorable, then BRK gets the first and third most favorable picks',
           ],
         },
-        summary: {
-          isOwn: true,
-          swapType: 'favorable',
-          teams: ['NYK', 'PHX'],
-        },
+        summary: [
+          {
+            isOwn: true,
+            swapType: 'favorable',
+            teams: ['NYK', 'PHX', 'PHI'],
+            desc: 'Best of BKN / PHX / NYK / PHI',
+          },
+          {
+            swapType: 'favorable',
+            teams: ['NYK', 'PHX', 'PHI'],
+            desc: 'Second (or third) best of BKN / PHX / NYK / PHI',
+          },
+        ],
       },
     ],
     roundTwo: [
@@ -170,6 +149,7 @@ export const BknPickMeta: YearMeta[] = [
         },
       },
       getPick(2030, 2, 'DAL'),
+      getPick(2030, 2, 'LAL'),
     ],
   },
   {
@@ -192,6 +172,7 @@ export const BknPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2031, 2, 'LAL'),
     ],
   },
   {
@@ -204,6 +185,7 @@ export const BknPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      getPick(2032, 1, 'DEN'),
     ],
     roundTwo: [
       {
@@ -213,6 +195,7 @@ export const BknPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      // TODO: 2 unspecified 2nd round from PHX
     ],
   },
 ];
@@ -220,7 +203,7 @@ export const BknPickMeta: YearMeta[] = [
 const info: TeamInfo = {
   abbr: 'BKN',
   fullName: 'Brooklyn Nets',
-  location: 'Brookly',
+  location: 'Brooklyn',
   name: 'Nets',
 };
 

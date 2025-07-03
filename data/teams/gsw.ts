@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { getPick, ifNotConvey, prot, tradePick } from '~/data/shorthand';
+import { ifNotConvey, prot, tradePick } from '~/data/shorthand';
 
 export const GswPickMeta: YearMeta[] = [
   {
@@ -14,7 +14,15 @@ export const GswPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2026, 2, 'CHA')],
+    roundTwo: [{
+      id: '2026.2',
+      details: 'To CHA / PHX',
+      summary: {
+        isOwn: true,
+        isTradedAway: true,
+        teams: ['CHA', 'PHX'],
+      },
+    }],
   },
   {
     year: 2027,
@@ -27,7 +35,15 @@ export const GswPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2027, 2, 'WAS')],
+    roundTwo: [{
+      id: '2027.2',
+      details: 'To PHI / WAS',
+      summary: {
+        isOwn: true,
+        isTradedAway: true,
+        teams: ['PHI', 'WAS'],
+      },
+    }],
   },
   {
     year: 2028,
@@ -40,7 +56,7 @@ export const GswPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2028, 2, 'POR')],
+    roundTwo: [tradePick(2028, 2, 'PHI')],
   },
   {
     year: 2029,
@@ -77,10 +93,6 @@ export const GswPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2030.1',
-            result: 'To WAS',
-          },
         },
       },
     ],
@@ -99,9 +111,11 @@ export const GswPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2031.2',
-        details: 'Own',
+        details: 'To MIN / DET',
         summary: {
           isOwn: true,
+          isTradedAway: true,
+          teams: ['MIN', 'DET'],
         },
       },
     ],

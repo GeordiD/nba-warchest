@@ -1,7 +1,7 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import {
-  favorableSwap,
+  ownPick,
   prot,
   tradePick,
   unfavorableSwap,
@@ -14,16 +14,16 @@ export const LacPickMeta: YearMeta[] = [
       {
         id: '2026.1',
         details: {
-          headline: 'To OKC / PHI',
+          headline: 'To OKC / WAS',
           extra: [
             `Two most favorable of LAC / HOU ${prot(4)} / OKC to OKC`,
-            `Worst to PHI`,
+            `Worst to WAS`,
           ],
         },
         summary: {
           isOwn: true,
           isTradedAway: true,
-          teams: ['OKC', 'PHI'],
+          teams: ['OKC', 'WAS'],
         },
       },
     ],
@@ -52,7 +52,6 @@ export const LacPickMeta: YearMeta[] = [
         id: '2027.1',
         details: {
           headline: `Worst of LAC / DEN ${prot(5)} / OKC`,
-          extra: ['If DEN conveys 1st to ORL in 2025'],
         },
         summary: {
           isOwn: true,
@@ -61,7 +60,7 @@ export const LacPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2027, 2, 'ATL')],
+    roundTwo: [ownPick(2027, 2)],
   },
   {
     year: 2028,
@@ -70,12 +69,12 @@ export const LacPickMeta: YearMeta[] = [
       {
         id: '2028.2',
         details: {
-          headline: 'To CHA / DAL',
-          extra: ['Best of LAC / CHA to CHA', 'Worst to DAL'],
+          headline: 'To CHA / DET',
+          extra: ['Best of LAC / CHA to CHA', 'Worst to DET'],
         },
         summary: {
           isOwn: true,
-          teams: ['CHA', 'DAL'],
+          teams: ['CHA', 'DET'],
           isTradedAway: true,
         },
       },
@@ -107,7 +106,18 @@ export const LacPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2030, 2, 'UTA')],
+    roundTwo: [{
+      id: '2030.2',
+      details: {
+        headline: `Worst of LAC / UTA`,
+        extra: ['Best to CHA'],
+      },
+      summary: {
+        isOwn: true,
+        teams: ['UTA'],
+        swapType: 'unfavorable',
+      },
+    }],
   },
   {
     year: 2031,

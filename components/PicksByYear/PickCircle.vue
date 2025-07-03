@@ -36,7 +36,8 @@ const abbrs = computed(() => {
   }
 
   if (summary.swapType) {
-    if (!summary.ownNotIncluded) {
+    const calcOwnNotIncluded = !summary.includeOwn && !summary.isOwn && summary.swapType;
+    if (!(summary.ownNotIncluded || calcOwnNotIncluded)) {
       return [
         relatedAbbr,
         ...teams,

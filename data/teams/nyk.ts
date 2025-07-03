@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { getPick, ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
+import { ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const NykPickMeta: YearMeta[] = [
   {
@@ -11,6 +11,21 @@ export const NykPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+        },
+      },
+      {
+        id: '2026.1.WAS',
+        details: {
+          headline: `WAS ${prot(8)}`,
+          extra: [
+            ifNotConvey([
+              '2027 2nd',
+            ]),
+          ],
+        },
+        summary: {
+          isConditional: true,
+          teams: ['WAS'],
         },
       },
     ],
@@ -39,6 +54,22 @@ export const NykPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
+      {
+        id: '2027.2.OKC-HOU-IND-MIA',
+        details: 'Second and third most favorable of OKC / HOU / IND / MIA',
+        summary: [
+          {
+            swapType: 'mixed',
+            teams: ['OKC', 'HOU', 'IND', 'MIA'],
+            desc: 'Second best of OKC / HOU / IND / MIA',
+          },
+          {
+            swapType: 'mixed',
+            teams: ['OKC', 'HOU', 'IND', 'MIA'],
+            desc: 'Third best of OKC / HOU / IND / MIA',
+          },
+        ],
+      },
     ],
   },
   {
@@ -57,6 +88,14 @@ export const NykPickMeta: YearMeta[] = [
     roundTwo: [
       tradePick(2028, 2, 'DET'),
       {
+        id: '2028.2.BOS',
+        details: `BOS ${prot(45)}`,
+        summary: {
+          isConditional: true,
+          teams: ['BOS'],
+        },
+      },
+      {
         id: '2028.2.IND-PHX',
         details: 'Worst of IND / PHX',
         summary: {
@@ -73,14 +112,6 @@ export const NykPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       tradePick(2029, 2, 'DET'),
-      {
-        id: '2029.2.IND-WAS',
-        details: 'Worst of IND / WAS',
-        summary: {
-          swapType: 'unfavorable',
-          teams: ['IND', 'WAS'],
-        },
-      },
     ],
   },
   {
@@ -95,13 +126,7 @@ export const NykPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2030.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2030, 2, 'BOS'),
     ],
   },
   {

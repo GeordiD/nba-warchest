@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { getPick, ifNotConvey, prot } from '~/data/shorthand';
+import { getPick, prot } from '~/data/shorthand';
 
 export const DetPickMeta: YearMeta[] = [
   {
@@ -11,10 +11,6 @@ export const DetPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2025.1',
-            result: `To NYK ${prot(11)}`,
-          },
         },
       },
     ],
@@ -44,10 +40,6 @@ export const DetPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2025.1',
-            result: `To NYK ${prot(9)}`,
-          },
         },
       },
     ],
@@ -57,10 +49,6 @@ export const DetPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2025.1',
-            result: 'To NYK',
-          },
         },
       },
       {
@@ -85,6 +73,7 @@ export const DetPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
+      // TODO: Least favorable of all these goes to UTA
       {
         id: '2028.2',
         details: `To PHI ${prot(55)}`,
@@ -95,6 +84,19 @@ export const DetPickMeta: YearMeta[] = [
         },
       },
       getPick(2028, 2, 'NYK'),
+      {
+        id: '2028.2.MIA',
+        details: {
+          headline: 'MIA',
+          extra: [
+            'If DAL conveys 1st to CHA in 2027',
+          ],
+        },
+        summary: {
+          isConditional: true,
+          teams: ['MIA'],
+        },
+      },
     ],
   },
   {
@@ -159,6 +161,16 @@ export const DetPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
+        },
+      },
+      getPick(2031, 2, 'DAL'),
+      {
+        id: '2031.2.GSW-MIN',
+        details: 'Worst of GSW / MIN',
+        summary: {
+          swapType: 'unfavorable',
+          ownNotIncluded: true,
+          teams: ['GSW', 'MIN'],
         },
       },
     ],
