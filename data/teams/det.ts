@@ -1,48 +1,8 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { getPick, ifNotConvey, prot } from '~/data/shorthand';
+import { getPick, prot } from '~/data/shorthand';
 
 export const DetPickMeta: YearMeta[] = [
-  {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: `To NYK ${prot(13)}`,
-          extra: [
-            ifNotConvey([
-              `2026 1st ${prot(11)}`,
-              `2027 1st ${prot(9)}`,
-              '2027 2nd',
-            ]),
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isConditional: true,
-          teams: ['NYK'],
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: {
-          headline: `To BOS / DAL / WAS / NYK`,
-          extra: [
-            'If 31-55, to BOS, DAL or WAS',
-            '56+, to NYK',
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['BOS', 'DAL', 'WAS'],
-        },
-      },
-    ],
-  },
   {
     year: 2026,
     roundOne: [
@@ -51,10 +11,6 @@ export const DetPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2025.1',
-            result: `To NYK ${prot(11)}`,
-          },
         },
       },
     ],
@@ -84,10 +40,6 @@ export const DetPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2025.1',
-            result: `To NYK ${prot(9)}`,
-          },
         },
       },
     ],
@@ -97,10 +49,6 @@ export const DetPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2025.1',
-            result: 'To NYK',
-          },
         },
       },
       {
@@ -125,6 +73,7 @@ export const DetPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
+      // TODO: Least favorable of all these goes to UTA
       {
         id: '2028.2',
         details: `To PHI ${prot(55)}`,
@@ -135,6 +84,19 @@ export const DetPickMeta: YearMeta[] = [
         },
       },
       getPick(2028, 2, 'NYK'),
+      {
+        id: '2028.2.MIA',
+        details: {
+          headline: 'MIA',
+          extra: [
+            'If DAL conveys 1st to CHA in 2027',
+          ],
+        },
+        summary: {
+          isConditional: true,
+          teams: ['MIA'],
+        },
+      },
     ],
   },
   {
@@ -196,6 +158,37 @@ export const DetPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2031.2',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+      getPick(2031, 2, 'DAL'),
+      {
+        id: '2031.2.GSW-MIN',
+        details: 'Worst of GSW / MIN',
+        summary: {
+          swapType: 'unfavorable',
+          ownNotIncluded: true,
+          teams: ['GSW', 'MIN'],
+        },
+      },
+    ],
+  },
+  {
+    year: 2032,
+    roundOne: [
+      {
+        id: '2032.1',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+    ],
+    roundTwo: [
+      {
+        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

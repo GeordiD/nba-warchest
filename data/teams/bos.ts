@@ -1,37 +1,8 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { prot, tradePick, unfavorableSwap } from '~/data/shorthand';
+import { favorableSwap, getPick, ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const bosPickMeta: YearMeta[] = [
-  {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: {
-          headline: 'To OKC or ORL',
-          extra: [
-            'More favorable of MEM / BOS to OKC',
-            'Less favorable to ORL',
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['OKC', 'ORL'],
-        },
-      },
-    ],
-  },
   {
     year: 2026,
     roundOne: [
@@ -62,6 +33,14 @@ export const bosPickMeta: YearMeta[] = [
           swapType: 'favorable',
         },
       },
+      {
+        id: '2026.2.ORL-DET-MIL',
+        details: 'Most favorable of DET / ORL / MIL',
+        summary: {
+          teams: ['DET', 'ORL', 'MIL'],
+          swapType: 'favorable',
+        },
+      },
     ],
   },
   {
@@ -78,20 +57,11 @@ export const bosPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2027.2',
-        details: 'To ORL',
+        details: `Own (${favorableSwap} ORL)`,
         summary: {
           isOwn: true,
-          isTradedAway: true,
+          swapType: 'favorable',
           teams: ['ORL'],
-        },
-      },
-      {
-        id: '2027.2.POR-NOP',
-        details: `Least favorable of POR and NOP ${prot(55)}`,
-        summary: {
-          teams: ['POR', 'NOP'],
-          isConditional: true,
-          swapType: 'unfavorable',
         },
       },
     ],
@@ -101,7 +71,10 @@ export const bosPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2028.1',
-        details: `Own (${unfavorableSwap} SAN ${prot(1)})`,
+        details: {
+          headline: `Own (${unfavorableSwap} SAN ${prot(1)})`,
+          extra: [ifNotConvey(['2028 2nd'])],
+        },
         summary: {
           isOwn: true,
           swapType: 'unfavorable',
@@ -112,11 +85,13 @@ export const bosPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2028.2',
-        details: `To PHX ${prot(45)}`,
+        details: {
+          headline: `To NYK ${prot(45)}`,
+        },
         summary: {
           isOwn: true,
-          isTradedAway: true,
-          teams: ['PHX'],
+          isConditional: true,
+          teams: ['NYK'],
         },
       },
     ],
@@ -127,7 +102,7 @@ export const bosPickMeta: YearMeta[] = [
       {
         id: '2029.1',
         details: {
-          headline: 'To POR / WAS',
+          headline: 'To POR or WAS',
           extra: [
             'Best and least favorable of BOS / POR / WAS to POR',
             'Second most favorable to WAS',
@@ -163,7 +138,10 @@ export const bosPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2030, 2, 'HOU')],
+    roundTwo: [
+      tradePick(2030, 2, 'PHX'),
+      getPick(2030, 2, 'NYK'),
+    ],
   },
   {
     year: 2031,
@@ -179,6 +157,39 @@ export const bosPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2031.2',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+      getPick(2031, 2, 'CLE'),
+      getPick(2031, 2, 'POR'),
+      {
+        id: '2031.2.HOU',
+        details: `HOU ${prot(55)}`,
+        summary: {
+          isConditional: true,
+          teams: ['HOU'],
+        },
+      },
+    ],
+  },
+  {
+    year: 2032,
+    roundOne: [
+      {
+        id: '2032.1',
+        details: 'Own (frozen through 2027-28)',
+        summary: {
+          isOwn: true,
+          isTradedAway: true, // temporary until implement frozen
+          frozen: 2028,
+        },
+      },
+    ],
+    roundTwo: [
+      {
+        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

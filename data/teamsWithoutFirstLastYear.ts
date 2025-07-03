@@ -1,6 +1,11 @@
 export const teamsWithoutFirstLastYear: TeamAbbr[] = [
-  'BKN',
-  'DAL',
-  'IND',
+  'CLE',
+  'DEN',
+  'DET',
   'GSW',
+  'IND',
+  'LAL',
+  'MIL',
+  'NYK',
+  'SAC',
 ]

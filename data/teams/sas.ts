@@ -6,33 +6,9 @@ import {
   getPick,
   ifNotConvey,
   prot,
-  tradePick,
 } from '~/data/shorthand';
 
 export const SasPickMeta: YearMeta[] = [
-  {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-      getPick(2025, 1, 'ATL'),
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-      getPick(2025, 2, 'NOP'),
-    ],
-  },
   {
     year: 2026,
     roundOne: [
@@ -75,12 +51,36 @@ export const SasPickMeta: YearMeta[] = [
           teams: ['NOP', 'POR'],
         },
       },
-      getPick(2026, 2, 'UTA'),
+      {
+        id: '2026.2.UTA',
+        details: `UTA ${botProt(56)}`,
+        summary: {
+          isConditional: true,
+          teams: ['UTA'],
+        },
+      },
     ],
   },
   {
     year: 2027,
-    roundOne: [tradePick(2027, 1, 'SAC'), getPick(2027, 1, 'ATL')],
+    roundOne: [
+      {
+        id: '2027.1',
+        details: {
+          headline: 'To SAC / OKC',
+          extra: [
+            'To SAC if 1-16',
+            'To OKC otherwise',
+          ],
+        },
+        summary: {
+          isOwn: true,
+          isTradedAway: true,
+          teams: ['SAC', 'OKC'],
+        },
+      },
+      getPick(2027, 1, 'ATL'),
+    ],
     roundTwo: [
       {
         id: '2027.2',
@@ -172,6 +172,7 @@ export const SasPickMeta: YearMeta[] = [
         },
       },
       getPick(2030, 2, 'CLE'),
+      getPick(2030, 2, 'SAC'),
     ],
   },
   {
@@ -179,10 +180,11 @@ export const SasPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2031.1',
-        details: `Own (${favorableSwap})`,
+        details: `Own (${favorableSwap} SAC)`,
         summary: {
           isOwn: true,
           swapType: 'favorable',
+          teams: ['SAC'],
         },
       },
     ],
@@ -195,6 +197,27 @@ export const SasPickMeta: YearMeta[] = [
         },
       },
       getPick(2031, 2, 'SAC'),
+    ],
+  },
+  {
+    year: 2032,
+    roundOne: [
+      {
+        id: '2032.1',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+    ],
+    roundTwo: [
+      {
+        id: '2032.2',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
     ],
   },
 ];

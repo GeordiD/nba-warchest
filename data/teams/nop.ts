@@ -1,41 +1,18 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { botProt, favorableSwap, getPick, prot, tradePick } from '~/data/shorthand';
+import { getPick, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const NopPickMeta: YearMeta[] = [
-  {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-      {
-        id: '2025.1.MIL',
-        details: `MIL ${botProt(4)}`,
-        summary: {
-          teams: ['MIL'],
-          isConditional: true,
-        },
-      },
-    ],
-    roundTwo: [
-      tradePick(2025, 2, 'SAS'),
-    ],
-  },
   {
     year: 2026,
     roundOne: [
       {
         id: '2026.1',
-        details: `Own (${favorableSwap} MIL)`,
+        details: `To ATL / MIL`,
         summary: {
           isOwn: true,
-          swapType: 'favorable',
-          teams: ['MIL'],
+          isTradedAway: true,
+          teams: ['MIL', 'ATL'],
         },
       },
     ],
@@ -57,20 +34,15 @@ export const NopPickMeta: YearMeta[] = [
       {
         id: '2027.1',
         details: {
-          headline: `Best of NOP / MIL`,
+          headline: `Best of NOP ${prot(4)} / MIL ${prot(4)}`,
           extra: [
-            `Worst of MIL / NOP to ATL ${prot(4)}`,
+            `Worst of MIL / NOP to ATL`,
+            'If both are top 4, NOP keeps both',
           ],
         },
         summary: [
           {
             isOwn: true,
-            swapType: 'favorable',
-            teams: ['MIL'],
-          },
-          {
-            isConditional: true,
-            isTradedAway: true,
             swapType: 'favorable',
             teams: ['MIL'],
           },
@@ -82,11 +54,6 @@ export const NopPickMeta: YearMeta[] = [
         id: '2027.2',
         details: {
           headline: 'To CHA / POR',
-          extra: [
-            'Best of NOP / POR to CHA',
-            'Worst to POR',
-            'POR may convey to BOS',
-          ],
         },
         summary: {
           isOwn: true,
@@ -140,9 +107,11 @@ export const NopPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2030.2',
-        details: 'Own',
+        details: `Own (${unfavorableSwap} ORL)`,
         summary: {
           isOwn: true,
+          swapType: 'unfavorable',
+          teams: ['ORL'],
         },
       },
     ],
@@ -161,6 +130,31 @@ export const NopPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2031.2',
+        details: 'To ORL / OKC',
+        summary: {
+          isOwn: true,
+          isTradedAway: true,
+          teams: ['ORL', 'OKC'],
+        },
+      },
+      getPick(2031, 2, 'TOR'),
+    ],
+  },
+  {
+    year: 2032,
+    roundOne: [
+      {
+        id: '2032.1',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+    ],
+    roundTwo: [
+      // TODO: One unspecified second round pick to WAS
+      {
+        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

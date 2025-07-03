@@ -1,8 +1,8 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import {
-  botProt,
   getPick,
+  ownPick,
   prot,
   tradePick,
   unfavorableSwap,
@@ -10,54 +10,32 @@ import {
 
 export const PhxPickMeta: YearMeta[] = [
   {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: 'To BKN / HOU',
-          extra: [
-            'HOU gets best of PHX and own pick (after top 10 prot. swap with OKC)',
-            'Worst to BKN',
-          ],
-        },
-        summary: {
-          isOwn: true,
-          teams: ['BKN', 'HOU'],
-          isTradedAway: true,
-        },
-      },
-      {
-        id: '2025.1.UTA-CLE-MIN',
-        details: `Least favorable of CLE / MIN / UTA ${botProt(10)}`,
-        summary: {
-          teams: ['UTA', 'CLE', 'MIN'],
-          swapType: 'unfavorable',
-          ownNotIncluded: true,
-        },
-      },
-    ],
-    roundTwo: [tradePick(2025, 2, 'WAS')],
-  },
-  {
     year: 2026,
     roundOne: [
       {
         id: '2026.1',
         details: {
-          headline: 'Worst of PHX / ORL / WAS / MEM',
-          extra: [
-            'If WAS has not conveyed 1st to NYK in 2025, WAS pick is top 8 prot.',
-          ],
+          headline: 'To WAS / MEM / CHA',
         },
         summary: {
           isOwn: true,
-          swapType: 'unfavorable',
-          teams: ['ORL', 'WAS', 'MEM'],
+          isTradedAway: true,
+          teams: ['CHA', 'WAS', 'MEM'],
         },
       },
     ],
-    roundTwo: [tradePick(2026, 2, 'WAS'), getPick(2026, 2, 'DEN')],
+    roundTwo: [
+      // TODO: Gets two 2nds from HOU
+      tradePick(2026, 2, 'WAS'),
+      {
+        id: '2026.2.DEN-GSW',
+        details: 'Worst of DEN / GSW',
+        summary: {
+          swapType: 'unfavorable',
+          teams: ['DEN', 'GSW'],
+        },
+      },
+    ],
   },
   {
     year: 2027,
@@ -69,11 +47,20 @@ export const PhxPickMeta: YearMeta[] = [
         summary: {
           teams: ['UTA', 'CLE', 'MIN'],
           swapType: 'unfavorable',
-          ownNotIncluded: true,
         },
       },
     ],
-    roundTwo: [tradePick(2027, 2, 'WAS')],
+    roundTwo: [
+      {
+        id: '2027.2.PHI-WAS',
+        details: 'To PHI / WAS',
+        summary: {
+          isOwn: true,
+          teams: ['PHI', 'WAS'],
+          isTradedAway: true,
+        },
+      },
+    ],
   },
   {
     year: 2028,
@@ -84,7 +71,7 @@ export const PhxPickMeta: YearMeta[] = [
           headline: `Own (${unfavorableSwap} PHI ${prot(8)} / BKN / WAS)`,
           extra: [
             [
-              'PHI included if',
+              'PHI included if:',
               'PHI does not convey 1st to BKN in 2027',
               'PHI has conveyed 1st to OKC in 2026',
             ],
@@ -130,17 +117,10 @@ export const PhxPickMeta: YearMeta[] = [
           teams: ['HOU', 'BKN'],
         },
       },
-      {
-        id: '2029.1.UTA-CLE-MIN',
-        details: 'Least favorable of CLE / MIN / UTA',
-        summary: {
-          teams: ['UTA', 'CLE', 'MIN'],
-          swapType: 'unfavorable',
-          ownNotIncluded: true,
-        },
-      },
     ],
-    roundTwo: [tradePick(2029, 2, 'CHA')],
+    roundTwo: [
+      ownPick(2029, 2),
+    ],
   },
   {
     year: 2030,
@@ -161,20 +141,42 @@ export const PhxPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2030, 2, 'WAS')],
+    roundTwo: [
+      tradePick(2030, 2, ['WAS', 'PHI']),
+      tradePick(2030, 2, 'BOS'),
+    ],
   },
   {
     year: 2031,
     roundOne: [tradePick(2031, 1, 'UTA')],
     roundTwo: [
+      tradePick(2031, 2, 'CHA'),
+    ],
+  },
+  {
+    year: 2032,
+    roundOne: [
       {
-        id: '2031.2',
+        id: '2032.1',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+          isTradedAway: true, // temp until frozen implemented
+          frozen: 2028,
+        },
+      },
+    ],
+    roundTwo: [
+      {
+        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
-      getPick(2031, 2, 'DEN'),
+      getPick(2032, 2, 'HOU'),
+      // TODO: two 2nds to BKN
+      // TODO: two 2nds to MIN
     ],
   },
 ];

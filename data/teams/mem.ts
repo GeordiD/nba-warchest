@@ -1,72 +1,47 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { favorableSwap, getPick, prot, tradePick } from '~/data/shorthand';
+import { botProt, favorableSwap, prot, tradePick } from '~/data/shorthand';
 
 export const MemPickMeta: YearMeta[] = [
-  {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: {
-          headline: 'TO OKC / ORL',
-          extra: [
-            'Best of BOS / MEM to OKC',
-            'Worst to ORL',
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['OKC', 'ORL'],
-        },
-      },
-      {
-        id: '2025.2.HOU-OKC',
-        details: 'Best of HOU / OKC',
-        summary: {
-          teams: ['HOU', 'OKC'],
-          swapType: 'favorable',
-        },
-      },
-    ],
-  },
   {
     year: 2026,
     roundOne: [
       {
         id: '2026.1',
         details: {
-          headline: `Own (${favorableSwap} worst of ORL / PHX / WAS)`,
+          headline: `Two best of MEM / PHX / WAS* / ORL`,
           extra: [
-            `Better of MEM and worst of ORL / PHX / WAS to MEM`,
-            `Worst to PHX`,
-            `If WAS does not convey 1st to NYK in 2025, WAS is top 8 prot.`,
+            [
+              'MEM receives two best from (1), (2) and (3):',
+              '(1): MEM',
+              `(2): Worst of PHX / WAS ${botProt(9)} (or PHX if WAS not conveyed)`,
+              '(3): ORL',
+            ],
           ],
         },
-        summary: {
-          isOwn: true,
-          swapType: 'mixed',
-          teams: ['ORL', 'PHX', 'WAS'],
-        },
+        summary: [
+          {
+            isOwn: true,
+            swapType: 'favorable',
+            teams: ['ORL', 'PHX', 'WAS'],
+            desc: 'Best of MEM / PHX / WAS* / ORL',
+          },
+          {
+            includeOwn: true,
+            desc: 'Second best of MEM / PHX / WAS* / ORL',
+            teams: ['ORL', 'PHX', 'WAS'],
+            swapType: 'favorable',
+          },
+        ],
       },
     ],
     roundTwo: [
       {
         id: '2026.2',
         details: {
-          headline: 'To ATL / POR',
+          headline: 'To LAC / POR',
           extra: [
-            '31-42 to ATL',
+            '31-42 to LAC',
             '43-60 to POR',
           ],
         },
@@ -99,7 +74,6 @@ export const MemPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       tradePick(2027, 2, 'HOU'),
-      getPick(2027, 2, 'ATL'),
     ],
   },
   {
@@ -122,9 +96,10 @@ export const MemPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2029.1',
-        details: 'Own',
+        details: `Own(${favorableSwap} ORL ${prot(2)}`,
         summary: {
           isOwn: true,
+          swapType: 'favorable',
         },
       },
     ],
@@ -154,9 +129,11 @@ export const MemPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2030.2',
-        details: 'Own',
+        details: `To MIN ${prot(50)}`,
         summary: {
           isOwn: true,
+          isConditional: true,
+          teams: ['MIN'],
         },
       },
     ],
@@ -175,6 +152,27 @@ export const MemPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2031.2',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+    ],
+  },
+  {
+    year: 2032,
+    roundOne: [
+      {
+        id: '2032.1',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+    ],
+    roundTwo: [
+      {
+        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

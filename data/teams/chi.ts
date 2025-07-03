@@ -1,19 +1,24 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { ifNotConvey, ownPick, prot } from '~/data/shorthand';
+import { ifNotConvey, prot } from '~/data/shorthand';
 
 export const ChiPickMeta: YearMeta[] = [
   {
-    year: 2025,
+    year: 2026,
     roundOne: [
-      ownPick(2025, 1),
       {
-        id: '2025.1.POR',
+        id: '2026.1',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+      {
+        id: '2026.1.POR',
         details: {
           headline: `POR ${prot(14)}`,
           extra: [
             ifNotConvey([
-              `2026 1st ${prot(14)}`,
               `2027 1st ${prot(14)}`,
               `2028 1st ${prot(14)}`,
               `2028 2nd`,
@@ -23,33 +28,6 @@ export const ChiPickMeta: YearMeta[] = [
         summary: {
           isConditional: true,
           teams: ['POR'],
-        },
-      },
-    ],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: 'To SAC',
-        summary: {
-          isTradedAway: true,
-          isOwn: true,
-          teams: ['SAC'],
-        },
-      },
-    ],
-  },
-  {
-    year: 2026,
-    roundOne: [
-      {
-        id: '2026.1',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-          ifNotSettled: {
-            id: '2025.1',
-            result: `To SAS ${prot(8)}`,
-          },
         },
       },
     ],
@@ -169,6 +147,27 @@ export const ChiPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2031.2',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+    ],
+  },
+  {
+    year: 2032,
+    roundOne: [
+      {
+        id: '2032.1',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+    ],
+    roundTwo: [
+      {
+        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

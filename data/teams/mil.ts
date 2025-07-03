@@ -1,31 +1,8 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { tradePick, unfavorableSwap } from '~/data/shorthand';
+import { prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const MilPickMeta: YearMeta[] = [
-  {
-    year: 2025,
-    roundOne: [
-      {
-        id: '2025.1',
-        details: {
-          headline: 'To NOP / BKN',
-          extra: [
-            '1-4 to NOP',
-            '5-30 to BKN',
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['NOP', 'BKN'],
-        },
-      },
-    ],
-    roundTwo: [
-      tradePick(2025, 2, 'CLE'),
-    ],
-  },
   {
     year: 2026,
     roundOne: [
@@ -43,16 +20,12 @@ export const MilPickMeta: YearMeta[] = [
       {
         id: '2026.2',
         details: {
-          headline: 'To ORL / BKN',
-          extra: [
-            'Best two of MIL / DET / ORL to ORL',
-            'Worst to BKN',
-          ],
+          headline: 'To BOS / NYK',
         },
         summary: {
           isOwn: true,
           isTradedAway: true,
-          teams: ['ORL', 'BKN'],
+          teams: ['BOS', 'NYK'],
         },
       },
     ],
@@ -67,6 +40,7 @@ export const MilPickMeta: YearMeta[] = [
           extra: [
             'Best of MIL / NOP to NOP',
             'Worst to ATL',
+            'If both in top 4, NOP keeps both',
           ],
         },
         summary: {
@@ -77,7 +51,7 @@ export const MilPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2027, 2, 'PHI'),
+      tradePick(2027, 2, 'DET'),
     ],
   },
   {
@@ -86,14 +60,18 @@ export const MilPickMeta: YearMeta[] = [
       {
         id: '2028.1',
         details: {
-          headline: `Own (${unfavorableSwap} POR)`,
+          headline: `Own (${unfavorableSwap} POR / WAS / BKN / PHI)`,
           extra: [
-            'If POR has not conveyed 1st to CHI by 2027, POR can only swap if it\'s pick is 1-14',
+            [
+              'MIL receives the worst of (1) and (2):',
+              '(1): Worst of MIL / POR 1-14; (or MIL if POR is not conveyable)',
+              `(2): Best of WAS and worst of BKN / PHI ${prot(8)} (if PHI is conveyable)`,
+            ],
           ],
         },
         summary: {
           isOwn: true,
-          teams: ['POR'],
+          teams: ['POR', 'WAS', 'BKN', 'PHI'],
           swapType: 'unfavorable',
         },
       },
@@ -109,10 +87,6 @@ export const MilPickMeta: YearMeta[] = [
         id: '2029.1',
         details: {
           headline: 'To POR / WAS',
-          extra: [
-            'Best and worst of BOS / MIL / POR to POR',
-            'Second best to WAS',
-          ],
         },
         summary: {
           isOwn: true,
@@ -154,13 +128,22 @@ export const MilPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
+      tradePick(2031, 2, 'CHA'),
+    ],
+  },
+  {
+    year: 2032,
+    roundOne: [
       {
-        id: '2031.2',
+        id: '2032.1',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
+    ],
+    roundTwo: [
+      tradePick(2031, 2, 'CHA'),
     ],
   },
 ]

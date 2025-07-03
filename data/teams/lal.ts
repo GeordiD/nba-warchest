@@ -1,21 +1,8 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { getPick, ifNotConvey, prot, tradePick } from '~/data/shorthand';
+import { ifNotConvey, prot, tradePick } from '~/data/shorthand';
 
 export const LalPickMeta: YearMeta[] = [
-  {
-    year: 2025,
-    roundOne: [tradePick(2025, 1, 'ATL')],
-    roundTwo: [
-      {
-        id: '2025.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-    ],
-  },
   {
     year: 2026,
     roundOne: [
@@ -27,7 +14,7 @@ export const LalPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2026, 2, 'MIA')],
+    roundTwo: [tradePick(2026, 2, 'TOR')],
   },
   {
     year: 2027,
@@ -48,13 +35,16 @@ export const LalPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2027.2',
-        details: 'Own',
+        details: {
+          headline: 'To BKN',
+          extra: [
+            'If LAL has conveyed a 1st to UTA in 2027; Otherwise to UTA',
+          ],
+        },
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2027.1',
-            result: 'To UTA',
-          },
+          isTradedAway: true,
+          teams: ['BKN'],
         },
       },
     ],
@@ -102,13 +92,7 @@ export const LalPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2030.2',
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      tradePick(2030, 2, 'BKN'),
     ],
   },
   {
@@ -123,8 +107,23 @@ export const LalPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
+      tradePick(2030, 2, 'BKN'),
+    ],
+  },
+  {
+    year: 2032,
+    roundOne: [
       {
-        id: '2031.2',
+        id: '2032.1',
+        details: 'Own',
+        summary: {
+          isOwn: true,
+        },
+      },
+    ],
+    roundTwo: [
+      {
+        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,
