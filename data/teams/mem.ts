@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { botProt, favorableSwap, prot, tradePick } from '~/data/shorthand';
+import { botProt, favorableSwap, getPick, prot, tradePick } from '~/data/shorthand';
 
 export const MemPickMeta: YearMeta[] = [
   {
@@ -125,6 +125,7 @@ export const MemPickMeta: YearMeta[] = [
           teams: ['PHX', 'WAS'],
         },
       },
+      getPick(2030, 1, 'ORL'),
     ],
     roundTwo: [
       {
