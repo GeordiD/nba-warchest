@@ -29,6 +29,8 @@ const tableData = computed(() => metaStore.tableData);
           <Column
             header="Team"
             :rowspan="2"
+            sortable
+            field="info.fullName"
           />
           <Column
             header="Tradable 1sts"
