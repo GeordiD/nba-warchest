@@ -161,7 +161,6 @@ export const PhxPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-          isTradedAway: true, // temp until frozen implemented
           frozen: 2028,
         },
       },

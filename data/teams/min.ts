@@ -136,10 +136,9 @@ export const MinPickMeta: YearMeta[] = [
     roundOne: [
       {
         id: '2032.1',
-        details: 'Ow (frozen through 2027-28',
+        details: 'Own (frozen through 2027-28)',
         summary: {
           isOwn: true,
-          isTradedAway: true, // temporary until implement frozen
           frozen: 2028,
         },
       },

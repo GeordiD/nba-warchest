@@ -19,7 +19,7 @@ export interface PickSummary {
   teams?: TeamAbbr[];
   isTradedAway?: boolean;
   isOwn?: boolean;
-  frozen?: number; // 2028
+  frozen?: number; // Year of the start of the season it's frozen through (2027 = 2027-28)
   desc?: string;
   /**
    * @deprecated we're not using, so I'm not updating. If we want to use, must update data

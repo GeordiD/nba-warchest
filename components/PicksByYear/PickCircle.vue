@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import CornerArtifact from '~/components/PicksByYear/CornerArtifact.vue';
 import type { PickDetails, PickSummary } from '~/data/PickMetaTypes';
 
 const {
@@ -26,6 +27,8 @@ const {
 
 const isTradedAway = computed(() => pickData.summary.isOwn
   && pickData.summary.isTradedAway)
+
+const isFrozen = computed(() => !!pickData.summary.frozen);
 
 const abbrs = computed(() => {
   const summary = pickData.summary;
@@ -83,6 +86,12 @@ const protection = computed(() => {
   return '';
 });
 
+const pickTypeClass = computed(() => {
+  if (isTradedAway.value) return 'grayed-out';
+  if (isFrozen.value) return 'owned frozen';
+  return pickData.summary.isConditional ? 'conditional' : 'owned'
+});
+
 const {
   isIdActive,
   onMouseOut,
@@ -101,7 +110,7 @@ const {
       v-tooltip="pickDescription"
       class="rounded-lg h-14 w-14 flex items-center justify-center relative"
       :class="[
-        isTradedAway ? 'traded-away' : (pickData.summary.isConditional ? 'conditional' : 'owned'),
+        pickTypeClass,
         pickData.summary.isOwn ? 'is-own' : '',
         { hover: isIdActive },
       ]"
@@ -112,10 +121,27 @@ const {
         :swap-type="pickData.summary.swapType"
       />
 
-      <TradedAwayIcon
+      <CornerArtifact
         v-if="isTradedAway"
+        direction="tr"
         class="z-30"
-      />
+      >
+        <Icon
+          name="fe:logout"
+          class="icon text-white"
+        />
+      </CornerArtifact>
+
+      <CornerArtifact
+        v-if="isFrozen"
+        direction="tr"
+        class="z-30 bg-blue-500"
+      >
+        <Icon
+          name="mingcute:snowflake-line"
+          class="icon text-white"
+        />
+      </CornerArtifact>
 
       <Protection
         v-if="protection"
@@ -155,9 +181,13 @@ const {
   --bg-conditional-extra: #c7bf96;
 }
 
-.traded-away {
+.grayed-out {
   @apply bg-transparent border-dashed border-2 border-gray-800;
   filter: grayscale(1) opacity(.3);
+}
+
+.frozen {
+  @apply bg-transparent border-dashed border-2 border-blue-500;
 }
 
 .owned {

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import CornerArtifact from '~/components/PicksByYear/CornerArtifact.vue';
+
 const {
   swapType,
 } = defineProps({
@@ -10,15 +12,15 @@ const {
 </script>
 
 <template>
-  <div
-    class="rounded-tl-lg rounded-br-lg w-5 h-5 absolute top-0 left-0 flex items-center justify-center"
+  <CornerArtifact
+    direction="tl"
     :class="swapType"
   >
     <Icon
       name="fe:sync"
       class="icon"
     />
-  </div>
+  </CornerArtifact>
 </template>
 
 <style scoped>
