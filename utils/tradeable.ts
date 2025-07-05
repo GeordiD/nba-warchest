@@ -10,16 +10,16 @@ Algorithm
   - Make sure the last draft year is in this list and marked accordingly
 - For each year next to a FALSE value:
   - If num picks = 0; Error
-  - If num picks = 1; Mark year as TRUE and do not add pick to tradable list
-  - If num picks > 1; Mark year as TRUE and n-1 picks are tradable
+  - If num picks = 1; Mark year as TRUE and do not add pick to tradeable list
+  - If num picks > 1; Mark year as TRUE and n-1 picks are tradeable
 - For remaining years, make groups
   * We know each group is surrounded by years with a true value
   * We're going to opt for efficiency instead of communicating infinite combinations
   - For groups of an odd number of years:
     - For every odd year:
-      - Mark year as FALSE and all picks tradable.
+      - Mark year as FALSE and all picks tradeable.
     - For every even year:
-      - Mark year as TRUE; If multiple picks, n-1 is tradable.
+      - Mark year as TRUE; If multiple picks, n-1 is tradeable.
   - For groups of an even number of years:
     - RoundUp(year/2) picks may be traded from all the picks in these years
 */
@@ -31,13 +31,13 @@ export interface PickSummaryMeta {
   details: string | PickDetails,
 }
 
-export interface TradablePicksGroup<T = PickSummaryMeta> {
+export interface TradeablePicksGroup<T = PickSummaryMeta> {
   total: number;
   picks: T[]
 }
 
 export interface RichTeamMeta extends TeamMeta {
-  tradeInfo: ReturnType<typeof getTradability>;
+  tradeInfo: ReturnType<typeof getTradeability>;
 }
 
 function isEven(value: number) {
@@ -79,8 +79,8 @@ function getPickData(pick: PickSummaryMeta): string {
   return `${pick.year} ${getPickDescription(pick)}`;
 }
 
-function isTradablePicksGroup(value: unknown): value is TradablePicksGroup {
-  return (value as TradablePicksGroup).total !== undefined
+function isTradeablePicksGroup(value: unknown): value is TradeablePicksGroup {
+  return (value as TradeablePicksGroup).total !== undefined
 }
 
 function isConsideredTradedAway(pick: { summary: PickSummary }) {
@@ -88,8 +88,8 @@ function isConsideredTradedAway(pick: { summary: PickSummary }) {
     || (pick.summary.isConditional && pick.summary.isOwn)
 }
 
-function stringifyPickGroups(input: PickSummaryMeta | TradablePicksGroup): (string | TradablePicksGroup<string>) {
-  if (isTradablePicksGroup(input)) {
+function stringifyPickGroups(input: PickSummaryMeta | TradeablePicksGroup): (string | TradeablePicksGroup<string>) {
+  if (isTradeablePicksGroup(input)) {
     return {
       total: input.total,
       picks: input.picks.map(x => getPickData(x)),
@@ -111,7 +111,7 @@ function forEachYear(
   }
 }
 
-export function getTradablePicks(
+export function getTradeablePicks(
   picks: PickSummaryMeta[],
   options: {
     startYear: number,
@@ -122,12 +122,12 @@ export function getTradablePicks(
     startYear,
     hadPickLastYear,
   } = options;
-  let output: (PickSummaryMeta | TradablePicksGroup)[] = [];
+  let output: (PickSummaryMeta | TradeablePicksGroup)[] = [];
 
   // NOTE: I am going to leave picks that have ifNotConveyed in this algo
-  // If the pick has conveyance protocols, it's still tradable, it would just have to be conditional
+  // If the pick has conveyance protocols, it's still tradeable, it would just have to be conditional
 
-  // Add all conditional picks as tradable
+  // Add all conditional picks as tradeable
   output = picks.filter(x =>
     x.summary.isConditional && !isConsideredTradedAway(x),
   );
@@ -159,7 +159,7 @@ export function getTradablePicks(
 
       if (guarenteedPicksThisYear.length === 1) {
         years[year] = true;
-        // do not add this pick as tradable, as we need to keep it.
+        // do not add this pick as tradeable, as we need to keep it.
       } else if (guarenteedPicksThisYear.length > 1) {
         years[year] = true;
         output.push({
@@ -221,38 +221,38 @@ export function getTradablePicks(
   return output;
 }
 
-function getSwappablePicks(allPicks: PickSummaryMeta[], tradablePicks: (PickSummaryMeta | TradablePicksGroup)[]) {
-  const flatTradablePicks = tradablePicks.flatMap(x => isTradablePicksGroup(x) ? x.picks : x);
+function getSwappablePicks(allPicks: PickSummaryMeta[], tradeablePicks: (PickSummaryMeta | TradeablePicksGroup)[]) {
+  const flatTradeablePicks = tradeablePicks.flatMap(x => isTradeablePicksGroup(x) ? x.picks : x);
   const isSwappable = (pick: PickSummaryMeta) => pick.summary.swapType !== 'unfavorable'
     && pick.summary.swapType !== 'mixed'
     && !isConsideredTradedAway(pick)
 
-  // if a pick is not tradable, it could be swappable
-  const untradableSwaps = allPicks
-    // find picks not marked as potentially tradable
-    .filter(x => !flatTradablePicks
+  // if a pick is not tradeable, it could be swappable
+  const untradeableSwaps = allPicks
+    // find picks not marked as potentially tradeable
+    .filter(x => !flatTradeablePicks
       .map(y => getPickData(y))
       .includes(getPickData(x)))
     .filter(x => isSwappable(x))
 
   // Additionally, any picks left out of a pick group would be swappable
-  const groupedSwaps = tradablePicks
-    .filter(x => isTradablePicksGroup(x))
-    .map(x => x as TradablePicksGroup)
+  const groupedSwaps = tradeablePicks
+    .filter(x => isTradeablePicksGroup(x))
+    .map(x => x as TradeablePicksGroup)
     .map(x => ({
       ...x,
-      // the inverse of what is tradable is swappable
+      // the inverse of what is tradeable is swappable
       total: x.picks.length - x.total,
     }));
 
   return [
-    ...untradableSwaps,
+    ...untradeableSwaps,
     ...groupedSwaps,
   ];
 }
 
-function getTotal(input: (PickSummaryMeta | TradablePicksGroup<PickSummaryMeta>)[]): number {
-  return input.reduce((prev, curr) => prev + (isTradablePicksGroup(curr) ? curr.total : 1), 0);
+function getTotal(input: (PickSummaryMeta | TradeablePicksGroup<PickSummaryMeta>)[]): number {
+  return input.reduce((prev, curr) => prev + (isTradeablePicksGroup(curr) ? curr.total : 1), 0);
 }
 
 function getOwnedObject(input: PickSummary[]) {
@@ -262,13 +262,13 @@ function getOwnedObject(input: PickSummary[]) {
   }
 }
 
-export function getTradability(meta: TeamMeta) {
+export function getTradeability(meta: TeamMeta) {
   const picks = getPicksFromMeta(meta.picks);
-  const tradables = getTradablePicks(picks, {
+  const tradeables = getTradeablePicks(picks, {
     startYear: 2026,
     hadPickLastYear: !teamsWithoutFirstLastYear.includes(meta.info.abbr),
   });
-  const swappables = getSwappablePicks(picks, tradables);
+  const swappables = getSwappablePicks(picks, tradeables);
 
   const allFirsts = meta.picks
     .flatMap(x => x.roundOne.flatMap(y => y.summary))
@@ -283,10 +283,10 @@ export function getTradability(meta: TeamMeta) {
       picks: allFirsts,
       total: allFirsts.length,
       owned: getOwnedObject(allFirsts),
-      tradable: {
-        total: getTotal(tradables),
-        asMeta: tradables,
-        asStrings: tradables.map(x => stringifyPickGroups(x)),
+      tradeable: {
+        total: getTotal(tradeables),
+        asMeta: tradeables,
+        asStrings: tradeables.map(x => stringifyPickGroups(x)),
       },
       swappable: {
         total: getTotal(swappables),

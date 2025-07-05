@@ -1,5 +1,5 @@
-import type { Team } from '~/utils/types/Team';
 import { DraftAsset } from '#imports';
+import type { Team } from '~/utils/types/Team';
 
 const sortOwnToTop = (a: DraftAsset, b: DraftAsset) => {
   if (a.isOwn()) return -1;
@@ -31,8 +31,8 @@ export function useTeamAssets(team: Team) {
   ))
   const availableAssetsRoundOne = computed(() => availableAssets.value.filter(x => x.round === 1));
 
-  const tradableRoundOnePicks = computed(() => getTradeablePicks(availableAssetsRoundOne.value));
-  const tradableRoundOneSwaps = computed(() => []);
+  const tradeableRoundOnePicks = computed(() => getTradeablePicks(availableAssetsRoundOne.value));
+  const tradeableRoundOneSwaps = computed(() => []);
 
   return {
     assets: relatedAssets,
@@ -41,8 +41,8 @@ export function useTeamAssets(team: Team) {
 
     roundOneAssets,
     availableAssetsRoundOne,
-    tradableRoundOnePicks,
-    tradableRoundOneSwaps,
+    tradeableRoundOnePicks,
+    tradeableRoundOneSwaps,
 
     roundTwoAssets,
     availableAssetsRoundTwo: computed(() => availableAssets.value.filter(x => x.round === 2)),

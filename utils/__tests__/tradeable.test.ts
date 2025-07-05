@@ -1,7 +1,7 @@
 import type { PickSummaryMeta } from '~/utils/tradeable';
 
-describe('tradable', () => {
-  describe('getTradablePicks', () => {
+describe('tradeable', () => {
+  describe('getTradeablePicks', () => {
     const buildMeta = (
       year: number,
       isGuarenteed = true,
@@ -29,8 +29,8 @@ describe('tradable', () => {
 
     const defaultOptions = { startYear: 2025, hadPickLastYear: false }
 
-    it('should include all non-guarenteed picks as tradable', () => {
-      const result = getTradablePicks([
+    it('should include all non-guarenteed picks as tradeable', () => {
+      const result = getTradeablePicks([
         ...buildInputPicks(2025, 2027, 2028, 2030),
         buildMeta(2025, false, 2),
         buildMeta(2026, false, 1),
@@ -44,8 +44,8 @@ describe('tradable', () => {
       ])
     })
 
-    it('should not include traded away picks as tradable', () => {
-      const result = getTradablePicks(
+    it('should not include traded away picks as tradeable', () => {
+      const result = getTradeablePicks(
         buildInputPicks(2025, 2026, 2027, 2028, 2029).map(x => ({
           ...x,
           summary: {
@@ -59,9 +59,9 @@ describe('tradable', () => {
       expect(result).toEqual([]);
     })
 
-    it('should not include own pick as tradable when its also conditional', () => {
+    it('should not include own pick as tradeable when its also conditional', () => {
       const meta = buildMeta(2025, false);
-      const result = getTradablePicks([
+      const result = getTradeablePicks([
         {
           ...meta,
           summary: {
@@ -75,8 +75,8 @@ describe('tradable', () => {
     });
 
     describe('when there are no guarenteed picks the year before or after', () => {
-      it('should be no tradable picks when there are no picks before AND after', () => {
-        const result = getTradablePicks(
+      it('should be no tradeable picks when there are no picks before AND after', () => {
+        const result = getTradeablePicks(
           buildInputPicks(2025, 2027, 2028, 2030),
           defaultOptions,
         );
@@ -84,8 +84,8 @@ describe('tradable', () => {
         expect(result).toEqual([]);
       });
 
-      it('should not mark a pick as tradable when there was no pick the year before or after', () => {
-        const result = getTradablePicks(
+      it('should not mark a pick as tradeable when there was no pick the year before or after', () => {
+        const result = getTradeablePicks(
           buildInputPicks(2026, 2027),
           defaultOptions,
         )
@@ -93,8 +93,8 @@ describe('tradable', () => {
         expect(result).toEqual([]);
       })
 
-      it('should mark n-1 picks as tradable when there are multiple picks in a year', () => {
-        const result = getTradablePicks(
+      it('should mark n-1 picks as tradeable when there are multiple picks in a year', () => {
+        const result = getTradeablePicks(
           buildInputPicks(2026, 2026, 2026),
           defaultOptions,
         );
@@ -110,8 +110,8 @@ describe('tradable', () => {
     // by years with a guarenteed pick and there is more trade flexibility
     describe('groupings', () => {
       describe('1', () => {
-        it('should mark a pick as tradable when one pick is guarenteed that year', () => {
-          const result = getTradablePicks(
+        it('should mark a pick as tradeable when one pick is guarenteed that year', () => {
+          const result = getTradeablePicks(
             buildInputPicks(2026, 2027, 2028),
             defaultOptions,
           );
@@ -119,8 +119,8 @@ describe('tradable', () => {
           expect(result).toEqual([buildMeta(2027)])
         })
 
-        it('should mark all guarenteed picks as tradable when there are mulitple', () => {
-          const result = getTradablePicks(
+        it('should mark all guarenteed picks as tradeable when there are mulitple', () => {
+          const result = getTradeablePicks(
             buildInputPicks(2026, 2027, 2027, 2028),
             defaultOptions,
           );
@@ -130,8 +130,8 @@ describe('tradable', () => {
       })
 
       describe('even', () => {
-        it('should mark the picks as -or- tradable (2x2)', () => {
-          const result = getTradablePicks(
+        it('should mark the picks as -or- tradeable (2x2)', () => {
+          const result = getTradeablePicks(
             buildInputPicks(2025, 2026, 2027, 2028),
             defaultOptions,
           )
@@ -142,8 +142,8 @@ describe('tradable', () => {
           }])
         })
 
-        it('should mark the picks as -or- tradable (2x3)', () => {
-          const result = getTradablePicks(
+        it('should mark the picks as -or- tradeable (2x3)', () => {
+          const result = getTradeablePicks(
             buildInputPicks(2025, 2026, 2027, 2027, 2028),
             defaultOptions,
           )
@@ -158,8 +158,8 @@ describe('tradable', () => {
           }])
         })
 
-        it('should mark the picks as -or- tradable (2x4)', () => {
-          const result = getTradablePicks(
+        it('should mark the picks as -or- tradeable (2x4)', () => {
+          const result = getTradeablePicks(
             buildInputPicks(2025, 2026, 2026, 2027, 2027, 2028),
             defaultOptions,
           )
@@ -175,8 +175,8 @@ describe('tradable', () => {
           }])
         })
 
-        it('should mark the picks as -or- tradable (4x4)', () => {
-          const result = getTradablePicks(
+        it('should mark the picks as -or- tradeable (4x4)', () => {
+          const result = getTradeablePicks(
             buildInputPicks(2025, 2026, 2027, 2028, 2029, 2030),
             defaultOptions,
           )
@@ -191,8 +191,8 @@ describe('tradable', () => {
       })
 
       describe('odd', () => {
-        it('should mark all picks as tradable every other year', () => {
-          const result = getTradablePicks(
+        it('should mark all picks as tradeable every other year', () => {
+          const result = getTradeablePicks(
             buildInputPicks(2025, 2026, 2027, 2028, 2028, 2029),
             defaultOptions,
           )
@@ -204,8 +204,8 @@ describe('tradable', () => {
           ])
         })
 
-        it('should mark all but one pick as tradable in the in between years', () => {
-          const result = getTradablePicks(
+        it('should mark all but one pick as tradeable in the in between years', () => {
+          const result = getTradeablePicks(
             buildInputPicks(2025, 2026, 2027, 2027, 2027, 2028, 2029),
             defaultOptions,
           )
@@ -222,7 +222,7 @@ describe('tradable', () => {
       })
 
       it('should work when there are multiple groups', () => {
-        const result = getTradablePicks(
+        const result = getTradeablePicks(
           // missing 2027
           buildInputPicks(2025, 2026, 2028, 2029, 2030, 2031),
           { startYear: 2025, hadPickLastYear: true },

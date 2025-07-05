@@ -1,15 +1,15 @@
 import type { RichTeamMeta } from '~/utils/tradeable';
 
-function isTradablePicksGroup(val: PickSummaryMeta | TradablePicksGroup<PickSummaryMeta>): val is TradablePicksGroup<PickSummaryMeta> {
-  return (val as TradablePicksGroup).total !== undefined;
+function isTradeablePicksGroup(val: PickSummaryMeta | TradeablePicksGroup<PickSummaryMeta>): val is TradeablePicksGroup<PickSummaryMeta> {
+  return (val as TradeablePicksGroup).total !== undefined;
 }
 
 function processMetas(
-  input: PickSummaryMeta | TradablePicksGroup,
+  input: PickSummaryMeta | TradeablePicksGroup,
   isConditional: boolean,
   // fn: (x: PickSummaryMeta) => boolean,
 ) {
-  if (isTradablePicksGroup(input)) {
+  if (isTradeablePicksGroup(input)) {
     return isConditional ? 0 : input.total;
   } else {
     return !!input.summary.isConditional == isConditional ? 1 : 0;
@@ -17,11 +17,11 @@ function processMetas(
 }
 
 export function getData(meta: RichTeamMeta) {
-  const guarenteedFirsts = meta.tradeInfo.firsts.tradable.asMeta.reduce((acc, curr) => {
+  const guarenteedFirsts = meta.tradeInfo.firsts.tradeable.asMeta.reduce((acc, curr) => {
     return acc + processMetas(curr, false);
   }, 0)
 
-  const conditionalFirsts = meta.tradeInfo.firsts.tradable.asMeta.reduce((acc, curr) => {
+  const conditionalFirsts = meta.tradeInfo.firsts.tradeable.asMeta.reduce((acc, curr) => {
     return acc + processMetas(curr, true);
   }, 0)
 

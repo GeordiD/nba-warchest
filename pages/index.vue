@@ -33,7 +33,7 @@ const tableData = computed(() => metaStore.tableData);
             field="info.fullName"
           />
           <Column
-            header="Tradable 1sts"
+            header="Tradeable 1sts"
             :colspan="2"
           />
           <Column
@@ -42,11 +42,11 @@ const tableData = computed(() => metaStore.tableData);
           />
         </Row>
         <Row>
-          <!-- Tradable -->
+          <!-- Tradeable -->
           <Column
             header="Picks"
             sortable
-            field="tradeInfo.firsts.tradable.total"
+            field="tradeInfo.firsts.tradeable.total"
           />
           <Column
             header="Swaps"
@@ -93,7 +93,7 @@ const tableData = computed(() => metaStore.tableData);
         </template>
       </Column>
       <Column
-        field="tradeInfo.firsts.tradable.total"
+        field="tradeInfo.firsts.tradeable.total"
       />
       <Column
         field="tradeInfo.firsts.swappable.total"

@@ -5,7 +5,7 @@ import { getMetadataForTeam } from '~/data/getAssetMetadataForTeam';
 export const useMetaStore = defineStore('meta', () => {
   const teamMetas: RichTeamMeta[] = TeamAbbrs
     .map(x => getMetadataForTeam(x))
-    .map(x => ({ ...x, tradeInfo: getTradability(x) }));
+    .map(x => ({ ...x, tradeInfo: getTradeability(x) }));
 
   const metaPerTeam = computed<Record<string, RichTeamMeta>>(() => TeamAbbrs.reduce((prev, curr) => ({
     ...prev,
