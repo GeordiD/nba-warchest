@@ -59,7 +59,7 @@ const showRankModal = ref(false);
       <li>Tradeable, guaranteed first round picks</li>
       <li>Tradeable, conditional first round picks</li>
       <ul class="list-disc ml-4">
-        <li>2 conditional picks = 1 guarenteed pick</li>
+        <li>2 conditional picks = 1 guaranteed pick</li>
       </ul>
       <li>Available first round pick swaps</li>
       <li>Available second round picks</li>

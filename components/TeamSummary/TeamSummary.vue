@@ -15,8 +15,8 @@ const showInfoModal = ref(false);
 const teamMeta = computed(() => metaStore.metaPerTeam[abbr]);
 const tradeabilityResult = computed(() => teamMeta.value.tradeInfo);
 
-const guarenteedFirsts = computed(() => tradeabilityResult.value.firsts.picks.filter(x => !x.isConditional));
-const guarenteedSeconds = computed(() => tradeabilityResult.value.seconds.picks.filter(x => !x.isConditional));
+const guaranteedFirsts = computed(() => tradeabilityResult.value.firsts.picks.filter(x => !x.isConditional));
+const guaranteedSeconds = computed(() => tradeabilityResult.value.seconds.picks.filter(x => !x.isConditional));
 
 const conditionalFirsts = computed(() => tradeabilityResult.value.firsts.picks.filter(x => x.isConditional));
 const conditionalSeconds = computed(() => tradeabilityResult.value.seconds.picks.filter(x => x.isConditional));
@@ -54,10 +54,10 @@ const conditionalSeconds = computed(() => tradeabilityResult.value.seconds.picks
               Guaranteed
             </td>
             <td>
-              {{ guarenteedFirsts.length }}
+              {{ guaranteedFirsts.length }}
             </td>
             <td>
-              {{ guarenteedSeconds.length }}
+              {{ guaranteedSeconds.length }}
             </td>
           </tr>
           <tr>

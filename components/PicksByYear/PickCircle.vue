@@ -176,8 +176,8 @@ const {
 <style scoped>
 .pick-circle {
   --bg-conditional: #E5DDB4;
-  --bg-guarenteed: #CDF3CA;
-  --bg-guarenteed-extra: #95d092;
+  --bg-guaranteed: #CDF3CA;
+  --bg-guaranteed-extra: #95d092;
   --bg-conditional-extra: #c7bf96;
 }
 
@@ -191,11 +191,11 @@ const {
 }
 
 .owned {
-  background-color: var(--bg-guarenteed);
+  background-color: var(--bg-guaranteed);
 }
 
 .owned .extra-circle {
-  background-color: var(--bg-guarenteed-extra);
+  background-color: var(--bg-guaranteed-extra);
 }
 
 .conditional {

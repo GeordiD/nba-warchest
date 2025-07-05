@@ -15,7 +15,7 @@ const props = defineProps({
   <div
     class="rounded-bl-lg rounded-tr-lg w-5 h-5 absolute -top-0.5 -right-0.5 flex items-center justify-center text-xs font-semibold z-50 text-white"
     :class="[
-      isConditional ? 'protection-conditional-bg' : 'protection-guarenteed-bg',
+      isConditional ? 'protection-conditional-bg' : 'protection-guaranteed-bg',
     ]"
   >
     {{ props.protection }}
@@ -27,7 +27,7 @@ const props = defineProps({
   background-color: #b67513;
 }
 
-.protection-guarenteed-bg {
+.protection-guaranteed-bg {
   background-color: #0e624e;
 }
 </style>

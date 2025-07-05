@@ -155,7 +155,7 @@ export class DraftAsset {
   // Ideas:
   // conveyance rules?
   // isContingent
-  // isGuarenteed
+  // isGuaranteed
   // describe swap?
 
   // hasErrors: self idenitify when data isn't right

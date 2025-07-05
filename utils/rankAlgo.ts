@@ -17,7 +17,7 @@ function processMetas(
 }
 
 export function getData(meta: RichTeamMeta) {
-  const guarenteedFirsts = meta.tradeInfo.firsts.tradeable.asMeta.reduce((acc, curr) => {
+  const guaranteedFirsts = meta.tradeInfo.firsts.tradeable.asMeta.reduce((acc, curr) => {
     return acc + processMetas(curr, false);
   }, 0)
 
@@ -29,7 +29,7 @@ export function getData(meta: RichTeamMeta) {
   const seconds = meta.tradeInfo.seconds;
 
   return {
-    guaranteed_firsts: guarenteedFirsts,
+    guaranteed_firsts: guaranteedFirsts,
     conditional_firsts: conditionalFirsts,
     swaps: swappableFirsts.total,
     seconds: seconds.total,
