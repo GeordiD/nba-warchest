@@ -100,16 +100,21 @@ describe('DraftAsset', () => {
     });
 
     describe('basic swap', () => {
-      const asset = new DraftAsset(self, {
-        picks: [
-          buildPick({ originator: self, id: '1' }),
-          buildPick({ originator: otherTeam, id: '2' }),
-        ],
-        protections: [],
-        bestTo: self,
+      const asset = new DraftAsset(self, buildPick({
+        originator: self,
         year: 2024,
         round: 1,
-      });
+        swaps: [{
+          picks: [
+            buildPick({ originator: self, id: '1' }),
+            buildPick({ originator: otherTeam, id: '2' }),
+          ],
+          protections: [],
+          bestTo: self,
+          year: 2024,
+          round: 1,
+        }],
+      }));
 
       it('should set the round', () => {
         expect(asset.round).toBe(1);
