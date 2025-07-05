@@ -15,7 +15,7 @@ const cls = computed(() => classes[direction]);
 
 <template>
   <div
-    class="w-5 h-5 absolute -top-0.5 flex items-center justify-center bg-gray-800"
+    class="w-5 h-5 absolute -top-0.5 flex items-center justify-center"
     :class="[cls]"
   >
     <slot />

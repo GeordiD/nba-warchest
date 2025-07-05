@@ -124,7 +124,7 @@ const {
       <CornerArtifact
         v-if="isTradedAway"
         direction="tr"
-        class="z-30"
+        class="z-30 bg-gray-800"
       >
         <Icon
           name="fe:logout"

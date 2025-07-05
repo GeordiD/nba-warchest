@@ -85,7 +85,7 @@ function isTradeablePicksGroup(value: unknown): value is TradeablePicksGroup {
 
 function isConsideredTradedAway(pick: { summary: PickSummary }) {
   return pick.summary.isTradedAway
-    || (pick.summary.isConditional && pick.summary.isOwn)
+    || (pick.summary.isConditional && pick.summary.isOwn);
 }
 
 function stringifyPickGroups(input: PickSummaryMeta | TradeablePicksGroup): (string | TradeablePicksGroup<string>) {
@@ -129,7 +129,9 @@ export function getTradeablePicks(
 
   // Add all conditional picks as tradeable
   output = picks.filter(x =>
-    x.summary.isConditional && !isConsideredTradedAway(x),
+    x.summary.isConditional
+    && !isConsideredTradedAway(x)
+    && !x.summary.frozen, // I'm not sure this would ever happen, but just in case
   );
 
   // Organize guaranteed picks by year
@@ -139,7 +141,7 @@ export function getTradeablePicks(
     [startYear - 1]: hadPickLastYear,
   };
 
-  // Mark years as false if no guarenteed picks
+  // Mark years as false if no guaranteed picks
   forEachYear(startYear, (year) => {
     if (!guaranteedPicks.filter(x => x.year === year).length)
       years[year] = false;
@@ -155,16 +157,16 @@ export function getTradeablePicks(
     const isNextYearFalse = !isLastYear && years[year + 1] === false;
 
     if (isLastYearFalse || isNextYearFalse) {
-      const guarenteedPicksThisYear = guaranteedPicks.filter(x => x.year === year);
+      const guaranteedPicksThisYear = guaranteedPicks.filter(x => x.year === year);
 
-      if (guarenteedPicksThisYear.length === 1) {
+      if (guaranteedPicksThisYear.length === 1) {
         years[year] = true;
         // do not add this pick as tradeable, as we need to keep it.
-      } else if (guarenteedPicksThisYear.length > 1) {
+      } else if (guaranteedPicksThisYear.length > 1) {
         years[year] = true;
         output.push({
-          total: guarenteedPicksThisYear.length - 1,
-          picks: guarenteedPicksThisYear,
+          total: guaranteedPicksThisYear.length - 1,
+          picks: guaranteedPicksThisYear,
         })
       } else {
         // no picks this year or last/next year
@@ -190,27 +192,44 @@ export function getTradeablePicks(
   // We know each group has a year with a pick on each end (outside the group)
   yearGroupings.forEach((group) => {
     if (isArrayEven(group)) {
-      const guarenteedPicksFromThisGroup = guaranteedPicks.filter(x => group.includes(x.year));
-      const numPicksToKeep = group.length / 2;
-      output.push({
-        picks: guarenteedPicksFromThisGroup,
-        total: guarenteedPicksFromThisGroup.length - numPicksToKeep,
-      })
+      const guaranteedPicksFromThisGroup = guaranteedPicks.filter(x => group.includes(x.year));
+      const frozenPicksInGroup = guaranteedPicksFromThisGroup.filter(x => x.summary.frozen);
+
+      if (frozenPicksInGroup.length === 1) {
+        const frozenPickYear = frozenPicksInGroup[0].year;
+        const place = group.indexOf(frozenPickYear);
+        const chosenPicks = guaranteedPicksFromThisGroup.filter(x => isEven(place) !== isEven(group.indexOf(x.year)))
+
+        output.push(...chosenPicks);
+      } else {
+        if (frozenPicksInGroup.length > 1) {
+          console.error('We did not expect this; We need to update this logic');
+          // just do the normal thing and treat it like a tradeable pick
+        }
+
+        const numPicksToKeep = group.length / 2;
+
+        output.push({
+          picks: guaranteedPicksFromThisGroup,
+          total: guaranteedPicksFromThisGroup.length - numPicksToKeep,
+        })
+      }
     } else {
       group.forEach((year, i) => {
-        const guarenteedPicksThisYear = guaranteedPicks
+        const guaranteedPicksThisYear = guaranteedPicks
           .filter(x => x.year === year)
+          .filter(x => !x.summary.frozen) // can't trade frozen picks
 
         if (isEven(i)) {
           // Since arrays are 0 based, this is the odd years in a group
           output = [
             ...output,
-            ...guarenteedPicksThisYear,
+            ...guaranteedPicksThisYear,
           ]
-        } else if (guarenteedPicksThisYear.length > 1) {
+        } else if (guaranteedPicksThisYear.length > 1) {
           output.push({
-            picks: guarenteedPicksThisYear,
-            total: guarenteedPicksThisYear.length - 1,
+            picks: guaranteedPicksThisYear,
+            total: guaranteedPicksThisYear.length - 1,
           });
         }
       })

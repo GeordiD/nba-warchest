@@ -4,13 +4,13 @@ describe('tradeable', () => {
   describe('getTradeablePicks', () => {
     const buildMeta = (
       year: number,
-      isGuarenteed = true,
+      isGuaranteed = true,
       id = 1,
     ): PickSummaryMeta => ({
       id: id.toString(),
       year,
       summary: {
-        isConditional: !isGuarenteed,
+        isConditional: !isGuaranteed,
       },
       details: `${id}`,
     })
@@ -29,7 +29,7 @@ describe('tradeable', () => {
 
     const defaultOptions = { startYear: 2025, hadPickLastYear: false }
 
-    it('should include all non-guarenteed picks as tradeable', () => {
+    it('should include all non-guaranteed picks as tradeable', () => {
       const result = getTradeablePicks([
         ...buildInputPicks(2025, 2027, 2028, 2030),
         buildMeta(2025, false, 2),
@@ -74,7 +74,7 @@ describe('tradeable', () => {
       expect(result).toEqual([]);
     });
 
-    describe('when there are no guarenteed picks the year before or after', () => {
+    describe('when there are no guaranteed picks the year before or after', () => {
       it('should be no tradeable picks when there are no picks before AND after', () => {
         const result = getTradeablePicks(
           buildInputPicks(2025, 2027, 2028, 2030),
@@ -107,10 +107,10 @@ describe('tradeable', () => {
     })
 
     // A grouping is a year where there is a group of years that are surrounded
-    // by years with a guarenteed pick and there is more trade flexibility
+    // by years with a guaranteed pick and there is more trade flexibility
     describe('groupings', () => {
       describe('1', () => {
-        it('should mark a pick as tradeable when one pick is guarenteed that year', () => {
+        it('should mark a pick as tradeable when one pick is guaranteed that year', () => {
           const result = getTradeablePicks(
             buildInputPicks(2026, 2027, 2028),
             defaultOptions,
@@ -119,7 +119,7 @@ describe('tradeable', () => {
           expect(result).toEqual([buildMeta(2027)])
         })
 
-        it('should mark all guarenteed picks as tradeable when there are mulitple', () => {
+        it('should mark all guaranteed picks as tradeable when there are mulitple', () => {
           const result = getTradeablePicks(
             buildInputPicks(2026, 2027, 2027, 2028),
             defaultOptions,
@@ -200,7 +200,7 @@ describe('tradeable', () => {
           expect(result).toEqual([
             buildMeta(2026),
             buildMeta(2028),
-            buildMeta(2028, true, '2'),
+            buildMeta(2028, true, 2),
           ])
         })
 
@@ -234,6 +234,73 @@ describe('tradeable', () => {
           buildMeta(2031),
         ])
       })
+
+      describe('frozen picks', () => {
+        const makeFrozen = (picks: PickSummaryMeta[], ...years: number[]) => {
+          years.forEach((year) => {
+            const pick = picks.find(x => x.year === year);
+            if (pick) {
+              pick.summary.frozen = 2027;
+            }
+          })
+        }
+
+        it('should not mark a frozen pick as tradeable', () => {
+          // frozen in middle
+          const picks = buildInputPicks(2026, 2027, 2028);
+          makeFrozen(picks, 2027);
+          const result = getTradeablePicks(
+            picks,
+            { startYear: 2025, hadPickLastYear: true },
+          )
+
+          // since the only tradeable pick is frozen, no tradeable picks
+          expect(result).toEqual([]);
+        });
+
+        it('should include a frozen pick when making groupings', () => {
+          // frozen on end
+          const picks = buildInputPicks(2026, 2027, 2028);
+          makeFrozen(picks, 2028);
+          const result = getTradeablePicks(
+            picks,
+            { startYear: 2025, hadPickLastYear: true },
+          )
+
+          // Still have a tradeable pick, since the frozen pick counts as guaranteed
+          expect(result).toEqual([buildMeta(2027)]);
+        })
+
+        it('on even groupings when one is frozen, it should just pick the unfrozen pick', () => {
+          const picks = buildInputPicks(2026, 2027, 2028, 2029);
+          makeFrozen(picks, 2028);
+          const result = getTradeablePicks(picks, { startYear: 2025, hadPickLastYear: true })
+
+          expect(result).toEqual([buildMeta(2027)])
+        })
+
+        it('on big even groupings, it should pick the path with the unfrozen pick (frozen on end)', () => {
+          const picks = buildInputPicks(2027, 2028, 2029, 2030, 2031);
+          makeFrozen(picks, 2031);
+          const result = getTradeablePicks(picks, { startYear: 2025, hadPickLastYear: false })
+
+          expect(result).toEqual([
+            buildMeta(2028),
+            buildMeta(2030),
+          ])
+        })
+
+        it('on big even groupings, it should pick the path with the unfrozen pick (frozen in middle)', () => {
+          const picks = buildInputPicks(2027, 2028, 2029, 2030, 2031);
+          makeFrozen(picks, 2030);
+          const result = getTradeablePicks(picks, { startYear: 2025, hadPickLastYear: false })
+
+          expect(result).toEqual([
+            buildMeta(2029),
+            buildMeta(2031),
+          ])
+        })
+      });
     })
   });
 });
