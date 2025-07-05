@@ -5,4 +5,4 @@
 - Use esmodules (import/export) syntax, not commonjs (require)
 - Be sure to lint and typecheck after you write code to make sure it matches our standards
   - Lint: `pnpm run lint`
-  - Type Check: idk
+  - Type Check: `pnpm run typecheck`

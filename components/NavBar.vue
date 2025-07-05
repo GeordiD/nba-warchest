@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// @ts-expect-error todo: fix the imports here
 import SvgoBasketball from '~/assets/basketball.svg?componentext';
 </script>
 
