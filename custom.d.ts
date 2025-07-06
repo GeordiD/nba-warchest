@@ -12,4 +12,3 @@ declare module '*.svg?componentext' {
   const component: DefineComponent
   export default component
 }
-
