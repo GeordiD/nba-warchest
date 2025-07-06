@@ -15,7 +15,9 @@
       "Bash(pnpm run:*)",
       "Bash(rg:*)",
       "Bash(node:*)",
-      "Bash(npx tsx:*)"
+      "Bash(npx tsx:*)",
+      "Bash(rm:*)",
+      "Bash(cp:*)"
     ],
     "deny": []
   }
