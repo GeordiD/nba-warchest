@@ -21,12 +21,12 @@ export const IndPickMeta: YearMeta[] = [
       {
         id: '2026.2',
         details: {
-          headline: 'To MIN / BOS / MEM / HOU',
+          headline: 'To MIN / BOS / MEM / BKN',
         },
         summary: {
           isOwn: true,
           isTradedAway: true,
-          teams: ['MIN', 'BOS', 'MEM', 'HOU'],
+          teams: ['MIN', 'BOS', 'MEM', 'BKN'],
         },
       },
     ],
@@ -177,6 +177,8 @@ export const IndPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
+      // TODO: One unspecified 2nd round pick (maybe?)
+      // TODO: One unspecified 2nd round pick swap (maybe?)
       {
         id: '2032.2',
         details: 'Own',

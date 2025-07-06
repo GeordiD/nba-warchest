@@ -34,17 +34,17 @@ export const PhiPickMeta: YearMeta[] = [
       {
         id: '2026.2',
         details: {
-          headline: 'To OKC / HOU / SAS',
+          headline: 'To OKC / BKN / SAS',
           extra: [
             'Best of PHI / OKC / DAl to OKC',
-            'Second best to HOU',
+            'Second best to BKN',
             'Worst to SAS',
           ],
         },
         summary: {
           isOwn: true,
           isTradedAway: true,
-          teams: ['OKC', 'HOU', 'SAS'],
+          teams: ['OKC', 'BKN', 'SAS'],
         },
       },
     ],

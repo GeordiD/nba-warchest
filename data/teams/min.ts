@@ -45,6 +45,14 @@ export const MinPickMeta: YearMeta[] = [
           swapType: 'unfavorable',
         },
       },
+      {
+        id: '2026.2.DEN-GSW',
+        details: 'Worst of DEN / GSW',
+        summary: {
+          swapType: 'unfavorable',
+          teams: ['DEN', 'GSW'],
+        },
+      },
     ],
   },
   {

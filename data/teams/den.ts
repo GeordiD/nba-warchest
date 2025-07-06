@@ -14,7 +14,15 @@ export const DenPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2026, 2, 'PHX')],
+    roundTwo: [{
+      id: '2026.2.CHA-MIN',
+      details: 'To CHA / MIN',
+      summary: {
+        isOwn: true,
+        isTradedAway: true,
+        teams: ['CHA', 'MIN'],
+      },
+    }],
   },
   {
     year: 2027,

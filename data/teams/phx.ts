@@ -28,11 +28,11 @@ export const PhxPickMeta: YearMeta[] = [
       // TODO: Gets two 2nds from HOU
       tradePick(2026, 2, 'WAS'),
       {
-        id: '2026.2.DEN-GSW',
-        details: 'Worst of DEN / GSW',
+        id: '2026.2.OKC-DAL-PHI',
+        details: 'Second best of OKC / DAL / PHI',
         summary: {
-          swapType: 'unfavorable',
-          teams: ['DEN', 'GSW'],
+          teams: ['OKC', 'DAL', 'PHI'],
+          swapType: 'mixed',
         },
       },
     ],

@@ -95,7 +95,7 @@ export const SacPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2029, 2, 'WAS'),
+      tradePick(2029, 2, 'HOU'),
     ],
   },
   {

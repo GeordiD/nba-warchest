@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { botProt, favorableSwap, getPick, ifNotConvey, ownPick, prot, tradePick } from '~/data/shorthand';
+import { favorableSwap, getPick, ifNotConvey, ownPick, prot, tradePick } from '~/data/shorthand';
 
 export const WasPickMeta: YearMeta[] = [
   {
@@ -38,7 +38,6 @@ export const WasPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2026, 2, 'CHI'),
       getPick(2026, 2, 'PHX'),
       {
         id: '2026.2.MIN-NYK-NOP-POR',
@@ -86,14 +85,7 @@ export const WasPickMeta: YearMeta[] = [
           teams: ['BKN', 'DAL'],
         },
       },
-      {
-        id: '2027.2.CHI',
-        details: `CHI ${botProt(51)}`,
-        summary: {
-          isConditional: true,
-          teams: ['CHI'],
-        },
-      },
+      getPick(2027, 2, 'CHI'),
       {
         id: '2027.2.GSW-PHX',
         details: 'Worst of GSW / PHX',
@@ -265,6 +257,7 @@ export const WasPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       // TODO: 2nd from NOP
+      // TODO: 2 unspecified 2nds from WAS to HOU
       ownPick(2032, 2),
       getPick(2032, 2, 'UTA'),
     ],

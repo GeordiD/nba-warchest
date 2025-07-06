@@ -22,11 +22,11 @@ export const MiaPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2026.2',
-        details: 'To BOS / MIN / SAS / MEM / HOU',
+        details: 'To BOS / MIN / SAS / MEM / BKN',
         summary: {
           isOwn: true,
           isTradedAway: true,
-          teams: ['BOS', 'MIN', 'SAS', 'MEM', 'HOU'],
+          teams: ['BOS', 'MIN', 'SAS', 'MEM', 'BKN'],
         },
       },
     ],

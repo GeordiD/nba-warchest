@@ -16,11 +16,11 @@ export const GswPickMeta: YearMeta[] = [
     ],
     roundTwo: [{
       id: '2026.2',
-      details: 'To CHA / PHX',
+      details: 'To CHA / MIN',
       summary: {
         isOwn: true,
         isTradedAway: true,
-        teams: ['CHA', 'PHX'],
+        teams: ['CHA', 'MIN'],
       },
     }],
   },

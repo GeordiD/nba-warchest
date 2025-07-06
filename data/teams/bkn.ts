@@ -26,6 +26,23 @@ export const BknPickMeta: YearMeta[] = [
         },
       },
       getPick(2026, 2, 'ATL'),
+      {
+        id: '2026.2.et-all',
+        details: {
+          headline: 'One of LAC / BOS / IND / MIA',
+          extra: [
+            [
+              'BKN gets the worst between (1) and (2):',
+              '(1): LAC',
+              '(2): Best of BOS / IND / MIA',
+            ],
+          ],
+        },
+        summary: {
+          swapType: 'mixed',
+          teams: ['LAC', 'BOS', 'IND', 'MIA'],
+        },
+      },
     ],
   },
   {

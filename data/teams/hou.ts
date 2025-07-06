@@ -27,7 +27,6 @@ export const HouPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      // TODO: Two of these to PHX
       {
         id: '2026.2',
         details: 'Own',
@@ -35,22 +34,7 @@ export const HouPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      {
-        id: '2026.2.OKC-DAL-PHI',
-        details: 'Second best of OKC / DAL / PHI',
-        summary: {
-          teams: ['OKC', 'DAL', 'PHI'],
-          swapType: 'mixed',
-        },
-      },
-      {
-        id: '2026.2.LAC-BOS-IND-MIA',
-        details: 'Worst of LAC and best of BOS / IND / MIA',
-        summary: {
-          teams: ['LAC', 'BOS', 'IND', 'MIA'],
-          swapType: 'mixed',
-        },
-      },
+      getPick(2026, 2, 'CHI'),
     ],
   },
   {
@@ -129,7 +113,10 @@ export const HouPickMeta: YearMeta[] = [
         ],
       },
     ],
-    roundTwo: [tradePick(2029, 2, 'WAS')],
+    roundTwo: [
+      tradePick(2029, 2, 'WAS'),
+      getPick(2029, 2, 'SAC'),
+    ],
   },
   {
     year: 2030,
@@ -179,6 +166,7 @@ export const HouPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
+      // TODO: get 2 unspecified 2nd round picks from WAS
       tradePick(2032, 2, 'PHX'),
     ],
   },

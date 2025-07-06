@@ -59,7 +59,7 @@ export const OkcCombinedMeta: YearMeta[] = [
         id: '2026.2',
         details: {
           headline: 'Most favorable of OKC / DAL / PHL',
-          extra: ['Second most favorable to HOU', 'Least favorable to SAN'],
+          extra: ['Second most favorable to PHX', 'Least favorable to SAS'],
         },
         summary: {
           isOwn: true,

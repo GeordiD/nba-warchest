@@ -31,16 +31,16 @@ export const LacPickMeta: YearMeta[] = [
       {
         id: '2026.2',
         details: {
-          headline: 'To HOU / MEM',
+          headline: 'To BKN / MEM',
           extra: [
-            'Worst between LAC and the best of BOS / IND / MIA to HOU',
+            'Worst between LAC and the best of BOS / IND / MIA to BKN',
             'Other to MEM',
           ],
         },
         summary: {
           isOwn: true,
           isTradedAway: true,
-          teams: ['MEM', 'HOU'],
+          teams: ['MEM', 'BKN'],
         },
       },
     ],

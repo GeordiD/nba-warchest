@@ -172,6 +172,7 @@ export const MemPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
+      // TODO: One unspecified 2nd round pick and one unspecified 2nd round pick swap in IND's possession to MEM
       {
         id: '2032.2',
         details: 'Own',
