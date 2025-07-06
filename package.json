@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "test": "vitest"
+    "test": "vitest",
+    "typecheck": "nuxt typecheck"
   },
   "dependencies": {
     "@nuxt/eslint": "^0.3.13",
@@ -17,6 +18,7 @@
     "@nuxtjs/tailwindcss": "^6.12.0",
     "@pinia/nuxt": "^0.5.1",
     "@primevue/themes": "^4.0.4",
+    "diff": "^8.0.2",
     "nuxt": "^3.11.2",
     "nuxt-svgo": "^4.0.2",
     "nuxt-umami": "^2.6.4",
@@ -33,8 +35,9 @@
     "@vue/test-utils": "^2.4.6",
     "eslint": "^8.57.0",
     "happy-dom": "^14.12.3",
+    "tsx": "^4.20.3",
     "typescript": "^5.4.5",
     "vitest": "^1.6.0",
-    "vue-tsc": "^1"
+    "vue-tsc": "^2.2.12"
   }
 }

@@ -10,7 +10,14 @@
       "Bash(fi)",
       "Bash(done)",
       "Bash(do echo \"=== $file ===\")",
-      "Bash(tail:*)"
+      "Bash(tail:*)",
+      "Bash(npx nuxt typecheck)",
+      "Bash(pnpm run:*)",
+      "Bash(rg:*)",
+      "Bash(node:*)",
+      "Bash(npx tsx:*)",
+      "Bash(rm:*)",
+      "Bash(cp:*)"
     ],
     "deny": []
   }

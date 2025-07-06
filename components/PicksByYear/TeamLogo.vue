@@ -30,13 +30,6 @@ import SvgoTor from '~/assets/icons/tor.svg?componentext';
 import SvgoUta from '~/assets/icons/uta.svg?componentext';
 import SvgoWas from '~/assets/icons/was.svg?componentext';
 
-declare module '*.svg' {
-  import type { DefineComponent } from 'vue'
-
-  const component: DefineComponent
-  export default component
-}
-
 const {
   abbr,
 } = defineProps({
