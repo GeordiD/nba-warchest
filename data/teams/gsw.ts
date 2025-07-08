@@ -134,9 +134,11 @@ export const GswPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2032.2',
-        details: 'Own',
+        details: `To MEM ${prot(50)}`,
         summary: {
           isOwn: true,
+          teams: ['MEM'],
+          isConditional: true,
         },
       },
     ],

@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { getPick, prot } from '~/data/shorthand';
+import { botProt, getPick } from '~/data/shorthand';
 
 export const DetPickMeta: YearMeta[] = [
   {
@@ -73,29 +73,37 @@ export const DetPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      // TODO: Least favorable of all these goes to UTA
       {
-        id: '2028.2',
-        details: `To PHI ${prot(55)}`,
-        summary: {
-          isOwn: true,
-          isConditional: true,
-          teams: ['PHI'],
-        },
-      },
-      getPick(2028, 2, 'NYK'),
-      {
-        id: '2028.2.MIA',
+        id: '2028.2.et-all',
         details: {
-          headline: 'MIA',
+          headline: `All but one of DET ${botProt(56)} / CHA or LAC / MIA / NYK`,
           extra: [
-            'If DAL conveys 1st to CHA in 2027',
+            'Least of these picks goes to UTA',
+            'MIA: If DAL conveys 1st to CHA in 2027',
+            'Own: Included if 31-55; Otherwise to PHI',
+            'Least favorable of CHA / LAC',
           ],
         },
-        summary: {
-          isConditional: true,
-          teams: ['MIA'],
-        },
+        summary: [
+          {
+            isOwn: true,
+            teams: ['CHA', 'LAC', 'MIA', 'NYK'],
+            desc: `DET ${botProt(56)} / CHA or LAC / MIA / NYK`,
+            swapType: 'favorable',
+          },
+          {
+            teams: ['CHA', 'LAC', 'MIA', 'NYK'],
+            desc: `Second best of DET ${botProt(56)} / CHA or LAC / MIA / NYK`,
+            isConditional: true,
+            swapType: 'favorable',
+          },
+          {
+            teams: ['CHA', 'LAC', 'MIA', 'NYK'],
+            desc: `Third best of DET ${botProt(56)} / CHA or LAC / MIA / NYK`,
+            isConditional: true,
+            swapType: 'favorable',
+          },
+        ],
       },
     ],
   },

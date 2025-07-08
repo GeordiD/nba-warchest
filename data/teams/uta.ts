@@ -75,6 +75,7 @@ export const UtaPickMeta: YearMeta[] = [
           teams: ['IND'],
         },
       },
+      getPick(2027, 2, 'LAC'),
     ],
   },
   {

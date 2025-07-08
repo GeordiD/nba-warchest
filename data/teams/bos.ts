@@ -139,8 +139,7 @@ export const bosPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2030, 2, 'PHX'),
-      getPick(2030, 2, 'NYK'),
+      tradePick(2030, 2, 'BKN'),
     ],
   },
   {
@@ -163,7 +162,6 @@ export const bosPickMeta: YearMeta[] = [
         },
       },
       getPick(2031, 2, 'CLE'),
-      getPick(2031, 2, 'POR'),
       {
         id: '2031.2.HOU',
         details: `HOU ${prot(55)}`,

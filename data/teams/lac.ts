@@ -1,7 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import {
-  ownPick,
   prot,
   tradePick,
   unfavorableSwap,
@@ -60,7 +59,7 @@ export const LacPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [ownPick(2027, 2)],
+    roundTwo: [tradePick(2027, 2, 'UTA')],
   },
   {
     year: 2028,

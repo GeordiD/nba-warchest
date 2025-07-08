@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { ifNotConvey, prot } from '~/data/shorthand';
+import { ifNotConvey, prot, tradePick } from '~/data/shorthand';
 
 export const ChiPickMeta: YearMeta[] = [
   {
@@ -32,15 +32,7 @@ export const ChiPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        id: '2026.2',
-        details: 'To WAS',
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['WAS'],
-        },
-      },
+      tradePick(2026, 2, 'HOU'),
     ],
   },
   {

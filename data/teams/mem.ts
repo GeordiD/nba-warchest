@@ -105,6 +105,7 @@ export const MemPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       tradePick(2029, 2, 'BKN'),
+      getPick(2029, 2, 'POR'),
     ],
   },
   {
@@ -153,9 +154,20 @@ export const MemPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2031.2',
-        details: 'Own',
+        details: {
+          headline: `Swap with IND / MIA`,
+          extra: [
+            [
+              'MEM receives best of (1) and (2):',
+              '(1): Worst of IND / MIA',
+              '(2): MEM',
+            ],
+          ],
+        },
         summary: {
           isOwn: true,
+          swapType: 'mixed',
+          teams: ['IND', 'MIA'],
         },
       },
     ],
@@ -172,12 +184,19 @@ export const MemPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      // TODO: One unspecified 2nd round pick and one unspecified 2nd round pick swap in IND's possession to MEM
       {
         id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,
+        },
+      },
+      {
+        id: '2032.2.GSW',
+        details: `GSW ${prot(50)}`,
+        summary: {
+          isConditional: true,
+          teams: ['GSW'],
         },
       },
     ],

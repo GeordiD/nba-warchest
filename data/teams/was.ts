@@ -257,7 +257,6 @@ export const WasPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       // TODO: 2nd from NOP
-      // TODO: 2 unspecified 2nds from WAS to HOU
       ownPick(2032, 2),
       getPick(2032, 2, 'UTA'),
     ],

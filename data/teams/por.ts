@@ -131,7 +131,7 @@ export const PorPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2029, 2, 'IND'),
+      tradePick(2029, 2, 'MEM'),
       {
         id: '2029.2.IND-WAS',
         details: 'Worst of IND / WAS',
@@ -157,6 +157,7 @@ export const PorPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       tradePick(2030, 2, ['PHI', 'WAS']),
+      getPick(2030, 2, 'NYK'),
     ],
   },
   {
@@ -171,7 +172,7 @@ export const PorPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2031, 2, 'BOS'),
+      ownPick(2031, 2),
     ],
   },
   {

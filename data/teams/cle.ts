@@ -39,7 +39,7 @@ export const ClePickMeta: YearMeta[] = [
       tradePick(2027, 1, 'UTA'),
     ],
     roundTwo: [
-      tradePick(2027, 2, 'ATL'),
+      tradePick(2027, 2, 'MIN'),
       getPick(2027, 2, 'DEN'),
     ],
   },

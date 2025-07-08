@@ -167,6 +167,7 @@ export const BknPickMeta: YearMeta[] = [
       },
       getPick(2030, 2, 'DAL'),
       getPick(2030, 2, 'LAL'),
+      getPick(2030, 2, 'BOS'),
     ],
   },
   {
@@ -212,7 +213,6 @@ export const BknPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      // TODO: 2 unspecified 2nd round from PHX
     ],
   },
 ];

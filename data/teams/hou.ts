@@ -145,11 +145,18 @@ export const HouPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2031.2',
-        details: `To BOS ${prot(55)}`,
+        details: {
+          headline: `Unfavorable swap with ATL or to BOS ${prot(55)}`,
+          extra: [
+            'If 31-55: Unfavorable swap with ATL',
+            '56-60: To BOS',
+          ],
+        },
         summary: {
           isOwn: true,
           teams: ['BOS'],
           isConditional: true,
+          swapType: 'unfavorable',
         },
       },
     ],
@@ -166,8 +173,14 @@ export const HouPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      // TODO: get 2 unspecified 2nd round picks from WAS
-      tradePick(2032, 2, 'PHX'),
+      {
+        id: '2032.2',
+        details: 'To MIN / PHX',
+        summary: {
+          isOwn: true,
+          teams: ['MIN', 'PHX'],
+        },
+      },
     ],
   },
 ];

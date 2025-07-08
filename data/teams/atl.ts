@@ -1,7 +1,8 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import {
-  getPick,
+  botProt,
+  favorableSwap,
   prot,
   tradePick,
 } from '~/data/shorthand';
@@ -74,7 +75,7 @@ export const AtlPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2027, 2, 'POR'), getPick(2027, 2, 'CLE')],
+    roundTwo: [tradePick(2027, 2, 'POR')],
   },
   {
     year: 2028,
@@ -144,9 +145,11 @@ export const AtlPickMeta: YearMeta[] = [
     roundTwo: [
       {
         id: '2031.2',
-        details: 'Own',
+        details: `Own (${favorableSwap} HOU ${botProt(56)})`,
         summary: {
           isOwn: true,
+          teams: ['HOU'],
+          swapType: 'favorable',
         },
       },
     ],

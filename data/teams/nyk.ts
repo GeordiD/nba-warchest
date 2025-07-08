@@ -126,7 +126,7 @@ export const NykPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2030, 2, 'BOS'),
+      tradePick(2030, 2, 'POR'),
     ],
   },
   {
