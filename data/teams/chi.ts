@@ -43,10 +43,6 @@ export const ChiPickMeta: YearMeta[] = [
         details: 'Own',
         summary: {
           isOwn: true,
-          ifNotSettled: {
-            id: '2026.1',
-            result: `To SAS ${prot(8)}`,
-          },
         },
       },
     ],
