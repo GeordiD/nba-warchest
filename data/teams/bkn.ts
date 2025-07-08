@@ -94,6 +94,7 @@ export const BknPickMeta: YearMeta[] = [
             desc: 'Best of BKN / PHX / NYK / PHI',
           },
           {
+            isOwn: true,
             swapType: 'favorable',
             teams: ['NYK', 'PHX', 'PHI'],
             desc: 'Second (or third) best of BKN / PHX / NYK / PHI',

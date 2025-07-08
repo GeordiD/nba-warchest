@@ -20,6 +20,7 @@ export const OkcCombinedMeta: YearMeta[] = [
             desc: `Best of OKC / HOU ${prot(4)} / LAC`,
           },
           {
+            isOwn: true,
             teams: ['HOU', 'LAC'],
             swapType: 'favorable',
             isConditional: true,
@@ -96,6 +97,7 @@ export const OkcCombinedMeta: YearMeta[] = [
             desc: 'Best of OKC / DEN / LAC',
           },
           {
+            isOwn: true,
             isConditional: true,
             swapType: 'favorable',
             teams: ['DEN', 'LAC'],
@@ -118,13 +120,11 @@ export const OkcCombinedMeta: YearMeta[] = [
         details: {
           headline: 'Most favorable of OKC / HOU / IND / MIA',
         },
-        summary: [
-          {
-            isOwn: true,
-            swapType: 'favorable',
-            teams: ['HOU', 'IND', 'MIA'],
-          },
-        ],
+        summary: {
+          isOwn: true,
+          swapType: 'favorable',
+          teams: ['HOU', 'IND', 'MIA'],
+        },
       },
       {
         id: '2027.2.CHA',

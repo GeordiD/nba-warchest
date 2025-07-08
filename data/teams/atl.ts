@@ -33,9 +33,7 @@ export const AtlPickMeta: YearMeta[] = [
         id: '2026.1.MIL-NOP',
         details: `Most favorable of MIL / NOP`,
         summary: {
-          isOwn: true,
           swapType: 'unfavorable',
-          ownNotIncluded: true,
           teams: ['MIL', 'NOP'],
         },
       },
@@ -55,7 +53,6 @@ export const AtlPickMeta: YearMeta[] = [
         summary: {
           isConditional: true,
           swapType: 'mixed',
-          ownNotIncluded: true,
           teams: ['BOS', 'IND', 'MIA', 'MIN', 'NYK', 'NOP', 'POR'],
         },
       },
@@ -71,7 +68,6 @@ export const AtlPickMeta: YearMeta[] = [
         summary: {
           swapType: 'unfavorable',
           teams: ['MIL', 'NOP'],
-          ownNotIncluded: true,
         },
       },
     ],

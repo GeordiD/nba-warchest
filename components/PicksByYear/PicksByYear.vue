@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { YearMeta, PickSummary } from '~/data/PickMetaTypes';
+import type { PickSummary, YearMeta } from '~/data/PickMetaTypes';
 
 const {
   abbr,
@@ -62,7 +62,6 @@ const byYear = computed(() =>
         <div class="flex-grow flex flex-wrap gap-1 sm:flex-nowrap sm:flex-col-reverse">
           <PickCircle
             v-for="(pick, i) in yearInfo.roundData"
-            :id="pick.id"
             :key="i"
             :pick-data="pick"
             :related-abbr="abbr"

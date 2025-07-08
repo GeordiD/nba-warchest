@@ -14,8 +14,6 @@ export interface PickDetails {
 export interface PickSummary {
   isConditional?: boolean,
   swapType?: SwapType,
-  ownNotIncluded?: boolean, // Probably deprecated: should be checking if isOwn instead
-  includeOwn?: boolean, // Sometimes needed to get around new logic above. Is isOwn fine here too?
   teams?: TeamAbbr[];
   isTradedAway?: boolean;
   isOwn?: boolean;

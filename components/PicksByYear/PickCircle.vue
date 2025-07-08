@@ -39,8 +39,8 @@ const abbrs = computed(() => {
   }
 
   if (summary.swapType) {
-    const calcOwnNotIncluded = !summary.includeOwn && !summary.isOwn && summary.swapType;
-    if (!(summary.ownNotIncluded || calcOwnNotIncluded)) {
+    const ownNotIncluded = !summary.isOwn && summary.swapType;
+    if (!ownNotIncluded) {
       return [
         relatedAbbr,
         ...teams,
@@ -91,28 +91,19 @@ const pickTypeClass = computed(() => {
   if (isFrozen.value) return 'owned frozen';
   return pickData.summary.isConditional ? 'conditional' : 'owned'
 });
-
-const {
-  isIdActive,
-  onMouseOut,
-  onMouseOver,
-} = useHoverPick(pickData.id);
 </script>
 
 <template>
   <a
     class="flex items-center cursor-pointer relative pick-circle"
     :href="`#${year}`"
-    @mouseover="onMouseOver"
-    @mouseout="onMouseOut"
   >
     <div
       v-tooltip="pickDescription"
-      class="rounded-lg h-14 w-14 flex items-center justify-center relative"
+      class="rounded-lg h-14 w-14 flex items-center justify-center relative hover:shadow-lg hover:shadow-gray-500"
       :class="[
         pickTypeClass,
         pickData.summary.isOwn ? 'is-own' : '',
-        { hover: isIdActive },
       ]"
     >
       <SwapIcon
@@ -212,7 +203,7 @@ const {
   background-color: var(--bg-conditional-extra);
 }
 
-.hover {
+.hover-shadow {
   @apply shadow-lg shadow-gray-500;
 }
 

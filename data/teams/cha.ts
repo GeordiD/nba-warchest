@@ -18,7 +18,6 @@ export const ChaPickMeta: YearMeta[] = [
         details: `Worst of MEM / ORL / WAS ${prot(8)} / PHX`,
         summary: {
           swapType: 'unfavorable',
-          ownNotIncluded: true,
           teams: ['PHX', 'WAS', 'ORL', 'MEM'],
         },
       },
@@ -30,7 +29,6 @@ export const ChaPickMeta: YearMeta[] = [
         details: 'Best of DEN / GSW',
         summary: {
           swapType: 'favorable',
-          ownNotIncluded: true,
           teams: ['DEN', 'GSW'],
         },
       },

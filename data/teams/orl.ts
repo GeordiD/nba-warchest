@@ -24,13 +24,11 @@ export const OrlPickMeta: YearMeta[] = [
         details: {
           headline: 'Second best of ORL / DET / MIL',
         },
-        summary: [
-          {
-            isOwn: true,
-            teams: ['DET', 'MIL'],
-            swapType: 'mixed',
-          },
-        ],
+        summary: {
+          isOwn: true,
+          teams: ['DET', 'MIL'],
+          swapType: 'mixed',
+        },
       },
     ],
   },

@@ -105,9 +105,9 @@ export const HouPickMeta: YearMeta[] = [
             desc: 'Best of HOU / DAL / PHX',
           },
           {
+            isOwn: true,
             teams: ['DAL', 'PHX'],
             swapType: 'favorable',
-            includeOwn: true,
             desc: 'Second best of HOU / DAL / PHX',
           },
         ],

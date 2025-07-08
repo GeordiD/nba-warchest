@@ -40,13 +40,11 @@ export const NopPickMeta: YearMeta[] = [
             'If both are top 4, NOP keeps both',
           ],
         },
-        summary: [
-          {
-            isOwn: true,
-            swapType: 'favorable',
-            teams: ['MIL'],
-          },
-        ],
+        summary: {
+          isOwn: true,
+          swapType: 'favorable',
+          teams: ['MIL'],
+        },
       },
     ],
     roundTwo: [

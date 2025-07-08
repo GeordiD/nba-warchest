@@ -92,12 +92,14 @@ export const DetPickMeta: YearMeta[] = [
             swapType: 'favorable',
           },
           {
+            isOwn: true,
             teams: ['CHA', 'LAC', 'MIA', 'NYK'],
             desc: `Second best of DET ${botProt(56)} / CHA or LAC / MIA / NYK`,
             isConditional: true,
             swapType: 'favorable',
           },
           {
+            isOwn: true,
             teams: ['CHA', 'LAC', 'MIA', 'NYK'],
             desc: `Third best of DET ${botProt(56)} / CHA or LAC / MIA / NYK`,
             isConditional: true,
@@ -177,7 +179,6 @@ export const DetPickMeta: YearMeta[] = [
         details: 'Worst of GSW / MIN',
         summary: {
           swapType: 'unfavorable',
-          ownNotIncluded: true,
           teams: ['GSW', 'MIN'],
         },
       },

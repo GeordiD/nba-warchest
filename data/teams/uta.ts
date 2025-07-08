@@ -47,6 +47,7 @@ export const UtaPickMeta: YearMeta[] = [
             desc: 'Best of of UTA / CLE / MIN',
           },
           {
+            isOwn: true,
             swapType: 'favorable',
             teams: ['UTA', 'CLE', 'MIN'],
             desc: 'Second best of UTA / CLE / MIN',
@@ -129,6 +130,7 @@ export const UtaPickMeta: YearMeta[] = [
             desc: `Most favorable of UTA / CLE / MIN ${prot(5)}`,
           },
           {
+            isOwn: true,
             swapType: 'favorable',
             teams: ['UTA', 'CLE', 'MIN'],
             isConditional: true,

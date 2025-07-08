@@ -27,7 +27,7 @@ export const MemPickMeta: YearMeta[] = [
             desc: 'Best of MEM / PHX / WAS* / ORL',
           },
           {
-            includeOwn: true,
+            isOwn: true,
             desc: 'Second best of MEM / PHX / WAS* / ORL',
             teams: ['ORL', 'PHX', 'WAS'],
             swapType: 'favorable',

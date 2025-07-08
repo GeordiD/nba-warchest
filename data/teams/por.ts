@@ -124,6 +124,7 @@ export const PorPickMeta: YearMeta[] = [
             swapType: 'favorable',
           },
           {
+            isOwn: true,
             teams: ['BOS', 'MIL'],
             swapType: 'unfavorable',
           },
