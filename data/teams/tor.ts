@@ -7,7 +7,6 @@ export const TorPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -16,7 +15,6 @@ export const TorPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2026.2',
         details: `To IND ${prot(55)}`,
         summary: {
           isOwn: true,
@@ -31,7 +29,6 @@ export const TorPickMeta: YearMeta[] = [
     year: 2027,
     roundOne: [
       {
-        id: '2027.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -40,7 +37,6 @@ export const TorPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2027.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -52,7 +48,6 @@ export const TorPickMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -61,7 +56,6 @@ export const TorPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2028.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -73,7 +67,6 @@ export const TorPickMeta: YearMeta[] = [
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -82,7 +75,6 @@ export const TorPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2029.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -94,7 +86,6 @@ export const TorPickMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -103,7 +94,6 @@ export const TorPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2030.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -115,7 +105,6 @@ export const TorPickMeta: YearMeta[] = [
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,

@@ -22,7 +22,6 @@ export interface PickSummary {
 }
 
 export interface PickMeta {
-  id: Id,
   summary: PickSummary | PickSummary[],
   details: string | PickDetails,
 }

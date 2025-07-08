@@ -14,7 +14,6 @@ export const UtaPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: {
           headline: `To OKC ${prot(8)}*`,
           extra: [
@@ -34,7 +33,6 @@ export const UtaPickMeta: YearMeta[] = [
     year: 2027,
     roundOne: [
       {
-        id: '2027.1',
         details: {
           headline: 'Two most favorable of UTA / CLE / MIN',
           extra: ['Least favorable to PHX'],
@@ -55,7 +53,6 @@ export const UtaPickMeta: YearMeta[] = [
         ],
       },
       {
-        id: '2027.1.LAL',
         details: {
           headline: `LAL ${prot(4)}`,
           extra: ['2027 2nd'],
@@ -68,7 +65,6 @@ export const UtaPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2027.2',
         details: 'To IND',
         summary: {
           isOwn: true,
@@ -83,7 +79,6 @@ export const UtaPickMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: `Own (${favorableSwap} CLE)`,
         summary: {
           isOwn: true,
@@ -95,7 +90,6 @@ export const UtaPickMeta: YearMeta[] = [
     roundTwo: [
       tradePick(2028, 2, 'OKC'),
       {
-        id: '2028.2.et-all',
         details: {
           headline: `Worst of DET* / CHA / LAC / MIA* / NYK`,
           extra: [
@@ -114,7 +108,6 @@ export const UtaPickMeta: YearMeta[] = [
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: {
           headline: `Two* most favorable of UTA / CLE / MIN ${prot(5)}`,
           extra: [
@@ -141,7 +134,6 @@ export const UtaPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2029.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -153,7 +145,6 @@ export const UtaPickMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -162,7 +153,6 @@ export const UtaPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2030.2',
         details: `Worst of LAC / UTA`,
         summary: {
           isOwn: true,
@@ -176,7 +166,6 @@ export const UtaPickMeta: YearMeta[] = [
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -186,7 +175,6 @@ export const UtaPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2031.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -198,7 +186,6 @@ export const UtaPickMeta: YearMeta[] = [
     year: 2032,
     roundOne: [
       {
-        id: '2032.1',
         details: 'Own',
         summary: {
           isOwn: true,

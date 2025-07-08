@@ -25,7 +25,6 @@ Algorithm
 */
 
 export interface PickSummaryMeta {
-  id: string,
   year: number,
   summary: PickSummary,
   details: string | PickDetails,
@@ -54,13 +53,11 @@ function getPicksFromMeta(metas: YearMeta[]): PickSummaryMeta[] {
       Array.isArray(y.summary)
         ? y.summary.flatMap(z => ({
           year: x.year,
-          id: y.id,
           summary: z,
           details: y.details,
         }))
         : {
             year: x.year,
-            id: y.id,
             summary: y.summary,
             details: y.details,
           }));

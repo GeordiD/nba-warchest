@@ -7,7 +7,6 @@ export const ClePickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: {
           headline: `Swap with UTA* / MIN / ATL / SAS`,
           extra: [[
@@ -25,7 +24,6 @@ export const ClePickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2026.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -47,7 +45,6 @@ export const ClePickMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: `Own (${unfavorableSwap} ATL / UTA)`,
         summary: {
           isOwn: true,
@@ -58,7 +55,6 @@ export const ClePickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2028.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -79,7 +75,6 @@ export const ClePickMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -94,7 +89,6 @@ export const ClePickMeta: YearMeta[] = [
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -109,7 +103,6 @@ export const ClePickMeta: YearMeta[] = [
     year: 2032,
     roundOne: [
       {
-        id: '2032.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -118,7 +111,6 @@ export const ClePickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

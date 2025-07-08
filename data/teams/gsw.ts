@@ -7,7 +7,6 @@ export const GswPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -15,7 +14,6 @@ export const GswPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [{
-      id: '2026.2',
       details: 'To CHA / MIN',
       summary: {
         isOwn: true,
@@ -28,7 +26,6 @@ export const GswPickMeta: YearMeta[] = [
     year: 2027,
     roundOne: [
       {
-        id: '2027.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -36,7 +33,6 @@ export const GswPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [{
-      id: '2027.2',
       details: 'To PHI / WAS',
       summary: {
         isOwn: true,
@@ -49,7 +45,6 @@ export const GswPickMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -62,7 +57,6 @@ export const GswPickMeta: YearMeta[] = [
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -75,7 +69,6 @@ export const GswPickMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: {
           headline: `To WAS ${prot(20)}`,
           extra: [ifNotConvey(['2030 2nd'])],
@@ -89,7 +82,6 @@ export const GswPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2030.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -101,7 +93,6 @@ export const GswPickMeta: YearMeta[] = [
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -110,7 +101,6 @@ export const GswPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2031.2',
         details: 'To MIN / DET',
         summary: {
           isOwn: true,
@@ -124,7 +114,6 @@ export const GswPickMeta: YearMeta[] = [
     year: 2032,
     roundOne: [
       {
-        id: '2032.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -133,7 +122,6 @@ export const GswPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2032.2',
         details: `To MEM ${prot(50)}`,
         summary: {
           isOwn: true,

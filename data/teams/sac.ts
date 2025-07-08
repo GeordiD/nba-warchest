@@ -12,7 +12,6 @@ export const SacPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -21,7 +20,6 @@ export const SacPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2026.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -34,14 +32,12 @@ export const SacPickMeta: YearMeta[] = [
     year: 2027,
     roundOne: [
       {
-        id: '2027.1',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
       {
-        id: '2027.1.SAS',
         details: `SAS ${botProt(17)}`,
         summary: {
           isConditional: true,
@@ -51,7 +47,6 @@ export const SacPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2027.2',
         details: 'To OKC / CHA',
         summary: {
           isOwn: true,
@@ -65,7 +60,6 @@ export const SacPickMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -74,7 +68,6 @@ export const SacPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2028.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -87,7 +80,6 @@ export const SacPickMeta: YearMeta[] = [
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -102,7 +94,6 @@ export const SacPickMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -115,7 +106,6 @@ export const SacPickMeta: YearMeta[] = [
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: `Own (${unfavorableSwap} SAS)`,
         summary: {
           isOwn: true,
@@ -131,7 +121,6 @@ export const SacPickMeta: YearMeta[] = [
     year: 2032,
     roundOne: [
       {
-        id: '2032.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -140,7 +129,6 @@ export const SacPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

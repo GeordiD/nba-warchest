@@ -7,7 +7,6 @@ export const MemPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: {
           headline: `Two best of MEM / PHX / WAS* / ORL`,
           extra: [
@@ -37,7 +36,6 @@ export const MemPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2026.2',
         details: {
           headline: 'To LAC / POR',
           extra: [
@@ -52,7 +50,6 @@ export const MemPickMeta: YearMeta[] = [
         },
       },
       {
-        id: '2026.2.BOS-IND-LAC-MIA',
         details: 'Best of BOS / IND / LAC / MIA',
         summary: {
           teams: ['BOS', 'IND', 'LAC', 'MIA'],
@@ -65,7 +62,6 @@ export const MemPickMeta: YearMeta[] = [
     year: 2027,
     roundOne: [
       {
-        id: '2027.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -80,7 +76,6 @@ export const MemPickMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -95,7 +90,6 @@ export const MemPickMeta: YearMeta[] = [
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: `Own(${favorableSwap} ORL ${prot(2)}`,
         summary: {
           isOwn: true,
@@ -112,7 +106,6 @@ export const MemPickMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: {
           headline: `Own (${favorableSwap} worst of PHX / WAS)`,
           extra: [
@@ -130,7 +123,6 @@ export const MemPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2030.2',
         details: `To MIN ${prot(50)}`,
         summary: {
           isOwn: true,
@@ -144,7 +136,6 @@ export const MemPickMeta: YearMeta[] = [
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -153,7 +144,6 @@ export const MemPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2031.2',
         details: {
           headline: `Swap with IND / MIA`,
           extra: [
@@ -176,7 +166,6 @@ export const MemPickMeta: YearMeta[] = [
     year: 2032,
     roundOne: [
       {
-        id: '2032.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -185,14 +174,12 @@ export const MemPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
       {
-        id: '2032.2.GSW',
         details: `GSW ${prot(50)}`,
         summary: {
           isConditional: true,

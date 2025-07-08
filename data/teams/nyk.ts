@@ -7,14 +7,12 @@ export const NykPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
       {
-        id: '2026.1.WAS',
         details: {
           headline: `WAS ${prot(8)}`,
           extra: [
@@ -31,7 +29,6 @@ export const NykPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2026.2',
         details: `Worst of NYK / MIN`,
         summary: {
           isOwn: true,
@@ -48,14 +45,12 @@ export const NykPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2027.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
       {
-        id: '2027.2.OKC-HOU-IND-MIA',
         details: 'Second and third most favorable of OKC / HOU / IND / MIA',
         summary: [
           {
@@ -76,7 +71,6 @@ export const NykPickMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: `Own (${unfavorableSwap} BKN / PHX)`,
         summary: {
           isOwn: true,
@@ -88,7 +82,6 @@ export const NykPickMeta: YearMeta[] = [
     roundTwo: [
       tradePick(2028, 2, 'DET'),
       {
-        id: '2028.2.BOS',
         details: `BOS ${prot(45)}`,
         summary: {
           isConditional: true,
@@ -96,7 +89,6 @@ export const NykPickMeta: YearMeta[] = [
         },
       },
       {
-        id: '2028.2.IND-PHX',
         details: 'Worst of IND / PHX',
         summary: {
           swapType: 'unfavorable',
@@ -118,7 +110,6 @@ export const NykPickMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -142,7 +133,6 @@ export const NykPickMeta: YearMeta[] = [
     year: 2032,
     roundOne: [
       {
-        id: '2032.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -151,7 +141,6 @@ export const NykPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

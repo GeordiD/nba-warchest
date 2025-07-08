@@ -12,7 +12,6 @@ export const AtlPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: {
           headline: `Own (swap with SAS / CLE / UTA / MIN)`,
           extra: [
@@ -30,7 +29,6 @@ export const AtlPickMeta: YearMeta[] = [
         },
       },
       {
-        id: '2026.1.MIL-NOP',
         details: `Most favorable of MIL / NOP`,
         summary: {
           swapType: 'unfavorable',
@@ -41,7 +39,6 @@ export const AtlPickMeta: YearMeta[] = [
     roundTwo: [
       tradePick(2026, 2, 'BKN'),
       {
-        id: '2026.2.et-all',
         details: {
           headline: `One of BOS / IND / MIA / MIN / NYK / NOP / POR`,
           extra: [[
@@ -63,7 +60,6 @@ export const AtlPickMeta: YearMeta[] = [
     roundOne: [
       tradePick(2027, 1, 'SAS'),
       {
-        id: '2027.1.MIL.NOP',
         details: `Least favorable of MIL ${prot(4)} and NOP ${prot(4)}`,
         summary: {
           swapType: 'unfavorable',
@@ -77,7 +73,6 @@ export const AtlPickMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: {
           headline: 'Swap with UTA / CLE',
           extra: [
@@ -97,7 +92,6 @@ export const AtlPickMeta: YearMeta[] = [
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -110,7 +104,6 @@ export const AtlPickMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -119,7 +112,6 @@ export const AtlPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2030.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -131,7 +123,6 @@ export const AtlPickMeta: YearMeta[] = [
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -140,7 +131,6 @@ export const AtlPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2031.2',
         details: `Own (${favorableSwap} HOU ${botProt(56)})`,
         summary: {
           isOwn: true,
@@ -154,7 +144,6 @@ export const AtlPickMeta: YearMeta[] = [
     year: 2032,
     roundOne: [
       {
-        id: '2032.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -163,7 +152,6 @@ export const AtlPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

@@ -7,7 +7,6 @@ export const OkcCombinedMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: {
           headline: `Two most favorable of OKC / HOU ${prot(4)} / LAC`,
           extra: [`Least favorable to WAS`],
@@ -29,7 +28,6 @@ export const OkcCombinedMeta: YearMeta[] = [
         ],
       },
       {
-        id: '2026.1.PHI',
         details: {
           headline: `PHI ${prot(4)}`,
           extra: [
@@ -45,7 +43,6 @@ export const OkcCombinedMeta: YearMeta[] = [
         },
       },
       {
-        id: '2026.1.UTA',
         details: {
           headline: `UTA ${prot(8)}`,
         },
@@ -57,7 +54,6 @@ export const OkcCombinedMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2026.2',
         details: {
           headline: 'Most favorable of OKC / DAL / PHL',
           extra: ['Second most favorable to PHX', 'Least favorable to SAS'],
@@ -74,7 +70,6 @@ export const OkcCombinedMeta: YearMeta[] = [
     year: 2027,
     roundOne: [
       {
-        id: '2027.1',
         details: {
           headline: `Two most favorable of OKC / DEN ${prot(5)} / LAC`,
           extra: [
@@ -106,7 +101,6 @@ export const OkcCombinedMeta: YearMeta[] = [
         ],
       },
       {
-        id: '2027.1.SAS',
         details: `SAS ${prot(16)}`,
         summary: {
           isConditional: true,
@@ -116,7 +110,6 @@ export const OkcCombinedMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2027.2',
         details: {
           headline: 'Most favorable of OKC / HOU / IND / MIA',
         },
@@ -127,7 +120,6 @@ export const OkcCombinedMeta: YearMeta[] = [
         },
       },
       {
-        id: '2027.2.CHA',
         details: {
           headline: 'CHA',
           extra: [
@@ -141,7 +133,6 @@ export const OkcCombinedMeta: YearMeta[] = [
         },
       },
       {
-        id: '2027.2.SAC',
         details: {
           headline: 'SAC',
           extra: [
@@ -160,7 +151,6 @@ export const OkcCombinedMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: `Own (${favorableSwap} DAL)`,
         summary: {
           teams: ['DAL'],
@@ -171,21 +161,18 @@ export const OkcCombinedMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2028.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
       {
-        id: '2028.2.MIL',
         details: 'MIL',
         summary: {
           teams: ['MIL'],
         },
       },
       {
-        id: '2028.2.UTA',
         details: 'UTA',
         summary: {
           teams: ['UTA'],
@@ -197,14 +184,12 @@ export const OkcCombinedMeta: YearMeta[] = [
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
       {
-        id: '2029.1.DEN',
         details: {
           headline: `DEN ${prot(5)}`,
           extra: [
@@ -223,28 +208,24 @@ export const OkcCombinedMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2029.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
       {
-        id: '2029.2.ATL',
         details: 'ATL',
         summary: {
           teams: ['ATL'],
         },
       },
       {
-        id: '2029.2.BOS',
         details: 'BOS',
         summary: {
           teams: ['BOS'],
         },
       },
       {
-        id: '2029.2.MIA',
         details: 'MIA',
         summary: {
           teams: ['MIA'],
@@ -256,7 +237,6 @@ export const OkcCombinedMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -265,21 +245,18 @@ export const OkcCombinedMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2030.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
       {
-        id: '2030.2.HOU',
         details: 'HOU',
         summary: {
           teams: ['HOU'],
         },
       },
       {
-        id: '2030.2.MIA',
         details: 'MIA',
         summary: {
           teams: ['MIA'],
@@ -292,7 +269,6 @@ export const OkcCombinedMeta: YearMeta[] = [
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -301,14 +277,12 @@ export const OkcCombinedMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2031.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
       {
-        id: '2031.2.NOP-ORL',
         details: 'Worst of NOP / ORL',
         summary: {
           swapType: 'unfavorable',

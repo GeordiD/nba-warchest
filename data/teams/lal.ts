@@ -7,7 +7,6 @@ export const LalPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -20,7 +19,6 @@ export const LalPickMeta: YearMeta[] = [
     year: 2027,
     roundOne: [
       {
-        id: '2027.1',
         details: {
           headline: `To UTA ${prot(4)}`,
           extra: [ifNotConvey(['2027 2nd'])],
@@ -34,7 +32,6 @@ export const LalPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2027.2',
         details: {
           headline: 'To BKN',
           extra: [
@@ -53,7 +50,6 @@ export const LalPickMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -62,7 +58,6 @@ export const LalPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2028.2',
         details: {
           headline: 'To ORL / WAS',
           extra: ['Best of LAL / WAS to ORL', 'Worst to WAS'],
@@ -84,7 +79,6 @@ export const LalPickMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -99,7 +93,6 @@ export const LalPickMeta: YearMeta[] = [
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -114,7 +107,6 @@ export const LalPickMeta: YearMeta[] = [
     year: 2032,
     roundOne: [
       {
-        id: '2032.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -123,7 +115,6 @@ export const LalPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

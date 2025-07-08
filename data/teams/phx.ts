@@ -12,7 +12,6 @@ export const PhxPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: {
           headline: 'To WAS / MEM / CHA',
         },
@@ -27,7 +26,6 @@ export const PhxPickMeta: YearMeta[] = [
       // TODO: Gets two 2nds from HOU
       tradePick(2026, 2, 'WAS'),
       {
-        id: '2026.2.OKC-DAL-PHI',
         details: 'Second best of OKC / DAL / PHI',
         summary: {
           teams: ['OKC', 'DAL', 'PHI'],
@@ -41,7 +39,6 @@ export const PhxPickMeta: YearMeta[] = [
     roundOne: [
       tradePick(2027, 1, 'HOU'),
       {
-        id: '2027.1.UTA-CLE-MIN',
         details: 'Least favorable of CLE / MIN / UTA',
         summary: {
           teams: ['UTA', 'CLE', 'MIN'],
@@ -51,7 +48,6 @@ export const PhxPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2027.2.PHI-WAS',
         details: 'To PHI / WAS',
         summary: {
           isOwn: true,
@@ -65,7 +61,6 @@ export const PhxPickMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: {
           headline: `Own (${unfavorableSwap} PHI ${prot(8)} / BKN / WAS)`,
           extra: [
@@ -85,7 +80,6 @@ export const PhxPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2028.2',
         details: {
           headline: 'To IND / NYK',
           extra: ['Best of PHX / IND to IND', 'Worst to NYK'],
@@ -102,7 +96,6 @@ export const PhxPickMeta: YearMeta[] = [
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: {
           headline: 'To HOU / BKN',
           extra: [
@@ -125,7 +118,6 @@ export const PhxPickMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: {
           headline: `Own (${unfavorableSwap} WAS / MEM)`,
           extra: [
@@ -155,7 +147,6 @@ export const PhxPickMeta: YearMeta[] = [
     year: 2032,
     roundOne: [
       {
-        id: '2032.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -165,7 +156,6 @@ export const PhxPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2032.2',
         details: 'Worst of PHX / HOU',
         summary: {
           isOwn: true,

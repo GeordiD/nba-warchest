@@ -7,7 +7,6 @@ export const DetPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -16,7 +15,6 @@ export const DetPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2026.2',
         details: {
           headline: 'To ORL / BKN',
           extra: [
@@ -36,7 +34,6 @@ export const DetPickMeta: YearMeta[] = [
     year: 2027,
     roundOne: [
       {
-        id: '2027.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -45,14 +42,12 @@ export const DetPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2027.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
       {
-        id: '2027.2.BKN-DAL',
         details: 'Worst of BKN / DAL',
         summary: {
           teams: ['BKN', 'DAL'],
@@ -65,7 +60,6 @@ export const DetPickMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -74,7 +68,6 @@ export const DetPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2028.2.et-all',
         details: {
           headline: `All but one of DET ${botProt(56)} / CHA or LAC / MIA / NYK`,
           extra: [
@@ -113,7 +106,6 @@ export const DetPickMeta: YearMeta[] = [
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -122,7 +114,6 @@ export const DetPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2029.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -136,7 +127,6 @@ export const DetPickMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -145,7 +135,6 @@ export const DetPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2030.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -158,7 +147,6 @@ export const DetPickMeta: YearMeta[] = [
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -167,7 +155,6 @@ export const DetPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2031.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -175,7 +162,6 @@ export const DetPickMeta: YearMeta[] = [
       },
       getPick(2031, 2, 'DAL'),
       {
-        id: '2031.2.GSW-MIN',
         details: 'Worst of GSW / MIN',
         summary: {
           swapType: 'unfavorable',
@@ -188,7 +174,6 @@ export const DetPickMeta: YearMeta[] = [
     year: 2032,
     roundOne: [
       {
-        id: '2032.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -197,7 +182,6 @@ export const DetPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

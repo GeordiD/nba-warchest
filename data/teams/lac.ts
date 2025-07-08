@@ -11,7 +11,6 @@ export const LacPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: {
           headline: 'To OKC / WAS',
           extra: [
@@ -28,7 +27,6 @@ export const LacPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2026.2',
         details: {
           headline: 'To BKN / MEM',
           extra: [
@@ -48,7 +46,6 @@ export const LacPickMeta: YearMeta[] = [
     year: 2027,
     roundOne: [
       {
-        id: '2027.1',
         details: {
           headline: `Worst of LAC / DEN ${prot(5)} / OKC`,
         },
@@ -66,7 +63,6 @@ export const LacPickMeta: YearMeta[] = [
     roundOne: [tradePick(2028, 1, 'PHI')],
     roundTwo: [
       {
-        id: '2028.2',
         details: {
           headline: 'To CHA / DET',
           extra: ['Best of LAC / CHA to CHA', 'Worst to DET'],
@@ -83,7 +79,6 @@ export const LacPickMeta: YearMeta[] = [
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: `Own (${unfavorableSwap} PHI ${prot(3)})`,
         summary: {
           isOwn: true,
@@ -98,7 +93,6 @@ export const LacPickMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -106,7 +100,6 @@ export const LacPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [{
-      id: '2030.2',
       details: {
         headline: `Worst of LAC / UTA`,
         extra: ['Best to CHA'],
@@ -122,7 +115,6 @@ export const LacPickMeta: YearMeta[] = [
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -131,7 +123,6 @@ export const LacPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2031.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -143,7 +134,6 @@ export const LacPickMeta: YearMeta[] = [
     year: 2032,
     roundOne: [
       {
-        id: '2032.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -152,7 +142,6 @@ export const LacPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

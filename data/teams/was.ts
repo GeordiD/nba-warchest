@@ -7,7 +7,6 @@ export const WasPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: {
           headline: `To NYK ${prot(8)}`,
           extra: [
@@ -22,7 +21,6 @@ export const WasPickMeta: YearMeta[] = [
         },
       },
       {
-        id: '2026.1.OKC-HOU-LAC',
         details: `Worst of OKC / HOU ${prot(4)} / LAC`,
         summary: {
           teams: ['OKC', 'HOU', 'LAC'],
@@ -32,7 +30,6 @@ export const WasPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2026.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -40,7 +37,6 @@ export const WasPickMeta: YearMeta[] = [
       },
       getPick(2026, 2, 'PHX'),
       {
-        id: '2026.2.MIN-NYK-NOP-POR',
         details: {
           headline: 'MIN / NYK / NOP / POR',
           extra: [
@@ -62,7 +58,6 @@ export const WasPickMeta: YearMeta[] = [
     year: 2027,
     roundOne: [
       {
-        id: '2027.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -71,14 +66,12 @@ export const WasPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2027.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
       {
-        id: '2027.2.BKN-DAL',
         details: 'Best of BKN / DAL',
         summary: {
           swapType: 'favorable',
@@ -87,7 +80,6 @@ export const WasPickMeta: YearMeta[] = [
       },
       getPick(2027, 2, 'CHI'),
       {
-        id: '2027.2.GSW-PHX',
         details: 'Worst of GSW / PHX',
         summary: {
           swapType: 'unfavorable',
@@ -100,7 +92,6 @@ export const WasPickMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: {
           headline: `Own (swap with BKN / PHI* / PHX / MIL / POR)`,
           extra: [
@@ -127,7 +118,6 @@ export const WasPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2028.2',
         details: {
           headline: 'Worst of WAS / LAL',
           extra: [
@@ -139,7 +129,6 @@ export const WasPickMeta: YearMeta[] = [
         },
       },
       {
-        id: '2028.2.DEN',
         details: `DEN ${prot(33)}`,
         summary: {
           teams: ['DEN'],
@@ -152,14 +141,12 @@ export const WasPickMeta: YearMeta[] = [
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
       {
-        id: '2029.1.BOS.MIL.POR',
         details: 'Second best of BOS / MIL / POR',
         summary: {
           teams: ['BOS', 'MIL', 'POR'],
@@ -169,7 +156,6 @@ export const WasPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2029.2',
         details: {
           headline: 'To IND / NYK',
         },
@@ -185,7 +171,6 @@ export const WasPickMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: `Own (${favorableSwap} PHX)`,
         summary: {
           isOwn: true,
@@ -194,7 +179,6 @@ export const WasPickMeta: YearMeta[] = [
         },
       },
       {
-        id: '2030.1.GSW',
         details: {
           headline: `GSW ${prot(20)}`,
           extra: [
@@ -212,7 +196,6 @@ export const WasPickMeta: YearMeta[] = [
     roundTwo: [
       tradePick(2030, 2, 'PHI'),
       {
-        id: '2030.2.PHX-POR',
         details: 'Worst of PHX / POR',
         summary: {
           teams: ['PHX', 'POR'],
@@ -225,7 +208,6 @@ export const WasPickMeta: YearMeta[] = [
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -234,14 +216,12 @@ export const WasPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2031.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
       {
-        id: '2031.2.MIA-IND',
         details: 'Best of MIA / IND',
         summary: {
           swapType: 'favorable',
