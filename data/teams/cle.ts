@@ -34,11 +34,11 @@ export const ClePickMeta: YearMeta[] = [
   {
     year: 2027,
     roundOne: [
-      tradePick(2027, 1, 'UTA'),
+      tradePick('UTA'),
     ],
     roundTwo: [
-      tradePick(2027, 2, 'MIN'),
-      getPick(2027, 2, 'DEN'),
+      tradePick('MIN'),
+      getPick('DEN'),
     ],
   },
   {
@@ -65,10 +65,10 @@ export const ClePickMeta: YearMeta[] = [
   {
     year: 2029,
     roundOne: [
-      tradePick(2029, 1, 'UTA'),
+      tradePick('UTA'),
     ],
     roundTwo: [
-      tradePick(2029, 2, 'ATL'),
+      tradePick('ATL'),
     ],
   },
   {
@@ -82,7 +82,7 @@ export const ClePickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2030, 2, 'SAS'),
+      tradePick('SAS'),
     ],
   },
   {
@@ -96,7 +96,7 @@ export const ClePickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2031, 2, 'BOS'),
+      tradePick('BOS'),
     ],
   },
   {

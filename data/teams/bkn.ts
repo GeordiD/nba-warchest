@@ -23,7 +23,7 @@ export const BknPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2026, 2, 'ATL'),
+      getPick('ATL'),
       {
         details: {
           headline: 'One of LAC / BOS / IND / MIA',
@@ -53,7 +53,7 @@ export const BknPickMeta: YearMeta[] = [
           teams: ['HOU'],
         },
       },
-      getPick(2027, 1, 'NYK'),
+      getPick('NYK'),
     ],
     roundTwo: [
       {
@@ -103,8 +103,8 @@ export const BknPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2028, 2, 'MEM'),
-      getPick(2028, 2, 'ATL'),
+      getPick('MEM'),
+      getPick('ATL'),
     ],
   },
   {
@@ -116,7 +116,7 @@ export const BknPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2029, 1, 'NYK'),
+      getPick('NYK'),
       {
         details: 'Worst of DAL / PHX / HOU',
         summary: {
@@ -132,9 +132,9 @@ export const BknPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2029, 2, 'DAL'),
-      getPick(2029, 2, 'MEM'),
-      getPick(2029, 2, 'GSW'),
+      getPick('DAL'),
+      getPick('MEM'),
+      getPick('GSW'),
     ],
   },
   {
@@ -154,9 +154,9 @@ export const BknPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2030, 2, 'DAL'),
-      getPick(2030, 2, 'LAL'),
-      getPick(2030, 2, 'BOS'),
+      getPick('DAL'),
+      getPick('LAL'),
+      getPick('BOS'),
     ],
   },
   {
@@ -168,7 +168,7 @@ export const BknPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2031, 1, 'NYK'),
+      getPick('NYK'),
     ],
     roundTwo: [
       {
@@ -177,7 +177,7 @@ export const BknPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2031, 2, 'LAL'),
+      getPick('LAL'),
     ],
   },
   {
@@ -189,7 +189,7 @@ export const BknPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2032, 1, 'DEN'),
+      getPick('DEN'),
     ],
     roundTwo: [
       {

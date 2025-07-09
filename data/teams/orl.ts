@@ -54,7 +54,7 @@ export const OrlPickMeta: YearMeta[] = [
   {
     year: 2028,
     roundOne: [
-      tradePick(2028, 1, 'POR'),
+      tradePick('POR'),
     ],
     roundTwo: [
       {
@@ -95,7 +95,7 @@ export const OrlPickMeta: YearMeta[] = [
   {
     year: 2030,
     roundOne: [
-      tradePick(2030, 1, 'MEM'),
+      tradePick('MEM'),
     ],
     roundTwo: [
       {
@@ -106,7 +106,7 @@ export const OrlPickMeta: YearMeta[] = [
           swapType: 'favorable',
         },
       },
-      getPick(2030, 2, 'MIL'),
+      getPick('MIL'),
     ],
   },
   {
@@ -133,10 +133,10 @@ export const OrlPickMeta: YearMeta[] = [
   {
     year: 2032,
     roundOne: [
-      ownPick(2032, 1),
+      ownPick(),
     ],
     roundTwo: [
-      ownPick(2032, 2),
+      ownPick(),
     ],
   },
 ]

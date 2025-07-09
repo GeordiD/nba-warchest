@@ -54,10 +54,10 @@ export const MinPickMeta: YearMeta[] = [
   },
   {
     year: 2027,
-    roundOne: [tradePick(2027, 1, 'UTA')],
+    roundOne: [tradePick('UTA')],
     roundTwo: [
-      tradePick(2027, 2, 'POR'),
-      getPick(2027, 2, 'CLE'),
+      tradePick('POR'),
+      getPick('CLE'),
     ],
   },
   {
@@ -70,7 +70,7 @@ export const MinPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2028, 2, 'SAS')],
+    roundTwo: [tradePick('SAS')],
   },
   {
     year: 2029,
@@ -109,7 +109,7 @@ export const MinPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2030, 2, 'DET'),
+      tradePick('DET'),
       {
         details: `MEM ${prot(50)}`,
         summary: {
@@ -121,7 +121,7 @@ export const MinPickMeta: YearMeta[] = [
   },
   {
     year: 2031,
-    roundOne: [tradePick(2031, 1, 'SAC')],
+    roundOne: [tradePick('SAC')],
     roundTwo: [
       {
         details: 'Best of MIN / GSW',

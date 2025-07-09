@@ -119,8 +119,8 @@ export const DetPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2029, 2, 'MIL'),
-      getPick(2029, 2, 'NYK'),
+      getPick('MIL'),
+      getPick('NYK'),
     ],
   },
   {
@@ -140,7 +140,7 @@ export const DetPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2030, 2, 'MIN'),
+      getPick('MIN'),
     ],
   },
   {
@@ -160,7 +160,7 @@ export const DetPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2031, 2, 'DAL'),
+      getPick('DAL'),
       {
         details: 'Worst of GSW / MIN',
         summary: {

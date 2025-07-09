@@ -95,7 +95,7 @@ export const MiaPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2029, 2, 'OKC')],
+    roundTwo: [tradePick('OKC')],
   },
   {
     year: 2030,
@@ -107,7 +107,7 @@ export const MiaPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2030, 2, 'OKC')],
+    roundTwo: [tradePick('OKC')],
   },
   {
     year: 2031,

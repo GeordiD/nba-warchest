@@ -30,7 +30,7 @@ export const ChiPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2026, 2, 'HOU'),
+      tradePick('HOU'),
     ],
   },
   {

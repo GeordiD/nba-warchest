@@ -24,7 +24,7 @@ export const PhxPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       // TODO: Gets two 2nds from HOU
-      tradePick(2026, 2, 'WAS'),
+      tradePick('WAS'),
       {
         details: 'Second best of OKC / DAL / PHI',
         summary: {
@@ -37,7 +37,7 @@ export const PhxPickMeta: YearMeta[] = [
   {
     year: 2027,
     roundOne: [
-      tradePick(2027, 1, 'HOU'),
+      tradePick('HOU'),
       {
         details: 'Least favorable of CLE / MIN / UTA',
         summary: {
@@ -111,7 +111,7 @@ export const PhxPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      ownPick(2029, 2),
+      ownPick(),
     ],
   },
   {
@@ -133,14 +133,14 @@ export const PhxPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2030, 2, ['WAS', 'PHI']),
+      tradePick(['WAS', 'PHI']),
     ],
   },
   {
     year: 2031,
-    roundOne: [tradePick(2031, 1, 'UTA')],
+    roundOne: [tradePick('UTA')],
     roundTwo: [
-      tradePick(2031, 2, 'CHA'),
+      tradePick('CHA'),
     ],
   },
   {

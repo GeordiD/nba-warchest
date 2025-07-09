@@ -37,7 +37,7 @@ export const AtlPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2026, 2, 'BKN'),
+      tradePick('BKN'),
       {
         details: {
           headline: `One of BOS / IND / MIA / MIN / NYK / NOP / POR`,
@@ -58,7 +58,7 @@ export const AtlPickMeta: YearMeta[] = [
   {
     year: 2027,
     roundOne: [
-      tradePick(2027, 1, 'SAS'),
+      tradePick('SAS'),
       {
         details: `Least favorable of MIL ${prot(4)} and NOP ${prot(4)}`,
         summary: {
@@ -67,7 +67,7 @@ export const AtlPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2027, 2, 'POR')],
+    roundTwo: [tradePick('POR')],
   },
   {
     year: 2028,
@@ -86,7 +86,7 @@ export const AtlPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2028, 2, 'BKN')],
+    roundTwo: [tradePick('BKN')],
   },
   {
     year: 2029,
@@ -98,7 +98,7 @@ export const AtlPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2029, 2, 'OKC')],
+    roundTwo: [tradePick('OKC')],
   },
   {
     year: 2030,

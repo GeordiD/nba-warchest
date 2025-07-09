@@ -87,7 +87,7 @@ export const PorPickMeta: YearMeta[] = [
           swapType: 'favorable',
         },
       },
-      getPick(2028, 1, 'ORL'),
+      getPick('ORL'),
     ],
     roundTwo: [
       {
@@ -96,7 +96,7 @@ export const PorPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2028, 2, 'SAC'),
+      getPick('SAC'),
     ],
   },
   {
@@ -124,7 +124,7 @@ export const PorPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2029, 2, 'MEM'),
+      tradePick('MEM'),
       {
         details: 'Worst of IND / WAS',
         summary: {
@@ -147,8 +147,8 @@ export const PorPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2030, 2, ['PHI', 'WAS']),
-      getPick(2030, 2, 'NYK'),
+      tradePick(['PHI', 'WAS']),
+      getPick('NYK'),
     ],
   },
   {
@@ -162,16 +162,16 @@ export const PorPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      ownPick(2031, 2),
+      ownPick(),
     ],
   },
   {
     year: 2032,
     roundOne: [
-      ownPick(2032, 1),
+      ownPick(),
     ],
     roundTwo: [
-      ownPick(2032, 2),
+      ownPick(),
     ],
   },
 ]

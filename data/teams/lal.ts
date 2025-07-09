@@ -13,7 +13,7 @@ export const LalPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2026, 2, 'TOR')],
+    roundTwo: [tradePick('TOR')],
   },
   {
     year: 2027,
@@ -72,8 +72,8 @@ export const LalPickMeta: YearMeta[] = [
   },
   {
     year: 2029,
-    roundOne: [tradePick(2029, 1, 'DAL')],
-    roundTwo: [tradePick(2029, 2, 'WAS')],
+    roundOne: [tradePick('DAL')],
+    roundTwo: [tradePick('WAS')],
   },
   {
     year: 2030,
@@ -86,7 +86,7 @@ export const LalPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2030, 2, 'BKN'),
+      tradePick('BKN'),
     ],
   },
   {
@@ -100,7 +100,7 @@ export const LalPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2030, 2, 'BKN'),
+      tradePick('BKN'),
     ],
   },
   {

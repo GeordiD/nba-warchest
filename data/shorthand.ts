@@ -24,8 +24,6 @@ export const ifNotConvey = (becomes: string[], pickName?: string) => {
 };
 
 export const tradePick = (
-  year: number,
-  round: number,
   team: TeamAbbr | TeamAbbr[],
 ): PickMeta => ({
   details: `To ${Array.isArray(team) ? team.join(' / ') : team}`,
@@ -37,8 +35,6 @@ export const tradePick = (
 });
 
 export const getPick = (
-  year: number,
-  round: number,
   team: TeamAbbr,
 ): PickMeta => ({
   details: team,
@@ -47,7 +43,7 @@ export const getPick = (
   },
 });
 
-export const ownPick = (_year: number, _round: number): PickMeta => ({
+export const ownPick = (): PickMeta => ({
   details: 'Own',
   summary: {
     isOwn: true,

@@ -56,11 +56,11 @@ export const LacPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2027, 2, 'UTA')],
+    roundTwo: [tradePick('UTA')],
   },
   {
     year: 2028,
-    roundOne: [tradePick(2028, 1, 'PHI')],
+    roundOne: [tradePick('PHI')],
     roundTwo: [
       {
         details: {
@@ -87,7 +87,7 @@ export const LacPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2029, 2, 'SAS')],
+    roundTwo: [tradePick('SAS')],
   },
   {
     year: 2030,

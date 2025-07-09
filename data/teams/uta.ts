@@ -27,7 +27,7 @@ export const UtaPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2026, 2, ['SAS', 'MIL'])],
+    roundTwo: [tradePick(['SAS', 'MIL'])],
   },
   {
     year: 2027,
@@ -72,7 +72,7 @@ export const UtaPickMeta: YearMeta[] = [
           teams: ['IND'],
         },
       },
-      getPick(2027, 2, 'LAC'),
+      getPick('LAC'),
     ],
   },
   {
@@ -88,7 +88,7 @@ export const UtaPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2028, 2, 'OKC'),
+      tradePick('OKC'),
       {
         details: {
           headline: `Worst of DET* / CHA / LAC / MIA* / NYK`,
@@ -171,7 +171,7 @@ export const UtaPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2031, 1, 'PHX'),
+      getPick('PHX'),
     ],
     roundTwo: [
       {
@@ -193,7 +193,7 @@ export const UtaPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2032, 2, 'WAS'),
+      tradePick('WAS'),
     ],
   },
 ];

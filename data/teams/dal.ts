@@ -79,7 +79,7 @@ export const DalPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2028, 2, 'IND'),
+      tradePick('IND'),
     ],
   },
   {
@@ -99,9 +99,9 @@ export const DalPickMeta: YearMeta[] = [
           teams: ['HOU', 'BKN'],
         },
       },
-      getPick(2029, 1, 'LAL'),
+      getPick('LAL'),
     ],
-    roundTwo: [tradePick(2029, 2, 'BKN')],
+    roundTwo: [tradePick('BKN')],
   },
   {
     year: 2030,
@@ -120,7 +120,7 @@ export const DalPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2030, 2, 'BKN'), getPick(2030, 2, 'PHI')],
+    roundTwo: [tradePick('BKN'), getPick('PHI')],
   },
   {
     year: 2031,
@@ -133,7 +133,7 @@ export const DalPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2031, 2, 'DET'),
+      tradePick('DET'),
     ],
   },
   {

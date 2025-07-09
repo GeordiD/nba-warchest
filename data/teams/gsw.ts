@@ -51,7 +51,7 @@ export const GswPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2028, 2, 'PHI')],
+    roundTwo: [tradePick('PHI')],
   },
   {
     year: 2029,
@@ -63,7 +63,7 @@ export const GswPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2029, 2, 'BKN')],
+    roundTwo: [tradePick('BKN')],
   },
   {
     year: 2030,

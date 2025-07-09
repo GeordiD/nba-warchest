@@ -48,7 +48,7 @@ export const MilPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2027, 2, 'DET'),
+      tradePick('DET'),
     ],
   },
   {
@@ -73,7 +73,7 @@ export const MilPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2028, 2, 'OKC'),
+      tradePick('OKC'),
     ],
   },
   {
@@ -91,7 +91,7 @@ export const MilPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2029, 2, 'DET'),
+      tradePick('DET'),
     ],
   },
   {
@@ -107,7 +107,7 @@ export const MilPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2030, 2, 'ORL'),
+      tradePick('ORL'),
     ],
   },
   {
@@ -121,7 +121,7 @@ export const MilPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2031, 2, 'CHA'),
+      tradePick('CHA'),
     ],
   },
   {
@@ -135,7 +135,7 @@ export const MilPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2031, 2, 'CHA'),
+      tradePick('CHA'),
     ],
   },
 ]

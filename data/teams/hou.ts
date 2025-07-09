@@ -32,7 +32,7 @@ export const HouPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2026, 2, 'CHI'),
+      getPick('CHI'),
     ],
   },
   {
@@ -46,7 +46,7 @@ export const HouPickMeta: YearMeta[] = [
           teams: ['BKN'],
         },
       },
-      getPick(2027, 1, 'PHX'),
+      getPick('PHX'),
     ],
     roundTwo: [
       {
@@ -59,7 +59,7 @@ export const HouPickMeta: YearMeta[] = [
           teams: ['OKC', 'NYK', 'SAS', 'MIA'],
         },
       },
-      getPick(2027, 2, 'MEM'),
+      getPick('MEM'),
       {
         details: `Worst of POR ${prot(55)} / NOP ${prot(55)}`,
         summary: {
@@ -80,7 +80,7 @@ export const HouPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [ownPick(2028, 2)],
+    roundTwo: [ownPick()],
   },
   {
     year: 2029,
@@ -107,8 +107,8 @@ export const HouPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2029, 2, 'WAS'),
-      getPick(2029, 2, 'SAC'),
+      tradePick('WAS'),
+      getPick('SAC'),
     ],
   },
   {
@@ -121,7 +121,7 @@ export const HouPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2030, 2, 'OKC')],
+    roundTwo: [tradePick('OKC')],
   },
   {
     year: 2031,

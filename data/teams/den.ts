@@ -44,7 +44,7 @@ export const DenPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2027, 2, 'CLE')],
+    roundTwo: [tradePick('CLE')],
   },
   {
     year: 2028,
@@ -107,7 +107,7 @@ export const DenPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2030, 2, 'OKC')],
+    roundTwo: [tradePick('OKC')],
   },
   {
     year: 2031,
@@ -119,12 +119,12 @@ export const DenPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2031, 2, 'CHA')],
+    roundTwo: [tradePick('CHA')],
   },
   {
     year: 2032,
     roundOne: [
-      tradePick(2032, 1, 'BKN'),
+      tradePick('BKN'),
     ],
     roundTwo: [
       {

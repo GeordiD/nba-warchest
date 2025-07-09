@@ -21,7 +21,7 @@ export const ChaPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2026, 2, 'SAC'),
+      tradePick('SAC'),
       {
         details: 'Best of DEN / GSW',
         summary: {
@@ -66,7 +66,7 @@ export const ChaPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2027, 2, 'SAC'),
+      tradePick('SAC'),
       {
         details: 'Best of POR / NOP',
         summary: {
@@ -182,10 +182,10 @@ export const ChaPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2031, 2, 'NYK'),
-      getPick(2031, 2, 'DEN'),
-      getPick(2031, 2, 'MIL'),
-      getPick(2031, 2, 'PHX'),
+      getPick('NYK'),
+      getPick('DEN'),
+      getPick('MIL'),
+      getPick('PHX'),
     ],
   },
   {
@@ -205,7 +205,7 @@ export const ChaPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2032, 2, 'MIL'),
+      getPick('MIL'),
     ],
   },
 ];

@@ -68,7 +68,7 @@ export const NopPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2028, 2, 'SAS'),
+      tradePick('SAS'),
     ],
   },
   {
@@ -82,7 +82,7 @@ export const NopPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2028, 2, 'SAS'),
+      tradePick('SAS'),
     ],
   },
   {
@@ -125,7 +125,7 @@ export const NopPickMeta: YearMeta[] = [
           teams: ['ORL', 'OKC'],
         },
       },
-      getPick(2031, 2, 'TOR'),
+      getPick('TOR'),
     ],
   },
   {

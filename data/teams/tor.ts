@@ -22,7 +22,7 @@ export const TorPickMeta: YearMeta[] = [
           teams: ['IND'],
         },
       },
-      getPick(2026, 2, 'LAL'),
+      getPick('LAL'),
     ],
   },
   {
@@ -112,16 +112,16 @@ export const TorPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2031, 2, 'NOP'),
+      tradePick('NOP'),
     ],
   },
   {
     year: 2032,
     roundOne: [
-      ownPick(2032, 1),
+      ownPick(),
     ],
     roundTwo: [
-      ownPick(2032, 2),
+      ownPick(),
     ],
   },
 ]

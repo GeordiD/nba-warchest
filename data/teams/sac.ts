@@ -25,7 +25,7 @@ export const SacPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2026, 2, 'CHA'),
+      getPick('CHA'),
     ],
   },
   {
@@ -73,7 +73,7 @@ export const SacPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      tradePick(2028, 2, 'POR'),
+      tradePick('POR'),
     ],
   },
   {
@@ -87,7 +87,7 @@ export const SacPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2029, 2, 'HOU'),
+      tradePick('HOU'),
     ],
   },
   {
@@ -100,7 +100,7 @@ export const SacPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2030, 2, 'SAS')],
+    roundTwo: [tradePick('SAS')],
   },
   {
     year: 2031,
@@ -113,9 +113,9 @@ export const SacPickMeta: YearMeta[] = [
           swapType: 'unfavorable',
         },
       },
-      getPick(2031, 1, 'MIN'),
+      getPick('MIN'),
     ],
-    roundTwo: [tradePick(2031, 2, 'SAS')],
+    roundTwo: [tradePick('SAS')],
   },
   {
     year: 2032,

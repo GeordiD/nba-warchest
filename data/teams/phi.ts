@@ -90,7 +90,7 @@ export const PhiPickMeta: YearMeta[] = [
           teams: ['BKN'],
         },
       },
-      getPick(2028, 1, 'LAC'),
+      getPick('LAC'),
     ],
     roundTwo: [
       {
@@ -106,7 +106,7 @@ export const PhiPickMeta: YearMeta[] = [
           teams: ['DET'],
         },
       },
-      getPick(2028, 2, 'GSW'),
+      getPick('GSW'),
     ],
   },
   {
@@ -141,7 +141,7 @@ export const PhiPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2030, 2, 'DAL'),
+      tradePick('DAL'),
       {
         details: 'Best of PHX / POR',
         summary: {
@@ -149,7 +149,7 @@ export const PhiPickMeta: YearMeta[] = [
           teams: ['PHX', 'POR'],
         },
       },
-      getPick(2030, 2, 'WAS'),
+      getPick('WAS'),
     ],
   },
   {

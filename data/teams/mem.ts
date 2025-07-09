@@ -69,7 +69,7 @@ export const MemPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2027, 2, 'HOU'),
+      tradePick('HOU'),
     ],
   },
   {
@@ -83,7 +83,7 @@ export const MemPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2028, 2, 'BKN'),
+      tradePick('BKN'),
     ],
   },
   {
@@ -98,8 +98,8 @@ export const MemPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2029, 2, 'BKN'),
-      getPick(2029, 2, 'POR'),
+      tradePick('BKN'),
+      getPick('POR'),
     ],
   },
   {
@@ -119,7 +119,7 @@ export const MemPickMeta: YearMeta[] = [
           teams: ['PHX', 'WAS'],
         },
       },
-      getPick(2030, 1, 'ORL'),
+      getPick('ORL'),
     ],
     roundTwo: [
       {

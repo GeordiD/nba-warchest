@@ -35,7 +35,7 @@ export const WasPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2026, 2, 'PHX'),
+      getPick('PHX'),
       {
         details: {
           headline: 'MIN / NYK / NOP / POR',
@@ -78,7 +78,7 @@ export const WasPickMeta: YearMeta[] = [
           teams: ['BKN', 'DAL'],
         },
       },
-      getPick(2027, 2, 'CHI'),
+      getPick('CHI'),
       {
         details: 'Worst of GSW / PHX',
         summary: {
@@ -194,7 +194,7 @@ export const WasPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2030, 2, 'PHI'),
+      tradePick('PHI'),
       {
         details: 'Worst of PHX / POR',
         summary: {
@@ -233,12 +233,12 @@ export const WasPickMeta: YearMeta[] = [
   {
     year: 2032,
     roundOne: [
-      ownPick(2032, 1),
+      ownPick(),
     ],
     roundTwo: [
       // TODO: 2nd from NOP
-      ownPick(2032, 2),
-      getPick(2032, 2, 'UTA'),
+      ownPick(),
+      getPick('UTA'),
     ],
   },
 ]

@@ -41,7 +41,7 @@ export const NykPickMeta: YearMeta[] = [
   {
     year: 2027,
     roundOne: [
-      tradePick(2027, 1, 'BKN'),
+      tradePick('BKN'),
     ],
     roundTwo: [
       {
@@ -80,7 +80,7 @@ export const NykPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2028, 2, 'DET'),
+      tradePick('DET'),
       {
         details: `BOS ${prot(45)}`,
         summary: {
@@ -100,10 +100,10 @@ export const NykPickMeta: YearMeta[] = [
   {
     year: 2029,
     roundOne: [
-      tradePick(2029, 1, 'BKN'),
+      tradePick('BKN'),
     ],
     roundTwo: [
-      tradePick(2029, 2, 'DET'),
+      tradePick('DET'),
     ],
   },
   {
@@ -117,16 +117,16 @@ export const NykPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2030, 2, 'POR'),
+      tradePick('POR'),
     ],
   },
   {
     year: 2031,
     roundOne: [
-      tradePick(2031, 1, 'BKN'),
+      tradePick('BKN'),
     ],
     roundTwo: [
-      tradePick(2031, 2, 'CHA'),
+      tradePick('CHA'),
     ],
   },
   {

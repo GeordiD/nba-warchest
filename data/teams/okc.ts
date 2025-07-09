@@ -262,7 +262,7 @@ export const OkcCombinedMeta: YearMeta[] = [
           teams: ['MIA'],
         },
       },
-      getPick(2030, 2, 'DEN'),
+      getPick('DEN'),
     ],
   },
   {
@@ -294,10 +294,10 @@ export const OkcCombinedMeta: YearMeta[] = [
   {
     year: 2032,
     roundOne: [
-      ownPick(2032, 1),
+      ownPick(),
     ],
     roundTwo: [
-      ownPick(2032, 2),
+      ownPick(),
     ],
   },
 ];

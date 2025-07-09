@@ -73,7 +73,7 @@ export const SasPickMeta: YearMeta[] = [
           teams: ['SAC', 'OKC'],
         },
       },
-      getPick(2027, 1, 'ATL'),
+      getPick('ATL'),
     ],
     roundTwo: [
       {
@@ -114,8 +114,8 @@ export const SasPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2028, 2, 'MIN'),
-      getPick(2028, 2, 'NOP'),
+      getPick('MIN'),
+      getPick('NOP'),
     ],
   },
   {
@@ -135,8 +135,8 @@ export const SasPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2029, 2, 'LAC'),
-      getPick(2029, 2, 'NOP'),
+      getPick('LAC'),
+      getPick('NOP'),
     ],
   },
   {
@@ -158,8 +158,8 @@ export const SasPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2030, 2, 'CLE'),
-      getPick(2030, 2, 'SAC'),
+      getPick('CLE'),
+      getPick('SAC'),
     ],
   },
   {
@@ -181,7 +181,7 @@ export const SasPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick(2031, 2, 'SAC'),
+      getPick('SAC'),
     ],
   },
   {
