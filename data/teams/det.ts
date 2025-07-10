@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { botProt, getPick } from '~/data/shorthand';
+import { botProt, getPick, prot } from '~/data/shorthand';
 
 export const DetPickMeta: YearMeta[] = [
   {
@@ -26,6 +26,13 @@ export const DetPickMeta: YearMeta[] = [
           isOwn: true,
           isTradedAway: true,
           teams: ['ORL', 'BKN'],
+        },
+      },
+      {
+        details: `CHA ${prot(55)}`,
+        summary: {
+          isConditional: true,
+          teams: ['CHA'],
         },
       },
     ],
@@ -114,13 +121,25 @@ export const DetPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        details: 'Own',
-        summary: {
-          isOwn: true,
+        details: {
+          headline: 'Two best of DET / MIL / NYK',
+          extra: [
+            'Worst to SAC',
+          ],
         },
+        summary: [
+          {
+            isOwn: true,
+            teams: ['MIL', 'NYK'],
+            swapType: 'favorable',
+          },
+          {
+            isOwn: true,
+            teams: ['MIL', 'NYK'],
+            swapType: 'favorable',
+          },
+        ],
       },
-      getPick('MIL'),
-      getPick('NYK'),
     ],
   },
   {

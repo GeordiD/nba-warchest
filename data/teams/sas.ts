@@ -34,13 +34,6 @@ export const SasPickMeta: YearMeta[] = [
         },
       },
       {
-        details: 'Worst of OKC / DAL / PHI',
-        summary: {
-          swapType: 'unfavorable',
-          teams: ['OKC', 'DAL', 'PHI'],
-        },
-      },
-      {
         details: 'Worst of NOP / POR',
         summary: {
           swapType: 'unfavorable',

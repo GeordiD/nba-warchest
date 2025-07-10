@@ -36,7 +36,7 @@ export const PhiPickMeta: YearMeta[] = [
           extra: [
             'Best of PHI / OKC / DAl to OKC',
             'Second best to BKN',
-            'Worst to SAS',
+            'Worst to WAS',
           ],
         },
         summary: {

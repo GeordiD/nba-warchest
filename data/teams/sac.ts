@@ -25,7 +25,13 @@ export const SacPickMeta: YearMeta[] = [
           isOwn: true,
         },
       },
-      getPick('CHA'),
+      {
+        details: `CHA ${botProt(56)}`,
+        summary: {
+          isConditional: true,
+          teams: ['CHA'],
+        },
+      },
     ],
   },
   {
@@ -88,6 +94,13 @@ export const SacPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       tradePick('HOU'),
+      {
+        details: 'Worst of DET / MIL / NYK',
+        summary: {
+          swapType: 'unfavorable',
+          teams: ['DET', 'MIL', 'NYK'],
+        },
+      },
     ],
   },
   {

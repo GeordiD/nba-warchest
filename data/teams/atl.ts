@@ -39,6 +39,7 @@ export const AtlPickMeta: YearMeta[] = [
     roundTwo: [
       tradePick('BKN'),
       {
+        // TODO: This got vague -- do some research
         details: {
           headline: `One of BOS / IND / MIA / MIN / NYK / NOP / POR`,
           extra: [[

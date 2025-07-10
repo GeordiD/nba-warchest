@@ -80,7 +80,7 @@ export const NykPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick('DET'),
+      tradePick(['DET', 'SAC']),
       {
         details: `BOS ${prot(45)}`,
         summary: {

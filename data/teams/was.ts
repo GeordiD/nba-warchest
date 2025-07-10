@@ -52,6 +52,13 @@ export const WasPickMeta: YearMeta[] = [
           swapType: 'mixed',
         },
       },
+      {
+        details: 'Worst of OKC / DAL / PHI',
+        summary: {
+          swapType: 'unfavorable',
+          teams: ['OKC', 'DAL', 'PHI'],
+        },
+      },
     ],
   },
   {

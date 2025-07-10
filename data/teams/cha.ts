@@ -21,7 +21,7 @@ export const ChaPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick('SAC'),
+      tradePick(['SAC', 'DET']),
       {
         details: 'Best of DEN / GSW',
         summary: {

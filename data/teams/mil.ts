@@ -91,7 +91,7 @@ export const MilPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick('DET'),
+      tradePick(['DET', 'SAC']),
     ],
   },
   {

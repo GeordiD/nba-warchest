@@ -26,7 +26,7 @@ export const DalPickMeta: YearMeta[] = [
           extra: [
             'Best of DAL / OKC / PHI to OKC',
             'Second best to PHX',
-            'Worst to SAS',
+            'Worst to WAS',
           ],
         },
         summary: {
