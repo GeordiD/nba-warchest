@@ -13,7 +13,6 @@ const {
   },
   pickData: {
     type: Object as PropType<{
-      id: string,
       summary: PickSummary,
       details: string | PickDetails,
     }>,

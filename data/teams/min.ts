@@ -13,7 +13,6 @@ export const MinPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: {
           headline: `To CLE / UTA (conditionally)`,
           extra: [
@@ -30,7 +29,6 @@ export const MinPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2026.2',
         details: 'To NYK / BOS / WAS',
         summary: {
           isOwn: true,
@@ -39,7 +37,6 @@ export const MinPickMeta: YearMeta[] = [
         },
       },
       {
-        id: '2026.2.IND-MIA-SAS',
         details: 'Worst of IND / MIA / SAS',
         summary: {
           teams: ['IND', 'MIA', 'SAS'],
@@ -47,7 +44,6 @@ export const MinPickMeta: YearMeta[] = [
         },
       },
       {
-        id: '2026.2.DEN-GSW',
         details: 'Worst of DEN / GSW',
         summary: {
           swapType: 'unfavorable',
@@ -58,30 +54,28 @@ export const MinPickMeta: YearMeta[] = [
   },
   {
     year: 2027,
-    roundOne: [tradePick(2027, 1, 'UTA')],
+    roundOne: [tradePick('UTA')],
     roundTwo: [
-      tradePick(2027, 2, 'POR'),
-      getPick(2027, 2, 'CLE'),
+      tradePick('POR'),
+      getPick('CLE'),
     ],
   },
   {
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
     ],
-    roundTwo: [tradePick(2028, 2, 'SAS')],
+    roundTwo: [tradePick('SAS')],
   },
   {
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: {
           headline: `To UTA ${prot(5)}`,
           extra: [ifNotConvey(['2029 2nd'])],
@@ -95,7 +89,6 @@ export const MinPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2029.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -107,7 +100,6 @@ export const MinPickMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: `Own (${unfavorableSwap} best of DAL / SAS) ${prot(1)}`,
         summary: {
           isOwn: true,
@@ -117,9 +109,8 @@ export const MinPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2030, 2, 'DET'),
+      tradePick('DET'),
       {
-        id: '2030.2.MEM',
         details: `MEM ${prot(50)}`,
         summary: {
           isConditional: true,
@@ -130,10 +121,9 @@ export const MinPickMeta: YearMeta[] = [
   },
   {
     year: 2031,
-    roundOne: [tradePick(2031, 1, 'SAC')],
+    roundOne: [tradePick('SAC')],
     roundTwo: [
       {
-        id: '2031.2',
         details: 'Best of MIN / GSW',
         summary: {
           isOwn: true,
@@ -147,7 +137,6 @@ export const MinPickMeta: YearMeta[] = [
     year: 2032,
     roundOne: [
       {
-        id: '2032.1',
         details: 'Own (frozen through 2027-28)',
         summary: {
           isOwn: true,
@@ -158,14 +147,12 @@ export const MinPickMeta: YearMeta[] = [
     roundTwo: [
       // TODO: 2 unspecified 2nd round picks from PHX
       {
-        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
       {
-        id: '2032.2.PHX-HOU',
         details: 'Best of HOU / PHX',
         summary: {
           teams: ['HOU', 'PHX'],

@@ -7,7 +7,6 @@ export const MilPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: `Own (${unfavorableSwap} NOP)`,
         summary: {
           isOwn: true,
@@ -18,7 +17,6 @@ export const MilPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2026.2',
         details: {
           headline: 'To BOS / NYK',
         },
@@ -34,7 +32,6 @@ export const MilPickMeta: YearMeta[] = [
     year: 2027,
     roundOne: [
       {
-        id: '2027.1',
         details: {
           headline: 'To ATL / NOP',
           extra: [
@@ -51,14 +48,13 @@ export const MilPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2027, 2, 'DET'),
+      tradePick('DET'),
     ],
   },
   {
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: {
           headline: `Own (${unfavorableSwap} POR / WAS / BKN / PHI)`,
           extra: [
@@ -77,14 +73,13 @@ export const MilPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2028, 2, 'OKC'),
+      tradePick('OKC'),
     ],
   },
   {
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: {
           headline: 'To POR / WAS',
         },
@@ -96,14 +91,13 @@ export const MilPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2029, 2, 'DET'),
+      tradePick(['DET', 'SAC']),
     ],
   },
   {
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: `Own (${unfavorableSwap} POR)`,
         summary: {
           isOwn: true,
@@ -113,14 +107,13 @@ export const MilPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2030, 2, 'ORL'),
+      tradePick('ORL'),
     ],
   },
   {
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -128,14 +121,13 @@ export const MilPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2031, 2, 'CHA'),
+      tradePick('CHA'),
     ],
   },
   {
     year: 2032,
     roundOne: [
       {
-        id: '2032.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -143,7 +135,7 @@ export const MilPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2031, 2, 'CHA'),
+      tradePick('CHA'),
     ],
   },
 ]

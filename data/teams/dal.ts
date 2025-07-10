@@ -13,7 +13,6 @@ export const DalPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -22,13 +21,12 @@ export const DalPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2026.2',
         details: {
           headline: 'To OKC / HOU / SAS',
           extra: [
             'Best of DAL / OKC / PHI to OKC',
             'Second best to PHX',
-            'Worst to SAS',
+            'Worst to WAS',
           ],
         },
         summary: {
@@ -43,7 +41,6 @@ export const DalPickMeta: YearMeta[] = [
     year: 2027,
     roundOne: [
       {
-        id: '2027.1',
         details: {
           headline: `To CHA ${prot(2)}`,
           extra: [ifNotConvey(['2028 MIA 2nd'])],
@@ -57,7 +54,6 @@ export const DalPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2027.2',
         details: {
           headline: 'To WAS / DET',
           extra: ['Best of DAL / BKN to WAS', 'Worst to DET'],
@@ -74,7 +70,6 @@ export const DalPickMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: `Own (${unfavorableSwap} OKC)`,
         summary: {
           isOwn: true,
@@ -84,14 +79,13 @@ export const DalPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2028, 2, 'IND'),
+      tradePick('IND'),
     ],
   },
   {
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: {
           headline: 'To HOU / BKN',
           extra: [
@@ -105,15 +99,14 @@ export const DalPickMeta: YearMeta[] = [
           teams: ['HOU', 'BKN'],
         },
       },
-      getPick(2029, 1, 'LAL'),
+      getPick('LAL'),
     ],
-    roundTwo: [tradePick(2029, 2, 'BKN')],
+    roundTwo: [tradePick('BKN')],
   },
   {
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: {
           headline: `Own (${unfavorableSwap} SAS)`,
           extra: [
@@ -127,13 +120,12 @@ export const DalPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2030, 2, 'BKN'), getPick(2030, 2, 'PHI')],
+    roundTwo: [tradePick('BKN'), getPick('PHI')],
   },
   {
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -141,14 +133,13 @@ export const DalPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2031, 2, 'DET'),
+      tradePick('DET'),
     ],
   },
   {
     year: 2032,
     roundOne: [
       {
-        id: '2032.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -157,7 +148,6 @@ export const DalPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

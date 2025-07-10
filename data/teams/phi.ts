@@ -13,7 +13,6 @@ export const PhiPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: {
           headline: `To OKC ${prot(4)}`,
           extra: [
@@ -32,13 +31,12 @@ export const PhiPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2026.2',
         details: {
           headline: 'To OKC / BKN / SAS',
           extra: [
             'Best of PHI / OKC / DAl to OKC',
             'Second best to BKN',
-            'Worst to SAS',
+            'Worst to WAS',
           ],
         },
         summary: {
@@ -53,7 +51,6 @@ export const PhiPickMeta: YearMeta[] = [
     year: 2027,
     roundOne: [
       {
-        id: '2027.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -62,14 +59,12 @@ export const PhiPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2027.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
       {
-        id: '2027.2.GSW-PHX',
         details: 'Best of GSW / PHX',
         summary: {
           swapType: 'favorable',
@@ -82,7 +77,6 @@ export const PhiPickMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: {
           headline: `To BKN ${prot(8)}`,
           extra: [
@@ -96,32 +90,29 @@ export const PhiPickMeta: YearMeta[] = [
           teams: ['BKN'],
         },
       },
-      getPick(2028, 1, 'LAC'),
+      getPick('LAC'),
     ],
     roundTwo: [
       {
-        id: '2028.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
       {
-        id: '2028.2.DET',
         details: `DET ${prot(55)}`,
         summary: {
           isConditional: true,
           teams: ['DET'],
         },
       },
-      getPick(2028, 2, 'GSW'),
+      getPick('GSW'),
     ],
   },
   {
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: `Own (${favorableSwap} LAC ${prot(3)})`,
         summary: {
           isOwn: true,
@@ -132,7 +123,6 @@ export const PhiPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2029.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -144,7 +134,6 @@ export const PhiPickMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -152,23 +141,21 @@ export const PhiPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2030, 2, 'DAL'),
+      tradePick('DAL'),
       {
-        id: '2030.2.PHX-POR',
         details: 'Best of PHX / POR',
         summary: {
           swapType: 'favorable',
           teams: ['PHX', 'POR'],
         },
       },
-      getPick(2030, 2, 'WAS'),
+      getPick('WAS'),
     ],
   },
   {
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -177,7 +164,6 @@ export const PhiPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2031.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -189,7 +175,6 @@ export const PhiPickMeta: YearMeta[] = [
     year: 2032,
     roundOne: [
       {
-        id: '2032.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -198,7 +183,6 @@ export const PhiPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

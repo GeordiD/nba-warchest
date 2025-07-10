@@ -7,7 +7,6 @@ export const PorPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: {
           headline: `To CHI ${prot(14)}`,
           extra: [
@@ -27,7 +26,6 @@ export const PorPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2026.2',
         details: 'To BOS / SAS / WAS',
         summary: {
           isOwn: true,
@@ -36,7 +34,6 @@ export const PorPickMeta: YearMeta[] = [
         },
       },
       {
-        id: '2026.2.MEM',
         details: `MEM ${prot(42)}`,
         summary: {
           teams: ['MEM'],
@@ -49,7 +46,6 @@ export const PorPickMeta: YearMeta[] = [
     year: 2027,
     roundOne: [
       {
-        id: '2027.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -58,7 +54,6 @@ export const PorPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2027.2',
         details: {
           headline: `Worst of POR / NOP`,
           extra: [
@@ -79,7 +74,6 @@ export const PorPickMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: {
           headline: `Own (${favorableSwap} MIL)`,
           extra: [
@@ -93,24 +87,22 @@ export const PorPickMeta: YearMeta[] = [
           swapType: 'favorable',
         },
       },
-      getPick(2028, 1, 'ORL'),
+      getPick('ORL'),
     ],
     roundTwo: [
       {
-        id: '2028.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
-      getPick(2028, 2, 'SAC'),
+      getPick('SAC'),
     ],
   },
   {
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: {
           headline: 'Best and worst of BOS / MIL / POR',
           extra: [
@@ -132,9 +124,8 @@ export const PorPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2029, 2, 'MEM'),
+      tradePick('MEM'),
       {
-        id: '2029.2.IND-WAS',
         details: 'Worst of IND / WAS',
         summary: {
           swapType: 'unfavorable',
@@ -147,7 +138,6 @@ export const PorPickMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: `Own (${favorableSwap} MIL)`,
         summary: {
           isOwn: true,
@@ -157,15 +147,14 @@ export const PorPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2030, 2, ['PHI', 'WAS']),
-      getPick(2030, 2, 'NYK'),
+      tradePick(['PHI', 'WAS']),
+      getPick('NYK'),
     ],
   },
   {
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -173,16 +162,16 @@ export const PorPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      ownPick(2031, 2),
+      ownPick(),
     ],
   },
   {
     year: 2032,
     roundOne: [
-      ownPick(2032, 1),
+      ownPick(),
     ],
     roundTwo: [
-      ownPick(2032, 2),
+      ownPick(),
     ],
   },
 ]

@@ -7,7 +7,6 @@ export const ClePickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: {
           headline: `Swap with UTA* / MIN / ATL / SAS`,
           extra: [[
@@ -25,7 +24,6 @@ export const ClePickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2026.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -36,18 +34,17 @@ export const ClePickMeta: YearMeta[] = [
   {
     year: 2027,
     roundOne: [
-      tradePick(2027, 1, 'UTA'),
+      tradePick('UTA'),
     ],
     roundTwo: [
-      tradePick(2027, 2, 'MIN'),
-      getPick(2027, 2, 'DEN'),
+      tradePick('MIN'),
+      getPick('DEN'),
     ],
   },
   {
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: `Own (${unfavorableSwap} ATL / UTA)`,
         summary: {
           isOwn: true,
@@ -58,7 +55,6 @@ export const ClePickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2028.2',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -69,17 +65,16 @@ export const ClePickMeta: YearMeta[] = [
   {
     year: 2029,
     roundOne: [
-      tradePick(2029, 1, 'UTA'),
+      tradePick('UTA'),
     ],
     roundTwo: [
-      tradePick(2029, 2, 'ATL'),
+      tradePick('ATL'),
     ],
   },
   {
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -87,14 +82,13 @@ export const ClePickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2030, 2, 'SAS'),
+      tradePick('SAS'),
     ],
   },
   {
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -102,14 +96,13 @@ export const ClePickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      tradePick(2031, 2, 'BOS'),
+      tradePick('BOS'),
     ],
   },
   {
     year: 2032,
     roundOne: [
       {
-        id: '2032.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -118,7 +111,6 @@ export const ClePickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

@@ -10,7 +10,6 @@ export const BknPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -19,15 +18,13 @@ export const BknPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2026.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
-      getPick(2026, 2, 'ATL'),
+      getPick('ATL'),
       {
-        id: '2026.2.et-all',
         details: {
           headline: 'One of LAC / BOS / IND / MIA',
           extra: [
@@ -49,7 +46,6 @@ export const BknPickMeta: YearMeta[] = [
     year: 2027,
     roundOne: [
       {
-        id: '2027.1',
         details: `Own (${unfavorableSwap} HOU)`,
         summary: {
           isOwn: true,
@@ -57,11 +53,10 @@ export const BknPickMeta: YearMeta[] = [
           teams: ['HOU'],
         },
       },
-      getPick(2027, 1, 'NYK'),
+      getPick('NYK'),
     ],
     roundTwo: [
       {
-        id: '2027.2',
         details: {
           headline: 'To WAS / DET',
           extra: ['Best of BKN / DAL to WAS', 'Worst to DET'],
@@ -78,7 +73,6 @@ export const BknPickMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: {
           headline: `Two most favorable of BKN / PHX / NYK / PHI)`,
           extra: [
@@ -104,29 +98,26 @@ export const BknPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2028.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
-      getPick(2028, 2, 'MEM'),
-      getPick(2028, 2, 'ATL'),
+      getPick('MEM'),
+      getPick('ATL'),
     ],
   },
   {
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
-      getPick(2029, 1, 'NYK'),
+      getPick('NYK'),
       {
-        id: '2029.1.DAL-PHX-HOU',
         details: 'Worst of DAL / PHX / HOU',
         summary: {
           swapType: 'unfavorable',
@@ -136,22 +127,20 @@ export const BknPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2029.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
-      getPick(2029, 2, 'DAL'),
-      getPick(2029, 2, 'MEM'),
-      getPick(2029, 2, 'GSW'),
+      getPick('DAL'),
+      getPick('MEM'),
+      getPick('GSW'),
     ],
   },
   {
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -160,55 +149,50 @@ export const BknPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2030.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
-      getPick(2030, 2, 'DAL'),
-      getPick(2030, 2, 'LAL'),
-      getPick(2030, 2, 'BOS'),
+      getPick('DAL'),
+      getPick('LAL'),
+      getPick('BOS'),
     ],
   },
   {
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
-      getPick(2031, 1, 'NYK'),
+      getPick('NYK'),
     ],
     roundTwo: [
       {
-        id: '2031.2',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
-      getPick(2031, 2, 'LAL'),
+      getPick('LAL'),
     ],
   },
   {
     year: 2032,
     roundOne: [
       {
-        id: '2032.1',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
-      getPick(2032, 1, 'DEN'),
+      getPick('DEN'),
     ],
     roundTwo: [
       {
-        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

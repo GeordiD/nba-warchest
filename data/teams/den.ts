@@ -7,7 +7,6 @@ export const DenPickMeta: YearMeta[] = [
     year: 2026,
     roundOne: [
       {
-        id: '2026.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -15,7 +14,6 @@ export const DenPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [{
-      id: '2026.2.CHA-MIN',
       details: 'To CHA / MIN',
       summary: {
         isOwn: true,
@@ -28,7 +26,6 @@ export const DenPickMeta: YearMeta[] = [
     year: 2027,
     roundOne: [
       {
-        id: '2027.1',
         details: {
           headline: `To OKC ${prot(5)}`,
           extra: [
@@ -47,13 +44,12 @@ export const DenPickMeta: YearMeta[] = [
         },
       },
     ],
-    roundTwo: [tradePick(2027, 2, 'CLE')],
+    roundTwo: [tradePick('CLE')],
   },
   {
     year: 2028,
     roundOne: [
       {
-        id: '2028.1',
         details: 'Own',
         summary: {
           isOwn: true,
@@ -62,7 +58,6 @@ export const DenPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2028.2',
         details: `To WAS ${prot(33)}`,
         summary: {
           isOwn: true,
@@ -76,7 +71,6 @@ export const DenPickMeta: YearMeta[] = [
     year: 2029,
     roundOne: [
       {
-        id: '2029.1',
         details: {
           headline: `To OKC ${prot(5)}`,
           extra: [
@@ -92,7 +86,6 @@ export const DenPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       {
-        id: '2029.2',
         details: {
           headline: 'To CHA',
           extra: ['If DEN has conveyed a 1st to OKC by 2029; Otherwise this goes to OKC'],
@@ -108,36 +101,33 @@ export const DenPickMeta: YearMeta[] = [
     year: 2030,
     roundOne: [
       {
-        id: '2030.1',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
     ],
-    roundTwo: [tradePick(2030, 2, 'OKC')],
+    roundTwo: [tradePick('OKC')],
   },
   {
     year: 2031,
     roundOne: [
       {
-        id: '2031.1',
         details: 'Own',
         summary: {
           isOwn: true,
         },
       },
     ],
-    roundTwo: [tradePick(2031, 2, 'CHA')],
+    roundTwo: [tradePick('CHA')],
   },
   {
     year: 2032,
     roundOne: [
-      tradePick(2032, 1, 'BKN'),
+      tradePick('BKN'),
     ],
     roundTwo: [
       {
-        id: '2032.2',
         details: 'Own',
         summary: {
           isOwn: true,

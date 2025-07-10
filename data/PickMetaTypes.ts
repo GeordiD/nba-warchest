@@ -1,7 +1,6 @@
 import type { TeamAbbr } from '~/utils/TeamAbbr';
 
 export type SwapType = 'favorable' | 'unfavorable' | 'mixed';
-
 export type Year = '2026' | '2027' | '2028' | '2029' | '2030' | '2031' | '2032';
 export type Round = '1' | '2';
 export type Id = `${Year}.${Round}` | `${Year}.${Round}.${string}`;
@@ -22,7 +21,6 @@ export interface PickSummary {
 }
 
 export interface PickMeta {
-  id: Id,
   summary: PickSummary | PickSummary[],
   details: string | PickDetails,
 }

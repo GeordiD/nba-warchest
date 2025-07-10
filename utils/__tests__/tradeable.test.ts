@@ -7,7 +7,6 @@ describe('tradeable', () => {
       isGuaranteed = true,
       id = 1,
     ): PickSummaryMeta => ({
-      id: id.toString(),
       year,
       summary: {
         isConditional: !isGuaranteed,
