@@ -3,6 +3,7 @@ import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import {
   botProt,
   getPick,
+  ownPick,
   tradePick,
   unfavorableSwap,
 } from '~/data/shorthand';
@@ -11,20 +12,10 @@ export const SacPickMeta: YearMeta[] = [
   {
     year: 2026,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: `CHA ${botProt(56)}`,
         summary: {
@@ -37,12 +28,7 @@ export const SacPickMeta: YearMeta[] = [
   {
     year: 2027,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: `SAS ${botProt(17)}`,
         summary: {
@@ -52,45 +38,23 @@ export const SacPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'To OKC / CHA',
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['OKC', 'CHA'],
-        },
-      },
+      tradePick(['OKC', 'CHA']),
     ],
   },
   {
     year: 2028,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       tradePick('POR'),
     ],
   },
   {
     year: 2029,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       tradePick('HOU'),
@@ -106,12 +70,7 @@ export const SacPickMeta: YearMeta[] = [
   {
     year: 2030,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [tradePick('SAS')],
   },
@@ -133,20 +92,10 @@ export const SacPickMeta: YearMeta[] = [
   {
     year: 2032,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
 ];

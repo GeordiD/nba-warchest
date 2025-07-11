@@ -11,16 +11,7 @@ export const PhxPickMeta: YearMeta[] = [
   {
     year: 2026,
     roundOne: [
-      {
-        details: {
-          headline: 'To WAS / MEM / CHA',
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['CHA', 'WAS', 'MEM'],
-        },
-      },
+      tradePick(['CHA', 'WAS', 'MEM']),
     ],
     roundTwo: [
       // TODO: Gets two 2nds from HOU
@@ -47,14 +38,7 @@ export const PhxPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'To PHI / WAS',
-        summary: {
-          isOwn: true,
-          teams: ['PHI', 'WAS'],
-          isTradedAway: true,
-        },
-      },
+      tradePick(['PHI', 'WAS']),
     ],
   },
   {
@@ -79,36 +63,13 @@ export const PhxPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: {
-          headline: 'To IND / NYK',
-          extra: ['Best of PHX / IND to IND', 'Worst to NYK'],
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['IND', 'NYK'],
-        },
-      },
+      tradePick(['IND', 'NYK']),
     ],
   },
   {
     year: 2029,
     roundOne: [
-      {
-        details: {
-          headline: 'To HOU / BKN',
-          extra: [
-            'Two most favorable of PHX / DAL / HOU to HOU',
-            'Worst to BKN',
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['HOU', 'BKN'],
-        },
-      },
+      tradePick(['HOU', 'BKN']),
     ],
     roundTwo: [
       ownPick(),
@@ -146,13 +107,7 @@ export const PhxPickMeta: YearMeta[] = [
   {
     year: 2032,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-          frozen: 2028,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       {

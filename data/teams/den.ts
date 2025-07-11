@@ -1,26 +1,16 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { ifNotConvey, prot, tradePick } from '~/data/shorthand';
+import { ifNotConvey, ownPick, prot, tradePick } from '~/data/shorthand';
 
 export const DenPickMeta: YearMeta[] = [
   {
     year: 2026,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
-    roundTwo: [{
-      details: 'To CHA / MIN',
-      summary: {
-        isOwn: true,
-        isTradedAway: true,
-        teams: ['CHA', 'MIN'],
-      },
-    }],
+    roundTwo: [
+      tradePick(['CHA', 'MIN']),
+    ],
   },
   {
     year: 2027,
@@ -49,12 +39,7 @@ export const DenPickMeta: YearMeta[] = [
   {
     year: 2028,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       {
@@ -100,24 +85,14 @@ export const DenPickMeta: YearMeta[] = [
   {
     year: 2030,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [tradePick('OKC')],
   },
   {
     year: 2031,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [tradePick('CHA')],
   },
@@ -127,12 +102,7 @@ export const DenPickMeta: YearMeta[] = [
       tradePick('BKN'),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
 ];

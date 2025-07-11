@@ -5,7 +5,9 @@ import {
   favorableSwap,
   getPick,
   ifNotConvey,
+  ownPick,
   prot,
+  tradePick,
 } from '~/data/shorthand';
 
 export const SasPickMeta: YearMeta[] = [
@@ -52,20 +54,7 @@ export const SasPickMeta: YearMeta[] = [
   {
     year: 2027,
     roundOne: [
-      {
-        details: {
-          headline: 'To SAC / OKC',
-          extra: [
-            'To SAC if 1-16',
-            'To OKC otherwise',
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['SAC', 'OKC'],
-        },
-      },
+      tradePick(['SAC', 'OKC']),
       getPick('ATL'),
     ],
     roundTwo: [
@@ -101,12 +90,7 @@ export const SasPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('MIN'),
       getPick('NOP'),
     ],
@@ -114,20 +98,10 @@ export const SasPickMeta: YearMeta[] = [
   {
     year: 2029,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('LAC'),
       getPick('NOP'),
     ],
@@ -145,12 +119,7 @@ export const SasPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('CLE'),
       getPick('SAC'),
     ],
@@ -168,32 +137,17 @@ export const SasPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('SAC'),
     ],
   },
   {
     year: 2032,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
 ];

@@ -3,6 +3,7 @@ import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import {
   getPick,
   ifNotConvey,
+  ownPick,
   prot,
   tradePick,
   unfavorableSwap,
@@ -12,12 +13,7 @@ export const DalPickMeta: YearMeta[] = [
   {
     year: 2026,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       {
@@ -125,12 +121,7 @@ export const DalPickMeta: YearMeta[] = [
   {
     year: 2031,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       tradePick('DET'),
@@ -139,20 +130,10 @@ export const DalPickMeta: YearMeta[] = [
   {
     year: 2032,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
 ];

@@ -6,16 +6,7 @@ export const OrlPickMeta: YearMeta[] = [
   {
     year: 2026,
     roundOne: [
-      {
-        details: {
-          headline: `To MEM / CHA`,
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['MEM', 'CHA'],
-        },
-      },
+      tradePick(['MEM', 'CHA']),
     ],
     roundTwo: [
       {
@@ -33,12 +24,7 @@ export const OrlPickMeta: YearMeta[] = [
   {
     year: 2027,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       {
@@ -57,12 +43,7 @@ export const OrlPickMeta: YearMeta[] = [
       tradePick('POR'),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: 'Best of LAL / WAS',
         summary: {
@@ -84,12 +65,7 @@ export const OrlPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
   {
@@ -112,12 +88,7 @@ export const OrlPickMeta: YearMeta[] = [
   {
     year: 2031,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       {

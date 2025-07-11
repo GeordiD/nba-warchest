@@ -3,6 +3,7 @@ import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import {
   favorableSwap,
   ifNotConvey,
+  ownPick,
   prot,
   tradePick,
 } from '~/data/shorthand';
@@ -11,22 +12,10 @@ export const MiaPickMeta: YearMeta[] = [
   {
     year: 2026,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'To BOS / MIN / SAS / MEM / BKN',
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['BOS', 'MIN', 'SAS', 'MEM', 'BKN'],
-        },
-      },
+      tradePick(['BOS', 'MIN', 'SAS', 'MEM', 'BKN']),
     ],
   },
   {
@@ -67,86 +56,42 @@ export const MiaPickMeta: YearMeta[] = [
   {
     year: 2028,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'To DET / CHA',
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['DET', 'CHA'],
-        },
-      },
+      tradePick(['DET', 'CHA']),
     ],
   },
   {
     year: 2029,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [tradePick('OKC')],
   },
   {
     year: 2030,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [tradePick('OKC')],
   },
   {
     year: 2031,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: `To IND / MEM / WAS`,
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['IND', 'MEM', 'WAS'],
-        },
-      },
+      tradePick(['IND', 'MEM', 'WAS']),
     ],
   },
   {
     year: 2032,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
 ];
