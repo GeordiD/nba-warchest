@@ -138,30 +138,12 @@ function logPickDataChanges(oldPickData: PickData, newPickData: PickData): void 
     }
   }
 
-  // Log individual pick changes
-  const oldPicksSet = new Set(oldPickData.picks);
-  const newPicksSet = new Set(newPickData.picks);
-
-  // Find removed picks
-  for (const pick of oldPickData.picks) {
-    if (!newPicksSet.has(pick)) {
-      console.log(`    ❌ Removed: \x1b[31m${pick}\x1b[0m`);
-    }
-  }
-
-  // Find added picks
-  for (const pick of newPickData.picks) {
-    if (!oldPicksSet.has(pick)) {
-      console.log(`    ✅ Added: \x1b[32m${pick}\x1b[0m`);
-    }
-  }
-
-  // If same number of picks but content changed, show diff
-  if (oldPickData.picks.length === newPickData.picks.length
-    && oldPickData.picks.length === 1
-    && oldPickData.picks[0] !== newPickData.picks[0]) {
+  // Show modified diff for any content changes
+  const oldFullText = oldPickData.picks.join('; ');
+  const newFullText = newPickData.picks.join('; ');
+  if (oldFullText !== newFullText) {
     console.log(`    🔄 Modified:`);
-    console.log(createWordDiff(oldPickData.picks[0], newPickData.picks[0]));
+    console.log(createWordDiff(oldFullText, newFullText));
   }
 }
 
