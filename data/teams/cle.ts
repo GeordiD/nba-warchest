@@ -40,11 +40,11 @@ export const ClePickMeta: YearMeta[] = [
     year: 2028,
     roundOne: [
       {
-        details: `Own (${unfavorableSwap} ATL / UTA)`,
+        details: `Own (${unfavorableSwap} ATL / CLE / UTA)`,
         summary: {
           isOwn: true,
           swapType: 'unfavorable',
-          teams: ['ATL', 'UTA'],
+          teams: ['ATL', 'CLE', 'UTA'],
         },
       },
     ],
