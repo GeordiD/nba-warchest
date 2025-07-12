@@ -29,12 +29,7 @@ export const WasPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('PHX'),
       {
         details: {
@@ -64,20 +59,10 @@ export const WasPickMeta: YearMeta[] = [
   {
     year: 2027,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: 'Best of BKN / DAL',
         summary: {
@@ -147,12 +132,7 @@ export const WasPickMeta: YearMeta[] = [
   {
     year: 2029,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: 'Second best of BOS / MIL / POR',
         summary: {
@@ -162,16 +142,7 @@ export const WasPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: {
-          headline: 'To IND / NYK',
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['IND', 'NYK'],
-        },
-      },
+      tradePick(['IND', 'NYK']),
     ],
   },
   {
@@ -214,20 +185,10 @@ export const WasPickMeta: YearMeta[] = [
   {
     year: 2031,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: 'Best of MIA / IND',
         summary: {

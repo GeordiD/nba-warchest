@@ -1,17 +1,12 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { getPick, ifNotConvey, prot, tradePick } from '~/data/shorthand';
+import { getPick, ifNotConvey, ownPick, prot, tradePick } from '~/data/shorthand';
 
 export const ChaPickMeta: YearMeta[] = [
   {
     year: 2026,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: `Worst of MEM / ORL / WAS ${prot(8)} / PHX`,
         summary: {
@@ -34,12 +29,7 @@ export const ChaPickMeta: YearMeta[] = [
   {
     year: 2027,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: {
           headline: `DAL ${prot(2)}`,
@@ -79,12 +69,7 @@ export const ChaPickMeta: YearMeta[] = [
   {
     year: 2028,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       {
@@ -103,12 +88,7 @@ export const ChaPickMeta: YearMeta[] = [
   {
     year: 2029,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: `Worst of CLE / MIN ${prot(5)} / UTA`,
         summary: {
@@ -118,12 +98,7 @@ export const ChaPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: {
           headline: 'DEN',
@@ -142,20 +117,10 @@ export const ChaPickMeta: YearMeta[] = [
   {
     year: 2030,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: 'Best of LAC / UTA',
         summary: {
@@ -168,20 +133,10 @@ export const ChaPickMeta: YearMeta[] = [
   {
     year: 2031,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('NYK'),
       getPick('DEN'),
       getPick('MIL'),
@@ -191,20 +146,10 @@ export const ChaPickMeta: YearMeta[] = [
   {
     year: 2032,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('MIL'),
     ],
   },

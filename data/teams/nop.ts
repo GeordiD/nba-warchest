@@ -1,29 +1,15 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { getPick, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
+import { getPick, ownPick, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const NopPickMeta: YearMeta[] = [
   {
     year: 2026,
     roundOne: [
-      {
-        details: `To ATL / MIL`,
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['MIL', 'ATL'],
-        },
-      },
+      tradePick(['MIL', 'ATL']),
     ],
     roundTwo: [
-      {
-        details: 'To BOS / SAS / WAS',
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['BOS', 'SAS', 'WAS'],
-        },
-      },
+      tradePick(['BOS', 'SAS', 'WAS']),
     ],
   },
   {
@@ -45,27 +31,13 @@ export const NopPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: {
-          headline: 'To CHA / POR',
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['CHA', 'POR'],
-        },
-      },
+      tradePick(['CHA', 'POR']),
     ],
   },
   {
     year: 2028,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       tradePick('SAS'),
@@ -74,12 +46,7 @@ export const NopPickMeta: YearMeta[] = [
   {
     year: 2029,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       tradePick('SAS'),
@@ -88,12 +55,7 @@ export const NopPickMeta: YearMeta[] = [
   {
     year: 2030,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       {
@@ -109,43 +71,21 @@ export const NopPickMeta: YearMeta[] = [
   {
     year: 2031,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'To ORL / OKC',
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['ORL', 'OKC'],
-        },
-      },
+      tradePick(['ORL', 'OKC']),
       getPick('TOR'),
     ],
   },
   {
     year: 2032,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       // TODO: One unspecified second round pick to WAS
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
 ]

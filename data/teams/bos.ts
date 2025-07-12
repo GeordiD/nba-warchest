@@ -1,17 +1,12 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { favorableSwap, getPick, ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
+import { favorableSwap, getPick, ifNotConvey, ownPick, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const bosPickMeta: YearMeta[] = [
   {
     year: 2026,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       {
@@ -42,12 +37,7 @@ export const bosPickMeta: YearMeta[] = [
   {
     year: 2027,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       {
@@ -120,12 +110,7 @@ export const bosPickMeta: YearMeta[] = [
   {
     year: 2030,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       tradePick('BKN'),
@@ -134,20 +119,10 @@ export const bosPickMeta: YearMeta[] = [
   {
     year: 2031,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('CLE'),
       {
         details: `HOU ${prot(55)}`,
@@ -170,12 +145,7 @@ export const bosPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
 ];

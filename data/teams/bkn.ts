@@ -2,6 +2,7 @@ import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import {
   getPick,
+  ownPick,
   unfavorableSwap,
 } from '~/data/shorthand';
 
@@ -9,20 +10,10 @@ export const BknPickMeta: YearMeta[] = [
   {
     year: 2026,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('ATL'),
       {
         details: {
@@ -97,12 +88,7 @@ export const BknPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('MEM'),
       getPick('ATL'),
     ],
@@ -110,12 +96,7 @@ export const BknPickMeta: YearMeta[] = [
   {
     year: 2029,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('NYK'),
       {
         details: 'Worst of DAL / PHX / HOU',
@@ -126,12 +107,7 @@ export const BknPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('DAL'),
       getPick('MEM'),
       getPick('GSW'),
@@ -140,20 +116,10 @@ export const BknPickMeta: YearMeta[] = [
   {
     year: 2030,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('DAL'),
       getPick('LAL'),
       getPick('BOS'),
@@ -162,42 +128,22 @@ export const BknPickMeta: YearMeta[] = [
   {
     year: 2031,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('NYK'),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('LAL'),
     ],
   },
   {
     year: 2032,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('DEN'),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
 ];

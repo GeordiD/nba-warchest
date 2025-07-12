@@ -5,6 +5,7 @@ import {
   favorableSwap,
   getPick,
   ifNotConvey,
+  ownPick,
   prot,
   tradePick,
 } from '~/data/shorthand';
@@ -64,14 +65,7 @@ export const UtaPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'To IND',
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['IND'],
-        },
-      },
+      tradePick('IND'),
       getPick('LAC'),
     ],
   },
@@ -133,23 +127,13 @@ export const UtaPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
   {
     year: 2030,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       {
@@ -165,32 +149,17 @@ export const UtaPickMeta: YearMeta[] = [
   {
     year: 2031,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('PHX'),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
   {
     year: 2032,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       tradePick('WAS'),

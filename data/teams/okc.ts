@@ -160,35 +160,15 @@ export const OkcCombinedMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-      {
-        details: 'MIL',
-        summary: {
-          teams: ['MIL'],
-        },
-      },
-      {
-        details: 'UTA',
-        summary: {
-          teams: ['UTA'],
-        },
-      },
+      ownPick(),
+      getPick('MIL'),
+      getPick('UTA'),
     ],
   },
   {
     year: 2029,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: {
           headline: `DEN ${prot(5)}`,
@@ -207,81 +187,31 @@ export const OkcCombinedMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-      {
-        details: 'ATL',
-        summary: {
-          teams: ['ATL'],
-        },
-      },
-      {
-        details: 'BOS',
-        summary: {
-          teams: ['BOS'],
-        },
-      },
-      {
-        details: 'MIA',
-        summary: {
-          teams: ['MIA'],
-        },
-      },
+      ownPick(),
+      getPick('ATL'),
+      getPick('BOS'),
+      getPick('MIA'),
     ],
   },
   {
     year: 2030,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
-      {
-        details: 'HOU',
-        summary: {
-          teams: ['HOU'],
-        },
-      },
-      {
-        details: 'MIA',
-        summary: {
-          teams: ['MIA'],
-        },
-      },
+      ownPick(),
+      getPick('HOU'),
+      getPick('MIA'),
       getPick('DEN'),
     ],
   },
   {
     year: 2031,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: 'Worst of NOP / ORL',
         summary: {

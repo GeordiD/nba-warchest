@@ -26,12 +26,7 @@ export const HouPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('CHI'),
     ],
   },
@@ -73,12 +68,7 @@ export const HouPickMeta: YearMeta[] = [
   {
     year: 2028,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [ownPick()],
   },
@@ -114,24 +104,14 @@ export const HouPickMeta: YearMeta[] = [
   {
     year: 2030,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [tradePick('OKC')],
   },
   {
     year: 2031,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       {
@@ -154,12 +134,7 @@ export const HouPickMeta: YearMeta[] = [
   {
     year: 2032,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       {

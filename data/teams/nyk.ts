@@ -1,17 +1,12 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { ifNotConvey, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
+import { ifNotConvey, ownPick, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const NykPickMeta: YearMeta[] = [
   {
     year: 2026,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: {
           headline: `WAS ${prot(8)}`,
@@ -44,12 +39,7 @@ export const NykPickMeta: YearMeta[] = [
       tradePick('BKN'),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: 'Second and third most favorable of OKC / HOU / IND / MIA',
         summary: [
@@ -109,12 +99,7 @@ export const NykPickMeta: YearMeta[] = [
   {
     year: 2030,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       tradePick('POR'),
@@ -132,20 +117,10 @@ export const NykPickMeta: YearMeta[] = [
   {
     year: 2032,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
 ]

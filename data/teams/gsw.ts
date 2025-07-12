@@ -1,67 +1,37 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { ifNotConvey, prot, tradePick } from '~/data/shorthand';
+import { ifNotConvey, ownPick, prot, tradePick } from '~/data/shorthand';
 
 export const GswPickMeta: YearMeta[] = [
   {
     year: 2026,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
-    roundTwo: [{
-      details: 'To CHA / MIN',
-      summary: {
-        isOwn: true,
-        isTradedAway: true,
-        teams: ['CHA', 'MIN'],
-      },
-    }],
+    roundTwo: [
+      tradePick(['CHA', 'MIN']),
+    ],
   },
   {
     year: 2027,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
-    roundTwo: [{
-      details: 'To PHI / WAS',
-      summary: {
-        isOwn: true,
-        isTradedAway: true,
-        teams: ['PHI', 'WAS'],
-      },
-    }],
+    roundTwo: [
+      tradePick(['PHI', 'WAS']),
+    ],
   },
   {
     year: 2028,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [tradePick('PHI')],
   },
   {
     year: 2029,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [tradePick('BKN')],
   },
@@ -81,44 +51,22 @@ export const GswPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
   {
     year: 2031,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'To MIN / DET',
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['MIN', 'DET'],
-        },
-      },
+      tradePick(['MIN', 'DET']),
     ],
   },
   {
     year: 2032,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       {

@@ -1,6 +1,9 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import {
+  getPick,
+  ownPick,
+  tradePick,
   unfavorableSwap,
 } from '~/data/shorthand';
 
@@ -8,62 +11,26 @@ export const IndPickMeta: YearMeta[] = [
   {
     year: 2026,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: {
-          headline: 'To MIN / BOS / MEM / BKN',
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['MIN', 'BOS', 'MEM', 'BKN'],
-        },
-      },
+      tradePick(['MIN', 'BOS', 'MEM', 'BKN']),
     ],
   },
   {
     year: 2027,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'To OKC / NYK / SAS / MIA',
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['OKC', 'SAS', 'NYK', 'MIA'],
-        },
-      },
-      {
-        details: 'UTA',
-        summary: {
-          teams: ['UTA'],
-        },
-      },
+      tradePick(['OKC', 'SAS', 'NYK', 'MIA']),
+      getPick('UTA'),
     ],
   },
   {
     year: 2028,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       {
@@ -77,23 +44,13 @@ export const IndPickMeta: YearMeta[] = [
           teams: ['IND', 'PHX'],
         },
       },
-      {
-        details: 'DAL',
-        summary: {
-          teams: ['DAL'],
-        },
-      },
+      getPick('DAL'),
     ],
   },
   {
     year: 2029,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       {
@@ -112,31 +69,16 @@ export const IndPickMeta: YearMeta[] = [
   {
     year: 2030,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
   {
     year: 2031,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       {
@@ -152,20 +94,10 @@ export const IndPickMeta: YearMeta[] = [
   {
     year: 2032,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
 ];

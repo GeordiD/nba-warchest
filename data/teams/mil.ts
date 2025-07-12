@@ -1,6 +1,6 @@
 import type { YearMeta } from '~/data/PickMetaTypes';
 import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
-import { prot, tradePick, unfavorableSwap } from '~/data/shorthand';
+import { ownPick, prot, tradePick, unfavorableSwap } from '~/data/shorthand';
 
 export const MilPickMeta: YearMeta[] = [
   {
@@ -16,36 +16,13 @@ export const MilPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: {
-          headline: 'To BOS / NYK',
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['BOS', 'NYK'],
-        },
-      },
+      tradePick(['BOS', 'NYK']),
     ],
   },
   {
     year: 2027,
     roundOne: [
-      {
-        details: {
-          headline: 'To ATL / NOP',
-          extra: [
-            'Best of MIL / NOP to NOP',
-            'Worst to ATL',
-            'If both in top 4, NOP keeps both',
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['ATL', 'NOP'],
-        },
-      },
+      tradePick(['ATL', 'NOP']),
     ],
     roundTwo: [
       tradePick('DET'),
@@ -79,16 +56,7 @@ export const MilPickMeta: YearMeta[] = [
   {
     year: 2029,
     roundOne: [
-      {
-        details: {
-          headline: 'To POR / WAS',
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['POR', 'WAS'],
-        },
-      },
+      tradePick(['POR', 'WAS']),
     ],
     roundTwo: [
       tradePick(['DET', 'SAC']),
@@ -113,12 +81,7 @@ export const MilPickMeta: YearMeta[] = [
   {
     year: 2031,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       tradePick('CHA'),
@@ -127,12 +90,7 @@ export const MilPickMeta: YearMeta[] = [
   {
     year: 2032,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       tradePick('CHA'),

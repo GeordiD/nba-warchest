@@ -4,6 +4,7 @@ import {
   favorableSwap,
   getPick,
   ifNotConvey,
+  ownPick,
   prot,
   tradePick,
 } from '~/data/shorthand';
@@ -30,40 +31,16 @@ export const PhiPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: {
-          headline: 'To OKC / BKN / SAS',
-          extra: [
-            'Best of PHI / OKC / DAl to OKC',
-            'Second best to BKN',
-            'Worst to WAS',
-          ],
-        },
-        summary: {
-          isOwn: true,
-          isTradedAway: true,
-          teams: ['OKC', 'BKN', 'SAS'],
-        },
-      },
+      tradePick(['OKC', 'BKN', 'SAS']),
     ],
   },
   {
     year: 2027,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: 'Best of GSW / PHX',
         summary: {
@@ -93,12 +70,7 @@ export const PhiPickMeta: YearMeta[] = [
       getPick('LAC'),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: `DET ${prot(55)}`,
         summary: {
@@ -122,23 +94,13 @@ export const PhiPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
   {
     year: 2030,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       tradePick('DAL'),
@@ -155,39 +117,19 @@ export const PhiPickMeta: YearMeta[] = [
   {
     year: 2031,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
   {
     year: 2032,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
 ];

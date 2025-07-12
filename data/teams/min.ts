@@ -3,6 +3,7 @@ import type { TeamInfo, TeamMeta } from '~/data/TeamMeta';
 import {
   getPick,
   ifNotConvey,
+  ownPick,
   prot,
   tradePick,
   unfavorableSwap,
@@ -28,14 +29,7 @@ export const MinPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'To NYK / BOS / WAS',
-        summary: {
-          isOwn: true,
-          teams: ['NYK', 'BOS', 'WAS'],
-          isTradedAway: true,
-        },
-      },
+      tradePick(['NYK', 'BOS', 'WAS']),
       {
         details: 'Worst of IND / MIA / SAS',
         summary: {
@@ -63,12 +57,7 @@ export const MinPickMeta: YearMeta[] = [
   {
     year: 2028,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [tradePick('SAS')],
   },
@@ -88,12 +77,7 @@ export const MinPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
   },
   {
@@ -146,12 +130,7 @@ export const MinPickMeta: YearMeta[] = [
     ],
     roundTwo: [
       // TODO: 2 unspecified 2nd round picks from PHX
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       {
         details: 'Best of HOU / PHX',
         summary: {

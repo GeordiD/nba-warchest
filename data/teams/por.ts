@@ -25,14 +25,7 @@ export const PorPickMeta: YearMeta[] = [
       },
     ],
     roundTwo: [
-      {
-        details: 'To BOS / SAS / WAS',
-        summary: {
-          isOwn: true,
-          teams: ['BOS', 'SAS', 'WAS'],
-          isTradedAway: true,
-        },
-      },
+      tradePick(['BOS', 'SAS', 'WAS']),
       {
         details: `MEM ${prot(42)}`,
         summary: {
@@ -45,12 +38,7 @@ export const PorPickMeta: YearMeta[] = [
   {
     year: 2027,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       {
@@ -90,12 +78,7 @@ export const PorPickMeta: YearMeta[] = [
       getPick('ORL'),
     ],
     roundTwo: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
       getPick('SAC'),
     ],
   },
@@ -154,12 +137,7 @@ export const PorPickMeta: YearMeta[] = [
   {
     year: 2031,
     roundOne: [
-      {
-        details: 'Own',
-        summary: {
-          isOwn: true,
-        },
-      },
+      ownPick(),
     ],
     roundTwo: [
       ownPick(),
