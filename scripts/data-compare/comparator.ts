@@ -56,7 +56,7 @@ function compareTeamData(oldTeam: TeamData, newTeam: TeamData): boolean {
 }
 
 function hasPickDataChanges(oldPickData: PickData, newPickData: PickData): boolean {
-  // Check pick count changes
+  // Check pick count changes (total or certainty)
   if (oldPickData.pickCount.total !== newPickData.pickCount.total
     || oldPickData.pickCount.definite !== newPickData.pickCount.definite
     || oldPickData.pickCount.conditional !== newPickData.pickCount.conditional) {
@@ -121,11 +121,21 @@ function logYearChanges(
 }
 
 function logPickDataChanges(oldPickData: PickData, newPickData: PickData): void {
-  // Log pick count changes prominently
-  if (oldPickData.pickCount.total !== newPickData.pickCount.total) {
+  // Log pick count changes prominently (total OR certainty changes)
+  const totalChanged = oldPickData.pickCount.total !== newPickData.pickCount.total;
+  const certaintyChanged = oldPickData.pickCount.definite !== newPickData.pickCount.definite 
+                          || oldPickData.pickCount.conditional !== newPickData.pickCount.conditional;
+  
+  if (totalChanged || certaintyChanged) {
     const oldCount = formatPickCount(oldPickData.pickCount);
     const newCount = formatPickCount(newPickData.pickCount);
-    console.log(`    📊 Pick Count: ${oldCount} → ${newCount}`);
+    
+    if (totalChanged) {
+      console.log(`    📊 Pick Counts: ${oldCount} → ${newCount}`);
+    } else {
+      // Same total but different certainty (green vs gold)
+      console.log(`    📊 Pick Counts: ${oldCount} → ${newCount}`);
+    }
   }
 
   // Log individual pick changes
@@ -173,18 +183,18 @@ function logPickDataDetails(pickData: PickData, label: string, isNew: boolean = 
 
 function formatPickCount(pickCount: { definite: number; conditional: number; total: number }): string {
   if (pickCount.total === 0) {
-    return '\x1b[31m0\x1b[0m';
+    return '\x1b[41m\x1b[37m 0 \x1b[0m'; // Red background, white text
   }
 
   let result = '';
   if (pickCount.definite > 0) {
-    result += `\x1b[32m${pickCount.definite}\x1b[0m`;
+    result += `\x1b[42m\x1b[30m ${pickCount.definite} \x1b[0m`; // Green background, black text
   }
 
   if (pickCount.conditional > 0) {
     if (result) result += ' + ';
-    result += `\x1b[33m${pickCount.conditional}\x1b[0m`;
+    result += `\x1b[43m\x1b[30m ${pickCount.conditional} \x1b[0m`; // Yellow background, black text
   }
 
-  return result || '\x1b[31m0\x1b[0m';
+  return result || '\x1b[41m\x1b[37m 0 \x1b[0m'; // Red background, white text
 }
