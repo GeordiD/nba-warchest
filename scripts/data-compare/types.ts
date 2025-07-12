@@ -1,9 +1,18 @@
+export interface PickData {
+  picks: string[];
+  pickCount: {
+    definite: number;
+    conditional: number;
+    total: number;
+  };
+}
+
 export interface TeamData {
   teamName: string;
   picks: {
     [year: string]: {
-      firstRound: string;
-      secondRound: string;
+      firstRound: PickData;
+      secondRound: PickData;
     };
   };
 }

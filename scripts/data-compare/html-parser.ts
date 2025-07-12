@@ -1,5 +1,5 @@
 import { readFileSync } from 'fs';
-import type { ParsedData, TeamData } from './types.js';
+import type { ParsedData, TeamData, PickData } from './types.js';
 
 export function parseHtmlFile(filePath: string): ParsedData {
   const html = readFileSync(filePath, 'utf-8');
@@ -39,8 +39,8 @@ function extractTeamName(teamSectionHtml: string): string | null {
   return teamNameMatch ? teamNameMatch[1].trim() : null;
 }
 
-function extractPicksData(teamSectionHtml: string): Record<string, { firstRound: string; secondRound: string }> {
-  const picks: Record<string, { firstRound: string; secondRound: string }> = {};
+function extractPicksData(teamSectionHtml: string): Record<string, { firstRound: PickData; secondRound: PickData }> {
+  const picks: Record<string, { firstRound: PickData; secondRound: PickData }> = {};
 
   const tbodyMatch = teamSectionHtml.match(/<tbody[^>]*>([\s\S]*?)<\/tbody>/);
   if (!tbodyMatch) return picks;
@@ -52,8 +52,11 @@ function extractPicksData(teamSectionHtml: string): Record<string, { firstRound:
     const cells = extractCellData(rowMatch[1]);
 
     if (isValidPickRow(cells)) {
-      const [year, firstRound, secondRound] = cells;
-      picks[year] = { firstRound, secondRound };
+      const [year, firstRoundHtml, secondRoundHtml] = cells;
+      picks[year] = {
+        firstRound: parsePickData(firstRoundHtml),
+        secondRound: parsePickData(secondRoundHtml),
+      };
     }
   }
 
@@ -66,17 +69,122 @@ function extractCellData(rowHtml: string): string[] {
   let cellMatch;
 
   while ((cellMatch = cellRegex.exec(rowHtml)) !== null) {
-    const cleanContent = cellMatch[1]
-      .replace(/<[^>]*>/g, '')
-      .replace(/&nbsp;/g, ' ')
-      .replace(/\s+/g, ' ')
-      .trim();
-    cells.push(cleanContent);
+    // For year column, clean normally
+    if (cells.length === 0) {
+      const cleanContent = cellMatch[1]
+        .replace(/<[^>]*>/g, '')
+        .replace(/&nbsp;/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+      cells.push(cleanContent);
+    } else {
+      // For pick columns, preserve HTML for further parsing
+      cells.push(cellMatch[1]);
+    }
   }
 
   return cells;
 }
 
 function isValidPickRow(cells: string[]): boolean {
-  return cells.length === 3 && cells.every(cell => cell.length > 0);
+  return cells.length === 3 && cells[0].length > 0;
+}
+
+function parsePickData(cellHtml: string): PickData {
+  // Extract pick count from colored spans
+  const pickCount = extractPickCount(cellHtml);
+
+  // Extract individual picks from paragraphs
+  const picks = extractIndividualPicks(cellHtml);
+
+  return {
+    picks,
+    pickCount,
+  };
+}
+
+function extractPickCount(cellHtml: string): { definite: number; conditional: number; total: number } {
+  let definite = 0;
+  let conditional = 0;
+
+  // Extract green numbers (definite picks)
+  const greenMatches = cellHtml.match(/<span style="color: green;">([^<]+)<\/span>/g) || [];
+  for (const match of greenMatches) {
+    const numberMatch = match.match(/>([0-9]+)</);
+    if (numberMatch) {
+      definite += parseInt(numberMatch[1], 10);
+    }
+  }
+
+  // Extract gold numbers (conditional picks)
+  const goldMatches = cellHtml.match(/<span style="color: gold;">([^<]+)<\/span>/g) || [];
+  for (const match of goldMatches) {
+    const numberMatch = match.match(/>([0-9]+)</);
+    if (numberMatch) {
+      conditional += parseInt(numberMatch[1], 10);
+    }
+  }
+
+  // Handle "+ X" format for conditional picks
+  const plusMatches = cellHtml.match(/\+ <span style="color: gold;">([0-9]+)<\/span>/g) || [];
+  for (const match of plusMatches) {
+    const numberMatch = match.match(/>([0-9]+)</);
+    if (numberMatch) {
+      conditional += parseInt(numberMatch[1], 10);
+    }
+  }
+
+  return {
+    definite,
+    conditional,
+    total: definite + conditional,
+  };
+}
+
+function extractIndividualPicks(cellHtml: string): string[] {
+  if (!cellHtml || cellHtml.trim() === '') {
+    return [];
+  }
+
+  // Remove pick count spans first to avoid including them in pick descriptions
+  let cleanHtml = cellHtml.replace(/<strong><p><span style="color: [^"]+;">[^<]*<\/span><\/p><\/strong>/g, '');
+  cleanHtml = cleanHtml.replace(/<strong><p><span style="color: [^"]+;">[^<]*<\/span> \+ <span style="color: [^"]+;">[^<]*<\/span><\/p><\/strong>/g, '');
+
+  // Extract paragraphs
+  const paragraphMatches = cleanHtml.match(/<p[^>]*>([\s\S]*?)<\/p>/g) || [];
+
+  const picks: string[] = [];
+
+  for (const paragraph of paragraphMatches) {
+    const cleanPick = paragraph
+      .replace(/<p[^>]*>/g, '')
+      .replace(/<\/p>/g, '')
+      .replace(/<br\s*\/?>/g, ' ')
+      .replace(/<strong>/g, '')
+      .replace(/<\/strong>/g, '')
+      .replace(/<small>/g, '(')
+      .replace(/<\/small>/g, ')')
+      .replace(/&nbsp;/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    if (cleanPick && cleanPick !== '') {
+      picks.push(cleanPick);
+    }
+  }
+
+  // If no paragraphs found, fall back to cleaning the entire content
+  if (picks.length === 0) {
+    const fallbackClean = cleanHtml
+      .replace(/<[^>]*>/g, '')
+      .replace(/&nbsp;/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    if (fallbackClean && fallbackClean !== '') {
+      picks.push(fallbackClean);
+    }
+  }
+
+  return picks;
 }
