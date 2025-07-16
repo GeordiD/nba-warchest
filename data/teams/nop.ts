@@ -84,7 +84,6 @@ export const NopPickMeta: YearMeta[] = [
       ownPick(),
     ],
     roundTwo: [
-      // TODO: One unspecified second round pick to WAS
       ownPick(),
     ],
   },
