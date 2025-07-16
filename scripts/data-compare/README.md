@@ -2,6 +2,34 @@
 
 Automated tool to monitor changes in NBA draft pick data from RealGM.
 
+## Overview
+
+This script parses RealGM's NBA draft pick HTML data and compares it with previous versions to detect changes. It tracks both pick counts (definite/conditional) and individual pick details, providing clear visual output with background-colored indicators.
+
+## HTML Format
+
+The script handles RealGM's HTML structure where:
+- Pick counts are in colored spans: green (definite), gold (conditional), red (none)
+- Individual picks are separated by paragraph tags (`<p>`)
+- Empty cells indicate no picks for that year
+
+## Data Structure
+
+The script processes data into:
+- **Pick Counts**: `{ definite: number, conditional: number, total: number }`
+- **Individual Picks**: Array of pick description strings
+- **Teams**: Collection of team data with years and pick information
+
+## Output Format
+
+When changes are detected, the script displays:
+- **📊 Pick Counts**: Background-colored indicators showing count changes
+  - Green background: definite picks
+  - Yellow background: conditional picks  
+  - Red background: no picks
+- **🔄 Modified**: Word-level diff showing content changes
+- **Summary**: Total teams with changes (used by GitHub Actions)
+
 ## Setup
 
 ### 1. Discord Webhook (Optional)
@@ -50,10 +78,10 @@ The GitHub Actions workflow runs automatically:
 ```
 scripts/data-compare/
 ├── index.ts          # Main entry point
-├── types.ts          # TypeScript interfaces
+├── types.ts          # TypeScript interfaces with PickData structure
 ├── data-fetcher.ts   # HTTP download logic
-├── html-parser.ts    # HTML parsing & extraction
-├── comparator.ts     # Team comparison logic
+├── html-parser.ts    # HTML parsing with color-coded pick extraction
+├── comparator.ts     # Team comparison with pick count & content analysis
 ├── file-manager.ts   # File save/load operations
 ├── cli.ts            # Command line interface
 ├── diff-utils.ts     # Word-level diff utilities
@@ -61,19 +89,19 @@ scripts/data-compare/
     └── current.html  # Baseline data file (update manually)
 ```
 
-## Output
+## GitHub Actions Integration
 
-The tool shows:
-- Team-by-team comparison results
-- Word-level diffs highlighting exact changes
-- Summary of total teams with changes
-- Discord notifications (if configured)
+The script maintains compatibility with the automated workflow by:
+- Exiting with code 1 when changes are found
+- Outputting the final summary line: "X teams with changes"
+- The workflow extracts the team count and sends Discord notifications
 
-Example output:
+## Example Output
+
 ```
 === Brooklyn Nets ===
-  2032 First Round:
-    Own; DEN
+📊 Pick Counts: 🟢 2  → 🟡 1  + 🟢 1 
+🔄 Modified: Own; [+conditional DEN,] Own
 
 ✅ Comparison complete! 21 teams with changes.
 ```
