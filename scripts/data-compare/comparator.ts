@@ -123,13 +123,13 @@ function logYearChanges(
 function logPickDataChanges(oldPickData: PickData, newPickData: PickData): void {
   // Log pick count changes prominently (total OR certainty changes)
   const totalChanged = oldPickData.pickCount.total !== newPickData.pickCount.total;
-  const certaintyChanged = oldPickData.pickCount.definite !== newPickData.pickCount.definite 
-                          || oldPickData.pickCount.conditional !== newPickData.pickCount.conditional;
-  
+  const certaintyChanged = oldPickData.pickCount.definite !== newPickData.pickCount.definite
+    || oldPickData.pickCount.conditional !== newPickData.pickCount.conditional;
+
   if (totalChanged || certaintyChanged) {
     const oldCount = formatPickCount(oldPickData.pickCount);
     const newCount = formatPickCount(newPickData.pickCount);
-    
+
     if (totalChanged) {
       console.log(`    📊 Pick Counts: ${oldCount} → ${newCount}`);
     } else {

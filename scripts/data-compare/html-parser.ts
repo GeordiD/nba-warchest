@@ -156,18 +156,7 @@ function extractIndividualPicks(cellHtml: string): string[] {
   const picks: string[] = [];
 
   for (const paragraph of paragraphMatches) {
-    const cleanPick = paragraph
-      .replace(/<p[^>]*>/g, '')
-      .replace(/<\/p>/g, '')
-      .replace(/<br\s*\/?>/g, ' ')
-      .replace(/<strong>/g, '')
-      .replace(/<\/strong>/g, '')
-      .replace(/<small>/g, '(')
-      .replace(/<\/small>/g, ')')
-      .replace(/&nbsp;/g, ' ')
-      .replace(/\s+/g, ' ')
-      .trim();
-
+    const cleanPick = cleanHtmlTags(paragraph);
     if (cleanPick && cleanPick !== '') {
       picks.push(cleanPick);
     }
@@ -175,16 +164,27 @@ function extractIndividualPicks(cellHtml: string): string[] {
 
   // If no paragraphs found, fall back to cleaning the entire content
   if (picks.length === 0) {
-    const fallbackClean = cleanHtml
-      .replace(/<[^>]*>/g, '')
-      .replace(/&nbsp;/g, ' ')
-      .replace(/\s+/g, ' ')
-      .trim();
-
+    const fallbackClean = cleanHtmlTags(cleanHtml);
     if (fallbackClean && fallbackClean !== '') {
       picks.push(fallbackClean);
     }
   }
 
   return picks;
+}
+
+function cleanHtmlTags(html: string): string {
+  return html
+    // Remove all HTML tags completely
+    .replace(/<[^>]*>/g, '')
+    // Convert HTML entities
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, '\'')
+    // Normalize whitespace
+    .replace(/\s+/g, ' ')
+    .trim();
 }
